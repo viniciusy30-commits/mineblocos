@@ -9,13 +9,18 @@ object Atlas {
     const val TILE = 16
     const val COLS = 64
 
+    @Volatile private var appCtx: Context? = null
+
+    fun init(c: Context) { appCtx = c.applicationContext }
+
     val bitmap: Bitmap by lazy { load() }
 
     private fun load(): Bitmap {
         val o = BitmapFactory.Options()
         o.inScaled = false
         o.inPreferredConfig = Bitmap.Config.ARGB_8888
-        App.ctx.assets.open("atlas.png").use { s ->
+        val c = appCtx ?: throw IllegalStateException("Atlas.init(context) não foi chamado")
+        c.assets.open("atlas.png").use { s ->
             return BitmapFactory.decodeStream(s, null, o)!!
         }
     }

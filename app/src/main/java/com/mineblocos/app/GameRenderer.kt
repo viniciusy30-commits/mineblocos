@@ -398,7 +398,7 @@ class GameRenderer(
     }
 
     private fun spawnParticles(x: Int, y: Int, z: Int, b: Int) {
-        val col = Atlas.tileAvg[Blocks.tile(b, 2)]
+        val col = Reg.avg(b)
         val cr = ((col shr 16) and 0xFF) / 255f
         val cg = ((col shr 8) and 0xFF) / 255f
         val cb = (col and 0xFF) / 255f
