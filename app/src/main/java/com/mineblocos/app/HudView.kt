@@ -34,6 +34,40 @@ class HudView(
         setShadowLayer(dp(1.5f), dp(1.5f), dp(1.5f), 0xFF202020.toInt())
     }
     private val icons = HashMap<Int, Bitmap>()
+    private val invIcons = HashMap<Int, Bitmap>()
+
+    // inventário
+    private var invOpen = false
+    private var invScroll = 0f
+    private var invMaxScroll = 0f
+    private var invId = -1
+    private var invDownX = 0f; private var invDownY = 0f; private var invLastY = 0f
+    private var invMoved = false
+    private var invX = 0f; private var invY = 0f; private var invR = 0f
+    private var cubes: IntArray = IntArray(0)
+    private var invTab = 0
+    private val tabNames = arrayOf("Blocos", "Plantas", "Itens")
+
+    init {
+        Prefs.hotbar(ctx)?.let { v ->
+            if (v.all { it > 0 && it < Reg.count }) for (i in 0 until 10) s.hotbar[i] = v[i]
+        }
+    }
+
+    private fun loadTab() {
+        cubes = when (invTab) {
+            0 -> Reg.list(Reg.K_CUBE)
+            1 -> Reg.list(Reg.K_CROSS, Reg.K_FLAT)
+            else -> Reg.list(Reg.K_ITEM)
+        }
+        invScroll = 0f
+    }
+    private val pl get() = dp(24f)
+    private val pr get() = width - dp(24f)
+    private val pt get() = dp(76f)
+    private val pb get() = hbTop - dp(10f)
+    private val cell get() = dp(50f)
+    private val cols get() = max(1, ((pr - pl - dp(16f)) / cell).toInt())
 
     // geometria
     private var slot = 0f
@@ -81,8 +115,10 @@ class HudView(
         camR = dp(25f); camX = w - dp(152f); camY = h - dp(170f)
         dnR = dp(30f); dnX = w - dp(152f); dnY = h - dp(80f)
         pauseR = dp(22f); pauseX = w - dp(36f); pauseY = dp(36f)
+        invR = dp(22f); invX = w - dp(92f); invY = dp(36f)
         joyR = dp(56f); joyDefX = dp(108f); joyDefY = h - dp(116f)
         icons.clear()
+        invIcons.clear()
     }
 
     private fun inCircle(x: Float, y: Float, cx: Float, cy: Float, r: Float) = hypot(x - cx, y - cy) <= r * 1.25f
@@ -106,8 +142,70 @@ class HudView(
         return true
     }
 
+    private fun resetControls() {
+        removeCallbacks(longPress)
+        joyId = -1; lookId = -1; jumpId = -1; downId = -1
+        s.moveX = 0f; s.moveZ = 0f; s.jump = false; s.down = false; s.breaking = false
+        longFired = false
+    }
+
+    private fun invContentH(): Float = ((cubes.size + cols - 1) / cols) * cell
+
+    private fun invTouchDown(id: Int, x: Float, y: Float) {
+        if (y in pt..(pt + dp(30f)) && x in pl..pr) {
+            val tw = dp(66f)
+            val i = ((x - (pr - tw * 3f - dp(6f))) / tw).toInt()
+            if (x >= pr - tw * 3f - dp(6f) && i in 0..2 && i != invTab) { invTab = i; loadTab() }
+            return
+        }
+        if (y >= hbTop - dp(4f) && x >= hbLeft && x <= hbLeft + slot * 10f) {
+            s.selected = ((x - hbLeft) / slot).toInt().coerceIn(0, 9)
+            return
+        }
+        if (invId == -1 && x in pl..pr && y in pt..pb) {
+            invId = id; invDownX = x; invDownY = y; invLastY = y; invMoved = false
+        }
+    }
+
+    private fun invTouchMove(id: Int, x: Float, y: Float) {
+        if (id != invId) return
+        if (!invMoved && hypot(x - invDownX, y - invDownY) > dp(10f)) invMoved = true
+        if (invMoved) {
+            invScroll = (invScroll - (y - invLastY)).coerceIn(0f, invMaxScroll)
+            invLastY = y
+        }
+    }
+
+    private fun invTouchUp(id: Int) {
+        if (id != invId) return
+        invId = -1
+        if (invMoved) return
+        val gridTop = pt + dp(30f)
+        val gx = invDownX - (pl + dp(8f))
+        val gy = invDownY - gridTop + invScroll
+        if (gx < 0f || gy < 0f || invDownY < gridTop) return
+        val col = (gx / cell).toInt()
+        val row = (gy / cell).toInt()
+        if (col >= cols) return
+        val idx = row * cols + col
+        if (idx in cubes.indices) {
+            s.hotbar[s.selected] = cubes[idx]
+            Prefs.setHotbar(context, s.hotbar)
+        }
+    }
+
     private fun touchDown(id: Int, x: Float, y: Float) {
         if (inCircle(x, y, pauseX, pauseY, pauseR)) { onPauseClick(); return }
+        if (inCircle(x, y, invX, invY, invR)) {
+            invOpen = !invOpen
+            if (invOpen) {
+                resetControls()
+                loadTab()
+                invId = -1
+            }
+            return
+        }
+        if (invOpen) { invTouchDown(id, x, y); return }
         if (y >= hbTop - dp(4f) && x >= hbLeft && x <= hbLeft + slot * 10f) {
             s.selected = ((x - hbLeft) / slot).toInt().coerceIn(0, 9)
             return
@@ -131,6 +229,7 @@ class HudView(
     }
 
     private fun touchMove(id: Int, x: Float, y: Float) {
+        if (invOpen) { invTouchMove(id, x, y); return }
         if (id == joyId) {
             var vx = x - joyOx
             var vy = y - joyOy
@@ -153,6 +252,7 @@ class HudView(
 
     private fun touchUp(id: Int) {
         if (id < 0) return
+        if (invOpen || id == invId) { invTouchUp(id); return }
         if (id == joyId) {
             joyId = -1; s.moveX = 0f; s.moveZ = 0f
         }
@@ -233,6 +333,12 @@ class HudView(
         c.drawRect(pauseX - dp(6f), pauseY - dp(7f), pauseX - dp(2.5f), pauseY + dp(7f), paint)
         c.drawRect(pauseX + dp(2.5f), pauseY - dp(7f), pauseX + dp(6f), pauseY + dp(7f), paint)
 
+        // botão do inventário
+        drawRound(c, invX, invY, invR, false, invOpen)
+        text.textSize = dp(10f)
+        text.textAlign = Paint.Align.CENTER
+        c.drawText(if (invOpen) "FECHAR" else "INV", invX, invY + dp(3.5f), text)
+
         // hotbar
         val rect = RectF()
         for (i in 0 until 10) {
@@ -245,7 +351,7 @@ class HudView(
             paint.strokeWidth = dp(1.5f)
             paint.color = 0xFF5A5F66.toInt()
             c.drawRoundRect(rect, dp(4f), dp(4f), paint)
-            val ic = icon(Blocks.hotbar[i])
+            val ic = icon(s.hotbar[i])
             val lift = if (i == s.selected) dp(3f) else 0f
             c.drawBitmap(ic, l + (slot - ic.width) / 2f, hbTop + (slot - ic.height) / 2f - lift, null)
         }
@@ -255,6 +361,8 @@ class HudView(
         paint.strokeWidth = dp(3f)
         paint.color = Color.WHITE
         c.drawRoundRect(rect, dp(5f), dp(5f), paint)
+
+        if (invOpen) drawInventory(c)
 
         // nome do bloco
         if (nameAlpha > 0f) {
@@ -305,6 +413,67 @@ class HudView(
             text.alpha = 255
         }
         postInvalidateOnAnimation()
+    }
+
+    private fun drawInventory(c: Canvas) {
+        val rect = RectF(pl, pt, pr, pb)
+        paint.style = Paint.Style.FILL
+        paint.color = 0xE0101418.toInt()
+        c.drawRoundRect(rect, dp(8f), dp(8f), paint)
+        paint.style = Paint.Style.STROKE
+        paint.strokeWidth = dp(2f)
+        paint.color = 0xFF5A5F66.toInt()
+        c.drawRoundRect(rect, dp(8f), dp(8f), paint)
+
+        text.textAlign = Paint.Align.LEFT
+        text.textSize = dp(13f)
+        c.drawText("Inventário", pl + dp(10f), pt + dp(20f), text)
+        val tw = dp(66f)
+        text.textAlign = Paint.Align.CENTER
+        text.textSize = dp(11f)
+        for (i in 0 until 3) {
+            val tl = pr - tw * 3f - dp(6f) + i * tw
+            val tr = RectF(tl + 2f, pt + dp(5f), tl + tw - 2f, pt + dp(27f))
+            paint.style = Paint.Style.FILL
+            paint.color = if (i == invTab) 0xAA57C84D.toInt() else 0x55FFFFFF
+            c.drawRoundRect(tr, dp(4f), dp(4f), paint)
+            c.drawText(tabNames[i], (tl + tw / 2f), pt + dp(20f), text)
+        }
+        text.textAlign = Paint.Align.LEFT
+
+        val gridTop = pt + dp(30f)
+        val rows = (cubes.size + cols - 1) / cols
+        invMaxScroll = max(0f, rows * cell - (pb - gridTop - dp(6f)))
+        invScroll = invScroll.coerceIn(0f, invMaxScroll)
+
+        c.save()
+        c.clipRect(pl + dp(2f), gridTop, pr - dp(2f), pb - dp(4f))
+        val first = max(0, (invScroll / cell).toInt())
+        val last = min(rows - 1, ((invScroll + (pb - gridTop)) / cell).toInt())
+        val r = RectF()
+        val isz = max(8, (cell * 0.8f).toInt())
+        for (row in first..last) {
+            for (col in 0 until cols) {
+                val idx = row * cols + col
+                if (idx >= cubes.size) break
+                val b = cubes[idx]
+                val x = pl + dp(8f) + col * cell
+                val y = gridTop + row * cell - invScroll
+                r.set(x + 2f, y + 2f, x + cell - 2f, y + cell - 2f)
+                paint.style = Paint.Style.FILL
+                paint.color = 0x66303840
+                c.drawRoundRect(r, dp(4f), dp(4f), paint)
+                val ic = invIcons.getOrPut(b) { BlockIcons.make(b, isz) }
+                c.drawBitmap(ic, x + (cell - ic.width) / 2f, y + (cell - ic.height) / 2f, null)
+                if (b == s.block) {
+                    paint.style = Paint.Style.STROKE
+                    paint.strokeWidth = dp(2f)
+                    paint.color = Color.WHITE
+                    c.drawRoundRect(r, dp(4f), dp(4f), paint)
+                }
+            }
+        }
+        c.restore()
     }
 
     private fun drawRound(c: Canvas, x: Float, y: Float, r: Float, pressed: Boolean, active: Boolean) {

@@ -20,22 +20,10 @@ object Blocks {
         "Tábuas", "Folhas", "Areia", "Vidro", "Tijolos"
     )
 
-    fun name(b: Int): String = if (b in names.indices) names[b] else "?"
+    fun name(b: Int): String = Reg.name(b)
 
-    fun opaque(b: Int): Boolean = b != AIR && b != LEAVES && b != GLASS
+    fun opaque(b: Int): Boolean = Reg.opaque(b)
 
     /** kind: 0 = topo, 1 = base, 2 = lado */
-    fun tile(b: Int, kind: Int): Int = when (b) {
-        GRASS -> when (kind) { 0 -> 0; 1 -> 2; else -> 1 }
-        DIRT -> 2
-        STONE -> 3
-        COBBLE -> 4
-        LOG -> if (kind == 2) 5 else 6
-        PLANKS -> 7
-        LEAVES -> 8
-        SAND -> 9
-        GLASS -> 10
-        BRICK -> 11
-        else -> 3
-    }
+    fun tile(b: Int, kind: Int): Int = Reg.tile(b, kind)
 }

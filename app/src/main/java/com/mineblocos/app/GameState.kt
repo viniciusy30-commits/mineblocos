@@ -44,5 +44,7 @@ class GameState {
         ly = 0f
     }
 
-    val block: Int get() = Blocks.hotbar[selected]
+    val hotbar = Blocks.hotbar.copyOf()
+
+    val block: Int get() = hotbar[selected]
 }

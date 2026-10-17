@@ -14,4 +14,11 @@ object Prefs {
 
     fun showFps(c: Context) = p(c).getBoolean("fps", false)
     fun setShowFps(c: Context, v: Boolean) = p(c).edit().putBoolean("fps", v).apply()
+
+    fun hotbar(c: Context): IntArray? {
+        val s = p(c).getString("hotbar", null) ?: return null
+        val v = s.split(',').mapNotNull { it.toIntOrNull() }
+        return if (v.size == 10) v.toIntArray() else null
+    }
+    fun setHotbar(c: Context, v: IntArray) = p(c).edit().putString("hotbar", v.joinToString(",")).apply()
 }

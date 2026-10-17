@@ -16,6 +16,16 @@ object BlockIcons {
         val bmp = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val cv = Canvas(bmp)
         val atlas = Atlas.bitmap
+        if (Reg.kind(b) != Reg.K_CUBE) {
+            val t = Reg.tile(b, 2)
+            val sx = (t % Atlas.COLS) * 16
+            val sy = (t / Atlas.COLS) * 16
+            val pad = (size * 0.1f).toInt()
+            val pf = Paint()
+            pf.isFilterBitmap = false
+            cv.drawBitmap(atlas, android.graphics.Rect(sx, sy, sx + 16, sy + 16), android.graphics.Rect(pad, pad, size - pad, size - pad), pf)
+            return bmp
+        }
         val s = size / 2f * 0.96f
         val cx = size / 2f
         val cy = size / 2f

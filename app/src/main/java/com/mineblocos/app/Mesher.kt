@@ -99,6 +99,26 @@ object Mesher {
         return if (Blocks.opaque(w.getMesh(tmp[0], tmp[1], tmp[2]))) 1 else 0
     }
 
+    private fun emitCross(out: FloatList, ox: Float, oy: Float, oz: Float, tile: Int) {
+        val tx = (tile % Atlas.COLS) * 16f
+        val ty = (tile / Atlas.COLS) * 16f
+        val aw = Atlas.bitmap.width.toFloat()
+        val ah = Atlas.bitmap.height.toFloat()
+        val px = floatArrayOf(0f, 0f, 0f, 1f, 0f, 1f, 1f, 1f, 1f, 0f, 1f, 0f,   1f, 0f, 0f, 0f, 0f, 1f, 0f, 1f, 1f, 1f, 1f, 0f)
+        val uvs = floatArrayOf(0f, 1f, 1f, 1f, 1f, 0f, 0f, 0f)
+        val order = intArrayOf(0, 1, 2, 0, 2, 3)
+        for (q in 0 until 2) {
+            for (k in order) {
+                out.add(ox + px[q * 12 + k * 3])
+                out.add(oy + px[q * 12 + k * 3 + 1])
+                out.add(oz + px[q * 12 + k * 3 + 2])
+                out.add((tx + 0.05f + uvs[k * 2] * 15.9f) / aw)
+                out.add((ty + 0.05f + uvs[k * 2 + 1] * 15.9f) / ah)
+                out.add(0.95f)
+            }
+        }
+    }
+
     fun buildChunk(w: World, cx: Int, cz: Int): MeshData {
         val out = FloatList(24000)
         val x0 = cx * World.CS
@@ -108,6 +128,11 @@ object Mesher {
                 for (x in x0 until x0 + World.CS) {
                     val b = w.get(x, y, z)
                     if (b == Blocks.AIR) continue
+                    if (Reg.kind(b) == Reg.K_CROSS) {
+                        emitCross(out, x.toFloat(), y.toFloat(), z.toFloat(), Reg.tile(b, 2))
+                        continue
+                    }
+                    if (Reg.kind(b) != Reg.K_CUBE) continue
                     for (f in 0 until 6) {
                         val n = NORMALS[f]
                         val bx = x + n[0]
@@ -115,7 +140,7 @@ object Mesher {
                         val bz = z + n[2]
                         val nb = w.getMesh(bx, by, bz)
                         if (Blocks.opaque(nb)) continue
-                        if (b == Blocks.GLASS && nb == Blocks.GLASS) continue
+                        if (b == nb && Reg.glassy(b)) continue
                         val t1 = (AXIS[f] + 1) % 3
                         val t2 = (AXIS[f] + 2) % 3
                         val c = CORNERS[f]

@@ -344,7 +344,7 @@ class GameRenderer(
             handWave = abs(sin(timeAcc * 14f))
             if (hasBreak && h.x == breakX && h.y == breakY && h.z == breakZ) {
                 val b = world.get(h.x, h.y, h.z)
-                val total = if (b == Blocks.LEAVES || b == Blocks.GLASS) 0.22f else 0.55f
+                val total = if (Reg.isPlant(b)) 0.08f else if (b == Blocks.LEAVES || b == Blocks.GLASS) 0.22f else 0.55f
                 breakProg += dt / total
                 if (breakProg >= 1f) {
                     spawnParticles(h.x, h.y, h.z, b)
@@ -368,7 +368,7 @@ class GameRenderer(
                 val bx = h.x + h.nx
                 val by = h.y + h.ny
                 val bz = h.z + h.nz
-                if (world.inBounds(bx, by, bz) && world.get(bx, by, bz) == Blocks.AIR && !intersectsPlayer(bx, by, bz)) {
+                if (world.inBounds(bx, by, bz) && world.get(bx, by, bz) == Blocks.AIR && Reg.placeable(s.block) && !intersectsPlayer(bx, by, bz)) {
                     world.set(bx, by, bz, s.block)
                     punch = 1f
                 }

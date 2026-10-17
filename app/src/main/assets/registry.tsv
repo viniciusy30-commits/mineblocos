@@ -8,1053 +8,1089 @@ leaves	Folhas	1	8	8	8	1	3E8037
 sand	Areia	1	9	9	9	0	F0D280
 glass	Vidro	1	10	10	10	3	E7F4F7
 brick	Tijolos	1	11	11	11	0	A2563B
-amethyst_block	Amethyst Block	1	12	12	12	1	9669C3
+amethyst_block	Bloco de Ametista	1	12	12	12	1	9669C3
 ancient_debris	Ancient Debris	1	13	13	14	0	643D31
-azalea_leaves	Azalea Leaves	1	15	15	15	1	526822
-azalea_leaves_flowers	Azalea Leaves Flowers	2	16	16	16	1	5F6932
-azalea_leaves_flowers_opaque	Azalea Leaves Flowers Opaque	2	17	17	17	0	5F6932
-azalea_leaves_opaque	Azalea Leaves Opaque	1	18	18	18	0	526822
+azalea_leaves	Folhas de Azalea	1	15	15	15	1	526822
+azalea_leaves_flowers	Azalea Folhas Flowers	1	16	16	16	1	5F6932
+azalea_leaves_flowers_opaque	Azalea Folhas Flowers Opaque	1	17	17	17	0	5F6932
+azalea_leaves_opaque	Azalea Folhas Opaque	1	18	18	18	0	526822
 azalea	Azalea	1	19	19	20	1	5B761A
-bamboo_block	Bamboo Block	1	21	21	22	0	969D35
-bamboo_fence	Bamboo Fence	1	23	23	23	1	BC9D49
-bamboo_fence_gate	Bamboo Fence Gate	1	24	24	24	1	C3A44C
-bamboo_mosaic	Bamboo Mosaic	1	25	25	25	0	BE9F4B
-bamboo_planks	Bamboo Planks	1	26	26	26	0	BC9D49
-basalt	Basalt	1	27	27	28	0	5B555F
-bedrock	Bedrock	1	29	29	29	0	515151
+bamboo_block	Bloco de Bambu	1	21	21	22	0	969D35
+bamboo_fence	Cerca de Bambu	1	23	23	23	1	BC9D49
+bamboo_fence_gate	Portão de Bambu Cerca	1	24	24	24	1	C3A44C
+bamboo_mosaic	Bambu Mosaic	1	25	25	25	0	BE9F4B
+bamboo_planks	Tábuas de Bambu	1	26	26	26	0	BC9D49
+basalt	Basalto	1	27	27	28	0	5B555F
+bedrock	Rocha Matriz	1	29	29	29	0	515151
 bee_nest	Bee Nest	1	30	31	32	0	C9993F
-bee_nest_front_honey	Bee Nest Front Honey	1	33	33	33	1	E0A439
+bee_nest_front_honey	Bee Nest Front Mel	1	33	33	33	1	E0A439
 beehive	Beehive	1	34	35	36	0	A87743
-beehive_front_honey	Beehive Front Honey	1	37	37	37	1	E7A95E
-blackstone	Blackstone	1	38	38	39	0	292329
-blast_furnace	Blast Furnace	1	40	41	42	0	6C6B6B
-blue_ice	Blue Ice	1	43	43	43	0	60ADFB
-bone_block	Bone Block	1	44	44	45	0	D9D3AF
-budding_amethyst	Budding Amethyst	1	46	46	46	1	42266F
-bush	Bush	1	47	47	47	1	95A7B4
-cactus	Cactus	1	48	49	50	1	7C9F34
-cactus_flower	Cactus Flower	2	51	51	51	1	EA86A3
-calcite	Calcite	1	52	52	52	0	DEDFDB
-cherry_leaves	Cherry Leaves	1	53	53	53	1	DB8B9D
-cherry_leaves_opaque	Cherry Leaves Opaque	1	54	54	54	0	DB8B9D
-cherry_log	Cherry Log	1	55	55	56	0	8F696B
-cherry_planks	Cherry Planks	1	57	57	57	0	E1AFA9
-cherry_sapling	Cherry Sapling	2	58	58	58	1	C188A7
-chiseled_copper	Chiseled Copper	1	59	59	59	0	B45338
-chiseled_nether_bricks	Chiseled Nether Bricks	1	60	60	60	0	301318
-chiseled_polished_blackstone	Chiseled Polished Blackstone	1	61	61	61	0	3D3442
-chiseled_resin_bricks	Chiseled Resin Bricks	1	62	62	62	0	CC5813
-chiseled_tuff_bricks	Chiseled Tuff Bricks	1	63	63	64	0	696C65
-chiseled_tuff	Chiseled Tuff	1	65	65	66	0	5E625B
-clay	Clay	1	67	67	67	0	A0A6B4
-coal_block	Coal Block	1	68	68	68	0	0F0F0F
-coal_ore	Coal Ore	1	69	69	69	0	5F5E5F
-coarse_dirt	Coarse Dirt	1	70	70	70	0	875737
-cobblestone_mossy	Cobblestone Mossy	1	71	71	71	0	6F7B50
+beehive_front_honey	Beehive Front Mel	1	37	37	37	1	E7A95E
+blackstone	Pedra Negra	1	38	38	39	0	292329
+blast_furnace	Blast Fornalha	1	40	41	42	0	6C6B6B
+blue_ice	Azul Gelo	1	43	43	43	0	60ADFB
+bone_block	Bloco de Osso	1	44	44	45	0	D9D3AF
+budding_amethyst	Budding Ametista	1	46	46	46	1	42266F
+bush	Arbusto	1	47	47	47	1	95A7B4
+cactus	Cacto	1	48	49	50	1	7C9F34
+cactus_flower	Flor de Cacto	1	51	51	51	1	EA86A3
+calcite	Calcita	1	52	52	52	0	DEDFDB
+cherry_leaves	Folhas de Cerejeira	1	53	53	53	1	DB8B9D
+cherry_leaves_opaque	Cerejeira Folhas Opaque	1	54	54	54	0	DB8B9D
+cherry_log	Tronco de Cerejeira	1	55	55	56	0	8F696B
+cherry_planks	Tábuas de Cerejeira	1	57	57	57	0	E1AFA9
+cherry_sapling	Muda de Cerejeira	1	58	58	58	1	C188A7
+chiseled_copper	Talhado Cobre	1	59	59	59	0	B45338
+chiseled_nether_bricks	Tijolos de Talhado Nether	1	60	60	60	0	301318
+chiseled_polished_blackstone	Talhado Polido Pedra Negra	1	61	61	61	0	3D3442
+chiseled_resin_bricks	Tijolos de Talhado Resin	1	62	62	62	0	CC5813
+chiseled_tuff_bricks	Tijolos de Talhado Tufo	1	63	63	64	0	696C65
+chiseled_tuff	Talhado Tufo	1	65	65	66	0	5E625B
+clay	Argila	1	67	67	67	0	A0A6B4
+coal_block	Bloco de Carvão	1	68	68	68	0	0F0F0F
+coal_ore	Minério de Carvão	1	69	69	69	0	5F5E5F
+coarse_dirt	Grossa Terra	1	70	70	70	0	875737
+cobblestone_mossy	Pedregulho Musgoso	1	71	71	71	0	6F7B50
 compost	Compost	1	72	72	72	1	5B3513
 compost_ready	Compost Ready	1	73	73	73	1	735331
-concrete_black	Concrete Black	1	74	74	74	0	090D13
-concrete_blue	Concrete Blue	1	75	75	75	0	3135AD
-concrete_brown	Concrete Brown	1	76	76	76	0	703B1A
-concrete_cyan	Concrete Cyan	1	77	77	77	0	067A8E
-concrete_gray	Concrete Gray	1	78	78	78	0	393D43
-concrete_green	Concrete Green	1	79	79	79	0	4B6214
-concrete_lime	Concrete Lime	1	80	80	80	0	78AE24
-concrete_magenta	Concrete Magenta	1	81	81	81	0	C555B6
-concrete_orange	Concrete Orange	1	82	82	82	0	E3610B
-concrete_pink	Concrete Pink	1	83	83	83	0	F38BAA
-concrete_powder_black	Concrete Powder Black	1	84	84	84	0	070A10
-concrete_powder_blue	Concrete Powder Blue	1	85	85	85	0	4548A8
-concrete_powder_brown	Concrete Powder Brown	1	86	86	86	0	663E20
-concrete_powder_cyan	Concrete Powder Cyan	1	87	87	87	0	249EA1
-concrete_powder_gray	Concrete Powder Gray	1	88	88	88	0	35383D
-concrete_powder_green	Concrete Powder Green	1	89	89	89	0	61771E
-concrete_powder_lime	Concrete Powder Lime	1	90	90	90	0	71A925
-concrete_powder_magenta	Concrete Powder Magenta	1	91	91	91	0	C75FC0
-concrete_powder_orange	Concrete Powder Orange	1	92	92	92	0	DD7712
-concrete_powder_pink	Concrete Powder Pink	1	93	93	93	0	F08DB1
-concrete_powder_purple	Concrete Powder Purple	1	94	94	94	0	8C2CC4
-concrete_powder_red	Concrete Powder Red	1	95	95	95	0	9F2626
-concrete_powder_silver	Concrete Powder Silver	1	96	96	96	0	93938A
-concrete_powder_white	Concrete Powder White	1	97	97	97	0	ECECEC
-concrete_powder_yellow	Concrete Powder Yellow	1	98	98	98	0	E1B335
-concrete_purple	Concrete Purple	1	99	99	99	0	7415B9
-concrete_red	Concrete Red	1	100	100	100	0	972222
-concrete_silver	Concrete Silver	1	101	101	101	0	999992
-concrete_white	Concrete White	1	102	102	102	0	F0F0F0
-concrete_yellow	Concrete Yellow	1	103	103	103	0	EEB315
-copper_block	Copper Block	1	104	104	104	0	C35E40
-copper_grate	Copper Grate	1	105	105	105	1	C05C3F
-copper_ore	Copper Ore	1	106	106	106	0	7F7268
-cracked_nether_bricks	Cracked Nether Bricks	1	107	107	107	0	281015
-cracked_polished_blackstone_bricks	Cracked Polished Blackstone Bricks	1	108	108	108	0	352C35
+concrete_black	Concreto Preto	1	74	74	74	0	090D13
+concrete_blue	Concreto Azul	1	75	75	75	0	3135AD
+concrete_brown	Concreto Marrom	1	76	76	76	0	703B1A
+concrete_cyan	Concreto Ciano	1	77	77	77	0	067A8E
+concrete_gray	Concreto Cinza	1	78	78	78	0	393D43
+concrete_green	Concreto Verde	1	79	79	79	0	4B6214
+concrete_lime	Concreto Lima	1	80	80	80	0	78AE24
+concrete_magenta	Concreto Magenta	1	81	81	81	0	C555B6
+concrete_orange	Concreto Laranja	1	82	82	82	0	E3610B
+concrete_pink	Concreto Rosa	1	83	83	83	0	F38BAA
+concrete_powder_black	Concreto Pó Preto	1	84	84	84	0	070A10
+concrete_powder_blue	Concreto Pó Azul	1	85	85	85	0	4548A8
+concrete_powder_brown	Concreto Pó Marrom	1	86	86	86	0	663E20
+concrete_powder_cyan	Concreto Pó Ciano	1	87	87	87	0	249EA1
+concrete_powder_gray	Concreto Pó Cinza	1	88	88	88	0	35383D
+concrete_powder_green	Concreto Pó Verde	1	89	89	89	0	61771E
+concrete_powder_lime	Concreto Pó Lima	1	90	90	90	0	71A925
+concrete_powder_magenta	Concreto Pó Magenta	1	91	91	91	0	C75FC0
+concrete_powder_orange	Concreto Pó Laranja	1	92	92	92	0	DD7712
+concrete_powder_pink	Concreto Pó Rosa	1	93	93	93	0	F08DB1
+concrete_powder_purple	Concreto Pó Roxo	1	94	94	94	0	8C2CC4
+concrete_powder_red	Concreto Pó Vermelho	1	95	95	95	0	9F2626
+concrete_powder_silver	Concreto Pó Cinza Claro	1	96	96	96	0	93938A
+concrete_powder_white	Concreto Pó Branco	1	97	97	97	0	ECECEC
+concrete_powder_yellow	Concreto Pó Amarelo	1	98	98	98	0	E1B335
+concrete_purple	Concreto Roxo	1	99	99	99	0	7415B9
+concrete_red	Concreto Vermelho	1	100	100	100	0	972222
+concrete_silver	Concreto Cinza Claro	1	101	101	101	0	999992
+concrete_white	Concreto Branco	1	102	102	102	0	F0F0F0
+concrete_yellow	Concreto Amarelo	1	103	103	103	0	EEB315
+copper_block	Bloco de Cobre	1	104	104	104	0	C35E40
+copper_grate	Cobre Grate	1	105	105	105	1	C05C3F
+copper_ore	Minério de Cobre	1	106	106	106	0	7F7268
+cracked_nether_bricks	Tijolos de Rachado Nether	1	107	107	107	0	281015
+cracked_polished_blackstone_bricks	Tijolos de Rachado Polido Pedra Negra	1	108	108	108	0	352C35
 crafter	Crafter	1	109	110	109	0	6B6263
-crafting_table	Crafting Table	1	111	112	113	0	86572F
-crimson_fungus	Crimson Fungus	1	114	114	114	1	992519
-crimson_nylium	Crimson Nylium	1	115	115	116	0	991913
-crimson_roots	Crimson Roots	2	117	117	117	1	790502
-crimson_roots_pot	Crimson Roots Pot	1	118	118	118	1	7D0603
-cut_copper	Cut Copper	1	119	119	119	0	BA583B
-diamond_block	Diamond Block	1	120	120	120	0	4AE3EB
-diamond_ore	Diamond Ore	1	121	121	121	1	709B9F
-dirt_podzol	Dirt Podzol	1	122	122	123	0	663D1A
-dirt_with_roots	Dirt With Roots	2	124	124	124	0	98623F
-emerald_block	Emerald Block	1	125	125	125	0	23C050
-emerald_ore	Emerald Ore	1	126	126	126	1	50925E
-end_bricks	End Bricks	1	127	127	127	0	EFE091
+crafting_table	Criação Mesa	1	111	112	113	0	86572F
+crimson_fungus	Fungo Carmesim	1	114	114	114	1	992519
+crimson_nylium	Carmesim Nylium	1	115	115	116	0	991913
+crimson_roots	Raízes Carmesim	1	117	117	117	1	790502
+crimson_roots_pot	Carmesim Roots Vaso	1	118	118	118	1	7D0603
+cut_copper	Cortado Cobre	1	119	119	119	0	BA583B
+diamond_block	Bloco de Diamante	1	120	120	120	0	4AE3EB
+diamond_ore	Minério de Diamante	1	121	121	121	1	709B9F
+dirt_podzol	Terra Podzol	1	122	122	123	0	663D1A
+dirt_with_roots	Terra With Roots	1	124	124	124	0	98623F
+emerald_block	Bloco de Esmeralda	1	125	125	125	0	23C050
+emerald_ore	Minério de Esmeralda	1	126	126	126	1	50925E
+end_bricks	Tijolos de End	1	127	127	127	0	EFE091
 end_gateway	End Gateway	1	128	128	128	1	07151E
-end_stone	End Stone	1	129	129	129	0	F2EE84
-exposed_chiseled_copper	Exposed Chiseled Copper	1	130	130	130	0	A56346
-exposed_copper	Exposed Copper	1	131	131	131	0	B26E4C
-exposed_copper_grate	Exposed Copper Grate	1	132	132	132	1	B16C4B
-exposed_cut_copper	Exposed Cut Copper	1	133	133	133	0	AD6749
+end_stone	End Pedra	1	129	129	129	0	F2EE84
+exposed_chiseled_copper	Exposed Talhado Cobre	1	130	130	130	0	A56346
+exposed_copper	Exposed Cobre	1	131	131	131	0	B26E4C
+exposed_copper_grate	Exposed Cobre Grate	1	132	132	132	1	B16C4B
+exposed_cut_copper	Exposed Cortado Cobre	1	133	133	133	0	AD6749
 eyeblossom_dormant	Eyeblossom Dormant	1	134	134	134	1	75656A
 farmland_dry	Farmland Dry	1	135	135	135	0	8E5C39
-farmland_wet	Farmland Wet	1	136	136	136	0	642E0B
+farmland_wet	Farmland Molhada	1	136	136	136	0	642E0B
 firefly_bush	Firefly Bush	1	137	137	137	1	675F2C
 firefly_bush_firefly	Firefly Bush Firefly	1	138	138	138	1	C9BF91
-fletcher_table_side1	Fletcher Table Side1	1	139	139	139	0	C29C73
-fletcher_table_side2	Fletcher Table Side2	1	140	140	140	0	B18F5C
-fletcher_table	Fletcher Table	1	141	141	141	0	C8A872
+fletcher_table_side1	Fletcher Mesa Side1	1	139	139	139	0	C29C73
+fletcher_table_side2	Fletcher Mesa Side2	1	140	140	140	0	B18F5C
+fletcher_table	Fletcher Mesa	1	141	141	141	0	C8A872
 frogspawn	Frogspawn	1	142	142	142	1	6C6565
-fungus_crimson_3d_pot	Fungus Crimson 3D Pot	1	143	143	143	1	7F251A
-fungus_crimson_3d	Fungus Crimson 3D	1	144	144	145	1	AE2C1F
-fungus_crimson_3d_side_pot	Fungus Crimson 3D Side Pot	1	146	146	146	1	921418
-fungus_warped_3d_pot	Fungus Warped 3D Pot	1	147	147	147	1	3A3741
-fungus_warped_3d	Fungus Warped 3D	1	148	148	149	1	3D8E62
-fungus_warped_3d_side_pot	Fungus Warped 3D Side Pot	1	150	150	150	1	449061
-furnace	Furnace	1	151	152	153	0	7D7D7D
-gilded_blackstone	Gilded Blackstone	1	154	154	154	0	372923
-glass_black	Glass Black	1	155	155	155	3	191919
-glass_blue	Glass Blue	1	156	156	156	3	324BB2
-glass_brown	Glass Brown	1	157	157	157	3	684D33
-glass_cyan	Glass Cyan	1	158	158	158	3	4B7F99
-glass_gray	Glass Gray	1	159	159	159	3	4D4D4D
-glass_green	Glass Green	1	160	160	160	3	667F32
-glass_lime	Glass Lime	1	161	161	161	3	7FCC19
-glass_magenta	Glass Magenta	1	162	162	162	3	B24BD7
-glass_orange	Glass Orange	1	163	163	163	3	D77F32
-glass_pink	Glass Pink	1	164	164	164	3	FC99BC
-glass_purple	Glass Purple	1	165	165	165	3	7F3FB2
-glass_red	Glass Red	1	166	166	166	3	993232
-glass_silver	Glass Silver	1	167	167	167	3	999999
-glass_white	Glass White	1	168	168	168	3	FFFFFF
-glass_yellow	Glass Yellow	1	169	169	169	3	E5C732
-glazed_terracotta_black	Glazed Terracotta Black	1	170	170	170	0	3E1A1D
-glazed_terracotta_blue	Glazed Terracotta Blue	1	171	171	171	0	2E418A
-glazed_terracotta_brown	Glazed Terracotta Brown	1	172	172	172	0	756A58
-glazed_terracotta_cyan	Glazed Terracotta Cyan	1	173	173	173	0	29737B
-glazed_terracotta_gray	Glazed Terracotta Gray	1	174	174	174	0	515B60
-glazed_terracotta_green	Glazed Terracotta Green	1	175	175	175	0	728E3D
-glazed_terracotta_lime	Glazed Terracotta Lime	1	176	176	176	0	A5C42C
-glazed_terracotta_magenta	Glazed Terracotta Magenta	1	177	177	177	0	DA60CA
-glazed_terracotta_orange	Glazed Terracotta Orange	1	178	178	178	0	998B54
-glazed_terracotta_pink	Glazed Terracotta Pink	1	179	179	179	0	F09CB7
-glazed_terracotta_purple	Glazed Terracotta Purple	1	180	180	180	0	72279D
-glazed_terracotta_red	Glazed Terracotta Red	1	181	181	181	0	BF332E
-glazed_terracotta_silver	Glazed Terracotta Silver	1	182	182	182	0	8DA5A7
-glazed_terracotta_white	Glazed Terracotta White	1	183	183	183	0	B4D5C5
-glazed_terracotta_yellow	Glazed Terracotta Yellow	1	184	184	184	0	E6BD5D
-glow_lichen	Glow Lichen	1	185	185	185	1	57875D
-glowstone	Glowstone	1	186	186	186	0	C09055
-gold_block	Gold Block	1	187	187	187	0	F0BD39
-gold_ore	Gold Ore	1	188	188	188	1	A4834D
-grass_block_snow	Grass Block Snow	1	189	189	189	0	BFAC9D
-grass_path	Grass Path	1	190	190	191	0	936532
-grass_side_snowed	Grass Side Snowed	1	192	192	192	0	BFAC9D
-gravel	Gravel	1	193	193	193	0	8D8380
-hardened_clay	Hardened Clay	1	194	194	194	0	9C4B2A
-hardened_clay_stained_black	Hardened Clay Stained Black	1	195	195	195	0	291C18
-hardened_clay_stained_blue	Hardened Clay Stained Blue	1	196	196	196	0	453C5B
-hardened_clay_stained_brown	Hardened Clay Stained Brown	1	197	197	197	0	4D3527
-hardened_clay_stained_cyan	Hardened Clay Stained Cyan	1	198	198	198	0	4C5C5F
-hardened_clay_stained_gray	Hardened Clay Stained Gray	1	199	199	199	0	3B2D28
-hardened_clay_stained_green	Hardened Clay Stained Green	1	200	200	200	0	505730
-hardened_clay_stained_lime	Hardened Clay Stained Lime	1	201	201	201	0	6B7832
-hardened_clay_stained_magenta	Hardened Clay Stained Magenta	1	202	202	202	0	975269
-hardened_clay_stained_orange	Hardened Clay Stained Orange	1	203	203	203	0	AA4D11
-hardened_clay_stained_pink	Hardened Clay Stained Pink	1	204	204	204	0	BF6267
-hardened_clay_stained_purple	Hardened Clay Stained Purple	1	205	205	205	0	764572
-hardened_clay_stained_red	Hardened Clay Stained Red	1	206	206	206	0	913224
-hardened_clay_stained_silver	Hardened Clay Stained Silver	1	207	207	207	0	836861
-hardened_clay_stained_white	Hardened Clay Stained White	1	208	208	208	0	CFAEA0
-hardened_clay_stained_yellow	Hardened Clay Stained Yellow	1	209	209	209	0	C48221
-hay_block	Hay Block	1	210	210	211	0	E4A72A
+fungus_crimson_3d_pot	Fungus Carmesim 3D Vaso	1	143	143	143	1	7F251A
+fungus_crimson_3d	Fungus Carmesim 3D	1	144	144	145	1	AE2C1F
+fungus_crimson_3d_side_pot	Fungus Carmesim 3D Side Vaso	1	146	146	146	1	921418
+fungus_warped_3d_pot	Fungus Distorcido 3D Vaso	1	147	147	147	1	3A3741
+fungus_warped_3d	Fungus Distorcido 3D	1	148	148	149	1	3D8E62
+fungus_warped_3d_side_pot	Fungus Distorcido 3D Side Vaso	1	150	150	150	1	449061
+furnace	Fornalha	1	151	152	153	0	7D7D7D
+gilded_blackstone	Gilded Pedra Negra	1	154	154	154	0	372923
+glass_black	Vidro Preto	1	155	155	155	3	191919
+glass_blue	Vidro Azul	1	156	156	156	3	324BB2
+glass_brown	Vidro Marrom	1	157	157	157	3	684D33
+glass_cyan	Vidro Ciano	1	158	158	158	3	4B7F99
+glass_gray	Vidro Cinza	1	159	159	159	3	4D4D4D
+glass_green	Vidro Verde	1	160	160	160	3	667F32
+glass_lime	Vidro Lima	1	161	161	161	3	7FCC19
+glass_magenta	Vidro Magenta	1	162	162	162	3	B24BD7
+glass_orange	Vidro Laranja	1	163	163	163	3	D77F32
+glass_pink	Vidro Rosa	1	164	164	164	3	FC99BC
+glass_purple	Vidro Roxo	1	165	165	165	3	7F3FB2
+glass_red	Vidro Vermelho	1	166	166	166	3	993232
+glass_silver	Vidro Cinza Claro	1	167	167	167	3	999999
+glass_white	Vidro Branco	1	168	168	168	3	FFFFFF
+glass_yellow	Vidro Amarelo	1	169	169	169	3	E5C732
+glazed_terracotta_black	Esmaltada Terracota Preto	1	170	170	170	0	3E1A1D
+glazed_terracotta_blue	Esmaltada Terracota Azul	1	171	171	171	0	2E418A
+glazed_terracotta_brown	Esmaltada Terracota Marrom	1	172	172	172	0	756A58
+glazed_terracotta_cyan	Esmaltada Terracota Ciano	1	173	173	173	0	29737B
+glazed_terracotta_gray	Esmaltada Terracota Cinza	1	174	174	174	0	515B60
+glazed_terracotta_green	Esmaltada Terracota Verde	1	175	175	175	0	728E3D
+glazed_terracotta_lime	Esmaltada Terracota Lima	1	176	176	176	0	A5C42C
+glazed_terracotta_magenta	Esmaltada Terracota Magenta	1	177	177	177	0	DA60CA
+glazed_terracotta_orange	Esmaltada Terracota Laranja	1	178	178	178	0	998B54
+glazed_terracotta_pink	Esmaltada Terracota Rosa	1	179	179	179	0	F09CB7
+glazed_terracotta_purple	Esmaltada Terracota Roxo	1	180	180	180	0	72279D
+glazed_terracotta_red	Esmaltada Terracota Vermelho	1	181	181	181	0	BF332E
+glazed_terracotta_silver	Esmaltada Terracota Cinza Claro	1	182	182	182	0	8DA5A7
+glazed_terracotta_white	Esmaltada Terracota Branco	1	183	183	183	0	B4D5C5
+glazed_terracotta_yellow	Esmaltada Terracota Amarelo	1	184	184	184	0	E6BD5D
+glow_lichen	Brilhante Lichen	1	185	185	185	1	57875D
+glowstone	Pedra Luminosa	1	186	186	186	0	C09055
+gold_block	Bloco de Ouro	1	187	187	187	0	F0BD39
+gold_ore	Minério de Ouro	1	188	188	188	1	A4834D
+grass_block_snow	Grama Bloco Neve	1	189	189	189	0	BFAC9D
+grass_path	Grama Path	1	190	190	191	0	936532
+grass_side_snowed	Grama Side Snowed	1	192	192	192	0	BFAC9D
+gravel	Cascalho	1	193	193	193	0	8D8380
+hardened_clay	Endurecida Argila	1	194	194	194	0	9C4B2A
+hardened_clay_stained_black	Endurecida Argila Tingido Preto	1	195	195	195	0	291C18
+hardened_clay_stained_blue	Endurecida Argila Tingido Azul	1	196	196	196	0	453C5B
+hardened_clay_stained_brown	Endurecida Argila Tingido Marrom	1	197	197	197	0	4D3527
+hardened_clay_stained_cyan	Endurecida Argila Tingido Ciano	1	198	198	198	0	4C5C5F
+hardened_clay_stained_gray	Endurecida Argila Tingido Cinza	1	199	199	199	0	3B2D28
+hardened_clay_stained_green	Endurecida Argila Tingido Verde	1	200	200	200	0	505730
+hardened_clay_stained_lime	Endurecida Argila Tingido Lima	1	201	201	201	0	6B7832
+hardened_clay_stained_magenta	Endurecida Argila Tingido Magenta	1	202	202	202	0	975269
+hardened_clay_stained_orange	Endurecida Argila Tingido Laranja	1	203	203	203	0	AA4D11
+hardened_clay_stained_pink	Endurecida Argila Tingido Rosa	1	204	204	204	0	BF6267
+hardened_clay_stained_purple	Endurecida Argila Tingido Roxo	1	205	205	205	0	764572
+hardened_clay_stained_red	Endurecida Argila Tingido Vermelho	1	206	206	206	0	913224
+hardened_clay_stained_silver	Endurecida Argila Tingido Cinza Claro	1	207	207	207	0	836861
+hardened_clay_stained_white	Endurecida Argila Tingido Branco	1	208	208	208	0	CFAEA0
+hardened_clay_stained_yellow	Endurecida Argila Tingido Amarelo	1	209	209	209	0	C48221
+hay_block	Bloco de Hay	1	210	210	211	0	E4A72A
 heavy_core	Heavy Core	1	212	212	212	1	4F5561
-honey	Honey	1	213	214	215	1	FCA721
-honeycomb	Honeycomb	1	216	216	216	0	E58B18
-ice	Ice	1	217	217	217	3	68AAF8
-ice_packed	Ice Packed	1	218	218	218	0	81C3FF
-iron_block	Iron Block	1	219	219	219	0	D6DDDE
-iron_ore	Iron Ore	1	220	220	220	0	8F8177
-lapis_block	Lapis Block	1	221	221	221	0	0546AC
-lapis_ore	Lapis Ore	1	222	222	222	0	5D687D
-large_amethyst_bud	Large Amethyst Bud	1	223	223	223	1	B47AD4
-log_acacia	Log Acacia	1	224	224	225	0	925B3C
-log_big_oak	Log Big Oak	1	226	226	227	0	432A0F
-log_birch	Log Birch	1	228	228	229	0	CEBA93
-log_jungle	Log Jungle	1	230	230	231	0	7C572E
-log_spruce	Log Spruce	1	232	232	233	0	5C3C1B
-log_top_normal_weak	Log Top Normal Weak	1	234	234	234	0	8080FE
+honey	Mel	1	213	214	215	1	FCA721
+honeycomb	Favo de Mel	1	216	216	216	0	E58B18
+ice	Gelo	1	217	217	217	3	68AAF8
+ice_packed	Gelo Compactado	1	218	218	218	0	81C3FF
+iron_block	Bloco de Ferro	1	219	219	219	0	D6DDDE
+iron_ore	Minério de Ferro	1	220	220	220	0	8F8177
+lapis_block	Bloco de Lápis-lazúli	1	221	221	221	0	0546AC
+lapis_ore	Minério de Lápis-lazúli	1	222	222	222	0	5D687D
+large_amethyst_bud	Large Ametista Bud	1	223	223	223	1	B47AD4
+log_acacia	Tronco de Acácia	1	224	224	225	0	925B3C
+log_big_oak	Tronco de Escuro Carvalho	1	226	226	227	0	432A0F
+log_birch	Tronco de Bétula	1	228	228	229	0	CEBA93
+log_jungle	Tronco de Selva	1	230	230	231	0	7C572E
+log_spruce	Tronco de Abeto	1	232	232	233	0	5C3C1B
+log_top_normal_weak	Tronco de Top Normal Weak	1	234	234	234	0	8080FE
 magma	Magma	1	235	235	235	1	5E1310
-mangrove_leaves	Mangrove Leaves	1	236	236	236	1	8093A7
-mangrove_leaves_opaque	Mangrove Leaves Opaque	1	237	237	237	0	8092A5
-mangrove_log	Mangrove Log	1	238	238	239	0	532B19
-mangrove_planks	Mangrove Planks	1	240	240	240	0	5A2019
-mangrove_propagule	Mangrove Propagule	1	241	241	241	1	73A91F
-mangrove_roots	Mangrove Roots	1	242	242	243	1	553B1A
-medium_amethyst_bud	Medium Amethyst Bud	1	244	244	244	1	AB76CB
-melon	Melon	1	245	245	246	0	4F7E18
+mangrove_leaves	Folhas de Mangue	1	236	236	236	1	8093A7
+mangrove_leaves_opaque	Mangue Folhas Opaque	1	237	237	237	0	8092A5
+mangrove_log	Tronco de Mangue	1	238	238	239	0	532B19
+mangrove_planks	Tábuas de Mangue	1	240	240	240	0	5A2019
+mangrove_propagule	Mangue Propagule	1	241	241	241	1	73A91F
+mangrove_roots	Mangue Roots	1	242	242	243	1	553B1A
+medium_amethyst_bud	Medium Ametista Bud	1	244	244	244	1	AB76CB
+melon	Melancia	1	245	245	246	0	4F7E18
 missing_tile	Missing Tile	1	247	247	247	0	A96D18
-moss_block	Moss Block	1	248	248	248	0	637F1E
-mud	Mud	1	249	249	249	0	5B3D22
-mud_bricks	Mud Bricks	1	250	250	250	0	885D40
-muddy_mangrove_roots	Muddy Mangrove Roots	1	251	251	252	0	4C341B
-mushroom_block_inside	Mushroom Block Inside	2	253	253	253	0	DBAA6D
-mushroom_block_skin_brown	Mushroom Block Skin Brown	2	254	254	254	0	A37247
-mushroom_block_skin_red	Mushroom Block Skin Red	2	255	255	255	0	CD332F
-mushroom_brown	Mushroom Brown	2	256	256	256	1	B67955
-mushroom_brown_3d_pot	Mushroom Brown 3D Pot	2	257	257	257	1	BA936F
-mushroom_brown_3d	Mushroom Brown 3D	1	258	258	259	1	D48D5D
-mushroom_brown_3d_side_pot	Mushroom Brown 3D Side Pot	2	260	260	260	1	AD663C
-mushroom_red	Mushroom Red	2	261	261	261	1	D54633
-mushroom_red_3d_pot	Mushroom Red 3D Pot	2	262	262	262	1	A48059
-mushroom_red_3d	Mushroom Red 3D	1	263	263	264	1	DF5839
-mushroom_red_3d_side_pot	Mushroom Red 3D Side Pot	2	265	265	265	1	E34833
-mycelium	Mycelium	1	266	266	267	0	7B6561
-nether_brick	Nether Brick	1	268	268	268	0	2B1116
-nether_gold_ore	Nether Gold Ore	1	269	269	269	1	9A441A
-nether_sprouts	Nether Sprouts	1	270	270	270	1	119874
-netherite_block	Netherite Block	1	271	271	271	0	423C3E
+moss_block	Bloco de Musgo	1	248	248	248	0	637F1E
+mud	Lama	1	249	249	249	0	5B3D22
+mud_bricks	Tijolos de Lama	1	250	250	250	0	885D40
+muddy_mangrove_roots	Muddy Mangue Roots	1	251	251	252	0	4C341B
+mushroom_block_inside	Cogumelo Bloco Inside	1	253	253	253	0	DBAA6D
+mushroom_block_skin_brown	Cogumelo Bloco Skin Marrom	1	254	254	254	0	A37247
+mushroom_block_skin_red	Cogumelo Bloco Skin Vermelho	1	255	255	255	0	CD332F
+mushroom_brown	Cogumelo Marrom	1	256	256	256	1	B67955
+mushroom_brown_3d_pot	Cogumelo Marrom 3D Vaso	1	257	257	257	1	BA936F
+mushroom_brown_3d	Cogumelo Marrom 3D	1	258	258	259	1	D48D5D
+mushroom_brown_3d_side_pot	Cogumelo Marrom 3D Side Vaso	1	260	260	260	1	AD663C
+mushroom_red	Cogumelo Vermelho	1	261	261	261	1	D54633
+mushroom_red_3d_pot	Cogumelo Vermelho 3D Vaso	1	262	262	262	1	A48059
+mushroom_red_3d	Cogumelo Vermelho 3D	1	263	263	264	1	DF5839
+mushroom_red_3d_side_pot	Cogumelo Vermelho 3D Side Vaso	1	265	265	265	1	E34833
+mycelium	Micélio	1	266	266	267	0	7B6561
+nether_brick	Nether Tijolo	1	268	268	268	0	2B1116
+nether_gold_ore	Minério de Nether Ouro	1	269	269	269	1	9A441A
+nether_sprouts	Brotos do Nether	1	270	270	270	1	119874
+netherite_block	Bloco de Netherita	1	271	271	271	0	423C3E
 netherrack	Netherrack	1	272	272	272	0	6D1217
-obsidian	Obsidian	1	273	273	273	0	140E21
+obsidian	Obsidiana	1	273	273	273	0	140E21
 ochre_froglight	Ochre Froglight	1	274	274	275	0	F6EDC0
-oxidized_chiseled_copper	Oxidized Chiseled Copper	1	276	276	276	0	2D9D77
-oxidized_copper	Oxidized Copper	1	277	277	277	0	35B489
-oxidized_copper_grate	Oxidized Copper Grate	1	278	278	278	1	33AD80
-oxidized_cut_copper	Oxidized Cut Copper	1	279	279	279	0	30A77D
-packed_mud	Packed Mud	1	280	280	280	0	936644
-pale_moss	Pale Moss	1	281	281	281	0	7D877E
-pale_moss_block	Pale Moss Block	1	282	282	282	0	7D877E
-pale_oak_leaves	Pale Oak Leaves	1	283	283	283	1	606762
-pale_oak_leaves_opaque	Pale Oak Leaves Opaque	1	284	284	284	0	606762
-pale_oak_log	Pale Oak Log	1	285	285	286	0	A09491
-pale_oak_planks	Pale Oak Planks	1	287	287	287	0	E8DDDB
-pale_oak_sapling	Pale Oak Sapling	2	288	288	288	1	66645E
+oxidized_chiseled_copper	Oxidized Talhado Cobre	1	276	276	276	0	2D9D77
+oxidized_copper	Oxidized Cobre	1	277	277	277	0	35B489
+oxidized_copper_grate	Oxidized Cobre Grate	1	278	278	278	1	33AD80
+oxidized_cut_copper	Oxidized Cortado Cobre	1	279	279	279	0	30A77D
+packed_mud	Compactado Lama	1	280	280	280	0	936644
+pale_moss	Pálido Musgo	1	281	281	281	0	7D877E
+pale_moss_block	Bloco de Pálido Musgo	1	282	282	282	0	7D877E
+pale_oak_leaves	Folhas de Pálido Carvalho	1	283	283	283	1	606762
+pale_oak_leaves_opaque	Pálido Carvalho Folhas Opaque	1	284	284	284	0	606762
+pale_oak_log	Tronco de Pálido Carvalho	1	285	285	286	0	A09491
+pale_oak_planks	Tábuas de Pálido Carvalho	1	287	287	287	0	E8DDDB
+pale_oak_sapling	Muda de Pálido Carvalho	1	288	288	288	1	66645E
 pearlescent_froglight	Pearlescent Froglight	1	289	289	290	0	F1E9EA
-pink_petals	Pink Petals	1	291	291	291	1	F695B6
-planks_acacia	Planks Acacia	1	292	292	292	0	B55324
-planks_big_oak	Planks Big Oak	1	293	293	293	0	4A2C10
-planks_birch	Planks Birch	1	294	294	294	0	D2B172
-planks_jungle	Planks Jungle	1	295	295	295	0	A36D49
-planks_mer_weak	Planks Mer Weak	1	296	296	296	0	0000F3
-planks_normal_weak	Planks Normal Weak	1	297	297	297	0	807FFE
-planks_spruce	Planks Spruce	1	298	298	298	0	755026
-polished_basalt	Polished Basalt	1	299	299	300	0	5B5662
-polished_blackstone	Polished Blackstone	1	301	301	301	0	3C3642
-polished_blackstone_bricks	Polished Blackstone Bricks	1	302	302	302	0	38303B
-polished_tuff	Polished Tuff	1	303	303	303	0	616763
+pink_petals	Pétalas Rosa	1	291	291	291	1	F695B6
+planks_acacia	Tábuas de Acácia	1	292	292	292	0	B55324
+planks_big_oak	Tábuas de Escuro Carvalho	1	293	293	293	0	4A2C10
+planks_birch	Tábuas de Bétula	1	294	294	294	0	D2B172
+planks_jungle	Tábuas de Selva	1	295	295	295	0	A36D49
+planks_mer_weak	Tábuas de Mer Weak	1	296	296	296	0	0000F3
+planks_normal_weak	Tábuas de Normal Weak	1	297	297	297	0	807FFE
+planks_spruce	Tábuas de Abeto	1	298	298	298	0	755026
+polished_basalt	Polido Basalto	1	299	299	300	0	5B5662
+polished_blackstone	Polido Pedra Negra	1	301	301	301	0	3C3642
+polished_blackstone_bricks	Tijolos de Polido Pedra Negra	1	302	302	302	0	38303B
+polished_tuff	Polido Tufo	1	303	303	303	0	616763
 potted_azalea_bush	Potted Azalea Bush	1	304	304	305	1	5E791B
 potted_flowering_azalea_bush	Potted Flowering Azalea Bush	1	306	306	307	1	717536
-powder_snow	Powder Snow	1	308	308	308	0	EEF8FB
-prismarine_bricks	Prismarine Bricks	1	309	309	309	0	4FAF95
-prismarine_dark	Prismarine Dark	1	310	310	310	0	325849
-prismarine_rough	Prismarine Rough	1	311	311	311	1	529E9D
-pumpkin	Pumpkin	1	312	312	313	0	B86614
-pumpkin_white	Pumpkin White	1	314	314	314	0	C0AB87
-purpur_block	Purpur Block	1	315	315	315	0	BB69C4
+powder_snow	Pó de Neve	1	308	308	308	0	EEF8FB
+prismarine_bricks	Tijolos de Prismarina	1	309	309	309	0	4FAF95
+prismarine_dark	Prismarina Escuro	1	310	310	310	0	325849
+prismarine_rough	Prismarina Rough	1	311	311	311	1	529E9D
+pumpkin	Abóbora	1	312	312	313	0	B86614
+pumpkin_white	Abóbora Branco	1	314	314	314	0	C0AB87
+purpur_block	Bloco de Purpur	1	315	315	315	0	BB69C4
 purpur_pillar	Purpur Pillar	1	316	316	317	0	B967C2
-quartz_block	Quartz Block	1	318	319	320	0	EBE5E0
-quartz_block_chiseled	Quartz Block Chiseled	1	321	321	322	0	DFD7D0
-quartz_block_lines	Quartz Block Lines	1	323	323	324	0	DED6CF
-quartz_bricks	Quartz Bricks	1	325	325	325	0	EAE4DF
-quartz_ore	Quartz Ore	1	326	326	326	0	7B3437
-raw_copper_block	Raw Copper Block	1	327	327	327	0	9B664D
-raw_gold_block	Raw Gold Block	1	328	328	328	0	EFBD36
-raw_iron_block	Raw Iron Block	1	329	329	329	0	B48868
-red_nether_brick	Red Nether Brick	1	330	330	330	0	48080B
-red_sand	Red Sand	1	331	331	331	0	CC6A24
-red_sandstone	Red Sandstone	1	332	333	332	0	D06C25
-red_sandstone_carved	Red Sandstone Carved	1	334	334	334	0	CA6924
-red_sandstone_smooth	Red Sandstone Smooth	1	335	335	335	0	CF6D26
-redstone_block	Redstone Block	1	336	336	336	1	AF0B07
-redstone_ore	Redstone Ore	1	337	337	337	1	7A4F4F
-resin_block	Resin Block	1	338	338	338	0	DD6314
-resin_bricks	Resin Bricks	1	339	339	339	0	D05A14
+quartz_block	Bloco de Quartzo	1	318	319	320	0	EBE5E0
+quartz_block_chiseled	Quartzo Bloco Talhado	1	321	321	322	0	DFD7D0
+quartz_block_lines	Quartzo Bloco Lines	1	323	323	324	0	DED6CF
+quartz_bricks	Tijolos de Quartzo	1	325	325	325	0	EAE4DF
+quartz_ore	Minério de Quartzo	1	326	326	326	0	7B3437
+raw_copper_block	Bloco de Bruto Cobre	1	327	327	327	0	9B664D
+raw_gold_block	Bloco de Bruto Ouro	1	328	328	328	0	EFBD36
+raw_iron_block	Bloco de Bruto Ferro	1	329	329	329	0	B48868
+red_nether_brick	Vermelho Nether Tijolo	1	330	330	330	0	48080B
+red_sand	Vermelho Areia	1	331	331	331	0	CC6A24
+red_sandstone	Vermelho Sandstone	1	332	333	332	0	D06C25
+red_sandstone_carved	Vermelho Sandstone Carved	1	334	334	334	0	CA6924
+red_sandstone_smooth	Vermelho Sandstone Liso	1	335	335	335	0	CF6D26
+redstone_block	Bloco de Redstone	1	336	336	336	1	AF0B07
+redstone_ore	Minério de Redstone	1	337	337	337	1	7A4F4F
+resin_block	Bloco de Resin	1	338	338	338	0	DD6314
+resin_bricks	Tijolos de Resin	1	339	339	339	0	D05A14
 resin_clump	Resin Clump	1	340	340	340	1	DA6814
 sandstone	Sandstone	1	341	342	341	0	F0D389
 sandstone_carved	Sandstone Carved	1	343	343	343	0	EAC780
-sandstone_smooth	Sandstone Smooth	1	344	344	344	0	EFD088
+sandstone_smooth	Sandstone Liso	1	344	344	344	0	EFD088
 scuk_shrieker_can_summon_inner	Scuk Shrieker Can Summon Inner	1	345	345	345	1	3A5A54
 sculk	Sculk	1	346	346	346	1	081C24
-sea_pickle	Sea Pickle	1	347	347	347	1	555D1D
-short_dry_grass	Short Dry Grass	1	348	348	348	1	C79F61
+sea_pickle	Mar Pickle	1	347	347	347	1	555D1D
+short_dry_grass	Short Dry Grama	1	348	348	348	1	C79F61
 shroomlight	Shroomlight	1	349	349	349	0	F38A3E
 slime	Slime	1	350	350	350	1	77DB4B
-small_amethyst_bud	Small Amethyst Bud	1	351	351	351	1	996DBA
+small_amethyst_bud	Small Ametista Bud	1	351	351	351	1	996DBA
 smoker	Smoker	1	352	353	354	0	645E57
-smooth_basalt	Smooth Basalt	1	355	355	355	0	4A494F
-snow	Snow	1	356	356	356	0	EFF8FB
-soul_sand	Soul Sand	1	357	357	357	0	593829
-soul_soil	Soul Soil	1	358	358	358	0	543526
-sponge	Sponge	1	359	359	359	0	C7B534
-sponge_wet	Sponge Wet	1	360	360	360	0	B0B846
-stone_andesite	Stone Andesite	1	361	361	361	0	888889
-stone_andesite_smooth	Stone Andesite Smooth	1	362	362	362	0	838685
-stone_diorite	Stone Diorite	1	363	363	363	0	B2B2B3
-stone_diorite_smooth	Stone Diorite Smooth	1	364	364	364	0	BEBFC0
-stone_granite	Stone Granite	1	365	365	365	0	956048
-stone_granite_smooth	Stone Granite Smooth	1	366	366	366	0	9A634C
-stone_slab	Stone Slab	1	367	367	368	0	9F9F9F
+smooth_basalt	Liso Basalto	1	355	355	355	0	4A494F
+snow	Neve	1	356	356	356	0	EFF8FB
+soul_sand	Alma Areia	1	357	357	357	0	593829
+soul_soil	Alma Solo	1	358	358	358	0	543526
+sponge	Esponja	1	359	359	359	0	C7B534
+sponge_wet	Esponja Molhada	1	360	360	360	0	B0B846
+stone_andesite	Pedra Andesito	1	361	361	361	0	888889
+stone_andesite_smooth	Pedra Andesito Liso	1	362	362	362	0	838685
+stone_diorite	Pedra Diorito	1	363	363	363	0	B2B2B3
+stone_diorite_smooth	Pedra Diorito Liso	1	364	364	364	0	BEBFC0
+stone_granite	Pedra Granito	1	365	365	365	0	956048
+stone_granite_smooth	Pedra Granito Liso	1	366	366	366	0	9A634C
+stone_slab	Laje de Pedra	1	367	367	368	0	9F9F9F
 stonebrick	Stonebrick	1	369	369	369	0	787878
 stonebrick_carved	Stonebrick Carved	1	370	370	370	0	727272
-stonebrick_cracked	Stonebrick Cracked	1	371	371	371	0	757474
-stonebrick_mossy	Stonebrick Mossy	1	372	372	372	0	6E7758
-stripped_acacia_log	Stripped Acacia Log	1	373	373	374	0	AF5228
-stripped_bamboo_block	Stripped Bamboo Block	1	375	375	376	0	B69847
-stripped_birch_log	Stripped Birch Log	1	377	377	378	0	CCA869
-stripped_cherry_log	Stripped Cherry Log	1	379	379	380	0	DEA199
-stripped_dark_oak_log	Stripped Dark Oak Log	1	381	381	382	0	472E12
-stripped_jungle_log	Stripped Jungle Log	1	383	383	384	0	9A6B44
-stripped_mangrove_log	Stripped Mangrove Log	1	385	385	386	0	571F18
-stripped_oak_log	Stripped Oak Log	1	387	387	388	0	B38249
-stripped_pale_oak_log	Stripped Pale Oak Log	1	389	389	390	0	EEE5E3
-stripped_spruce_log	Stripped Spruce Log	1	391	391	392	0	66431E
-tall_dry_grass	Tall Dry Grass	1	393	393	393	1	D1AB6A
-tinted_glass	Tinted Glass	1	394	394	394	3	28242A
+stonebrick_cracked	Stonebrick Rachado	1	371	371	371	0	757474
+stonebrick_mossy	Stonebrick Musgoso	1	372	372	372	0	6E7758
+stripped_acacia_log	Tronco de Stripped Acácia	1	373	373	374	0	AF5228
+stripped_bamboo_block	Bloco de Stripped Bambu	1	375	375	376	0	B69847
+stripped_birch_log	Tronco de Stripped Bétula	1	377	377	378	0	CCA869
+stripped_cherry_log	Tronco de Stripped Cerejeira	1	379	379	380	0	DEA199
+stripped_dark_oak_log	Tronco de Stripped Escuro Carvalho	1	381	381	382	0	472E12
+stripped_jungle_log	Tronco de Stripped Selva	1	383	383	384	0	9A6B44
+stripped_mangrove_log	Tronco de Stripped Mangue	1	385	385	386	0	571F18
+stripped_oak_log	Tronco de Stripped Carvalho	1	387	387	388	0	B38249
+stripped_pale_oak_log	Tronco de Stripped Pálido Carvalho	1	389	389	390	0	EEE5E3
+stripped_spruce_log	Tronco de Stripped Abeto	1	391	391	392	0	66431E
+tall_dry_grass	Tall Dry Grama	1	393	393	393	1	D1AB6A
+tinted_glass	Tinted Vidro	1	394	394	394	3	28242A
 tril_spawner_side_inactive_ominous	Tril Spawner Side Inactive Ominous	1	395	395	395	1	203746
 triner_top_ejecting_reward_ominous	Triner Top Ejecting Reward Ominous	1	396	396	396	0	1F3947
 trip_wire	Trip Wire	1	397	397	397	1	A8A8A8
 trip_wire_source	Trip Wire Source	1	398	398	398	1	958879
-tuff	Tuff	1	399	399	399	0	707165
-tuff_bricks	Tuff Bricks	1	400	400	400	0	5F645D
+tuff	Tufo	1	399	399	399	0	707165
+tuff_bricks	Tijolos de Tufo	1	400	400	400	0	5F645D
 verdant_froglight	Verdant Froglight	1	401	401	402	0	D7ECD5
-warped_fungus	Warped Fungus	1	403	403	403	1	517855
-warped_nylium	Warped Nylium	1	404	404	405	0	235D56
-warped_roots	Warped Roots	2	406	406	406	1	129882
-warped_roots_pot	Warped Roots Pot	1	407	407	407	1	129682
-warped_wart_block	Warped Wart Block	1	408	408	408	0	177274
-weathered_chiseled_copper	Weathered Chiseled Copper	1	409	409	409	0	6B844C
-weathered_copper	Weathered Copper	1	410	410	410	0	759154
-weathered_copper_grate	Weathered Copper Grate	1	411	411	411	1	718E53
-weathered_cut_copper	Weathered Cut Copper	1	412	412	412	0	6E8A50
+warped_fungus	Fungo Distorcido	1	403	403	403	1	517855
+warped_nylium	Distorcido Nylium	1	404	404	405	0	235D56
+warped_roots	Raízes Distorcidas	1	406	406	406	1	129882
+warped_roots_pot	Distorcido Roots Vaso	1	407	407	407	1	129682
+warped_wart_block	Bloco de Distorcido Wart	1	408	408	408	0	177274
+weathered_chiseled_copper	Weathered Talhado Cobre	1	409	409	409	0	6B844C
+weathered_copper	Weathered Cobre	1	410	410	410	0	759154
+weathered_copper_grate	Weathered Cobre Grate	1	411	411	411	1	718E53
+weathered_cut_copper	Weathered Cortado Cobre	1	412	412	412	0	6E8A50
 web	Web	1	413	413	413	1	E9EDEE
-wildflowers	Wildflowers	2	414	414	414	1	F3D364
-wool_colored_black	Wool Colored Black	1	415	415	415	0	1C1C20
-wool_colored_blue	Wool Colored Blue	1	416	416	416	0	3A439E
-wool_colored_brown	Wool Colored Brown	1	417	417	417	0	6E472E
-wool_colored_cyan	Wool Colored Cyan	1	418	418	418	0	218E92
-wool_colored_gray	Wool Colored Gray	1	419	419	419	0	404547
-wool_colored_green	Wool Colored Green	1	420	420	420	0	566E27
-wool_colored_lime	Wool Colored Lime	1	421	421	421	0	71B636
-wool_colored_magenta	Wool Colored Magenta	1	422	422	422	0	BB4AB0
-wool_colored_orange	Wool Colored Orange	1	423	423	423	0	F0772D
-wool_colored_pink	Wool Colored Pink	1	424	424	424	0	EF92AE
-wool_colored_purple	Wool Colored Purple	1	425	425	425	0	7F38AE
-wool_colored_red	Wool Colored Red	1	426	426	426	0	A12C2A
-wool_colored_silver	Wool Colored Silver	1	427	427	427	0	898981
-wool_colored_white	Wool Colored White	1	428	428	428	0	ECEEEF
-wool_colored_yellow	Wool Colored Yellow	1	429	429	429	0	F8C242
-item_acacia_chest_boat	Acacia Chest Boat	5	430	430	430	1	94491A
-item_acacia_hanging_sign	Acacia Hanging Sign	5	431	431	431	1	9E4D2B
-item_amethyst_shard	Amethyst Shard	5	432	432	432	1	9669BC
-item_angler_pottery_sherd	Angler Pottery Sherd	5	433	433	433	1	783725
-item_apple	Apple	5	434	434	434	1	96321B
-item_apple_golden	Apple Golden	5	435	435	435	1	9F630F
-item_archer_pottery_sherd	Archer Pottery Sherd	5	436	436	436	1	773725
-item_armadillo_scute	Armadillo Scute	5	437	437	437	1	834C4B
-item_armor_stand	Armor Stand	5	438	438	438	1	775840
-item_arms_up_pottery_sherd	Arms Up Pottery Sherd	5	439	439	439	1	783725
-item_arrow	Arrow	5	440	440	440	1	8D7A67
-item_bamboo	Bamboo	5	441	441	441	1	517B1F
-item_bamboo_chest_raft	Bamboo Chest Raft	5	442	442	442	1	806228
-item_bamboo_door	Bamboo Door	5	443	443	443	1	BDAA4C
-item_bamboo_hanging_sign	Bamboo Hanging Sign	5	444	444	444	1	A6974D
-item_bamboo_raft	Bamboo Raft	5	445	445	445	1	837639
-item_bamboo_sign	Bamboo Sign	5	446	446	446	1	A99845
-item_banner_pattern	Banner Pattern	5	447	447	447	1	B6A58B
-item_bed_black	Bed Black	5	448	448	448	1	6E5D5B
-item_bed_blue	Bed Blue	5	449	449	449	1	716D84
-item_bed_brown	Bed Brown	5	450	450	450	1	8F6C50
-item_bed_cyan	Bed Cyan	5	451	451	451	1	638476
-item_bed_gray	Bed Gray	5	452	452	452	1	7D7569
-item_bed_green	Bed Green	5	453	453	453	1	7E7A45
-item_bed_light_blue	Bed Light Blue	5	454	454	454	1	6B818F
-item_bed_lime	Bed Lime	5	455	455	455	1	88954D
-item_bed_magenta	Bed Magenta	5	456	456	456	1	9E607B
-item_bed_orange	Bed Orange	5	457	457	457	1	B47943
-item_bed_pink	Bed Pink	5	458	458	458	1	B47577
-item_bed_purple	Bed Purple	5	459	459	459	1	885880
-item_bed_red	Bed Red	5	460	460	460	1	9B5544
-item_bed_silver	Bed Silver	5	461	461	461	1	958573
-item_bed_white	Bed White	5	462	462	462	1	ADA294
-item_bed_yellow	Bed Yellow	5	463	463	463	1	BD9554
-item_beef_cooked	Beef Cooked	5	464	464	464	1	762E17
-item_beef_raw	Beef Raw	5	465	465	465	1	A5413C
-item_beetroot	Beetroot	5	466	466	466	1	78472C
-item_beetroot_soup	Beetroot Soup	5	467	467	467	1	742D13
-item_birch_chest_boat	Birch Chest Boat	5	468	468	468	1	99713C
-item_birch_hanging_sign	Birch Hanging Sign	5	469	469	469	1	B5996A
-item_blade_pottery_sherd	Blade Pottery Sherd	5	470	470	470	1	793725
-item_blaze_powder	Blaze Powder	5	471	471	471	1	C06E10
-item_blaze_rod	Blaze Rod	5	472	472	472	1	C97612
-item_blue_egg	Blue Egg	5	473	473	473	1	7EAF94
-item_boat	Boat	5	474	474	474	1	492F16
-item_boat_acacia	Boat Acacia	5	475	475	475	1	95421C
-item_boat_birch	Boat Birch	5	476	476	476	1	9A7A4B
-item_boat_dark_oak	Boat Dark Oak	5	477	477	477	1	40250E
-item_boat_darkoak	Boat Darkoak	5	478	478	478	1	40250E
-item_boat_jungle	Boat Jungle	5	479	479	479	1	87593B
-item_boat_oak	Boat Oak	5	480	480	480	1	926639
-item_boat_spruce	Boat Spruce	5	481	481	481	1	603F1C
-item_bolt_armor_trim_smithing_template	Bolt Armor Trim Smithing Template	5	482	482	482	1	9D6249
-item_bone	Bone	5	483	483	483	1	D4C9AA
-item_book_enchanted	Book Enchanted	5	484	484	484	1	974A23
-item_book_portfolio	Book Portfolio	5	485	485	485	1	91633E
-item_book_writable	Book Writable	5	486	486	486	1	976E5A
-item_book_written	Book Written	5	487	487	487	1	794025
-item_bordure_indented_banner_pattern	Bordure Indented Banner Pattern	5	488	488	488	1	B9AB9B
-item_bow_standby	Bow Standby	5	489	489	489	1	885E39
-item_bowl	Bowl	5	490	490	490	1	5C2F0E
-item_bread	Bread	5	491	491	491	1	9F5E20
-item_breeze_rod	Breeze Rod	5	492	492	492	1	7E80C0
-item_brewer_pottery_sherd	Brewer Pottery Sherd	5	493	493	493	1	743524
-item_brewing_stand	Brewing Stand	5	494	494	494	1	7E6E5F
-item_broken_elytra	Broken Elytra	5	495	495	495	1	65607B
-item_brown_egg	Brown Egg	5	496	496	496	1	A1533E
-item_brush	Brush	5	497	497	497	1	A86A4D
-item_bucket_axolotl	Bucket Axolotl	5	498	498	498	1	9E7B96
-item_bucket_cod	Bucket Cod	5	499	499	499	1	8A8A8A
-item_bucket_lava	Bucket Lava	5	500	500	500	1	AE7953
-item_bucket_milk	Bucket Milk	5	501	501	501	1	98A1A2
-item_bucket_pufferfish	Bucket Pufferfish	5	502	502	502	1	828B81
-item_bucket_salmon	Bucket Salmon	5	503	503	503	1	7E7E81
-item_bucket_tadpole	Bucket Tadpole	5	504	504	504	1	718986
-item_bucket_tropical	Bucket Tropical	5	505	505	505	1	958681
-item_bucket_water	Bucket Water	5	506	506	506	1	7185A2
-item_bundle	Bundle	5	507	507	507	1	8E4A26
-item_bundle_black	Bundle Black	5	508	508	508	1	413A4F
-item_bundle_black_open	Bundle Black Open	5	509	509	509	1	3C364A
-item_bundle_black_open_back	Bundle Black Open Back	5	510	510	510	1	1B1A29
-item_bundle_black_open_front	Bundle Black Open Front	5	511	511	511	1	51485F
-item_bundle_blue	Bundle Blue	5	512	512	512	1	475DA9
-item_bundle_blue_open	Bundle Blue Open	5	513	513	513	1	4259A2
-item_bundle_blue_open_back	Bundle Blue Open Back	5	514	514	514	1	243A8B
-item_bundle_blue_open_front	Bundle Blue Open Front	5	515	515	515	1	546DAF
-item_bundle_brown	Bundle Brown	5	516	516	516	1	83542F
-item_bundle_brown_open	Bundle Brown Open	5	517	517	517	1	7E512D
-item_bundle_brown_open_back	Bundle Brown Open Back	5	518	518	518	1	4D2D15
-item_bundle_brown_open_front	Bundle Brown Open Front	5	519	519	519	1	9D673B
-item_bundle_cyan	Bundle Cyan	5	520	520	520	1	208D88
-item_bundle_cyan_open	Bundle Cyan Open	5	521	521	521	1	1E8985
-item_bundle_cyan_open_back	Bundle Cyan Open Back	5	522	522	522	1	0B6063
-item_bundle_cyan_open_front	Bundle Cyan Open Front	5	523	523	523	1	2AA299
-item_bundle_gray	Bundle Gray	5	524	524	524	1	565F5F
-item_bundle_gray_open	Bundle Gray Open	5	525	525	525	1	535B5B
-item_bundle_gray_open_back	Bundle Gray Open Back	5	526	526	526	1	2D363A
-item_bundle_gray_open_front	Bundle Gray Open Front	5	527	527	527	1	6A726F
-item_bundle_green	Bundle Green	5	528	528	528	1	566917
-item_bundle_green_open	Bundle Green Open	5	529	529	529	1	536616
-item_bundle_green_open_back	Bundle Green Open Back	5	530	530	530	1	34460C
-item_bundle_green_open_front	Bundle Green Open Front	5	531	531	531	1	66791C
-item_bundle_light_blue	Bundle Light Blue	5	532	532	532	1	347EB1
-item_bundle_light_blue_open	Bundle Light Blue Open	5	533	533	533	1	307BAD
-item_bundle_light_blue_open_back	Bundle Light Blue Open Back	5	534	534	534	1	10508F
-item_bundle_light_blue_open_front	Bundle Light Blue Open Front	5	535	535	535	1	4495BF
-item_bundle_light_gray	Bundle Light Gray	5	536	536	536	1	867F6F
-item_bundle_light_gray_open	Bundle Light Gray Open	5	537	537	537	1	857F70
-item_bundle_light_gray_open_back	Bundle Light Gray Open Back	5	538	538	538	1	57584F
-item_bundle_light_gray_open_front	Bundle Light Gray Open Front	5	539	539	539	1	A19884
-item_bundle_lime	Bundle Lime	5	540	540	540	1	5D951F
-item_bundle_lime_open	Bundle Lime Open	5	541	541	541	1	568D20
-item_bundle_lime_open_back	Bundle Lime Open Back	5	542	542	542	1	296011
-item_bundle_lime_open_front	Bundle Lime Open Front	5	543	543	543	1	72A929
-item_bundle_magenta	Bundle Magenta	5	544	544	544	1	9A3886
-item_bundle_magenta_open	Bundle Magenta Open	5	545	545	545	1	973883
-item_bundle_magenta_open_back	Bundle Magenta Open Back	5	546	546	546	1	681A60
-item_bundle_magenta_open_front	Bundle Magenta Open Front	5	547	547	547	1	B44B98
-item_bundle_open	Bundle Open	5	548	548	548	1	864623
-item_bundle_open_back	Bundle Open Back	5	549	549	549	1	5D2511
-item_bundle_open_front	Bundle Open Front	5	550	550	550	1	9F592F
-item_bundle_orange	Bundle Orange	5	551	551	551	1	C26516
-item_bundle_orange_open	Bundle Orange Open	5	552	552	552	1	BD6216
-item_bundle_orange_open_back	Bundle Orange Open Back	5	553	553	553	1	903D0A
-item_bundle_orange_open_front	Bundle Orange Open Front	5	554	554	554	1	D8781E
-item_bundle_pink	Bundle Pink	5	555	555	555	1	CC5F7E
-item_bundle_pink_open	Bundle Pink Open	5	556	556	556	1	C85F7C
-item_bundle_pink_open_back	Bundle Pink Open Back	5	557	557	557	1	A2375D
-item_bundle_pink_open_front	Bundle Pink Open Front	5	558	558	558	1	DF778F
-item_bundle_purple	Bundle Purple	5	559	559	559	1	742A97
-item_bundle_purple_open	Bundle Purple Open	5	560	560	560	1	722794
-item_bundle_purple_open_back	Bundle Purple Open Back	5	561	561	561	1	4B1074
-item_bundle_purple_open_front	Bundle Purple Open Front	5	562	562	562	1	8935A8
-item_bundle_red	Bundle Red	5	563	563	563	1	9C2518
-item_bundle_red_open	Bundle Red Open	5	564	564	564	1	972417
-item_bundle_red_open_back	Bundle Red Open Back	5	565	565	565	1	661008
-item_bundle_red_open_front	Bundle Red Open Front	5	566	566	566	1	B53120
-item_bundle_white	Bundle White	5	567	567	567	1	AAB0AC
-item_bundle_white_open	Bundle White Open	5	568	568	568	1	A3A8A6
-item_bundle_white_open_back	Bundle White Open Back	5	569	569	569	1	68747B
-item_bundle_white_open_front	Bundle White Open Front	5	570	570	570	1	C7C9C1
-item_bundle_yellow	Bundle Yellow	5	571	571	571	1	C6913B
-item_bundle_yellow_open	Bundle Yellow Open	5	572	572	572	1	C38D37
-item_bundle_yellow_open_back	Bundle Yellow Open Back	5	573	573	573	1	9E671C
-item_bundle_yellow_open_front	Bundle Yellow Open Front	5	574	574	574	1	D9A548
-item_burn_pottery_sherd	Burn Pottery Sherd	5	575	575	575	1	753624
-item_cake	Cake	5	576	576	576	1	D29A82
-item_campfire	Campfire	5	577	577	577	1	AB661D
-item_carrot	Carrot	5	578	578	578	1	9D7215
-item_carrot_golden	Carrot Golden	5	579	579	579	1	996912
-item_carrot_on_a_stick	Carrot On A Stick	5	580	580	580	1	9A652C
-item_cauldron	Cauldron	5	581	581	581	1	3F3E41
-item_chain	Chain	5	582	582	582	1	495476
-item_chainmail_boots	Chainmail Boots	5	583	583	583	1	6D7A7F
-item_chainmail_chestplate	Chainmail Chestplate	5	584	584	584	1	717D82
-item_chainmail_helmet	Chainmail Helmet	5	585	585	585	1	5B676D
-item_chainmail_leggings	Chainmail Leggings	5	586	586	586	1	657278
-item_charcoal	Charcoal	5	587	587	587	1	3C3325
-item_cherry_boat	Cherry Boat	5	588	588	588	1	C1827D
-item_cherry_chest_boat	Cherry Chest Boat	5	589	589	589	1	AF775E
-item_cherry_door	Cherry Door	5	590	590	590	1	D49993
-item_cherry_hanging_sign	Cherry Hanging Sign	5	591	591	591	1	C79493
-item_cherry_sign	Cherry Sign	5	592	592	592	1	C28B88
-item_chicken_cooked	Chicken Cooked	5	593	593	593	1	CD7C39
-item_chicken_raw	Chicken Raw	5	594	594	594	1	D5A592
-item_chorus_fruit	Chorus Fruit	5	595	595	595	1	A250BA
-item_chorus_fruit_popped	Chorus Fruit Popped	5	596	596	596	1	9D51C1
-item_clay_ball	Clay Ball	5	597	597	597	1	777F96
-item_clock_item	Clock Item	5	598	598	598	1	AC8C47
-item_coal	Coal	5	599	599	599	1	28262A
-item_coast_armor_trim_smithing_template	Coast Armor Trim Smithing Template	5	600	600	600	1	566068
-item_comparator	Comparator	5	601	601	601	1	824D4E
-item_compass_atlas	Compass Atlas	5	602	602	602	1	808080
-item_compass_item	Compass Item	5	603	603	603	1	676064
-item_cookie	Cookie	5	604	604	604	1	B1692E
-item_copper_axe	Copper Axe	5	605	605	605	1	A5502C
-item_copper_boots	Copper Boots	5	606	606	606	1	A84D2C
-item_copper_chain	Copper Chain	5	607	607	607	1	904326
-item_copper_chestplate	Copper Chestplate	5	608	608	608	1	9D4829
-item_copper_door	Copper Door	5	609	609	609	1	9F4D2C
-item_copper_helmet	Copper Helmet	5	610	610	610	1	A95333
-item_copper_hoe	Copper Hoe	5	611	611	611	1	974825
-item_copper_horse_armor	Copper Horse Armor	5	612	612	612	1	9D6444
-item_copper_ingot	Copper Ingot	5	613	613	613	1	BA5634
-item_copper_lantern	Copper Lantern	5	614	614	614	1	9A5B25
-item_copper_leggings	Copper Leggings	5	615	615	615	1	A54B2C
-item_copper_nugget	Copper Nugget	5	616	616	616	1	B35330
-item_copper_pickaxe	Copper Pickaxe	5	617	617	617	1	9F4925
-item_copper_shovel	Copper Shovel	5	618	618	618	1	A9532D
-item_copper_sword	Copper Sword	5	619	619	619	1	964121
-item_creeper_banner_pattern	Creeper Banner Pattern	5	620	620	620	1	B9AC9C
-item_crimson_door	Crimson Door	5	621	621	621	1	67334A
-item_crimson_hanging_sign	Crimson Hanging Sign	5	622	622	622	1	66354D
-item_crossbow_arrow	Crossbow Arrow	5	623	623	623	1	764E2E
-item_crossbow_firework	Crossbow Firework	5	624	624	624	1	82452B
-item_crossbow_standby	Crossbow Standby	5	625	625	625	1	673A1A
-item_danger_pottery_sherd	Danger Pottery Sherd	5	626	626	626	1	733524
-item_dark_oak_chest_boat	Dark Oak Chest Boat	5	627	627	627	1	5B3510
-item_dark_oak_hanging_sign	Dark Oak Hanging Sign	5	628	628	628	1	543D27
-item_diamond	Diamond	5	629	629	629	1	37ADC6
-item_diamond_axe	Diamond Axe	5	630	630	630	1	3C8696
-item_diamond_boots	Diamond Boots	5	631	631	631	1	308EB1
-item_diamond_chestplate	Diamond Chestplate	5	632	632	632	1	2EA4BF
-item_diamond_helmet	Diamond Helmet	5	633	633	633	1	309EB8
-item_diamond_hoe	Diamond Hoe	5	634	634	634	1	456F7B
-item_diamond_horse_armor	Diamond Horse Armor	5	635	635	635	1	4B9099
-item_diamond_leggings	Diamond Leggings	5	636	636	636	1	259FC0
-item_diamond_pickaxe	Diamond Pickaxe	5	637	637	637	1	3C7E8E
-item_diamond_shovel	Diamond Shovel	5	638	638	638	1	338DA2
-item_diamond_sword	Diamond Sword	5	639	639	639	1	2F93B1
-item_door_acacia	Door Acacia	5	640	640	640	1	A14B24
-item_door_birch	Door Birch	5	641	641	641	1	C3A97C
-item_door_dark_oak	Door Dark Oak	5	642	642	642	1	3E2915
-item_door_iron	Door Iron	5	643	643	643	1	9CA7AB
-item_door_jungle	Door Jungle	5	644	644	644	1	8F6041
-item_door_spruce	Door Spruce	5	645	645	645	1	664C2F
-item_door_wood	Door Wood	5	646	646	646	1	AA7C4D
-item_dragon_fireball	Dragon Fireball	5	647	647	647	1	BD5CCF
-item_dragons_breath	Dragons Breath	5	648	648	648	1	9B718F
-item_dried_kelp	Dried Kelp	5	649	649	649	1	322D22
-item_dune_armor_trim_smithing_template	Dune Armor Trim Smithing Template	5	650	650	650	1	ACB394
-item_dye_powder_black	Dye Powder Black	5	651	651	651	1	51435C
-item_dye_powder_black_new	Dye Powder Black New	5	652	652	652	1	2B222D
-item_dye_powder_blue	Dye Powder Blue	5	653	653	653	1	274089
-item_dye_powder_blue_new	Dye Powder Blue New	5	654	654	654	1	385092
-item_dye_powder_brown	Dye Powder Brown	5	655	655	655	1	693B21
-item_dye_powder_brown_new	Dye Powder Brown New	5	656	656	656	1	703D18
-item_dye_powder_cyan	Dye Powder Cyan	5	657	657	657	1	226962
-item_dye_powder_glow	Dye Powder Glow	5	658	658	658	1	398173
-item_dye_powder_gray	Dye Powder Gray	5	659	659	659	1	706564
-item_dye_powder_green	Dye Powder Green	5	660	660	660	1	575F13
-item_dye_powder_light_blue	Dye Powder Light Blue	5	661	661	661	1	4384AA
-item_dye_powder_lime	Dye Powder Lime	5	662	662	662	1	66841A
-item_dye_powder_magenta	Dye Powder Magenta	5	663	663	663	1	A54788
-item_dye_powder_orange	Dye Powder Orange	5	664	664	664	1	C16A1A
-item_dye_powder_pink	Dye Powder Pink	5	665	665	665	1	C97080
-item_dye_powder_purple	Dye Powder Purple	5	666	666	666	1	80388B
-item_dye_powder_red	Dye Powder Red	5	667	667	667	1	9A2516
-item_dye_powder_silver	Dye Powder Silver	5	668	668	668	1	8A7C7E
-item_dye_powder_white	Dye Powder White	5	669	669	669	1	D5CAAC
-item_dye_powder_white_new	Dye Powder White New	5	670	670	670	1	9D8F98
-item_dye_powder_yellow	Dye Powder Yellow	5	671	671	671	1	BE8830
-item_echo_shard	Echo Shard	5	672	672	672	1	093A43
-item_egg	Egg	5	673	673	673	1	D3905C
-item_egg_agent	Egg Agent	5	674	674	674	1	8D7970
-item_egg_bat	Egg Bat	5	675	675	675	1	352D26
-item_egg_bee	Egg Bee	5	676	676	676	1	8C6E2B
-item_egg_blaze	Egg Blaze	5	677	677	677	1	C09B1B
-item_egg_cat	Egg Cat	5	678	678	678	1	B38A5B
-item_egg_cave_spider	Egg Cave Spider	5	679	679	679	1	2B2C34
-item_egg_chicken	Egg Chicken	5	680	680	680	1	8F5454
-item_egg_clownfish	Egg Clownfish	5	681	681	681	1	B47145
-item_egg_cod	Egg Cod	5	682	682	682	1	8C7749
-item_egg_cow	Egg Cow	5	683	683	683	1	4D4339
-item_egg_creeper	Egg Creeper	5	684	684	684	1	0E5E0C
-item_egg_dolphin	Egg Dolphin	5	685	685	685	1	4D5B65
-item_egg_donkey	Egg Donkey	5	686	686	686	1	4D4136
-item_egg_drowned	Egg Drowned	5	687	687	687	1	649E85
-item_egg_elderguardian	Egg Elderguardian	5	688	688	688	1	858480
-item_egg_enderman	Egg Enderman	5	689	689	689	1	121212
-item_egg_endermite	Egg Endermite	5	690	690	690	1	282828
-item_egg_evoker	Egg Evoker	5	691	691	691	1	535656
-item_egg_fish	Egg Fish	5	692	692	692	1	8C7749
-item_egg_fox	Egg Fox	5	693	693	693	1	9E785B
-item_egg_ghast	Egg Ghast	5	694	694	694	1	A0A0A0
-item_egg_glow_squid	Egg Glow Squid	5	695	695	695	1	24665A
-item_egg_guardian	Egg Guardian	5	696	696	696	1	656448
-item_egg_horse	Egg Horse	5	697	697	697	1	9B8740
-item_egg_husk	Egg Husk	5	698	698	698	1	6F6D53
-item_egg_lava_slime	Egg Lava Slime	5	699	699	699	1	5A3901
-item_egg_llama	Egg Llama	5	700	700	700	1	896A51
-item_egg_mask	Egg Mask	5	701	701	701	1	C83800
-item_egg_mule	Egg Mule	5	702	702	702	1	2A130C
-item_egg_mushroomcow	Egg Mushroomcow	5	703	703	703	1	7D3232
-item_egg_npc	Egg Npc	5	704	704	704	1	475E56
-item_egg_null	Egg Null	5	705	705	705	1	AAAAAA
-item_egg_ocelot	Egg Ocelot	5	706	706	706	1	90834C
-item_egg_panda	Egg Panda	5	707	707	707	1	6C6C6D
-item_egg_parrot	Egg Parrot	5	708	708	708	1	415706
-item_egg_phantom	Egg Phantom	5	709	709	709	1	426548
-item_egg_pig	Egg Pig	5	710	710	710	1	B06E6B
-item_egg_pigzombie	Egg Pigzombie	5	711	711	711	1	8B6656
-item_egg_pillager	Egg Pillager	5	712	712	712	1	503C41
-item_egg_polarbear	Egg Polarbear	5	713	713	713	1	929291
-item_egg_pufferfish	Egg Pufferfish	5	714	714	714	1	8A8940
-item_egg_rabbit	Egg Rabbit	5	715	715	715	1	6C432D
-item_egg_ravager	Egg Ravager	5	716	716	716	1	514F4A
-item_egg_salmon	Egg Salmon	5	717	717	717	1	562724
-item_egg_sheep	Egg Sheep	5	718	718	718	1	B3A2A2
-item_egg_shulker	Egg Shulker	5	719	719	719	1	5F4260
-item_egg_silverfish	Egg Silverfish	5	720	720	720	1	535656
-item_egg_skeleton	Egg Skeleton	5	721	721	721	1	747474
-item_egg_skeletonhorse	Egg Skeletonhorse	5	722	722	722	1	666656
-item_egg_slime	Egg Slime	5	723	723	723	1	4E8830
-item_egg_spider	Egg Spider	5	724	724	724	1	411C17
-item_egg_squid	Egg Squid	5	725	725	725	1	2B3F4C
-item_egg_stray	Egg Stray	5	726	726	726	1	647373
-item_egg_turtle	Egg Turtle	5	727	727	727	1	79A1A1
-item_egg_vex	Egg Vex	5	728	728	728	1	7A8691
-item_egg_villager	Egg Villager	5	729	729	729	1	5C4034
-item_egg_vindicator	Egg Vindicator	5	730	730	730	1	505F60
-item_egg_wanderingtrader	Egg Wanderingtrader	5	731	731	731	1	69655F
-item_egg_witch	Egg Witch	5	732	732	732	1	34240E
-item_egg_wither	Egg Wither	5	733	733	733	1	202121
-item_egg_wolf	Egg Wolf	5	734	734	734	1	9D948F
-item_egg_zombie	Egg Zombie	5	735	735	735	1	1C7F72
-item_egg_zombiehorse	Egg Zombiehorse	5	736	736	736	1	36623C
-item_egg_zombievillager	Egg Zombievillager	5	737	737	737	1	504634
-item_elytra	Elytra	5	738	738	738	1	67637F
-item_emerald	Emerald	5	739	739	739	1	0D8532
-item_empty_armor_slot_boots	Empty Armor Slot Boots	5	740	740	740	1	192022
-item_empty_armor_slot_chestplate	Empty Armor Slot Chestplate	5	741	741	741	1	192022
-item_empty_armor_slot_helmet	Empty Armor Slot Helmet	5	742	742	742	1	192022
-item_empty_armor_slot_leggings	Empty Armor Slot Leggings	5	743	743	743	1	192022
-item_empty_armor_slot_shield	Empty Armor Slot Shield	5	744	744	744	1	192022
-item_end_crystal	End Crystal	5	745	745	745	1	AE7DCF
-item_ender_eye	Ender Eye	5	746	746	746	1	377A47
-item_ender_pearl	Ender Pearl	5	747	747	747	1	0B554E
-item_experience_bottle	Experience Bottle	5	748	748	748	1	889A2B
-item_explorer_pottery_sherd	Explorer Pottery Sherd	5	749	749	749	1	6F3222
-item_exposed_copper_chain	Exposed Copper Chain	5	750	750	750	1	864832
-item_exposed_copper_door	Exposed Copper Door	5	751	751	751	1	8A573C
-item_exposed_copper_lantern	Exposed Copper Lantern	5	752	752	752	1	77552B
-item_eye_armor_trim_smithing_template	Eye Armor Trim Smithing Template	5	753	753	753	1	B1B682
-item_feather	Feather	5	754	754	754	1	CDCAC4
-item_field_masoned_banner_pattern	Field Masoned Banner Pattern	5	755	755	755	1	BAAD9D
-item_fireball	Fireball	5	756	756	756	1	894C19
-item_fireworks	Fireworks	5	757	757	757	1	A2544C
-item_fish_clownfish_raw	Fish Clownfish Raw	5	758	758	758	1	AB5322
-item_fish_cooked	Fish Cooked	5	759	759	759	1	C8AB8A
-item_fish_pufferfish_raw	Fish Pufferfish Raw	5	760	760	760	1	B29745
-item_fish_raw	Fish Raw	5	761	761	761	1	B58B5E
-item_fish_salmon_cooked	Fish Salmon Cooked	5	762	762	762	1	B45931
-item_fish_salmon_raw	Fish Salmon Raw	5	763	763	763	1	835933
-item_fishing_rod_cast	Fishing Rod Cast	5	764	764	764	1	7C5532
-item_fishing_rod_uncast	Fishing Rod Uncast	5	765	765	765	1	816448
-item_flint	Flint	5	766	766	766	1	525151
-item_flint_and_steel	Flint And Steel	5	767	767	767	1	757A7C
-item_flow_armor_trim_smithing_template	Flow Armor Trim Smithing Template	5	768	768	768	1	6D79BB
-item_flow_banner_pattern	Flow Banner Pattern	5	769	769	769	1	B5A796
-item_flow_pottery_sherd	Flow Pottery Sherd	5	770	770	770	1	783725
-item_flower_banner_pattern	Flower Banner Pattern	5	771	771	771	1	B1A191
-item_flower_pot	Flower Pot	5	772	772	772	1	7C3827
-item_friend_pottery_sherd	Friend Pottery Sherd	5	773	773	773	1	763624
-item_ghast_tear	Ghast Tear	5	774	774	774	1	83AEB7
-item_globe_banner_pattern	Globe Banner Pattern	5	775	775	775	1	B4A695
-item_glow_berries	Glow Berries	5	776	776	776	1	B26E1E
-item_glow_item_frame	Glow Item Frame	5	777	777	777	1	B88655
-item_glowstone_dust	Glowstone Dust	5	778	778	778	1	BA7E44
-item_goat_horn	Goat Horn	5	779	779	779	1	4D4A47
-item_gold_axe	Gold Axe	5	780	780	780	1	B77A16
-item_gold_boots	Gold Boots	5	781	781	781	1	A46C15
-item_gold_chestplate	Gold Chestplate	5	782	782	782	1	A77116
-item_gold_helmet	Gold Helmet	5	783	783	783	1	A46912
-item_gold_hoe	Gold Hoe	5	784	784	784	1	AE7114
-item_gold_horse_armor	Gold Horse Armor	5	785	785	785	1	B06E14
-item_gold_ingot	Gold Ingot	5	786	786	786	1	CB9A28
-item_gold_leggings	Gold Leggings	5	787	787	787	1	A76C12
-item_gold_nugget	Gold Nugget	5	788	788	788	1	AA6F15
-item_gold_pickaxe	Gold Pickaxe	5	789	789	789	1	B07416
-item_gold_shovel	Gold Shovel	5	790	790	790	1	BF8014
-item_gold_sword	Gold Sword	5	791	791	791	1	C38315
-item_gunpowder	Gunpowder	5	792	792	792	1	45444D
-item_guster_banner_pattern	Guster Banner Pattern	5	793	793	793	1	BDB0A1
-item_guster_pottery_sherd	Guster Pottery Sherd	5	794	794	794	1	773725
-item_hanging_roots	Hanging Roots	5	795	795	795	1	A0674D
-item_heart_pottery_sherd	Heart Pottery Sherd	5	796	796	796	1	773625
-item_heartbreak_pottery_sherd	Heartbreak Pottery Sherd	5	797	797	797	1	773625
-item_heartofthesea_closed	Heartofthesea Closed	5	798	798	798	1	126387
-item_hoglin_meat_cooked	Hoglin Meat Cooked	5	799	799	799	1	762E17
-item_hoglin_meat_raw	Hoglin Meat Raw	5	800	800	800	1	A5413C
-item_honey_bottle	Honey Bottle	5	801	801	801	1	A07D5F
-item_hopper	Hopper	5	802	802	802	1	3E3C40
-item_host_armor_trim_smithing_template	Host Armor Trim Smithing Template	5	803	803	803	1	544940
-item_howl_pottery_sherd	Howl Pottery Sherd	5	804	804	804	1	743524
-item_iron_axe	Iron Axe	5	805	805	805	1	837671
-item_iron_boots	Iron Boots	5	806	806	806	1	717D83
-item_iron_chestplate	Iron Chestplate	5	807	807	807	1	6B787D
-item_iron_helmet	Iron Helmet	5	808	808	808	1	6D7A7F
-item_iron_hoe	Iron Hoe	5	809	809	809	1	81716A
-item_iron_horse_armor	Iron Horse Armor	5	810	810	810	1	6F6E70
-item_iron_ingot	Iron Ingot	5	811	811	811	1	97A4A8
-item_iron_leggings	Iron Leggings	5	812	812	812	1	6E7B80
-item_iron_nugget	Iron Nugget	5	813	813	813	1	79888D
-item_iron_pickaxe	Iron Pickaxe	5	814	814	814	1	857972
-item_iron_shovel	Iron Shovel	5	815	815	815	1	898482
-item_iron_sword	Iron Sword	5	816	816	816	1	7C8285
-item_item_frame	Item Frame	5	817	817	817	1	AB774C
-item_jungle_chest_boat	Jungle Chest Boat	5	818	818	818	1	8A572E
-item_jungle_hanging_sign	Jungle Hanging Sign	5	819	819	819	1	91644A
-item_kelp	Kelp	5	820	820	820	1	2F7614
-item_lantern	Lantern	5	821	821	821	1	5F5C66
-item_lead	Lead	5	822	822	822	1	7B3014
-item_leaf_litter	Leaf Litter	5	823	823	823	1	7D5332
-item_leather	Leather	5	824	824	824	1	873317
-item_leather_boots	Leather Boots	5	825	825	825	1	66340F
-item_leather_chestplate	Leather Chestplate	5	826	826	826	1	AD8B57
-item_leather_helmet	Leather Helmet	5	827	827	827	1	64320E
-item_leather_horse_armor	Leather Horse Armor	5	828	828	828	1	7D4314
-item_leather_leggings	Leather Leggings	5	829	829	829	1	62310E
-item_lever	Lever	5	830	830	830	1	696470
-item_light_block_10	Light Block 10	5	831	831	831	1	BCA262
-item_light_block_11	Light Block 11	5	832	832	832	1	C1A765
-item_light_block_12	Light Block 12	5	833	833	833	1	BFA86E
-item_light_block_13	Light Block 13	5	834	834	834	1	C5B076
-item_light_block_14	Light Block 14	5	835	835	835	1	C6B481
-item_light_block_15	Light Block 15	5	836	836	836	1	C4B791
-item_lodestonecompass_atlas	Lodestonecompass Atlas	5	837	837	837	1	808080
-item_lodestonecompass_item	Lodestonecompass Item	5	838	838	838	1	666064
-item_mace	Mace	5	839	839	839	1	515B83
-item_magma_cream	Magma Cream	5	840	840	840	1	B39132
-item_mangrove_boat	Mangrove Boat	5	841	841	841	1	541C17
-item_mangrove_chest_boat	Mangrove Chest Boat	5	842	842	842	1	693016
-item_mangrove_door	Mangrove Door	5	843	843	843	1	5B231E
-item_mangrove_hanging_sign	Mangrove Hanging Sign	5	844	844	844	1	5E2825
-item_mangrove_sign	Mangrove Sign	5	845	845	845	1	5B231A
-item_map_filled	Map Filled	5	846	846	846	1	94A388
-item_map_locked	Map Locked	5	847	847	847	1	B3C2B1
-item_map_mansion	Map Mansion	5	848	848	848	1	878F71
-item_map_monument	Map Monument	5	849	849	849	1	8F9D9D
-item_map_nautilus	Map Nautilus	5	850	850	850	1	9F9B99
-item_map_trial_chambers	Map Trial Chambers	5	851	851	851	1	AA9C7D
-item_melon_speckled	Melon Speckled	5	852	852	852	1	B06722
-item_minecart_chest	Minecart Chest	5	853	853	853	1	74644D
-item_minecart_command_block	Minecart Command Block	5	854	854	854	1	95836D
-item_minecart_furnace	Minecart Furnace	5	855	855	855	1	646F74
-item_minecart_hopper	Minecart Hopper	5	856	856	856	1	4C5257
-item_minecart_tnt	Minecart Tnt	5	857	857	857	1	77504B
-item_miner_pottery_sherd	Miner Pottery Sherd	5	858	858	858	1	793725
-item_mojang_banner_pattern	Mojang Banner Pattern	5	859	859	859	1	B6A897
-item_mourner_pottery_sherd	Mourner Pottery Sherd	5	860	860	860	1	753624
-item_mushroom_stew	Mushroom Stew	5	861	861	861	1	7F4A24
-item_music_disc_creator	Music Disc Creator	5	862	862	862	1	458967
-item_music_disc_creator_music_box	Music Disc Creator Music Box	5	863	863	863	1	BE5731
-item_music_disc_lava_chicken	Music Disc Lava Chicken	5	864	864	864	1	5D4344
-item_music_disc_precipice	Music Disc Precipice	5	865	865	865	1	646E66
-item_music_disc_relic	Music Disc Relic	5	866	866	866	1	804B38
-item_music_disc_tears	Music Disc Tears	5	867	867	867	1	CBC9C9
-item_mutton_cooked	Mutton Cooked	5	868	868	868	1	7E2818
-item_mutton_raw	Mutton Raw	5	869	869	869	1	BA463E
-item_name_tag	Name Tag	5	870	870	870	1	9D774E
-item_nautilus	Nautilus	5	871	871	871	1	AB7C5F
-item_nether_star	Nether Star	5	872	872	872	1	D6D1EA
-item_nether_wart	Nether Wart	5	873	873	873	1	93212B
-item_netherbrick	Netherbrick	5	874	874	874	1	442027
-item_netherite_axe	Netherite Axe	5	875	875	875	1	433135
-item_netherite_boots	Netherite Boots	5	876	876	876	1	4D3A40
-item_netherite_chestplate	Netherite Chestplate	5	877	877	877	1	4F3A42
-item_netherite_helmet	Netherite Helmet	5	878	878	878	1	504047
-item_netherite_hoe	Netherite Hoe	5	879	879	879	1	47343B
-item_netherite_horse_armor	Netherite Horse Armor	5	880	880	880	1	54444A
-item_netherite_ingot	Netherite Ingot	5	881	881	881	1	484042
-item_netherite_leggings	Netherite Leggings	5	882	882	882	1	4B3940
-item_netherite_pickaxe	Netherite Pickaxe	5	883	883	883	1	46343A
-item_netherite_scrap	Netherite Scrap	5	884	884	884	1	583229
-item_netherite_shovel	Netherite Shovel	5	885	885	885	1	46353B
-item_netherite_sword	Netherite Sword	5	886	886	886	1	443239
-item_netherite_upgrade_smithing_template	Netherite Upgrade Smithing Template	5	887	887	887	1	5F2C2D
-item_oak_chest_boat	Oak Chest Boat	5	888	888	888	1	92612D
-item_oak_hanging_sign	Oak Hanging Sign	5	889	889	889	1	A87C4C
-item_ominous_bottle	Ominous Bottle	5	890	890	890	1	4C4A50
-item_ominous_trial_key	Ominous Trial Key	5	891	891	891	1	4B564D
-item_oxidized_copper_chain	Oxidized Copper Chain	5	892	892	892	1	2F6F58
-item_oxidized_copper_door	Oxidized Copper Door	5	893	893	893	1	33775D
-item_oxidized_copper_lantern	Oxidized Copper Lantern	5	894	894	894	1	34784C
-item_painting	Painting	5	895	895	895	1	9F7B59
-item_pale_oak_boat	Pale Oak Boat	5	896	896	896	1	C1B3B2
-item_pale_oak_chest_boat	Pale Oak Chest Boat	5	897	897	897	1	AF937C
-item_pale_oak_door	Pale Oak Door	5	898	898	898	1	B8AEAD
-item_pale_oak_hanging_sign	Pale Oak Hanging Sign	5	899	899	899	1	C6BCBE
-item_pale_oak_sign	Pale Oak Sign	5	900	900	900	1	C3B8B6
-item_paper	Paper	5	901	901	901	1	D4DCDD
-item_phantom_membrane	Phantom Membrane	5	902	902	902	1	BDA598
-item_piglin_banner_pattern	Piglin Banner Pattern	5	903	903	903	1	B9AC9C
-item_pitcher_pod	Pitcher Pod	5	904	904	904	1	84441F
-item_plenty_pottery_sherd	Plenty Pottery Sherd	5	905	905	905	1	6F3222
-item_porkchop_cooked	Porkchop Cooked	5	906	906	906	1	D89361
-item_porkchop_raw	Porkchop Raw	5	907	907	907	1	E46D6D
-item_potato	Potato	5	908	908	908	1	9D622F
-item_potato_baked	Potato Baked	5	909	909	909	1	9B652C
-item_potato_poisonous	Potato Poisonous	5	910	910	910	1	A46F30
-item_potion_bottle_absorption	Potion Bottle Absorption	5	911	911	911	1	62779C
-item_potion_bottle_blindness	Potion Bottle Blindness	5	912	912	912	1	61646A
-item_potion_bottle_confusion	Potion Bottle Confusion	5	913	913	913	1	6D5E73
-item_potion_bottle_damageBoost	Potion Bottle Damageboost	5	914	914	914	1	857C5C
-item_potion_bottle_digSlowdown	Potion Bottle Digslowdown	5	915	915	915	1	6A6963
-item_potion_bottle_digSpeed	Potion Bottle Digspeed	5	916	916	916	1	8E8C71
-item_potion_bottle_drinkable	Potion Bottle Drinkable	5	917	917	917	1	5E6783
-item_potion_bottle_fireResistance	Potion Bottle Fireresistance	5	918	918	918	1	87735C
-item_potion_bottle_harm	Potion Bottle Harm	5	919	919	919	1	746871
-item_potion_bottle_heal	Potion Bottle Heal	5	920	920	920	1	835C63
-item_potion_bottle_healthBoost	Potion Bottle Healthboost	5	921	921	921	1	968269
-item_potion_bottle_hunger	Potion Bottle Hunger	5	922	922	922	1	6E7976
-item_potion_bottle_infested	Potion Bottle Infested	5	923	923	923	1	6E7377
-item_potion_bottle_invisibility	Potion Bottle Invisibility	5	924	924	924	1	83858C
-item_potion_bottle_jump	Potion Bottle Jump	5	925	925	925	1	848776
-item_potion_bottle_levitation	Potion Bottle Levitation	5	926	926	926	1	848776
-item_potion_bottle_lingering	Potion Bottle Lingering	5	927	927	927	1	606782
-item_potion_bottle_lingering_damageBoost	Potion Bottle Lingering Damageboost	5	928	928	928	1	897D59
-item_potion_bottle_lingering_fireResistance	Potion Bottle Lingering Fireresistance	5	929	929	929	1	8B7459
-item_potion_bottle_lingering_harm	Potion Bottle Lingering Harm	5	930	930	930	1	77686F
-item_potion_bottle_lingering_heal	Potion Bottle Lingering Heal	5	931	931	931	1	885B60
-item_potion_bottle_lingering_infested	Potion Bottle Lingering Infested	5	932	932	932	1	717376
-item_potion_bottle_lingering_invisibility	Potion Bottle Lingering Invisibility	5	933	933	933	1	87868C
-item_potion_bottle_lingering_jump	Potion Bottle Lingering Jump	5	934	934	934	1	898874
-item_potion_bottle_lingering_luck	Potion Bottle Lingering Luck	5	935	935	935	1	65785A
-item_potion_bottle_lingering_moveSlowdown	Potion Bottle Lingering Moveslowdown	5	936	936	936	1	717887
-item_potion_bottle_lingering_moveSpeed	Potion Bottle Lingering Movespeed	5	937	937	937	1	5F848E
-item_potion_bottle_lingering_nightVision	Potion Bottle Lingering Nightvision	5	938	938	938	1	7C886E
-item_potion_bottle_lingering_oozing	Potion Bottle Lingering Oozing	5	939	939	939	1	74887B
-item_potion_bottle_lingering_poison	Potion Bottle Lingering Poison	5	940	940	940	1	70756D
-item_potion_bottle_lingering_regeneration	Potion Bottle Lingering Regeneration	5	941	941	941	1	7F667C
-item_potion_bottle_lingering_slowFall	Potion Bottle Lingering Slowfall	5	942	942	942	1	877F80
-item_potion_bottle_lingering_turtleMaster	Potion Bottle Lingering Turtlemaster	5	943	943	943	1	716E89
-item_potion_bottle_lingering_waterBreathing	Potion Bottle Lingering Waterbreathing	5	944	944	944	1	748181
-item_potion_bottle_lingering_weakness	Potion Bottle Lingering Weakness	5	945	945	945	1	636368
-item_potion_bottle_lingering_weaving	Potion Bottle Lingering Weaving	5	946	946	946	1	6D696C
-item_potion_bottle_lingering_windCharged	Potion Bottle Lingering Windcharged	5	947	947	947	1	7B7D8D
-item_potion_bottle_lingering_wither	Potion Bottle Lingering Wither	5	948	948	948	1	716767
-item_potion_bottle_moveSlowdown	Potion Bottle Moveslowdown	5	949	949	949	1	6E7788
-item_potion_bottle_moveSpeed	Potion Bottle Movespeed	5	950	950	950	1	5D838E
-item_potion_bottle_nightVision	Potion Bottle Nightvision	5	951	951	951	1	798770
-item_potion_bottle_oozing	Potion Bottle Oozing	5	952	952	952	1	71877C
-item_potion_bottle_poison	Potion Bottle Poison	5	953	953	953	1	6D756F
-item_potion_bottle_regeneration	Potion Bottle Regeneration	5	954	954	954	1	7B677D
-item_potion_bottle_resistance	Potion Bottle Resistance	5	955	955	955	1	87735C
-item_potion_bottle_saturation	Potion Bottle Saturation	5	956	956	956	1	835C63
-item_potion_bottle_slowFall	Potion Bottle Slowfall	5	957	957	957	1	837E81
-item_potion_bottle_splash	Potion Bottle Splash	5	958	958	958	1	5C6A8A
-item_potion_bottle_splash_absorption	Potion Bottle Splash Absorption	5	959	959	959	1	65789C
-item_potion_bottle_splash_blindness	Potion Bottle Splash Blindness	5	960	960	960	1	606771
-item_potion_bottle_splash_confusion	Potion Bottle Splash Confusion	5	961	961	961	1	6B617A
-item_potion_bottle_splash_damageBoost	Potion Bottle Splash Damageboost	5	962	962	962	1	837F63
-item_potion_bottle_splash_digSlowdown	Potion Bottle Splash Digslowdown	5	963	963	963	1	686C6A
-item_potion_bottle_splash_digSpeed	Potion Bottle Splash Digspeed	5	964	964	964	1	8C8F78
-item_potion_bottle_splash_fireResistance	Potion Bottle Splash Fireresistance	5	965	965	965	1	857764
-item_potion_bottle_splash_harm	Potion Bottle Splash Harm	5	966	966	966	1	726C78
-item_potion_bottle_splash_heal	Potion Bottle Splash Heal	5	967	967	967	1	825F6A
-item_potion_bottle_splash_healthBoost	Potion Bottle Splash Healthboost	5	968	968	968	1	948670
-item_potion_bottle_splash_hunger	Potion Bottle Splash Hunger	5	969	969	969	1	6D7C7D
-item_potion_bottle_splash_infested	Potion Bottle Splash Infested	5	970	970	970	1	6D767F
-item_potion_bottle_splash_invisibility	Potion Bottle Splash Invisibility	5	971	971	971	1	818893
-item_potion_bottle_splash_jump	Potion Bottle Splash Jump	5	972	972	972	1	838A7D
-item_potion_bottle_splash_levitation	Potion Bottle Splash Levitation	5	973	973	973	1	838A7D
-item_potion_bottle_splash_moveSlowdown	Potion Bottle Splash Moveslowdown	5	974	974	974	1	6D7A8F
-item_potion_bottle_splash_moveSpeed	Potion Bottle Splash Movespeed	5	975	975	975	1	5B8695
-item_potion_bottle_splash_nightVision	Potion Bottle Splash Nightvision	5	976	976	976	1	778A77
-item_potion_bottle_splash_oozing	Potion Bottle Splash Oozing	5	977	977	977	1	6F8A83
-item_potion_bottle_splash_poison	Potion Bottle Splash Poison	5	978	978	978	1	6C7877
-item_potion_bottle_splash_regeneration	Potion Bottle Splash Regeneration	5	979	979	979	1	796A85
-item_potion_bottle_splash_resistance	Potion Bottle Splash Resistance	5	980	980	980	1	857764
-item_potion_bottle_splash_saturation	Potion Bottle Splash Saturation	5	981	981	981	1	825F6A
-item_potion_bottle_splash_slowFall	Potion Bottle Splash Slowfall	5	982	982	982	1	828188
-item_potion_bottle_splash_turtleMaster	Potion Bottle Splash Turtlemaster	5	983	983	983	1	6D7290
-item_potion_bottle_splash_waterBreathing	Potion Bottle Splash Waterbreathing	5	984	984	984	1	6F8389
-item_potion_bottle_splash_weakness	Potion Bottle Splash Weakness	5	985	985	985	1	606771
-item_potion_bottle_splash_weaving	Potion Bottle Splash Weaving	5	986	986	986	1	696D75
-item_potion_bottle_splash_windCharged	Potion Bottle Splash Windcharged	5	987	987	987	1	767F95
-item_potion_bottle_splash_wither	Potion Bottle Splash Wither	5	988	988	988	1	6C6B71
-item_potion_bottle_turtleMaster	Potion Bottle Turtlemaster	5	989	989	989	1	6F6E89
-item_potion_bottle_waterBreathing	Potion Bottle Waterbreathing	5	990	990	990	1	717F82
-item_potion_bottle_weakness	Potion Bottle Weakness	5	991	991	991	1	61646A
-item_potion_bottle_weaving	Potion Bottle Weaving	5	992	992	992	1	6B696E
-item_potion_bottle_windCharged	Potion Bottle Windcharged	5	993	993	993	1	787C8D
-item_potion_bottle_wither	Potion Bottle Wither	5	994	994	994	1	6E6769
-item_potion_overlay	Potion Overlay	5	995	995	995	1	BDBDBD
-item_prismarine_crystals	Prismarine Crystals	5	996	996	996	1	8FB7AA
-item_prismarine_shard	Prismarine Shard	5	997	997	997	1	6BA995
-item_prize_pottery_sherd	Prize Pottery Sherd	5	998	998	998	1	763625
-item_pumpkin_pie	Pumpkin Pie	5	999	999	999	1	BF621D
-item_quartz	Quartz	5	1000	1000	1000	1	C3B8AE
-item_quiver	Quiver	5	1001	1001	1001	1	A36340
-item_rabbit_cooked	Rabbit Cooked	5	1002	1002	1002	1	D28241
-item_rabbit_foot	Rabbit Foot	5	1003	1003	1003	1	BC9261
-item_rabbit_hide	Rabbit Hide	5	1004	1004	1004	1	A3723C
-item_rabbit_raw	Rabbit Raw	5	1005	1005	1005	1	D39E8C
-item_rabbit_stew	Rabbit Stew	5	1006	1006	1006	1	91511F
-item_raiser_armor_trim_smithing_template	Raiser Armor Trim Smithing Template	5	1007	1007	1007	1	544B42
-item_raw_copper	Raw Copper	5	1008	1008	1008	1	886647
-item_raw_gold	Raw Gold	5	1009	1009	1009	1	B87E16
-item_raw_iron	Raw Iron	5	1010	1010	1010	1	A88A74
-item_record_11	Record 11	5	1011	1011	1011	1	2C2B31
-item_record_13	Record 13	5	1012	1012	1012	1	42403F
-item_record_blocks	Record Blocks	5	1013	1013	1013	1	41393C
-item_record_cat	Record Cat	5	1014	1014	1014	1	394238
-item_record_chirp	Record Chirp	5	1015	1015	1015	1	423438
-item_record_far	Record Far	5	1016	1016	1016	1	3A443D
-item_record_mall	Record Mall	5	1017	1017	1017	1	3E3A48
-item_record_mellohi	Record Mellohi	5	1018	1018	1018	1	403B45
-item_record_otherside	Record Otherside	5	1019	1019	1019	1	393E40
-item_record_pigstep	Record Pigstep	5	1020	1020	1020	1	772D21
-item_record_stal	Record Stal	5	1021	1021	1021	1	363539
-item_record_strad	Record Strad	5	1022	1022	1022	1	424145
-item_record_wait	Record Wait	5	1023	1023	1023	1	3A3D46
-item_record_ward	Record Ward	5	1024	1024	1024	1	393C3B
-item_recovery_compass_atlas	Recovery Compass Atlas	5	1025	1025	1025	1	808080
-item_recovery_compass_item	Recovery Compass Item	5	1026	1026	1026	1	3A5556
-item_redstone_dust	Redstone Dust	5	1027	1027	1027	1	800600
-item_reeds	Reeds	5	1028	1028	1028	1	779329
-item_repeater	Repeater	5	1029	1029	1029	1	7F5458
-item_resin_brick	Resin Brick	5	1030	1030	1030	1	C85E19
-item_rib_armor_trim_smithing_template	Rib Armor Trim Smithing Template	5	1031	1031	1031	1	322833
-item_rotten_flesh	Rotten Flesh	5	1032	1032	1032	1	A05D2C
-item_saddle	Saddle	5	1033	1033	1033	1	7A3117
-item_scrape_pottery_sherd	Scrape Pottery Sherd	5	1034	1034	1034	1	773625
-item_seeds_beetroot	Seeds Beetroot	5	1035	1035	1035	1	A58459
-item_seeds_melon	Seeds Melon	5	1036	1036	1036	1	302A1E
-item_seeds_pumpkin	Seeds Pumpkin	5	1037	1037	1037	1	B6AD75
-item_seeds_wheat	Seeds Wheat	5	1038	1038	1038	1	979545
-item_sentry_armor_trim_smithing_template	Sentry Armor Trim Smithing Template	5	1039	1039	1039	1	515D5C
-item_shaper_armor_trim_smithing_template	Shaper Armor Trim Smithing Template	5	1040	1040	1040	1	55493F
-item_sheaf_pottery_sherd	Sheaf Pottery Sherd	5	1041	1041	1041	1	743524
-item_shears	Shears	5	1042	1042	1042	1	86888E
-item_shelter_pottery_sherd	Shelter Pottery Sherd	5	1043	1043	1043	1	763624
-item_shulker_shell	Shulker Shell	5	1044	1044	1044	1	9B499B
-item_sign	Sign	5	1045	1045	1045	1	A77640
-item_sign_acacia	Sign Acacia	5	1046	1046	1046	1	9D4B24
-item_sign_birch	Sign Birch	5	1047	1047	1047	1	BB9C69
-item_sign_crimson	Sign Crimson	5	1048	1048	1048	1	652D42
-item_sign_darkoak	Sign Darkoak	5	1049	1049	1049	1	52391E
-item_sign_jungle	Sign Jungle	5	1050	1050	1050	1	8E5F3E
-item_sign_spruce	Sign Spruce	5	1051	1051	1051	1	66441F
-item_sign_warped	Sign Warped	5	1052	1052	1052	1	296763
-item_silence_armor_trim_smithing_template	Silence Armor Trim Smithing Template	5	1053	1053	1053	1	335056
-item_skull_banner_pattern	Skull Banner Pattern	5	1054	1054	1054	1	B3A494
-item_skull_pottery_sherd	Skull Pottery Sherd	5	1055	1055	1055	1	713323
-item_slimeball	Slimeball	5	1056	1056	1056	1	6CBB45
-item_sniffer_egg	Sniffer Egg	5	1057	1057	1057	1	504844
-item_snort_pottery_sherd	Snort Pottery Sherd	5	1058	1058	1058	1	713423
-item_snout_armor_trim_smithing_template	Snout Armor Trim Smithing Template	5	1059	1059	1059	1	383E47
-item_snowball	Snowball	5	1060	1060	1060	1	C5DDE7
-item_soul_campfire	Soul Campfire	5	1061	1061	1061	1	578775
-item_soul_lantern	Soul Lantern	5	1062	1062	1062	1	476279
-item_spawn_egg	Spawn Egg	5	1063	1063	1063	1	AFAFAF
-item_spawn_egg_overlay	Spawn Egg Overlay	5	1064	1064	1064	1	B9B9B9
-item_spider_eye	Spider Eye	5	1065	1065	1065	1	70142A
-item_spider_eye_fermented	Spider Eye Fermented	5	1066	1066	1066	1	6E1C24
-item_spire_armor_trim_smithing_template	Spire Armor Trim Smithing Template	5	1067	1067	1067	1	9670A6
-item_spruce_chest_boat	Spruce Chest Boat	5	1068	1068	1068	1	704619
-item_spruce_hanging_sign	Spruce Hanging Sign	5	1069	1069	1069	1	6A4B2A
-item_spyglass	Spyglass	5	1070	1070	1070	1	B77B4C
-item_stick	Stick	5	1071	1071	1071	1	624B12
-item_stone_axe	Stone Axe	5	1072	1072	1072	1	635041
-item_stone_hoe	Stone Hoe	5	1073	1073	1073	1	67503D
-item_stone_pickaxe	Stone Pickaxe	5	1074	1074	1074	1	655140
-item_stone_shovel	Stone Shovel	5	1075	1075	1075	1	5F5147
-item_stone_sword	Stone Sword	5	1076	1076	1076	1	5B5550
-item_string	String	5	1077	1077	1077	1	A7ADB3
-item_sugar	Sugar	5	1078	1078	1078	1	D6D6DF
-item_suspicious_stew	Suspicious Stew	5	1079	1079	1079	1	794920
-item_sweet_berries	Sweet Berries	5	1080	1080	1080	1	722C1C
-item_tide_armor_trim_smithing_template	Tide Armor Trim Smithing Template	5	1081	1081	1081	1	5EAC96
-item_tipped_arrow	Tipped Arrow	5	1082	1082	1082	1	A69484
-item_tipped_arrow_base	Tipped Arrow Base	5	1083	1083	1083	1	A07A57
-item_tipped_arrow_fireres	Tipped Arrow Fireres	5	1084	1084	1084	1	AD7229
-item_tipped_arrow_harm	Tipped Arrow Harm	5	1085	1085	1085	1	8F5D50
-item_tipped_arrow_head	Tipped Arrow Head	5	1086	1086	1086	1	ABABAB
-item_tipped_arrow_healing	Tipped Arrow Healing	5	1087	1087	1087	1	A64535
-item_tipped_arrow_infested	Tipped Arrow Infested	5	1088	1088	1088	1	7E725C
-item_tipped_arrow_invisibility	Tipped Arrow Invisibility	5	1089	1089	1089	1	A79585
-item_tipped_arrow_leaping	Tipped Arrow Leaping	5	1090	1090	1090	1	A89759
-item_tipped_arrow_luck	Tipped Arrow Luck	5	1091	1091	1091	1	687C2A
-item_tipped_arrow_nightvision	Tipped Arrow Nightvision	5	1092	1092	1092	1	92974E
-item_tipped_arrow_oozing	Tipped Arrow Oozing	5	1093	1093	1093	1	819463
-item_tipped_arrow_poison	Tipped Arrow Poison	5	1094	1094	1094	1	7C754D
-item_tipped_arrow_regen	Tipped Arrow Regen	5	1095	1095	1095	1	965A68
-item_tipped_arrow_slow	Tipped Arrow Slow	5	1096	1096	1096	1	7E7B7E
-item_tipped_arrow_slowfalling	Tipped Arrow Slowfalling	5	1097	1097	1097	1	AE8F75
-item_tipped_arrow_strength	Tipped Arrow Strength	5	1098	1098	1098	1	A98228
-item_tipped_arrow_swift	Tipped Arrow Swift	5	1099	1099	1099	1	5C8E85
-item_tipped_arrow_turtlemaster	Tipped Arrow Turtlemaster	5	1100	1100	1100	1	7E687E
-item_tipped_arrow_waterbreathing	Tipped Arrow Waterbreathing	5	1101	1101	1101	1	828970
-item_tipped_arrow_weakness	Tipped Arrow Weakness	5	1102	1102	1102	1	645543
-item_tipped_arrow_weaving	Tipped Arrow Weaving	5	1103	1103	1103	1	765F4A
-item_tipped_arrow_windCharged	Tipped Arrow Windcharged	5	1104	1104	1104	1	928588
-item_tipped_arrow_wither	Tipped Arrow Wither	5	1105	1105	1105	1	7D5B42
-item_torchflower_seeds	Torchflower Seeds	5	1106	1106	1106	1	728247
-item_totem	Totem	5	1107	1107	1107	1	C39034
-item_trial_key	Trial Key	5	1108	1108	1108	1	755644
-item_trident	Trident	5	1109	1109	1109	1	80B6BB
-item_turtle_egg	Turtle Egg	5	1110	1110	1110	1	94AA89
-item_turtle_helmet	Turtle Helmet	5	1111	1111	1111	1	236B2D
-item_turtle_shell_piece	Turtle Shell Piece	5	1112	1112	1112	1	2E8037
-item_vex_armor_trim_smithing_template	Vex Armor Trim Smithing Template	5	1113	1113	1113	1	526160
-item_villagebell	Villagebell	5	1114	1114	1114	1	CE943D
-item_ward_armor_trim_smithing_template	Ward Armor Trim Smithing Template	5	1115	1115	1115	1	41585B
-item_warped_door	Warped Door	5	1116	1116	1116	1	287772
-item_warped_fungus_on_a_stick	Warped Fungus On A Stick	5	1117	1117	1117	1	82683F
-item_warped_hanging_sign	Warped Hanging Sign	5	1118	1118	1118	1	2E6B6A
-item_watch_atlas	Watch Atlas	5	1119	1119	1119	1	808080
-item_wayfinder_armor_trim_smithing_template	Wayfinder Armor Trim Smithing Template	5	1120	1120	1120	1	554B42
-item_weathered_copper_chain	Weathered Copper Chain	5	1121	1121	1121	1	5B6E42
-item_weathered_copper_door	Weathered Copper Door	5	1122	1122	1122	1	5D7649
-item_weathered_copper_lantern	Weathered Copper Lantern	5	1123	1123	1123	1	587837
-item_wheat	Wheat	5	1124	1124	1124	1	B06423
-item_wild_armor_trim_smithing_template	Wild Armor Trim Smithing Template	5	1125	1125	1125	1	69846A
-item_wind_charge	Wind Charge	5	1126	1126	1126	1	D1D8F5
-item_wolf_armor	Wolf Armor	5	1127	1127	1127	1	89534D
-item_wood_axe	Wood Axe	5	1128	1128	1128	1	734C16
-item_wood_hoe	Wood Hoe	5	1129	1129	1129	1	6F4B15
-item_wood_pickaxe	Wood Pickaxe	5	1130	1130	1130	1	713D14
-item_wood_shovel	Wood Shovel	5	1131	1131	1131	1	6A4613
-item_wood_sword	Wood Sword	5	1132	1132	1132	1	764015
+wildflowers	Flores Silvestres	1	414	414	414	1	F3D364
+wool_colored_black	Lã Preto	1	415	415	415	0	1C1C20
+wool_colored_blue	Lã Azul	1	416	416	416	0	3A439E
+wool_colored_brown	Lã Marrom	1	417	417	417	0	6E472E
+wool_colored_cyan	Lã Ciano	1	418	418	418	0	218E92
+wool_colored_gray	Lã Cinza	1	419	419	419	0	404547
+wool_colored_green	Lã Verde	1	420	420	420	0	566E27
+wool_colored_lime	Lã Lima	1	421	421	421	0	71B636
+wool_colored_magenta	Lã Magenta	1	422	422	422	0	BB4AB0
+wool_colored_orange	Lã Laranja	1	423	423	423	0	F0772D
+wool_colored_pink	Lã Rosa	1	424	424	424	0	EF92AE
+wool_colored_purple	Lã Roxo	1	425	425	425	0	7F38AE
+wool_colored_red	Lã Vermelho	1	426	426	426	0	A12C2A
+wool_colored_silver	Lã Cinza Claro	1	427	427	427	0	898981
+wool_colored_white	Lã Branco	1	428	428	428	0	ECEEEF
+wool_colored_yellow	Lã Amarelo	1	429	429	429	0	F8C242
+bush	Arbusto	2	430	430	430	1	95A7B4
+cactus_flower	Flor de Cacto	2	431	431	431	1	EA86A3
+crimson_fungus	Fungo Carmesim	2	432	432	432	1	992519
+crimson_roots	Raízes Carmesim	2	433	433	433	1	790502
+deadbush	Arbusto Seco	2	434	434	434	1	78441B
+fern	Samambaia	2	435	435	435	1	629F4B
+flower_allium	Alho-Ornamental	2	436	436	436	1	A36D9B
+flower_blue_orchid	Orquídea Azul	2	437	437	437	1	2A9BAD
+flower_cornflower	Centáurea	2	438	438	438	1	4D8072
+flower_dandelion	Dente-de-Leão	2	439	439	439	1	B1AF2F
+flower_houstonia	Houstônia	2	440	440	440	1	C5CC9F
+flower_lily_of_the_valley	Lírio-do-Vale	2	441	441	441	1	8FB675
+flower_oxeye_daisy	Margarida	2	442	442	442	1	96B384
+flower_paeonia	Peônia	2	443	443	443	1	827F63
+flower_rose	Papoula	2	444	444	444	1	70421A
+flower_rose_blue	Rosa Azul	2	445	445	445	1	319494
+flower_tulip_orange	Tulipa Laranja	2	446	446	446	1	89851E
+flower_tulip_pink	Tulipa Rosa	2	447	447	447	1	888F58
+flower_tulip_red	Tulipa Vermelha	2	448	448	448	1	7C6521
+flower_tulip_white	Tulipa Branca	2	449	449	449	1	91AF63
+flower_wither_rose	Rosa Wither	2	450	450	450	1	292B18
+leaf_litter	Folhas Caídas	2	451	451	451	1	B19987
+mushroom_brown	Cogumelo Marrom	2	452	452	452	1	B67955
+mushroom_red	Cogumelo Vermelho	2	453	453	453	1	D54633
+nether_sprouts	Brotos do Nether	2	454	454	454	1	119874
+pink_petals	Pétalas Rosa	2	455	455	455	1	F695B6
+reeds	Cana-de-Açúcar	2	456	456	456	1	B1C480
+sapling_acacia	Muda de Acácia	2	457	457	457	1	6D7314
+sapling_birch	Muda de Bétula	2	458	458	458	1	8BA55D
+sapling_jungle	Muda de Selva	2	459	459	459	1	385611
+sapling_oak	Muda de Carvalho	2	460	460	460	1	4A5912
+sapling_roofed_oak	Muda de Carvalho Escuro	2	461	461	461	1	41591D
+sapling_spruce	Muda de Abeto	2	462	462	462	1	2E3E25
+tallgrass	Grama Alta	2	463	463	463	1	5A9345
+torchflower	Flor-Tocha	2	464	464	464	1	7A5D55
+warped_fungus	Fungo Distorcido	2	465	465	465	1	517855
+warped_roots	Raízes Distorcidas	2	466	466	466	1	129882
+wildflowers	Flores Silvestres	2	467	467	467	1	F3D364
+item_acacia_chest_boat	Barco de Acácia Baú	5	468	468	468	1	94491A
+item_acacia_hanging_sign	Placa de Acácia Hanging	5	469	469	469	1	9E4D2B
+item_amethyst_shard	Fragmento de Ametista	5	470	470	470	1	9669BC
+item_angler_pottery_sherd	Angler Pottery Sherd	5	471	471	471	1	783725
+item_apple	Maçã	5	472	472	472	1	96321B
+item_apple_golden	Maçã Dourado	5	473	473	473	1	9F630F
+item_archer_pottery_sherd	Archer Pottery Sherd	5	474	474	474	1	773725
+item_armadillo_scute	Armadillo Scute	5	475	475	475	1	834C4B
+item_armor_stand	Armor Stand	5	476	476	476	1	775840
+item_arms_up_pottery_sherd	Arms Up Pottery Sherd	5	477	477	477	1	783725
+item_arrow	Flecha	5	478	478	478	1	8D7A67
+item_bamboo	Bambu	5	479	479	479	1	517B1F
+item_bamboo_chest_raft	Bambu Baú Raft	5	480	480	480	1	806228
+item_bamboo_door	Porta de Bambu	5	481	481	481	1	BDAA4C
+item_bamboo_hanging_sign	Placa de Bambu Hanging	5	482	482	482	1	A6974D
+item_bamboo_raft	Bambu Raft	5	483	483	483	1	837639
+item_bamboo_sign	Placa de Bambu	5	484	484	484	1	A99845
+item_banner_pattern	Banner Pattern	5	485	485	485	1	B6A58B
+item_bed_black	Cama de Preto	5	486	486	486	1	6E5D5B
+item_bed_blue	Cama de Azul	5	487	487	487	1	716D84
+item_bed_brown	Cama de Marrom	5	488	488	488	1	8F6C50
+item_bed_cyan	Cama de Ciano	5	489	489	489	1	638476
+item_bed_gray	Cama de Cinza	5	490	490	490	1	7D7569
+item_bed_green	Cama de Verde	5	491	491	491	1	7E7A45
+item_bed_light_blue	Cama de Claro Azul	5	492	492	492	1	6B818F
+item_bed_lime	Cama de Lima	5	493	493	493	1	88954D
+item_bed_magenta	Cama de Magenta	5	494	494	494	1	9E607B
+item_bed_orange	Cama de Laranja	5	495	495	495	1	B47943
+item_bed_pink	Cama de Rosa	5	496	496	496	1	B47577
+item_bed_purple	Cama de Roxo	5	497	497	497	1	885880
+item_bed_red	Cama de Vermelho	5	498	498	498	1	9B5544
+item_bed_silver	Cama de Cinza Claro	5	499	499	499	1	958573
+item_bed_white	Cama de Branco	5	500	500	500	1	ADA294
+item_bed_yellow	Cama de Amarelo	5	501	501	501	1	BD9554
+item_beef_cooked	Carne Cozido	5	502	502	502	1	762E17
+item_beef_raw	Carne Bruto	5	503	503	503	1	A5413C
+item_beetroot	Beterraba	5	504	504	504	1	78472C
+item_beetroot_soup	Beterraba Sopa	5	505	505	505	1	742D13
+item_birch_chest_boat	Barco de Bétula Baú	5	506	506	506	1	99713C
+item_birch_hanging_sign	Placa de Bétula Hanging	5	507	507	507	1	B5996A
+item_blade_pottery_sherd	Blade Pottery Sherd	5	508	508	508	1	793725
+item_blaze_powder	Pó de Chama	5	509	509	509	1	C06E10
+item_blaze_rod	Chama Vara	5	510	510	510	1	C97612
+item_blue_egg	Azul Ovo	5	511	511	511	1	7EAF94
+item_boat	Barco	5	512	512	512	1	492F16
+item_boat_acacia	Barco de Acácia	5	513	513	513	1	95421C
+item_boat_birch	Barco de Bétula	5	514	514	514	1	9A7A4B
+item_boat_dark_oak	Barco de Escuro Carvalho	5	515	515	515	1	40250E
+item_boat_darkoak	Barco de Darkoak	5	516	516	516	1	40250E
+item_boat_jungle	Barco de Selva	5	517	517	517	1	87593B
+item_boat_oak	Barco de Carvalho	5	518	518	518	1	926639
+item_boat_spruce	Barco de Abeto	5	519	519	519	1	603F1C
+item_bolt_armor_trim_smithing_template	Bolt Armor Trim Smithing Template	5	520	520	520	1	9D6249
+item_bone	Osso	5	521	521	521	1	D4C9AA
+item_book_enchanted	Livro Enchanted	5	522	522	522	1	974A23
+item_book_portfolio	Livro Portfolio	5	523	523	523	1	91633E
+item_book_writable	Livro Writable	5	524	524	524	1	976E5A
+item_book_written	Livro Written	5	525	525	525	1	794025
+item_bordure_indented_banner_pattern	Bordure Indented Banner Pattern	5	526	526	526	1	B9AB9B
+item_bow_standby	Arco Standby	5	527	527	527	1	885E39
+item_bowl	Tigela	5	528	528	528	1	5C2F0E
+item_bread	Pão	5	529	529	529	1	9F5E20
+item_breeze_rod	Breeze Vara	5	530	530	530	1	7E80C0
+item_brewer_pottery_sherd	Brewer Pottery Sherd	5	531	531	531	1	743524
+item_brewing_stand	Brewing Stand	5	532	532	532	1	7E6E5F
+item_broken_elytra	Broken Elytra	5	533	533	533	1	65607B
+item_brown_egg	Marrom Ovo	5	534	534	534	1	A1533E
+item_brush	Brush	5	535	535	535	1	A86A4D
+item_bucket_axolotl	Balde de Axolotl	5	536	536	536	1	9E7B96
+item_bucket_cod	Balde de Bacalhau	5	537	537	537	1	8A8A8A
+item_bucket_lava	Balde de Lava	5	538	538	538	1	AE7953
+item_bucket_milk	Balde de Leite	5	539	539	539	1	98A1A2
+item_bucket_pufferfish	Balde de Pufferfish	5	540	540	540	1	828B81
+item_bucket_salmon	Balde de Salmão	5	541	541	541	1	7E7E81
+item_bucket_tadpole	Balde de Tadpole	5	542	542	542	1	718986
+item_bucket_tropical	Balde de Tropical	5	543	543	543	1	958681
+item_bucket_water	Balde de Água	5	544	544	544	1	7185A2
+item_bundle	Bundle	5	545	545	545	1	8E4A26
+item_bundle_black	Bundle Preto	5	546	546	546	1	413A4F
+item_bundle_black_open	Bundle Preto Open	5	547	547	547	1	3C364A
+item_bundle_black_open_back	Bundle Preto Open Back	5	548	548	548	1	1B1A29
+item_bundle_black_open_front	Bundle Preto Open Front	5	549	549	549	1	51485F
+item_bundle_blue	Bundle Azul	5	550	550	550	1	475DA9
+item_bundle_blue_open	Bundle Azul Open	5	551	551	551	1	4259A2
+item_bundle_blue_open_back	Bundle Azul Open Back	5	552	552	552	1	243A8B
+item_bundle_blue_open_front	Bundle Azul Open Front	5	553	553	553	1	546DAF
+item_bundle_brown	Bundle Marrom	5	554	554	554	1	83542F
+item_bundle_brown_open	Bundle Marrom Open	5	555	555	555	1	7E512D
+item_bundle_brown_open_back	Bundle Marrom Open Back	5	556	556	556	1	4D2D15
+item_bundle_brown_open_front	Bundle Marrom Open Front	5	557	557	557	1	9D673B
+item_bundle_cyan	Bundle Ciano	5	558	558	558	1	208D88
+item_bundle_cyan_open	Bundle Ciano Open	5	559	559	559	1	1E8985
+item_bundle_cyan_open_back	Bundle Ciano Open Back	5	560	560	560	1	0B6063
+item_bundle_cyan_open_front	Bundle Ciano Open Front	5	561	561	561	1	2AA299
+item_bundle_gray	Bundle Cinza	5	562	562	562	1	565F5F
+item_bundle_gray_open	Bundle Cinza Open	5	563	563	563	1	535B5B
+item_bundle_gray_open_back	Bundle Cinza Open Back	5	564	564	564	1	2D363A
+item_bundle_gray_open_front	Bundle Cinza Open Front	5	565	565	565	1	6A726F
+item_bundle_green	Bundle Verde	5	566	566	566	1	566917
+item_bundle_green_open	Bundle Verde Open	5	567	567	567	1	536616
+item_bundle_green_open_back	Bundle Verde Open Back	5	568	568	568	1	34460C
+item_bundle_green_open_front	Bundle Verde Open Front	5	569	569	569	1	66791C
+item_bundle_light_blue	Bundle Claro Azul	5	570	570	570	1	347EB1
+item_bundle_light_blue_open	Bundle Claro Azul Open	5	571	571	571	1	307BAD
+item_bundle_light_blue_open_back	Bundle Claro Azul Open Back	5	572	572	572	1	10508F
+item_bundle_light_blue_open_front	Bundle Claro Azul Open Front	5	573	573	573	1	4495BF
+item_bundle_light_gray	Bundle Claro Cinza	5	574	574	574	1	867F6F
+item_bundle_light_gray_open	Bundle Claro Cinza Open	5	575	575	575	1	857F70
+item_bundle_light_gray_open_back	Bundle Claro Cinza Open Back	5	576	576	576	1	57584F
+item_bundle_light_gray_open_front	Bundle Claro Cinza Open Front	5	577	577	577	1	A19884
+item_bundle_lime	Bundle Lima	5	578	578	578	1	5D951F
+item_bundle_lime_open	Bundle Lima Open	5	579	579	579	1	568D20
+item_bundle_lime_open_back	Bundle Lima Open Back	5	580	580	580	1	296011
+item_bundle_lime_open_front	Bundle Lima Open Front	5	581	581	581	1	72A929
+item_bundle_magenta	Bundle Magenta	5	582	582	582	1	9A3886
+item_bundle_magenta_open	Bundle Magenta Open	5	583	583	583	1	973883
+item_bundle_magenta_open_back	Bundle Magenta Open Back	5	584	584	584	1	681A60
+item_bundle_magenta_open_front	Bundle Magenta Open Front	5	585	585	585	1	B44B98
+item_bundle_open	Bundle Open	5	586	586	586	1	864623
+item_bundle_open_back	Bundle Open Back	5	587	587	587	1	5D2511
+item_bundle_open_front	Bundle Open Front	5	588	588	588	1	9F592F
+item_bundle_orange	Bundle Laranja	5	589	589	589	1	C26516
+item_bundle_orange_open	Bundle Laranja Open	5	590	590	590	1	BD6216
+item_bundle_orange_open_back	Bundle Laranja Open Back	5	591	591	591	1	903D0A
+item_bundle_orange_open_front	Bundle Laranja Open Front	5	592	592	592	1	D8781E
+item_bundle_pink	Bundle Rosa	5	593	593	593	1	CC5F7E
+item_bundle_pink_open	Bundle Rosa Open	5	594	594	594	1	C85F7C
+item_bundle_pink_open_back	Bundle Rosa Open Back	5	595	595	595	1	A2375D
+item_bundle_pink_open_front	Bundle Rosa Open Front	5	596	596	596	1	DF778F
+item_bundle_purple	Bundle Roxo	5	597	597	597	1	742A97
+item_bundle_purple_open	Bundle Roxo Open	5	598	598	598	1	722794
+item_bundle_purple_open_back	Bundle Roxo Open Back	5	599	599	599	1	4B1074
+item_bundle_purple_open_front	Bundle Roxo Open Front	5	600	600	600	1	8935A8
+item_bundle_red	Bundle Vermelho	5	601	601	601	1	9C2518
+item_bundle_red_open	Bundle Vermelho Open	5	602	602	602	1	972417
+item_bundle_red_open_back	Bundle Vermelho Open Back	5	603	603	603	1	661008
+item_bundle_red_open_front	Bundle Vermelho Open Front	5	604	604	604	1	B53120
+item_bundle_white	Bundle Branco	5	605	605	605	1	AAB0AC
+item_bundle_white_open	Bundle Branco Open	5	606	606	606	1	A3A8A6
+item_bundle_white_open_back	Bundle Branco Open Back	5	607	607	607	1	68747B
+item_bundle_white_open_front	Bundle Branco Open Front	5	608	608	608	1	C7C9C1
+item_bundle_yellow	Bundle Amarelo	5	609	609	609	1	C6913B
+item_bundle_yellow_open	Bundle Amarelo Open	5	610	610	610	1	C38D37
+item_bundle_yellow_open_back	Bundle Amarelo Open Back	5	611	611	611	1	9E671C
+item_bundle_yellow_open_front	Bundle Amarelo Open Front	5	612	612	612	1	D9A548
+item_burn_pottery_sherd	Burn Pottery Sherd	5	613	613	613	1	753624
+item_cake	Bolo	5	614	614	614	1	D29A82
+item_campfire	Campfire	5	615	615	615	1	AB661D
+item_carrot	Cenoura	5	616	616	616	1	9D7215
+item_carrot_golden	Cenoura Dourado	5	617	617	617	1	996912
+item_carrot_on_a_stick	Cenoura On A Graveto	5	618	618	618	1	9A652C
+item_cauldron	Cauldron	5	619	619	619	1	3F3E41
+item_chain	Corrente	5	620	620	620	1	495476
+item_chainmail_boots	Botas de Malha	5	621	621	621	1	6D7A7F
+item_chainmail_chestplate	Peitoral de Malha	5	622	622	622	1	717D82
+item_chainmail_helmet	Capacete de Malha	5	623	623	623	1	5B676D
+item_chainmail_leggings	Calças de Malha	5	624	624	624	1	657278
+item_charcoal	Charcoal	5	625	625	625	1	3C3325
+item_cherry_boat	Barco de Cerejeira	5	626	626	626	1	C1827D
+item_cherry_chest_boat	Barco de Cerejeira Baú	5	627	627	627	1	AF775E
+item_cherry_door	Porta de Cerejeira	5	628	628	628	1	D49993
+item_cherry_hanging_sign	Placa de Cerejeira Hanging	5	629	629	629	1	C79493
+item_cherry_sign	Placa de Cerejeira	5	630	630	630	1	C28B88
+item_chicken_cooked	Frango Cozido	5	631	631	631	1	CD7C39
+item_chicken_raw	Frango Bruto	5	632	632	632	1	D5A592
+item_chorus_fruit	Chorus Fruit	5	633	633	633	1	A250BA
+item_chorus_fruit_popped	Chorus Fruit Popped	5	634	634	634	1	9D51C1
+item_clay_ball	Argila Ball	5	635	635	635	1	777F96
+item_clock_item	Relógio	5	636	636	636	1	AC8C47
+item_coal	Carvão	5	637	637	637	1	28262A
+item_coast_armor_trim_smithing_template	Coast Armor Trim Smithing Template	5	638	638	638	1	566068
+item_comparator	Comparator	5	639	639	639	1	824D4E
+item_compass_atlas	Bússola Atlas	5	640	640	640	1	808080
+item_compass_item	Bússola	5	641	641	641	1	676064
+item_cookie	Biscoito	5	642	642	642	1	B1692E
+item_copper_axe	Machado de Cobre	5	643	643	643	1	A5502C
+item_copper_boots	Botas de Cobre	5	644	644	644	1	A84D2C
+item_copper_chain	Corrente de Cobre	5	645	645	645	1	904326
+item_copper_chestplate	Peitoral de Cobre	5	646	646	646	1	9D4829
+item_copper_door	Porta de Cobre	5	647	647	647	1	9F4D2C
+item_copper_helmet	Capacete de Cobre	5	648	648	648	1	A95333
+item_copper_hoe	Enxada de Cobre	5	649	649	649	1	974825
+item_copper_horse_armor	Cobre Horse Armor	5	650	650	650	1	9D6444
+item_copper_ingot	Lingote de Cobre	5	651	651	651	1	BA5634
+item_copper_lantern	Lanterna de Cobre	5	652	652	652	1	9A5B25
+item_copper_leggings	Calças de Cobre	5	653	653	653	1	A54B2C
+item_copper_nugget	Pepita de Cobre	5	654	654	654	1	B35330
+item_copper_pickaxe	Picareta de Cobre	5	655	655	655	1	9F4925
+item_copper_shovel	Pá de Cobre	5	656	656	656	1	A9532D
+item_copper_sword	Espada de Cobre	5	657	657	657	1	964121
+item_creeper_banner_pattern	Creeper Banner Pattern	5	658	658	658	1	B9AC9C
+item_crimson_door	Porta de Carmesim	5	659	659	659	1	67334A
+item_crimson_hanging_sign	Placa de Carmesim Hanging	5	660	660	660	1	66354D
+item_crossbow_arrow	Crossbow Flecha	5	661	661	661	1	764E2E
+item_crossbow_firework	Crossbow Firework	5	662	662	662	1	82452B
+item_crossbow_standby	Crossbow Standby	5	663	663	663	1	673A1A
+item_danger_pottery_sherd	Danger Pottery Sherd	5	664	664	664	1	733524
+item_dark_oak_chest_boat	Barco de Escuro Carvalho Baú	5	665	665	665	1	5B3510
+item_dark_oak_hanging_sign	Placa de Escuro Carvalho Hanging	5	666	666	666	1	543D27
+item_diamond	Diamante	5	667	667	667	1	37ADC6
+item_diamond_axe	Machado de Diamante	5	668	668	668	1	3C8696
+item_diamond_boots	Botas de Diamante	5	669	669	669	1	308EB1
+item_diamond_chestplate	Peitoral de Diamante	5	670	670	670	1	2EA4BF
+item_diamond_helmet	Capacete de Diamante	5	671	671	671	1	309EB8
+item_diamond_hoe	Enxada de Diamante	5	672	672	672	1	456F7B
+item_diamond_horse_armor	Diamante Horse Armor	5	673	673	673	1	4B9099
+item_diamond_leggings	Calças de Diamante	5	674	674	674	1	259FC0
+item_diamond_pickaxe	Picareta de Diamante	5	675	675	675	1	3C7E8E
+item_diamond_shovel	Pá de Diamante	5	676	676	676	1	338DA2
+item_diamond_sword	Espada de Diamante	5	677	677	677	1	2F93B1
+item_door_acacia	Porta de Acácia	5	678	678	678	1	A14B24
+item_door_birch	Porta de Bétula	5	679	679	679	1	C3A97C
+item_door_dark_oak	Porta de Escuro Carvalho	5	680	680	680	1	3E2915
+item_door_iron	Porta de Ferro	5	681	681	681	1	9CA7AB
+item_door_jungle	Porta de Selva	5	682	682	682	1	8F6041
+item_door_spruce	Porta de Abeto	5	683	683	683	1	664C2F
+item_door_wood	Madeira de Porta	5	684	684	684	1	AA7C4D
+item_dragon_fireball	Dragon Fireball	5	685	685	685	1	BD5CCF
+item_dragons_breath	Dragons Breath	5	686	686	686	1	9B718F
+item_dried_kelp	Seca Alga	5	687	687	687	1	322D22
+item_dune_armor_trim_smithing_template	Dune Armor Trim Smithing Template	5	688	688	688	1	ACB394
+item_dye_powder_black	Dye Pó Preto	5	689	689	689	1	51435C
+item_dye_powder_black_new	Dye Pó Preto New	5	690	690	690	1	2B222D
+item_dye_powder_blue	Dye Pó Azul	5	691	691	691	1	274089
+item_dye_powder_blue_new	Dye Pó Azul New	5	692	692	692	1	385092
+item_dye_powder_brown	Dye Pó Marrom	5	693	693	693	1	693B21
+item_dye_powder_brown_new	Dye Pó Marrom New	5	694	694	694	1	703D18
+item_dye_powder_cyan	Dye Pó Ciano	5	695	695	695	1	226962
+item_dye_powder_glow	Dye Pó Brilhante	5	696	696	696	1	398173
+item_dye_powder_gray	Dye Pó Cinza	5	697	697	697	1	706564
+item_dye_powder_green	Dye Pó Verde	5	698	698	698	1	575F13
+item_dye_powder_light_blue	Dye Pó Claro Azul	5	699	699	699	1	4384AA
+item_dye_powder_lime	Dye Pó Lima	5	700	700	700	1	66841A
+item_dye_powder_magenta	Dye Pó Magenta	5	701	701	701	1	A54788
+item_dye_powder_orange	Dye Pó Laranja	5	702	702	702	1	C16A1A
+item_dye_powder_pink	Dye Pó Rosa	5	703	703	703	1	C97080
+item_dye_powder_purple	Dye Pó Roxo	5	704	704	704	1	80388B
+item_dye_powder_red	Dye Pó Vermelho	5	705	705	705	1	9A2516
+item_dye_powder_silver	Dye Pó Cinza Claro	5	706	706	706	1	8A7C7E
+item_dye_powder_white	Dye Pó Branco	5	707	707	707	1	D5CAAC
+item_dye_powder_white_new	Dye Pó Branco New	5	708	708	708	1	9D8F98
+item_dye_powder_yellow	Dye Pó Amarelo	5	709	709	709	1	BE8830
+item_echo_shard	Fragmento de Echo	5	710	710	710	1	093A43
+item_egg	Ovo	5	711	711	711	1	D3905C
+item_egg_agent	Ovo Agent	5	712	712	712	1	8D7970
+item_egg_bat	Ovo Bat	5	713	713	713	1	352D26
+item_egg_bee	Ovo Bee	5	714	714	714	1	8C6E2B
+item_egg_blaze	Ovo Chama	5	715	715	715	1	C09B1B
+item_egg_cat	Ovo Cat	5	716	716	716	1	B38A5B
+item_egg_cave_spider	Ovo Cave Aranha	5	717	717	717	1	2B2C34
+item_egg_chicken	Ovo Frango	5	718	718	718	1	8F5454
+item_egg_clownfish	Ovo Clownfish	5	719	719	719	1	B47145
+item_egg_cod	Ovo Bacalhau	5	720	720	720	1	8C7749
+item_egg_cow	Ovo Cow	5	721	721	721	1	4D4339
+item_egg_creeper	Ovo Creeper	5	722	722	722	1	0E5E0C
+item_egg_dolphin	Ovo Dolphin	5	723	723	723	1	4D5B65
+item_egg_donkey	Ovo Donkey	5	724	724	724	1	4D4136
+item_egg_drowned	Ovo Drowned	5	725	725	725	1	649E85
+item_egg_elderguardian	Ovo Elderguardian	5	726	726	726	1	858480
+item_egg_enderman	Ovo Enderman	5	727	727	727	1	121212
+item_egg_endermite	Ovo Endermite	5	728	728	728	1	282828
+item_egg_evoker	Ovo Evoker	5	729	729	729	1	535656
+item_egg_fish	Ovo Peixe	5	730	730	730	1	8C7749
+item_egg_fox	Ovo Fox	5	731	731	731	1	9E785B
+item_egg_ghast	Ovo Ghast	5	732	732	732	1	A0A0A0
+item_egg_glow_squid	Ovo Brilhante Squid	5	733	733	733	1	24665A
+item_egg_guardian	Ovo Guardian	5	734	734	734	1	656448
+item_egg_horse	Ovo Horse	5	735	735	735	1	9B8740
+item_egg_husk	Ovo Husk	5	736	736	736	1	6F6D53
+item_egg_lava_slime	Ovo Lava Slime	5	737	737	737	1	5A3901
+item_egg_llama	Ovo Llama	5	738	738	738	1	896A51
+item_egg_mask	Ovo Mask	5	739	739	739	1	C83800
+item_egg_mule	Ovo Mule	5	740	740	740	1	2A130C
+item_egg_mushroomcow	Ovo Mushroomcow	5	741	741	741	1	7D3232
+item_egg_npc	Ovo Npc	5	742	742	742	1	475E56
+item_egg_null	Ovo Null	5	743	743	743	1	AAAAAA
+item_egg_ocelot	Ovo Ocelot	5	744	744	744	1	90834C
+item_egg_panda	Ovo Panda	5	745	745	745	1	6C6C6D
+item_egg_parrot	Ovo Parrot	5	746	746	746	1	415706
+item_egg_phantom	Ovo Phantom	5	747	747	747	1	426548
+item_egg_pig	Ovo Pig	5	748	748	748	1	B06E6B
+item_egg_pigzombie	Ovo Pigzombie	5	749	749	749	1	8B6656
+item_egg_pillager	Ovo Pillager	5	750	750	750	1	503C41
+item_egg_polarbear	Ovo Polarbear	5	751	751	751	1	929291
+item_egg_pufferfish	Ovo Pufferfish	5	752	752	752	1	8A8940
+item_egg_rabbit	Ovo Coelho	5	753	753	753	1	6C432D
+item_egg_ravager	Ovo Ravager	5	754	754	754	1	514F4A
+item_egg_salmon	Ovo Salmão	5	755	755	755	1	562724
+item_egg_sheep	Ovo Sheep	5	756	756	756	1	B3A2A2
+item_egg_shulker	Ovo Shulker	5	757	757	757	1	5F4260
+item_egg_silverfish	Ovo Silverfish	5	758	758	758	1	535656
+item_egg_skeleton	Ovo Skeleton	5	759	759	759	1	747474
+item_egg_skeletonhorse	Ovo Skeletonhorse	5	760	760	760	1	666656
+item_egg_slime	Ovo Slime	5	761	761	761	1	4E8830
+item_egg_spider	Ovo Aranha	5	762	762	762	1	411C17
+item_egg_squid	Ovo Squid	5	763	763	763	1	2B3F4C
+item_egg_stray	Ovo Stray	5	764	764	764	1	647373
+item_egg_turtle	Ovo Turtle	5	765	765	765	1	79A1A1
+item_egg_vex	Ovo Vex	5	766	766	766	1	7A8691
+item_egg_villager	Ovo Villager	5	767	767	767	1	5C4034
+item_egg_vindicator	Ovo Vindicator	5	768	768	768	1	505F60
+item_egg_wanderingtrader	Ovo Wanderingtrader	5	769	769	769	1	69655F
+item_egg_witch	Ovo Witch	5	770	770	770	1	34240E
+item_egg_wither	Ovo Wither	5	771	771	771	1	202121
+item_egg_wolf	Ovo Wolf	5	772	772	772	1	9D948F
+item_egg_zombie	Ovo Zombie	5	773	773	773	1	1C7F72
+item_egg_zombiehorse	Ovo Zombiehorse	5	774	774	774	1	36623C
+item_egg_zombievillager	Ovo Zombievillager	5	775	775	775	1	504634
+item_elytra	Elytra	5	776	776	776	1	67637F
+item_emerald	Esmeralda	5	777	777	777	1	0D8532
+item_empty_armor_slot_boots	Botas de Vazio Armor Slot	5	778	778	778	1	192022
+item_empty_armor_slot_chestplate	Peitoral de Vazio Armor Slot	5	779	779	779	1	192022
+item_empty_armor_slot_helmet	Capacete de Vazio Armor Slot	5	780	780	780	1	192022
+item_empty_armor_slot_leggings	Calças de Vazio Armor Slot	5	781	781	781	1	192022
+item_empty_armor_slot_shield	Vazio Armor Slot Escudo	5	782	782	782	1	192022
+item_end_crystal	End Crystal	5	783	783	783	1	AE7DCF
+item_ender_eye	Ender Olho	5	784	784	784	1	377A47
+item_ender_pearl	Ender Pérola	5	785	785	785	1	0B554E
+item_experience_bottle	Experience Garrafa	5	786	786	786	1	889A2B
+item_explorer_pottery_sherd	Explorer Pottery Sherd	5	787	787	787	1	6F3222
+item_exposed_copper_chain	Corrente de Exposed Cobre	5	788	788	788	1	864832
+item_exposed_copper_door	Porta de Exposed Cobre	5	789	789	789	1	8A573C
+item_exposed_copper_lantern	Lanterna de Exposed Cobre	5	790	790	790	1	77552B
+item_eye_armor_trim_smithing_template	Olho Armor Trim Smithing Template	5	791	791	791	1	B1B682
+item_feather	Pena	5	792	792	792	1	CDCAC4
+item_field_masoned_banner_pattern	Field Masoned Banner Pattern	5	793	793	793	1	BAAD9D
+item_fireball	Fireball	5	794	794	794	1	894C19
+item_fireworks	Fireworks	5	795	795	795	1	A2544C
+item_fish_clownfish_raw	Peixe Clownfish Bruto	5	796	796	796	1	AB5322
+item_fish_cooked	Peixe Cozido	5	797	797	797	1	C8AB8A
+item_fish_pufferfish_raw	Peixe Pufferfish Bruto	5	798	798	798	1	B29745
+item_fish_raw	Peixe Bruto	5	799	799	799	1	B58B5E
+item_fish_salmon_cooked	Peixe Salmão Cozido	5	800	800	800	1	B45931
+item_fish_salmon_raw	Peixe Salmão Bruto	5	801	801	801	1	835933
+item_fishing_rod_cast	Fishing Vara Cast	5	802	802	802	1	7C5532
+item_fishing_rod_uncast	Fishing Vara Uncast	5	803	803	803	1	816448
+item_flint	Sílex	5	804	804	804	1	525151
+item_flint_and_steel	Sílex e Aço	5	805	805	805	1	757A7C
+item_flow_armor_trim_smithing_template	Flow Armor Trim Smithing Template	5	806	806	806	1	6D79BB
+item_flow_banner_pattern	Flow Banner Pattern	5	807	807	807	1	B5A796
+item_flow_pottery_sherd	Flow Pottery Sherd	5	808	808	808	1	783725
+item_flower_banner_pattern	Flor de Banner Pattern	5	809	809	809	1	B1A191
+item_flower_pot	Flor de Vaso	5	810	810	810	1	7C3827
+item_friend_pottery_sherd	Friend Pottery Sherd	5	811	811	811	1	763624
+item_ghast_tear	Ghast Tear	5	812	812	812	1	83AEB7
+item_globe_banner_pattern	Globe Banner Pattern	5	813	813	813	1	B4A695
+item_glow_berries	Brilhante Frutas Vermelhas	5	814	814	814	1	B26E1E
+item_glow_item_frame	Brilhante Frame	5	815	815	815	1	B88655
+item_glowstone_dust	Pedra Luminosa Pó	5	816	816	816	1	BA7E44
+item_goat_horn	Goat Horn	5	817	817	817	1	4D4A47
+item_gold_axe	Machado de Ouro	5	818	818	818	1	B77A16
+item_gold_boots	Botas de Ouro	5	819	819	819	1	A46C15
+item_gold_chestplate	Peitoral de Ouro	5	820	820	820	1	A77116
+item_gold_helmet	Capacete de Ouro	5	821	821	821	1	A46912
+item_gold_hoe	Enxada de Ouro	5	822	822	822	1	AE7114
+item_gold_horse_armor	Ouro Horse Armor	5	823	823	823	1	B06E14
+item_gold_ingot	Lingote de Ouro	5	824	824	824	1	CB9A28
+item_gold_leggings	Calças de Ouro	5	825	825	825	1	A76C12
+item_gold_nugget	Pepita de Ouro	5	826	826	826	1	AA6F15
+item_gold_pickaxe	Picareta de Ouro	5	827	827	827	1	B07416
+item_gold_shovel	Pá de Ouro	5	828	828	828	1	BF8014
+item_gold_sword	Espada de Ouro	5	829	829	829	1	C38315
+item_gunpowder	Pólvora	5	830	830	830	1	45444D
+item_guster_banner_pattern	Guster Banner Pattern	5	831	831	831	1	BDB0A1
+item_guster_pottery_sherd	Guster Pottery Sherd	5	832	832	832	1	773725
+item_hanging_roots	Hanging Roots	5	833	833	833	1	A0674D
+item_heart_pottery_sherd	Heart Pottery Sherd	5	834	834	834	1	773625
+item_heartbreak_pottery_sherd	Heartbreak Pottery Sherd	5	835	835	835	1	773625
+item_heartofthesea_closed	Heartofthesea Closed	5	836	836	836	1	126387
+item_hoglin_meat_cooked	Hoglin Meat Cozido	5	837	837	837	1	762E17
+item_hoglin_meat_raw	Hoglin Meat Bruto	5	838	838	838	1	A5413C
+item_honey_bottle	Mel Garrafa	5	839	839	839	1	A07D5F
+item_hopper	Hopper	5	840	840	840	1	3E3C40
+item_host_armor_trim_smithing_template	Host Armor Trim Smithing Template	5	841	841	841	1	544940
+item_howl_pottery_sherd	Howl Pottery Sherd	5	842	842	842	1	743524
+item_iron_axe	Machado de Ferro	5	843	843	843	1	837671
+item_iron_boots	Botas de Ferro	5	844	844	844	1	717D83
+item_iron_chestplate	Peitoral de Ferro	5	845	845	845	1	6B787D
+item_iron_helmet	Capacete de Ferro	5	846	846	846	1	6D7A7F
+item_iron_hoe	Enxada de Ferro	5	847	847	847	1	81716A
+item_iron_horse_armor	Ferro Horse Armor	5	848	848	848	1	6F6E70
+item_iron_ingot	Lingote de Ferro	5	849	849	849	1	97A4A8
+item_iron_leggings	Calças de Ferro	5	850	850	850	1	6E7B80
+item_iron_nugget	Pepita de Ferro	5	851	851	851	1	79888D
+item_iron_pickaxe	Picareta de Ferro	5	852	852	852	1	857972
+item_iron_shovel	Pá de Ferro	5	853	853	853	1	898482
+item_iron_sword	Espada de Ferro	5	854	854	854	1	7C8285
+item_item_frame	Frame	5	855	855	855	1	AB774C
+item_jungle_chest_boat	Barco de Selva Baú	5	856	856	856	1	8A572E
+item_jungle_hanging_sign	Placa de Selva Hanging	5	857	857	857	1	91644A
+item_kelp	Alga	5	858	858	858	1	2F7614
+item_lantern	Lanterna	5	859	859	859	1	5F5C66
+item_lead	Guia	5	860	860	860	1	7B3014
+item_leather	Couro	5	861	861	861	1	873317
+item_leather_boots	Botas de Couro	5	862	862	862	1	66340F
+item_leather_chestplate	Peitoral de Couro	5	863	863	863	1	AD8B57
+item_leather_helmet	Capacete de Couro	5	864	864	864	1	64320E
+item_leather_horse_armor	Couro Horse Armor	5	865	865	865	1	7D4314
+item_leather_leggings	Calças de Couro	5	866	866	866	1	62310E
+item_lever	Lever	5	867	867	867	1	696470
+item_light_block_10	Claro Bloco 10	5	868	868	868	1	BCA262
+item_light_block_11	Claro Bloco 11	5	869	869	869	1	C1A765
+item_light_block_12	Claro Bloco 12	5	870	870	870	1	BFA86E
+item_light_block_13	Claro Bloco 13	5	871	871	871	1	C5B076
+item_light_block_14	Claro Bloco 14	5	872	872	872	1	C6B481
+item_light_block_15	Claro Bloco 15	5	873	873	873	1	C4B791
+item_lodestonecompass_atlas	Lodestonecompass Atlas	5	874	874	874	1	808080
+item_lodestonecompass_item	Lodestonecompass	5	875	875	875	1	666064
+item_mace	Mace	5	876	876	876	1	515B83
+item_magma_cream	Magma Cream	5	877	877	877	1	B39132
+item_mangrove_boat	Barco de Mangue	5	878	878	878	1	541C17
+item_mangrove_chest_boat	Barco de Mangue Baú	5	879	879	879	1	693016
+item_mangrove_door	Porta de Mangue	5	880	880	880	1	5B231E
+item_mangrove_hanging_sign	Placa de Mangue Hanging	5	881	881	881	1	5E2825
+item_mangrove_sign	Placa de Mangue	5	882	882	882	1	5B231A
+item_map_filled	Mapa Filled	5	883	883	883	1	94A388
+item_map_locked	Mapa Locked	5	884	884	884	1	B3C2B1
+item_map_mansion	Mapa Mansion	5	885	885	885	1	878F71
+item_map_monument	Mapa Monument	5	886	886	886	1	8F9D9D
+item_map_nautilus	Mapa Nautilus	5	887	887	887	1	9F9B99
+item_map_trial_chambers	Mapa Trial Chambers	5	888	888	888	1	AA9C7D
+item_melon_speckled	Melancia Speckled	5	889	889	889	1	B06722
+item_minecart_chest	Minecart Baú	5	890	890	890	1	74644D
+item_minecart_command_block	Bloco de Minecart Command	5	891	891	891	1	95836D
+item_minecart_furnace	Minecart Fornalha	5	892	892	892	1	646F74
+item_minecart_hopper	Minecart Hopper	5	893	893	893	1	4C5257
+item_minecart_tnt	Minecart TNT	5	894	894	894	1	77504B
+item_miner_pottery_sherd	Miner Pottery Sherd	5	895	895	895	1	793725
+item_mojang_banner_pattern	Mojang Banner Pattern	5	896	896	896	1	B6A897
+item_mourner_pottery_sherd	Mourner Pottery Sherd	5	897	897	897	1	753624
+item_mushroom_stew	Cogumelo Ensopado	5	898	898	898	1	7F4A24
+item_music_disc_creator	Música Disco Creator	5	899	899	899	1	458967
+item_music_disc_creator_music_box	Música Disco Creator Música Box	5	900	900	900	1	BE5731
+item_music_disc_lava_chicken	Música Disco Lava Frango	5	901	901	901	1	5D4344
+item_music_disc_precipice	Música Disco Precipice	5	902	902	902	1	646E66
+item_music_disc_relic	Música Disco Relic	5	903	903	903	1	804B38
+item_music_disc_tears	Música Disco Tears	5	904	904	904	1	CBC9C9
+item_mutton_cooked	Carneiro Cozido	5	905	905	905	1	7E2818
+item_mutton_raw	Carneiro Bruto	5	906	906	906	1	BA463E
+item_name_tag	Nome Etiqueta	5	907	907	907	1	9D774E
+item_nautilus	Nautilus	5	908	908	908	1	AB7C5F
+item_nether_star	Nether Star	5	909	909	909	1	D6D1EA
+item_nether_wart	Nether Wart	5	910	910	910	1	93212B
+item_netherbrick	Netherbrick	5	911	911	911	1	442027
+item_netherite_axe	Machado de Netherita	5	912	912	912	1	433135
+item_netherite_boots	Botas de Netherita	5	913	913	913	1	4D3A40
+item_netherite_chestplate	Peitoral de Netherita	5	914	914	914	1	4F3A42
+item_netherite_helmet	Capacete de Netherita	5	915	915	915	1	504047
+item_netherite_hoe	Enxada de Netherita	5	916	916	916	1	47343B
+item_netherite_horse_armor	Netherita Horse Armor	5	917	917	917	1	54444A
+item_netherite_ingot	Lingote de Netherita	5	918	918	918	1	484042
+item_netherite_leggings	Calças de Netherita	5	919	919	919	1	4B3940
+item_netherite_pickaxe	Picareta de Netherita	5	920	920	920	1	46343A
+item_netherite_scrap	Netherita Scrap	5	921	921	921	1	583229
+item_netherite_shovel	Pá de Netherita	5	922	922	922	1	46353B
+item_netherite_sword	Espada de Netherita	5	923	923	923	1	443239
+item_netherite_upgrade_smithing_template	Netherita Upgrade Smithing Template	5	924	924	924	1	5F2C2D
+item_oak_chest_boat	Barco de Carvalho Baú	5	925	925	925	1	92612D
+item_oak_hanging_sign	Placa de Carvalho Hanging	5	926	926	926	1	A87C4C
+item_ominous_bottle	Ominous Garrafa	5	927	927	927	1	4C4A50
+item_ominous_trial_key	Ominous Trial Key	5	928	928	928	1	4B564D
+item_oxidized_copper_chain	Corrente de Oxidized Cobre	5	929	929	929	1	2F6F58
+item_oxidized_copper_door	Porta de Oxidized Cobre	5	930	930	930	1	33775D
+item_oxidized_copper_lantern	Lanterna de Oxidized Cobre	5	931	931	931	1	34784C
+item_painting	Painting	5	932	932	932	1	9F7B59
+item_pale_oak_boat	Barco de Pálido Carvalho	5	933	933	933	1	C1B3B2
+item_pale_oak_chest_boat	Barco de Pálido Carvalho Baú	5	934	934	934	1	AF937C
+item_pale_oak_door	Porta de Pálido Carvalho	5	935	935	935	1	B8AEAD
+item_pale_oak_hanging_sign	Placa de Pálido Carvalho Hanging	5	936	936	936	1	C6BCBE
+item_pale_oak_sign	Placa de Pálido Carvalho	5	937	937	937	1	C3B8B6
+item_paper	Papel	5	938	938	938	1	D4DCDD
+item_phantom_membrane	Phantom Membrane	5	939	939	939	1	BDA598
+item_piglin_banner_pattern	Piglin Banner Pattern	5	940	940	940	1	B9AC9C
+item_pitcher_pod	Pitcher Pod	5	941	941	941	1	84441F
+item_plenty_pottery_sherd	Plenty Pottery Sherd	5	942	942	942	1	6F3222
+item_porkchop_cooked	Costeleta Cozido	5	943	943	943	1	D89361
+item_porkchop_raw	Costeleta Bruto	5	944	944	944	1	E46D6D
+item_potato	Batata	5	945	945	945	1	9D622F
+item_potato_baked	Batata Baked	5	946	946	946	1	9B652C
+item_potato_poisonous	Batata Poisonous	5	947	947	947	1	A46F30
+item_potion_bottle_absorption	Poção Garrafa Absorption	5	948	948	948	1	62779C
+item_potion_bottle_blindness	Poção Garrafa Blindness	5	949	949	949	1	61646A
+item_potion_bottle_confusion	Poção Garrafa Confusion	5	950	950	950	1	6D5E73
+item_potion_bottle_damageBoost	Poção Garrafa Damageboost	5	951	951	951	1	857C5C
+item_potion_bottle_digSlowdown	Poção Garrafa Digslowdown	5	952	952	952	1	6A6963
+item_potion_bottle_digSpeed	Poção Garrafa Digspeed	5	953	953	953	1	8E8C71
+item_potion_bottle_drinkable	Poção Garrafa Drinkable	5	954	954	954	1	5E6783
+item_potion_bottle_fireResistance	Poção Garrafa Fireresistance	5	955	955	955	1	87735C
+item_potion_bottle_harm	Poção Garrafa Harm	5	956	956	956	1	746871
+item_potion_bottle_heal	Poção Garrafa Heal	5	957	957	957	1	835C63
+item_potion_bottle_healthBoost	Poção Garrafa Healthboost	5	958	958	958	1	968269
+item_potion_bottle_hunger	Poção Garrafa Hunger	5	959	959	959	1	6E7976
+item_potion_bottle_infested	Poção Garrafa Infested	5	960	960	960	1	6E7377
+item_potion_bottle_invisibility	Poção Garrafa Invisibility	5	961	961	961	1	83858C
+item_potion_bottle_jump	Poção Garrafa Jump	5	962	962	962	1	848776
+item_potion_bottle_levitation	Poção Garrafa Levitation	5	963	963	963	1	848776
+item_potion_bottle_lingering	Poção Garrafa Lingering	5	964	964	964	1	606782
+item_potion_bottle_lingering_damageBoost	Poção Garrafa Lingering Damageboost	5	965	965	965	1	897D59
+item_potion_bottle_lingering_fireResistance	Poção Garrafa Lingering Fireresistance	5	966	966	966	1	8B7459
+item_potion_bottle_lingering_harm	Poção Garrafa Lingering Harm	5	967	967	967	1	77686F
+item_potion_bottle_lingering_heal	Poção Garrafa Lingering Heal	5	968	968	968	1	885B60
+item_potion_bottle_lingering_infested	Poção Garrafa Lingering Infested	5	969	969	969	1	717376
+item_potion_bottle_lingering_invisibility	Poção Garrafa Lingering Invisibility	5	970	970	970	1	87868C
+item_potion_bottle_lingering_jump	Poção Garrafa Lingering Jump	5	971	971	971	1	898874
+item_potion_bottle_lingering_luck	Poção Garrafa Lingering Luck	5	972	972	972	1	65785A
+item_potion_bottle_lingering_moveSlowdown	Poção Garrafa Lingering Moveslowdown	5	973	973	973	1	717887
+item_potion_bottle_lingering_moveSpeed	Poção Garrafa Lingering Movespeed	5	974	974	974	1	5F848E
+item_potion_bottle_lingering_nightVision	Poção Garrafa Lingering Nightvision	5	975	975	975	1	7C886E
+item_potion_bottle_lingering_oozing	Poção Garrafa Lingering Oozing	5	976	976	976	1	74887B
+item_potion_bottle_lingering_poison	Poção Garrafa Lingering Poison	5	977	977	977	1	70756D
+item_potion_bottle_lingering_regeneration	Poção Garrafa Lingering Regeneration	5	978	978	978	1	7F667C
+item_potion_bottle_lingering_slowFall	Poção Garrafa Lingering Slowfall	5	979	979	979	1	877F80
+item_potion_bottle_lingering_turtleMaster	Poção Garrafa Lingering Turtlemaster	5	980	980	980	1	716E89
+item_potion_bottle_lingering_waterBreathing	Poção Garrafa Lingering Waterbreathing	5	981	981	981	1	748181
+item_potion_bottle_lingering_weakness	Poção Garrafa Lingering Weakness	5	982	982	982	1	636368
+item_potion_bottle_lingering_weaving	Poção Garrafa Lingering Weaving	5	983	983	983	1	6D696C
+item_potion_bottle_lingering_windCharged	Poção Garrafa Lingering Windcharged	5	984	984	984	1	7B7D8D
+item_potion_bottle_lingering_wither	Poção Garrafa Lingering Wither	5	985	985	985	1	716767
+item_potion_bottle_moveSlowdown	Poção Garrafa Moveslowdown	5	986	986	986	1	6E7788
+item_potion_bottle_moveSpeed	Poção Garrafa Movespeed	5	987	987	987	1	5D838E
+item_potion_bottle_nightVision	Poção Garrafa Nightvision	5	988	988	988	1	798770
+item_potion_bottle_oozing	Poção Garrafa Oozing	5	989	989	989	1	71877C
+item_potion_bottle_poison	Poção Garrafa Poison	5	990	990	990	1	6D756F
+item_potion_bottle_regeneration	Poção Garrafa Regeneration	5	991	991	991	1	7B677D
+item_potion_bottle_resistance	Poção Garrafa Resistance	5	992	992	992	1	87735C
+item_potion_bottle_saturation	Poção Garrafa Saturation	5	993	993	993	1	835C63
+item_potion_bottle_slowFall	Poção Garrafa Slowfall	5	994	994	994	1	837E81
+item_potion_bottle_splash	Poção Garrafa Splash	5	995	995	995	1	5C6A8A
+item_potion_bottle_splash_absorption	Poção Garrafa Splash Absorption	5	996	996	996	1	65789C
+item_potion_bottle_splash_blindness	Poção Garrafa Splash Blindness	5	997	997	997	1	606771
+item_potion_bottle_splash_confusion	Poção Garrafa Splash Confusion	5	998	998	998	1	6B617A
+item_potion_bottle_splash_damageBoost	Poção Garrafa Splash Damageboost	5	999	999	999	1	837F63
+item_potion_bottle_splash_digSlowdown	Poção Garrafa Splash Digslowdown	5	1000	1000	1000	1	686C6A
+item_potion_bottle_splash_digSpeed	Poção Garrafa Splash Digspeed	5	1001	1001	1001	1	8C8F78
+item_potion_bottle_splash_fireResistance	Poção Garrafa Splash Fireresistance	5	1002	1002	1002	1	857764
+item_potion_bottle_splash_harm	Poção Garrafa Splash Harm	5	1003	1003	1003	1	726C78
+item_potion_bottle_splash_heal	Poção Garrafa Splash Heal	5	1004	1004	1004	1	825F6A
+item_potion_bottle_splash_healthBoost	Poção Garrafa Splash Healthboost	5	1005	1005	1005	1	948670
+item_potion_bottle_splash_hunger	Poção Garrafa Splash Hunger	5	1006	1006	1006	1	6D7C7D
+item_potion_bottle_splash_infested	Poção Garrafa Splash Infested	5	1007	1007	1007	1	6D767F
+item_potion_bottle_splash_invisibility	Poção Garrafa Splash Invisibility	5	1008	1008	1008	1	818893
+item_potion_bottle_splash_jump	Poção Garrafa Splash Jump	5	1009	1009	1009	1	838A7D
+item_potion_bottle_splash_levitation	Poção Garrafa Splash Levitation	5	1010	1010	1010	1	838A7D
+item_potion_bottle_splash_moveSlowdown	Poção Garrafa Splash Moveslowdown	5	1011	1011	1011	1	6D7A8F
+item_potion_bottle_splash_moveSpeed	Poção Garrafa Splash Movespeed	5	1012	1012	1012	1	5B8695
+item_potion_bottle_splash_nightVision	Poção Garrafa Splash Nightvision	5	1013	1013	1013	1	778A77
+item_potion_bottle_splash_oozing	Poção Garrafa Splash Oozing	5	1014	1014	1014	1	6F8A83
+item_potion_bottle_splash_poison	Poção Garrafa Splash Poison	5	1015	1015	1015	1	6C7877
+item_potion_bottle_splash_regeneration	Poção Garrafa Splash Regeneration	5	1016	1016	1016	1	796A85
+item_potion_bottle_splash_resistance	Poção Garrafa Splash Resistance	5	1017	1017	1017	1	857764
+item_potion_bottle_splash_saturation	Poção Garrafa Splash Saturation	5	1018	1018	1018	1	825F6A
+item_potion_bottle_splash_slowFall	Poção Garrafa Splash Slowfall	5	1019	1019	1019	1	828188
+item_potion_bottle_splash_turtleMaster	Poção Garrafa Splash Turtlemaster	5	1020	1020	1020	1	6D7290
+item_potion_bottle_splash_waterBreathing	Poção Garrafa Splash Waterbreathing	5	1021	1021	1021	1	6F8389
+item_potion_bottle_splash_weakness	Poção Garrafa Splash Weakness	5	1022	1022	1022	1	606771
+item_potion_bottle_splash_weaving	Poção Garrafa Splash Weaving	5	1023	1023	1023	1	696D75
+item_potion_bottle_splash_windCharged	Poção Garrafa Splash Windcharged	5	1024	1024	1024	1	767F95
+item_potion_bottle_splash_wither	Poção Garrafa Splash Wither	5	1025	1025	1025	1	6C6B71
+item_potion_bottle_turtleMaster	Poção Garrafa Turtlemaster	5	1026	1026	1026	1	6F6E89
+item_potion_bottle_waterBreathing	Poção Garrafa Waterbreathing	5	1027	1027	1027	1	717F82
+item_potion_bottle_weakness	Poção Garrafa Weakness	5	1028	1028	1028	1	61646A
+item_potion_bottle_weaving	Poção Garrafa Weaving	5	1029	1029	1029	1	6B696E
+item_potion_bottle_windCharged	Poção Garrafa Windcharged	5	1030	1030	1030	1	787C8D
+item_potion_bottle_wither	Poção Garrafa Wither	5	1031	1031	1031	1	6E6769
+item_potion_overlay	Poção Overlay	5	1032	1032	1032	1	BDBDBD
+item_prismarine_crystals	Prismarina Crystals	5	1033	1033	1033	1	8FB7AA
+item_prismarine_shard	Fragmento de Prismarina	5	1034	1034	1034	1	6BA995
+item_prize_pottery_sherd	Prize Pottery Sherd	5	1035	1035	1035	1	763625
+item_pumpkin_pie	Abóbora Torta	5	1036	1036	1036	1	BF621D
+item_quartz	Quartzo	5	1037	1037	1037	1	C3B8AE
+item_quiver	Quiver	5	1038	1038	1038	1	A36340
+item_rabbit_cooked	Coelho Cozido	5	1039	1039	1039	1	D28241
+item_rabbit_foot	Coelho Foot	5	1040	1040	1040	1	BC9261
+item_rabbit_hide	Coelho Hide	5	1041	1041	1041	1	A3723C
+item_rabbit_raw	Coelho Bruto	5	1042	1042	1042	1	D39E8C
+item_rabbit_stew	Coelho Ensopado	5	1043	1043	1043	1	91511F
+item_raiser_armor_trim_smithing_template	Raiser Armor Trim Smithing Template	5	1044	1044	1044	1	544B42
+item_raw_copper	Bruto Cobre	5	1045	1045	1045	1	886647
+item_raw_gold	Bruto Ouro	5	1046	1046	1046	1	B87E16
+item_raw_iron	Bruto Ferro	5	1047	1047	1047	1	A88A74
+item_record_11	Disco 11	5	1048	1048	1048	1	2C2B31
+item_record_13	Disco 13	5	1049	1049	1049	1	42403F
+item_record_blocks	Disco Blocks	5	1050	1050	1050	1	41393C
+item_record_cat	Disco Cat	5	1051	1051	1051	1	394238
+item_record_chirp	Disco Chirp	5	1052	1052	1052	1	423438
+item_record_far	Disco Far	5	1053	1053	1053	1	3A443D
+item_record_mall	Disco Mall	5	1054	1054	1054	1	3E3A48
+item_record_mellohi	Disco Mellohi	5	1055	1055	1055	1	403B45
+item_record_otherside	Disco Otherside	5	1056	1056	1056	1	393E40
+item_record_pigstep	Disco Pigstep	5	1057	1057	1057	1	772D21
+item_record_stal	Disco Stal	5	1058	1058	1058	1	363539
+item_record_strad	Disco Strad	5	1059	1059	1059	1	424145
+item_record_wait	Disco Wait	5	1060	1060	1060	1	3A3D46
+item_record_ward	Disco Ward	5	1061	1061	1061	1	393C3B
+item_recovery_compass_atlas	Recovery Bússola Atlas	5	1062	1062	1062	1	808080
+item_recovery_compass_item	Recovery Bússola	5	1063	1063	1063	1	3A5556
+item_redstone_dust	Redstone Pó	5	1064	1064	1064	1	800600
+item_repeater	Repeater	5	1065	1065	1065	1	7F5458
+item_resin_brick	Resin Tijolo	5	1066	1066	1066	1	C85E19
+item_rib_armor_trim_smithing_template	Rib Armor Trim Smithing Template	5	1067	1067	1067	1	322833
+item_rotten_flesh	Podre Carne	5	1068	1068	1068	1	A05D2C
+item_saddle	Sela	5	1069	1069	1069	1	7A3117
+item_scrape_pottery_sherd	Scrape Pottery Sherd	5	1070	1070	1070	1	773625
+item_seeds_beetroot	Sementes Beterraba	5	1071	1071	1071	1	A58459
+item_seeds_melon	Sementes Melancia	5	1072	1072	1072	1	302A1E
+item_seeds_pumpkin	Sementes Abóbora	5	1073	1073	1073	1	B6AD75
+item_seeds_wheat	Sementes Trigo	5	1074	1074	1074	1	979545
+item_sentry_armor_trim_smithing_template	Sentry Armor Trim Smithing Template	5	1075	1075	1075	1	515D5C
+item_shaper_armor_trim_smithing_template	Shaper Armor Trim Smithing Template	5	1076	1076	1076	1	55493F
+item_sheaf_pottery_sherd	Sheaf Pottery Sherd	5	1077	1077	1077	1	743524
+item_shears	Shears	5	1078	1078	1078	1	86888E
+item_shelter_pottery_sherd	Shelter Pottery Sherd	5	1079	1079	1079	1	763624
+item_shulker_shell	Shulker Shell	5	1080	1080	1080	1	9B499B
+item_sign	Placa	5	1081	1081	1081	1	A77640
+item_sign_acacia	Placa de Acácia	5	1082	1082	1082	1	9D4B24
+item_sign_birch	Placa de Bétula	5	1083	1083	1083	1	BB9C69
+item_sign_crimson	Placa de Carmesim	5	1084	1084	1084	1	652D42
+item_sign_darkoak	Placa de Darkoak	5	1085	1085	1085	1	52391E
+item_sign_jungle	Placa de Selva	5	1086	1086	1086	1	8E5F3E
+item_sign_spruce	Placa de Abeto	5	1087	1087	1087	1	66441F
+item_sign_warped	Placa de Distorcido	5	1088	1088	1088	1	296763
+item_silence_armor_trim_smithing_template	Silence Armor Trim Smithing Template	5	1089	1089	1089	1	335056
+item_skull_banner_pattern	Skull Banner Pattern	5	1090	1090	1090	1	B3A494
+item_skull_pottery_sherd	Skull Pottery Sherd	5	1091	1091	1091	1	713323
+item_slimeball	Slimeball	5	1092	1092	1092	1	6CBB45
+item_sniffer_egg	Farejador Ovo	5	1093	1093	1093	1	504844
+item_snort_pottery_sherd	Snort Pottery Sherd	5	1094	1094	1094	1	713423
+item_snout_armor_trim_smithing_template	Snout Armor Trim Smithing Template	5	1095	1095	1095	1	383E47
+item_snowball	Snowball	5	1096	1096	1096	1	C5DDE7
+item_soul_campfire	Alma Campfire	5	1097	1097	1097	1	578775
+item_soul_lantern	Lanterna de Alma	5	1098	1098	1098	1	476279
+item_spawn_egg	Spawn Ovo	5	1099	1099	1099	1	AFAFAF
+item_spawn_egg_overlay	Spawn Ovo Overlay	5	1100	1100	1100	1	B9B9B9
+item_spider_eye	Aranha Olho	5	1101	1101	1101	1	70142A
+item_spider_eye_fermented	Aranha Olho Fermented	5	1102	1102	1102	1	6E1C24
+item_spire_armor_trim_smithing_template	Spire Armor Trim Smithing Template	5	1103	1103	1103	1	9670A6
+item_spruce_chest_boat	Barco de Abeto Baú	5	1104	1104	1104	1	704619
+item_spruce_hanging_sign	Placa de Abeto Hanging	5	1105	1105	1105	1	6A4B2A
+item_spyglass	Spyglass	5	1106	1106	1106	1	B77B4C
+item_stick	Graveto	5	1107	1107	1107	1	624B12
+item_stone_axe	Machado de Pedra	5	1108	1108	1108	1	635041
+item_stone_hoe	Enxada de Pedra	5	1109	1109	1109	1	67503D
+item_stone_pickaxe	Picareta de Pedra	5	1110	1110	1110	1	655140
+item_stone_shovel	Pá de Pedra	5	1111	1111	1111	1	5F5147
+item_stone_sword	Espada de Pedra	5	1112	1112	1112	1	5B5550
+item_string	Linha	5	1113	1113	1113	1	A7ADB3
+item_sugar	Açúcar	5	1114	1114	1114	1	D6D6DF
+item_suspicious_stew	Suspicious Ensopado	5	1115	1115	1115	1	794920
+item_sweet_berries	Doce Frutas Vermelhas	5	1116	1116	1116	1	722C1C
+item_tide_armor_trim_smithing_template	Tide Armor Trim Smithing Template	5	1117	1117	1117	1	5EAC96
+item_tipped_arrow	Tipped Flecha	5	1118	1118	1118	1	A69484
+item_tipped_arrow_base	Tipped Flecha Base	5	1119	1119	1119	1	A07A57
+item_tipped_arrow_fireres	Tipped Flecha Fireres	5	1120	1120	1120	1	AD7229
+item_tipped_arrow_harm	Tipped Flecha Harm	5	1121	1121	1121	1	8F5D50
+item_tipped_arrow_head	Tipped Flecha Head	5	1122	1122	1122	1	ABABAB
+item_tipped_arrow_healing	Tipped Flecha Healing	5	1123	1123	1123	1	A64535
+item_tipped_arrow_infested	Tipped Flecha Infested	5	1124	1124	1124	1	7E725C
+item_tipped_arrow_invisibility	Tipped Flecha Invisibility	5	1125	1125	1125	1	A79585
+item_tipped_arrow_leaping	Tipped Flecha Leaping	5	1126	1126	1126	1	A89759
+item_tipped_arrow_luck	Tipped Flecha Luck	5	1127	1127	1127	1	687C2A
+item_tipped_arrow_nightvision	Tipped Flecha Nightvision	5	1128	1128	1128	1	92974E
+item_tipped_arrow_oozing	Tipped Flecha Oozing	5	1129	1129	1129	1	819463
+item_tipped_arrow_poison	Tipped Flecha Poison	5	1130	1130	1130	1	7C754D
+item_tipped_arrow_regen	Tipped Flecha Regen	5	1131	1131	1131	1	965A68
+item_tipped_arrow_slow	Tipped Flecha Slow	5	1132	1132	1132	1	7E7B7E
+item_tipped_arrow_slowfalling	Tipped Flecha Slowfalling	5	1133	1133	1133	1	AE8F75
+item_tipped_arrow_strength	Tipped Flecha Strength	5	1134	1134	1134	1	A98228
+item_tipped_arrow_swift	Tipped Flecha Swift	5	1135	1135	1135	1	5C8E85
+item_tipped_arrow_turtlemaster	Tipped Flecha Turtlemaster	5	1136	1136	1136	1	7E687E
+item_tipped_arrow_waterbreathing	Tipped Flecha Waterbreathing	5	1137	1137	1137	1	828970
+item_tipped_arrow_weakness	Tipped Flecha Weakness	5	1138	1138	1138	1	645543
+item_tipped_arrow_weaving	Tipped Flecha Weaving	5	1139	1139	1139	1	765F4A
+item_tipped_arrow_windCharged	Tipped Flecha Windcharged	5	1140	1140	1140	1	928588
+item_tipped_arrow_wither	Tipped Flecha Wither	5	1141	1141	1141	1	7D5B42
+item_torchflower_seeds	Torchflower Sementes	5	1142	1142	1142	1	728247
+item_totem	Totem	5	1143	1143	1143	1	C39034
+item_trial_key	Trial Key	5	1144	1144	1144	1	755644
+item_trident	Trident	5	1145	1145	1145	1	80B6BB
+item_turtle_egg	Turtle Ovo	5	1146	1146	1146	1	94AA89
+item_turtle_helmet	Capacete de Turtle	5	1147	1147	1147	1	236B2D
+item_turtle_shell_piece	Turtle Shell Piece	5	1148	1148	1148	1	2E8037
+item_vex_armor_trim_smithing_template	Vex Armor Trim Smithing Template	5	1149	1149	1149	1	526160
+item_villagebell	Villagebell	5	1150	1150	1150	1	CE943D
+item_ward_armor_trim_smithing_template	Ward Armor Trim Smithing Template	5	1151	1151	1151	1	41585B
+item_warped_door	Porta de Distorcido	5	1152	1152	1152	1	287772
+item_warped_fungus_on_a_stick	Distorcido Fungus On A Graveto	5	1153	1153	1153	1	82683F
+item_warped_hanging_sign	Placa de Distorcido Hanging	5	1154	1154	1154	1	2E6B6A
+item_watch_atlas	Watch Atlas	5	1155	1155	1155	1	808080
+item_wayfinder_armor_trim_smithing_template	Wayfinder Armor Trim Smithing Template	5	1156	1156	1156	1	554B42
+item_weathered_copper_chain	Corrente de Weathered Cobre	5	1157	1157	1157	1	5B6E42
+item_weathered_copper_door	Porta de Weathered Cobre	5	1158	1158	1158	1	5D7649
+item_weathered_copper_lantern	Lanterna de Weathered Cobre	5	1159	1159	1159	1	587837
+item_wheat	Trigo	5	1160	1160	1160	1	B06423
+item_wild_armor_trim_smithing_template	Wild Armor Trim Smithing Template	5	1161	1161	1161	1	69846A
+item_wind_charge	Wind Charge	5	1162	1162	1162	1	D1D8F5
+item_wolf_armor	Wolf Armor	5	1163	1163	1163	1	89534D
+item_wood_axe	Machado de Madeira	5	1164	1164	1164	1	734C16
+item_wood_hoe	Enxada de Madeira	5	1165	1165	1165	1	6F4B15
+item_wood_pickaxe	Picareta de Madeira	5	1166	1166	1166	1	713D14
+item_wood_shovel	Pá de Madeira	5	1167	1167	1167	1	6A4613
+item_wood_sword	Espada de Madeira	5	1168	1168	1168	1	764015

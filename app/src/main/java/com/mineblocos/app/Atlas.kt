@@ -146,6 +146,12 @@ object Reg {
 
     fun solid(b: Int): Boolean = ok(b) && b != waterId && (kinds[b] == K_CUBE || kinds[b] == K_SLAB)
 
+    /** IDs de todos os blocos cúbicos (para o inventário). */
+    fun cubes(): IntArray = list(K_CUBE)
+
+    /** IDs de todos os registros de um dos tipos dados. */
+    fun list(vararg k: Int): IntArray = (1 until count).filter { kinds[it] in k }.toIntArray()
+
     fun placeable(b: Int): Boolean = ok(b) && kinds[b] != K_ITEM
 
     fun isPlant(b: Int): Boolean = ok(b) && (kinds[b] == K_CROSS || kinds[b] == K_FLAT)
