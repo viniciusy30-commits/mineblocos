@@ -16,13 +16,34 @@ object Atlas {
     val bitmap: Bitmap by lazy { load() }
 
     private fun load(): Bitmap {
-        val o = BitmapFactory.Options()
-        o.inScaled = false
-        o.inPreferredConfig = Bitmap.Config.ARGB_8888
-        val c = appCtx ?: throw IllegalStateException("Atlas.init(context) não foi chamado")
-        c.assets.open("atlas.png").use { s ->
-            return BitmapFactory.decodeStream(s, null, o)!!
+        try {
+            val o = BitmapFactory.Options()
+            o.inScaled = false
+            o.inPreferredConfig = Bitmap.Config.ARGB_8888
+            val c = appCtx ?: throw IllegalStateException("Atlas.init(context) não foi chamado")
+            c.assets.open("atlas.png").use { s ->
+                return BitmapFactory.decodeStream(s, null, o)!!
+            }
+        } catch (e: Throwable) {
+            android.util.Log.e("Mineblocos", "atlas.png ausente; usando textura provisória", e)
+            return placeholder()
         }
+    }
+
+    /** Textura provisória (xadrez colorido) para o app abrir sem o atlas.png. */
+    private fun placeholder(): Bitmap {
+        val w = COLS * TILE
+        val h = 8 * TILE
+        val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+        val px = IntArray(w * h)
+        for (y in 0 until h) for (x in 0 until w) {
+            val t = (y / TILE) * COLS + (x / TILE)
+            val base = android.graphics.Color.HSVToColor(floatArrayOf((t * 37 % 360).toFloat(), 0.45f, 0.75f))
+            val dark = ((x % TILE) / 4 + (y % TILE) / 4) % 2 == 0
+            px[y * w + x] = if (dark) base else (base and 0xFF000000.toInt()) or ((base and 0xFEFEFE) shr 1)
+        }
+        bmp.setPixels(px, 0, w, 0, 0, w, h)
+        return bmp
     }
 
     fun tx(tile: Int) = (tile % COLS) * TILE
