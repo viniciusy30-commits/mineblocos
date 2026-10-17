@@ -1,3 +1,9 @@
+#id 2026-10-17-c
+#titulo Andar igual ao Minecraft
+- Animação de andar do personagem baseada no addon Actions & Stuff
+- Braços, pernas, corpo e cabeça se movem como no Minecraft
+- Personagem com as proporções do Steve
+
 #id 2026-10-17-b
 #titulo Visão em 3ª pessoa e mundo gigante
 - Câmera em 3ª pessoa com personagem animado (botão CÂM alterna 1ª, 3ª atrás e 3ª de frente)

@@ -60,6 +60,7 @@ class GameRenderer(
     private var fpsFrames = 0
     private var timeAcc = 0f
     private var bobT = 0f
+    private val anim = PlayerAnim()
 
     private val look = FloatArray(2)
     private var hit: Hit? = null
@@ -326,6 +327,7 @@ class GameRenderer(
 
         val spd = sqrt(s.vx * s.vx + s.vz * s.vz)
         if (s.onGround && spd > 0.5f) bobT += dt * spd * 1.9f
+        anim.update(dt, spd, s.onGround, s.flying)
 
         // interação
         val cp = cos(s.pitch)
@@ -594,17 +596,48 @@ class GameRenderer(
 
     private val base = FloatArray(16)
     private val pm = FloatArray(16)
+    private val boneM = Array(PlayerAnim.COUNT) { FloatArray(16) }
 
-    private fun part(
-        pvx: Float, pvy: Float, pvz: Float, ang: Float,
-        cx: Float, cy: Float, cz: Float, sx: Float, sy: Float, sz: Float,
+    // Esqueleto do personagem, nas proporções do Minecraft (Steve: 32 px = 1,8 bloco).
+    // X+ é a direita do personagem; o rosto aponta para -Z.
+    private val PX = 1.8f / 32f
+    private val PIVOT = floatArrayOf(
+        0f, 12f, 0f,     // cintura
+        0f, 24f, 0f,     // corpo
+        0f, 24f, 0f,     // cabeça
+        5f, 22f, 0f,     // braço direito
+        -5f, 22f, 0f,    // braço esquerdo
+        1.9f, 12f, 0f,   // perna direita
+        -1.9f, 12f, 0f   // perna esquerda
+    )
+    // cintura -> corpo -> cabeça/braços; pernas presas na raiz (como no Minecraft)
+    private val PARENT = intArrayOf(
+        -1, PlayerAnim.WAIST, PlayerAnim.BODY, PlayerAnim.BODY, PlayerAnim.BODY, -1, -1
+    )
+
+    /** Monta a matriz do osso: posição da animação, depois rotação em torno do pivô. */
+    private fun poseBone(i: Int, extraPitch: Float) {
+        val parent = if (PARENT[i] < 0) base else boneM[PARENT[i]]
+        val m = boneM[i]
+        System.arraycopy(parent, 0, m, 0, 16)
+        val px = PIVOT[i * 3]
+        val py = PIVOT[i * 3 + 1]
+        val pz = PIVOT[i * 3 + 2]
+        Matrix.translateM(m, 0, px + anim.pos[i * 3], py + anim.pos[i * 3 + 1], pz + anim.pos[i * 3 + 2])
+        Matrix.rotateM(m, 0, anim.rot[i * 3 + 2], 0f, 0f, 1f)
+        Matrix.rotateM(m, 0, anim.rot[i * 3 + 1], 0f, 1f, 0f)
+        Matrix.rotateM(m, 0, anim.rot[i * 3] + extraPitch, 1f, 0f, 0f)
+        Matrix.translateM(m, 0, -px, -py, -pz)
+    }
+
+    /** Caixa em coordenadas do modelo (pixels), presa a um osso. */
+    private fun box(
+        bone: Int, x0: Float, y0: Float, z0: Float, x1: Float, y1: Float, z1: Float,
         r: Float, g: Float, b: Float, lum: Float
     ) {
-        System.arraycopy(base, 0, pm, 0, 16)
-        Matrix.translateM(pm, 0, pvx, pvy, pvz)
-        Matrix.rotateM(pm, 0, ang, 1f, 0f, 0f)
-        Matrix.translateM(pm, 0, cx - pvx, cy - pvy, cz - pvz)
-        Matrix.scaleM(pm, 0, sx, sy, sz)
+        System.arraycopy(boneM[bone], 0, pm, 0, 16)
+        Matrix.translateM(pm, 0, x0, y0, z0)
+        Matrix.scaleM(pm, 0, x1 - x0, y1 - y0, z1 - z0)
         drawColorCube(pm, r * lum, g * lum, b * lum, 1f)
     }
 
@@ -612,24 +645,26 @@ class GameRenderer(
         Matrix.setIdentityM(base, 0)
         Matrix.translateM(base, 0, s.px, s.py, s.pz)
         Matrix.rotateM(base, 0, -Math.toDegrees(s.yaw.toDouble()).toFloat(), 0f, 1f, 0f)
-        val moveAmt = if (s.onGround) min(1f, (abs(s.vx) + abs(s.vz)) / 4f) else 0f
-        var sw = sin(bobT) * 45f * moveAmt
-        if (!s.onGround && !s.flying) sw = 25f
-        val head = Math.toDegrees(s.pitch.toDouble()).toFloat()
+        Matrix.scaleM(base, 0, PX, PX, PX)
+        val pitch = Math.toDegrees(s.pitch.toDouble()).toFloat()
+        for (i in 0 until PlayerAnim.COUNT) {
+            poseBone(i, if (i == PlayerAnim.HEAD) pitch else 0f)
+        }
         // pernas
-        part(-0.125f, 0.7f, 0f, sw, -0.25f, 0f, -0.125f, 0.25f, 0.7f, 0.25f, 0.22f, 0.22f, 0.58f, lum)
-        part(0.125f, 0.7f, 0f, -sw, 0f, 0f, -0.125f, 0.25f, 0.7f, 0.25f, 0.2f, 0.2f, 0.52f, lum)
+        box(PlayerAnim.R_LEG, -0.1f, 0f, -2f, 3.9f, 12f, 2f, 0.2f, 0.2f, 0.52f, lum)
+        box(PlayerAnim.L_LEG, -3.9f, 0f, -2f, 0.1f, 12f, 2f, 0.22f, 0.22f, 0.58f, lum)
         // corpo
-        part(0f, 0.7f, 0f, 0f, -0.25f, 0.7f, -0.125f, 0.5f, 0.7f, 0.25f, 0.0f, 0.68f, 0.68f, lum)
+        box(PlayerAnim.BODY, -4f, 12f, -2f, 4f, 24f, 2f, 0.0f, 0.68f, 0.68f, lum)
         // braços
-        part(-0.325f, 1.4f, 0f, -sw, -0.4f, 0.7f, -0.125f, 0.15f, 0.7f, 0.25f, 0.84f, 0.64f, 0.48f, lum)
-        part(0.325f, 1.4f, 0f, sw, 0.25f, 0.7f, -0.125f, 0.15f, 0.7f, 0.25f, 0.8f, 0.6f, 0.45f, lum)
-        // cabeça
-        part(0f, 1.4f, 0f, head, -0.2f, 1.4f, -0.2f, 0.4f, 0.4f, 0.4f, 0.86f, 0.66f, 0.5f, lum)
-        part(0f, 1.4f, 0f, head, -0.22f, 1.68f, -0.22f, 0.44f, 0.14f, 0.44f, 0.28f, 0.17f, 0.08f, lum)
-        part(0f, 1.4f, 0f, head, -0.22f, 1.4f, 0.14f, 0.44f, 0.3f, 0.08f, 0.28f, 0.17f, 0.08f, lum)
-        part(0f, 1.4f, 0f, head, -0.14f, 1.57f, -0.206f, 0.09f, 0.07f, 0.02f, 0.15f, 0.2f, 0.65f, lum)
-        part(0f, 1.4f, 0f, head, 0.05f, 1.57f, -0.206f, 0.09f, 0.07f, 0.02f, 0.15f, 0.2f, 0.65f, lum)
+        box(PlayerAnim.R_ARM, 4f, 12f, -2f, 8f, 24f, 2f, 0.8f, 0.6f, 0.45f, lum)
+        box(PlayerAnim.L_ARM, -8f, 12f, -2f, -4f, 24f, 2f, 0.84f, 0.64f, 0.48f, lum)
+        // cabeça, cabelo e olhos
+        val h = PlayerAnim.HEAD
+        box(h, -4f, 24f, -4f, 4f, 32f, 4f, 0.86f, 0.66f, 0.5f, lum)
+        box(h, -4.4f, 30.2f, -4.4f, 4.4f, 32.4f, 4.4f, 0.28f, 0.17f, 0.08f, lum)
+        box(h, -4.4f, 24f, 2.8f, 4.4f, 30.2f, 4.4f, 0.28f, 0.17f, 0.08f, lum)
+        box(h, -2.8f, 26.8f, -4.3f, -0.8f, 28.2f, -3.95f, 0.15f, 0.2f, 0.65f, lum)
+        box(h, 0.8f, 26.8f, -4.3f, 2.8f, 28.2f, -3.95f, 0.15f, 0.2f, 0.65f, lum)
     }
 
     private fun drawHand(bright: Float) {
