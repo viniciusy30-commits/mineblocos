@@ -77,15 +77,17 @@ object Mesher {
     private fun emitQuad(out: FloatList, f: Int, ox: Float, oy: Float, oz: Float, tile: Int, l: FloatArray) {
         val c = CORNERS[f]
         val uv = UVS[f]
-        val tx = (tile % 4) * 16f
-        val ty = (tile / 4) * 16f
+        val tx = (tile % Atlas.COLS) * 16f
+        val ty = (tile / Atlas.COLS) * 16f
+        val aw = Atlas.bitmap.width.toFloat()
+        val ah = Atlas.bitmap.height.toFloat()
         val order = if (l[0] + l[2] >= l[1] + l[3]) ORDER_A else ORDER_B
         for (k in order) {
             out.add(ox + c[k * 3])
             out.add(oy + c[k * 3 + 1])
             out.add(oz + c[k * 3 + 2])
-            out.add((tx + 0.05f + uv[k * 2] * 15.9f) / 64f)
-            out.add((ty + 0.05f + uv[k * 2 + 1] * 15.9f) / 64f)
+            out.add((tx + 0.05f + uv[k * 2] * 15.9f) / aw)
+            out.add((ty + 0.05f + uv[k * 2 + 1] * 15.9f) / ah)
             out.add(l[k])
         }
     }

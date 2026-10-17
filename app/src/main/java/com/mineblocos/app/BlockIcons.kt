@@ -34,8 +34,8 @@ object BlockIcons {
     }
 
     private fun face(cv: Canvas, atlas: Bitmap, tile: Int, p0: PointF, p1: PointF, p2: PointF, p3: PointF, dark: Float) {
-        val tx = (tile % 4) * 16f
-        val ty = (tile / 4) * 16f
+        val tx = (tile % Atlas.COLS) * 16f
+        val ty = (tile / Atlas.COLS) * 16f
         val m = Matrix()
         m.setPolyToPoly(
             floatArrayOf(tx, ty, tx + 16f, ty, tx, ty + 16f), 0,

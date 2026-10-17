@@ -30,7 +30,12 @@ object Atlas {
         }
     }
 
-    /** Textura provisória (xadrez colorido) para o app abrir sem o atlas.png. */
+    private val FALLBACK_COLORS = intArrayOf(
+        0x5DA03A, 0x6E8F3C, 0x866043, 0x7D7D7D, 0x6A6A6A, 0x6B5230,
+        0x9C7F4E, 0xB8935A, 0x3F7A2A, 0xDBD3A0, 0xC8E6F0, 0x9A4B3C
+    )
+
+    /** Textura provisória (cores lisas com ruído leve) para o app abrir sem o atlas.png. */
     private fun placeholder(): Bitmap {
         val w = COLS * TILE
         val h = 8 * TILE
@@ -38,9 +43,12 @@ object Atlas {
         val px = IntArray(w * h)
         for (y in 0 until h) for (x in 0 until w) {
             val t = (y / TILE) * COLS + (x / TILE)
-            val base = android.graphics.Color.HSVToColor(floatArrayOf((t * 37 % 360).toFloat(), 0.45f, 0.75f))
-            val dark = ((x % TILE) / 4 + (y % TILE) / 4) % 2 == 0
-            px[y * w + x] = if (dark) base else (base and 0xFF000000.toInt()) or ((base and 0xFEFEFE) shr 1)
+            val base = if (t < FALLBACK_COLORS.size) FALLBACK_COLORS[t] else 0x808080
+            val n = (((x % TILE) * 7 + (y % TILE) * 13 + t * 5) % 5 - 2) * 4
+            val r = (((base shr 16) and 0xFF) + n).coerceIn(0, 255)
+            val g = (((base shr 8) and 0xFF) + n).coerceIn(0, 255)
+            val bl = ((base and 0xFF) + n).coerceIn(0, 255)
+            px[y * w + x] = (0xFF shl 24) or (r shl 16) or (g shl 8) or bl
         }
         bmp.setPixels(px, 0, w, 0, 0, w, h)
         return bmp
@@ -72,10 +80,29 @@ object Reg {
     private var ready = false
     private var waterId = -1
 
+    // id, nome, kind, topo, base, lado, flags, cor média (mesma ordem de Blocks.kt)
+    private val FALLBACK_REGISTRY = listOf(
+        "grass\tGrama\t1\t0\t2\t1\t0\t5DA03A",
+        "dirt\tTerra\t1\t2\t2\t2\t0\t866043",
+        "stone\tPedra\t1\t3\t3\t3\t0\t7D7D7D",
+        "cobble\tPedregulho\t1\t4\t4\t4\t0\t6A6A6A",
+        "log\tTronco\t1\t6\t6\t5\t0\t6B5230",
+        "planks\tTábuas\t1\t7\t7\t7\t0\tB8935A",
+        "leaves\tFolhas\t1\t8\t8\t8\t1\t3F7A2A",
+        "sand\tAreia\t1\t9\t9\t9\t0\tDBD3A0",
+        "glass\tVidro\t1\t10\t10\t10\t3\tC8E6F0",
+        "brick\tTijolos\t1\t11\t11\t11\t0\t9A4B3C"
+    )
+
     @Synchronized
     fun init(c: Context) {
         if (ready) return
-        val lines = c.assets.open("registry.tsv").bufferedReader(Charsets.UTF_8).readLines().filter { it.isNotBlank() }
+        val lines = try {
+            c.assets.open("registry.tsv").bufferedReader(Charsets.UTF_8).readLines().filter { it.isNotBlank() }
+        } catch (e: Throwable) {
+            android.util.Log.e("Mineblocos", "registry.tsv ausente; usando blocos básicos", e)
+            FALLBACK_REGISTRY
+        }
         val n = lines.size + 1
         ids = Array(n) { "air" }
         names = Array(n) { "Ar" }
