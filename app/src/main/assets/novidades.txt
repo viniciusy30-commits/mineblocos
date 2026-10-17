@@ -1,3 +1,17 @@
+#id 2026-10-17-e
+#titulo Mundo plano com rio
+- Mundo plano, bem maior (512 x 512 blocos), com um rio sinuoso e margens de areia
+- Dá para entrar na água do rio
+- Atenção: o mundo antigo não é compatível, um novo é criado
+
+#id 2026-10-17-d
+#titulo Todos os blocos e itens do Minecraft
+- Mais de 620 blocos e 760 itens com as texturas do Actions & Stuff
+- Botão INV abre o inventário: toque em qualquer bloco ou item para colocar no slot selecionado da hotbar
+- Lajes, flores, mudas, tochas, trilhos e tapetes com formato próprio
+- Itens (espadas, comidas, poções...) aparecem na mão, mas não dá para colocá-los
+- Mundos antigos continuam funcionando
+
 #id 2026-10-17-c
 #titulo Andar igual ao Minecraft
 - Animação de andar do personagem baseada no addon Actions & Stuff

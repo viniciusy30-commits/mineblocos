@@ -2,18 +2,19 @@ package com.mineblocos.app
 
 import kotlin.math.abs
 import kotlin.math.max
+import kotlin.math.sin
 
 class World(val seed: Int) {
     companion object {
-        const val W = 256
-        const val H = 64
-        const val D = 256
+        const val W = 512
+        const val H = 48
+        const val D = 512
         const val CS = 16
         const val CX = W / CS
         const val CZ = D / CS
     }
 
-    val blocks = ByteArray(W * H * D)
+    val blocks = ShortArray(W * H * D)
     val dirty = BooleanArray(CX * CZ)
 
     private fun idx(x: Int, y: Int, z: Int) = (y * D + z) * W + x
@@ -34,11 +35,11 @@ class World(val seed: Int) {
         if (y < 0) return true
         if (y >= H) return false
         if (x < 0 || x >= W || z < 0 || z >= D) return true
-        return blocks[idx(x, y, z)].toInt() != 0
+        return Reg.solid(blocks[idx(x, y, z)].toInt())
     }
 
     private fun setRaw(x: Int, y: Int, z: Int, b: Int) {
-        if (inBounds(x, y, z)) blocks[idx(x, y, z)] = b.toByte()
+        if (inBounds(x, y, z)) blocks[idx(x, y, z)] = b.toShort()
     }
 
     private fun markDirty(cx: Int, cz: Int) {
@@ -51,7 +52,7 @@ class World(val seed: Int) {
 
     fun set(x: Int, y: Int, z: Int, b: Int) {
         if (!inBounds(x, y, z)) return
-        blocks[idx(x, y, z)] = b.toByte()
+        blocks[idx(x, y, z)] = b.toShort()
         val cx = x shr 4
         val cz = z shr 4
         markDirty(cx, cz)
@@ -68,21 +69,34 @@ class World(val seed: Int) {
 
     fun generate(progress: (Int) -> Unit) {
         val heights = IntArray(W * D)
+        val water = Reg.id("water")
+        val ground = 20
         for (z in 0 until D) {
             for (x in 0 until W) {
-                val n = Noise.fbm(x / 40f, z / 40f, seed, 4)
-                val m = Noise.fbm(x / 90f, z / 90f, seed + 77, 3)
-                val h = 22f + (n - 0.5f) * 44f + max(0f, m - 0.52f) * 90f
-                val hi = h.toInt().coerceIn(3, H - 16)
-                heights[z * W + x] = hi
-                val sandy = hi <= 20
-                for (y in 0..hi) {
-                    val b = when {
-                        y == hi -> if (sandy) Blocks.SAND else Blocks.GRASS
-                        y >= hi - 3 -> if (sandy) Blocks.SAND else Blocks.DIRT
+                // rio sinuoso cruzando o mundo
+                val cz = D * 0.65f + sin(x / 70f) * 32f + sin(x / 23f + seed) * 9f
+                val width = 6f + 2.5f * sin(x / 41f)
+                val dist = abs(z - cz)
+                val inRiver = dist < width
+                val bank = dist < width + 2.5f
+                heights[z * W + x] = ground
+                for (y in 0..ground) {
+                    var b = when {
+                        y == 0 -> Blocks.STONE
+                        y == ground -> if (bank) Blocks.SAND else Blocks.GRASS
+                        y >= ground - 3 -> if (bank) Blocks.SAND else Blocks.DIRT
                         else -> Blocks.STONE
                     }
-                    blocks[idx(x, y, z)] = b.toByte()
+                    if (inRiver && y >= ground - 3) {
+                        // leito do rio mais fundo no meio
+                        val depth = if (dist < width * 0.5f) 3 else 2
+                        b = if (y > ground - depth) Blocks.AIR else Blocks.SAND
+                    }
+                    blocks[idx(x, y, z)] = b.toShort()
+                }
+                if (inRiver) {
+                    val depth = if (dist < width * 0.5f) 3 else 2
+                    for (y in ground - depth + 1 until ground) blocks[idx(x, y, z)] = water.toShort()
                 }
             }
             progress(z * 100 / D)
@@ -91,7 +105,7 @@ class World(val seed: Int) {
             for (x in 3 until W - 3) {
                 val hi = heights[z * W + x]
                 if (get(x, hi, z) != Blocks.GRASS) continue
-                if (Noise.rnd(x, z, seed + 99) > 0.009f) continue
+                if (Noise.rnd(x, z, seed + 99) > 0.004f) continue
                 val th = 4 + (Noise.hash(x, z, seed + 5) and 1)
                 for (i in 1..th) setRaw(x, hi + i, z, Blocks.LOG)
                 for (dy in (th - 2)..(th + 1)) {

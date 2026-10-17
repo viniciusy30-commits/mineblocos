@@ -1,122 +1,99 @@
 package com.mineblocos.app
 
+import android.content.Context
 import android.graphics.Bitmap
-import java.util.Random
-import kotlin.math.abs
-import kotlin.math.max
+import android.graphics.BitmapFactory
 
-/** Atlas de texturas 4x4 (16px cada) desenhado 100% por código. */
+/** Atlas de texturas (tiles de 16px, 64 colunas) vindo do pack Actions & Stuff. */
 object Atlas {
-    val tileAvg = IntArray(16)
-    val bitmap: Bitmap by lazy { generate() }
+    const val TILE = 16
+    const val COLS = 64
 
-    private fun c(v: Int) = if (v < 0) 0 else if (v > 255) 255 else v
-    private fun rgb(r: Int, g: Int, b: Int): Int = (0xFF shl 24) or (c(r) shl 16) or (c(g) shl 8) or c(b)
-    private fun n(rnd: Random, amp: Int) = rnd.nextInt(amp * 2 + 1) - amp
+    val bitmap: Bitmap by lazy { load() }
 
-    private fun generate(): Bitmap {
-        val bmp = Bitmap.createBitmap(64, 64, Bitmap.Config.ARGB_8888)
-        val rnd = Random(12345)
-        for (tile in 0 until 12) {
-            for (y in 0 until 16) {
-                for (x in 0 until 16) {
-                    bmp.setPixel((tile % 4) * 16 + x, (tile / 4) * 16 + y, pixel(tile, x, y, rnd))
-                }
-            }
-        }
-        for (tile in 0 until 12) {
-            var r = 0L; var g = 0L; var b = 0L; var cnt = 0L
-            for (y in 0 until 16) for (x in 0 until 16) {
-                val p = bmp.getPixel((tile % 4) * 16 + x, (tile / 4) * 16 + y)
-                if ((p ushr 24) > 0) {
-                    r += (p shr 16) and 0xFF; g += (p shr 8) and 0xFF; b += p and 0xFF; cnt++
-                }
-            }
-            if (cnt > 0) tileAvg[tile] = rgb((r / cnt).toInt(), (g / cnt).toInt(), (b / cnt).toInt())
-        }
-        return bmp
-    }
-
-    private fun dirtPx(rnd: Random): Int {
-        val v = n(rnd, 12)
-        val speck = if (rnd.nextInt(100) < 9) -28 else 0
-        return rgb(134 + v + speck, 96 + v + speck, 67 + v + speck)
-    }
-
-    private fun grassPx(rnd: Random): Int {
-        val v = n(rnd, 14)
-        return rgb(104 + v, 170 + v, 62 + v / 2)
-    }
-
-    private fun pixel(tile: Int, x: Int, y: Int, rnd: Random): Int {
-        return when (tile) {
-            0 -> grassPx(rnd)
-            1 -> {
-                val edge = 3 + ((x * 5 + 7) % 3)
-                if (y < edge) grassPx(rnd) else dirtPx(rnd)
-            }
-            2 -> dirtPx(rnd)
-            3 -> {
-                val dark = if (rnd.nextInt(100) < 7) -26 else 0
-                val g = 126 + n(rnd, 9) + dark
-                rgb(g, g, g)
-            }
-            4 -> {
-                val row = y / 5
-                val off = (row % 2) * 2
-                val col = (x + off) / 5
-                if (y % 5 == 4 || (x + off) % 5 == 4) {
-                    rgb(66, 66, 66)
-                } else {
-                    val h = ((col * 73856093) xor (row * 19349663)) and 0x3F
-                    val g = 92 + h + n(rnd, 5)
-                    rgb(g, g, g)
-                }
-            }
-            5 -> {
-                val v = if ((x * 3) % 4 == 0) -18 else n(rnd, 6)
-                rgb(104 + v, 78 + v, 46 + v)
-            }
-            6 -> {
-                val d = max(abs(x - 7.5f), abs(y - 7.5f))
-                val v = n(rnd, 5)
-                if (d >= 7f) rgb(92 + v, 68 + v, 40 + v)
-                else if (d.toInt() % 2 == 0) rgb(188 + v, 152 + v, 94 + v)
-                else rgb(160 + v, 126 + v, 74 + v)
-            }
-            7 -> {
-                val row = y / 4
-                var v = n(rnd, 6)
-                if (y % 4 == 3) v -= 36
-                val seam = if (row % 2 == 0) 3 else 11
-                if (x == seam && y % 4 != 3) v -= 30
-                rgb(178 + v, 140 + v, 86 + v)
-            }
-            8 -> {
-                if (rnd.nextInt(100) < 18) 0
-                else {
-                    val v = n(rnd, 18)
-                    rgb(54 + v, 128 + v, 40 + v / 2)
-                }
-            }
-            9 -> {
-                val v = n(rnd, 8)
-                rgb(220 + v, 210 + v, 160 + v)
-            }
-            10 -> {
-                if (x == 0 || y == 0 || x == 15 || y == 15) rgb(205, 232, 242)
-                else if ((x + y == 5 || x + y == 6 || x + y == 9) && x in 2..8 && y in 2..8) rgb(255, 255, 255)
-                else 0
-            }
-            else -> {
-                val row = y / 4
-                val off = (row % 2) * 4
-                if (y % 4 == 3 || (x + off) % 8 == 7) rgb(196, 190, 180)
-                else {
-                    val v = n(rnd, 8)
-                    rgb(156 + v, 70 + v, 52 + v)
-                }
-            }
+    private fun load(): Bitmap {
+        val o = BitmapFactory.Options()
+        o.inScaled = false
+        o.inPreferredConfig = Bitmap.Config.ARGB_8888
+        App.ctx.assets.open("atlas.png").use { s ->
+            return BitmapFactory.decodeStream(s, null, o)!!
         }
     }
+
+    fun tx(tile: Int) = (tile % COLS) * TILE
+    fun ty(tile: Int) = (tile / COLS) * TILE
+}
+
+/** Registro de todos os blocos e itens (assets/registry.tsv). O ID 0 é o ar. */
+object Reg {
+    const val K_CUBE = 1
+    const val K_CROSS = 2
+    const val K_FLAT = 3
+    const val K_SLAB = 4
+    const val K_ITEM = 5
+
+    var count = 1
+        private set
+    private var ids = arrayOf("air")
+    private var names = arrayOf("Ar")
+    private var kinds = IntArray(1)
+    private var top = IntArray(1)
+    private var bot = IntArray(1)
+    private var side = IntArray(1)
+    private var flags = IntArray(1)
+    private var avgs = IntArray(1) { 0xFF808080.toInt() }
+    private val index = HashMap<String, Int>()
+    private var ready = false
+    private var waterId = -1
+
+    @Synchronized
+    fun init(c: Context) {
+        if (ready) return
+        val lines = c.assets.open("registry.tsv").bufferedReader(Charsets.UTF_8).readLines().filter { it.isNotBlank() }
+        val n = lines.size + 1
+        ids = Array(n) { "air" }
+        names = Array(n) { "Ar" }
+        kinds = IntArray(n); top = IntArray(n); bot = IntArray(n); side = IntArray(n)
+        flags = IntArray(n); avgs = IntArray(n) { 0xFF808080.toInt() }
+        for ((i, l) in lines.withIndex()) {
+            val p = l.split('\t')
+            val k = i + 1
+            ids[k] = p[0]; names[k] = p[1]
+            kinds[k] = p[2].toInt()
+            top[k] = p[3].toInt(); bot[k] = p[4].toInt(); side[k] = p[5].toInt()
+            flags[k] = p[6].toInt()
+            avgs[k] = (0xFF shl 24) or p[7].toInt(16)
+            index[p[0]] = k
+        }
+        count = n
+        waterId = index["water"] ?: -1
+        ready = true
+    }
+
+    private fun ok(b: Int) = b > 0 && b < count
+
+    fun id(name: String): Int = index[name] ?: 0
+    fun key(b: Int): String = if (ok(b)) ids[b] else "air"
+    fun name(b: Int): String = if (ok(b)) names[b] else "?"
+    fun kind(b: Int): Int = if (ok(b)) kinds[b] else 0
+
+    /** kind: 0 = topo, 1 = base, 2 = lado */
+    fun tile(b: Int, kind: Int): Int {
+        if (!ok(b)) return 0
+        return when (kind) { 0 -> top[b]; 1 -> bot[b]; else -> side[b] }
+    }
+
+    fun avg(b: Int): Int = if (ok(b)) avgs[b] else 0xFF808080.toInt()
+
+    /** Cubo cheio e sem pixels transparentes. */
+    fun opaque(b: Int): Boolean = ok(b) && kinds[b] == K_CUBE && (flags[b] and 1) == 0
+
+    /** Vidro, gelo, água: faces entre blocos iguais não são desenhadas. */
+    fun glassy(b: Int): Boolean = ok(b) && (flags[b] and 2) != 0
+
+    fun solid(b: Int): Boolean = ok(b) && b != waterId && (kinds[b] == K_CUBE || kinds[b] == K_SLAB)
+
+    fun placeable(b: Int): Boolean = ok(b) && kinds[b] != K_ITEM
+
+    fun isPlant(b: Int): Boolean = ok(b) && (kinds[b] == K_CROSS || kinds[b] == K_FLAT)
 }
