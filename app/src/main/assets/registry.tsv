@@ -14,10 +14,10 @@ azalea_leaves	Folhas de Azalea	1	15	15	15	1	526822
 azalea_leaves_flowers	Azalea Folhas Flowers	1	16	16	16	1	5F6932
 azalea_leaves_flowers_opaque	Azalea Folhas Flowers Opaque	1	17	17	17	0	5F6932
 azalea_leaves_opaque	Azalea Folhas Opaque	1	18	18	18	0	526822
-azalea	Azalea	1	19	19	20	1	5B761A
+azalea	Azalea	6	19	19	20	1	5B761A
 bamboo_block	Bloco de Bambu	1	21	21	22	0	969D35
-bamboo_fence	Cerca de Bambu	1	23	23	23	1	BC9D49
-bamboo_fence_gate	Portão de Bambu Cerca	1	24	24	24	1	C3A44C
+bamboo_fence	Cerca de Bambu	6	23	23	23	1	BC9D49
+bamboo_fence_gate	Portão de Bambu Cerca	6	24	24	24	1	C3A44C
 bamboo_mosaic	Bambu Mosaic	1	25	25	25	0	BE9F4B
 bamboo_planks	Tábuas de Bambu	1	26	26	26	0	BC9D49
 basalt	Basalto	1	27	27	28	0	5B555F
@@ -31,15 +31,15 @@ blast_furnace	Blast Fornalha	1	40	41	42	0	6C6B6B
 blue_ice	Azul Gelo	1	43	43	43	0	60ADFB
 bone_block	Bloco de Osso	1	44	44	45	0	D9D3AF
 budding_amethyst	Budding Ametista	1	46	46	46	1	42266F
-bush	Arbusto	1	47	47	47	1	95A7B4
-cactus	Cacto	1	48	49	50	1	7C9F34
-cactus_flower	Flor de Cacto	1	51	51	51	1	EA86A3
+bush	Arbusto	7	47	47	47	1	95A7B4
+cactus	Cacto	6	48	49	50	1	7C9F34
+cactus_flower	Flor de Cacto	7	51	51	51	1	EA86A3
 calcite	Calcita	1	52	52	52	0	DEDFDB
 cherry_leaves	Folhas de Cerejeira	1	53	53	53	1	DB8B9D
 cherry_leaves_opaque	Cerejeira Folhas Opaque	1	54	54	54	0	DB8B9D
 cherry_log	Tronco de Cerejeira	1	55	55	56	0	8F696B
 cherry_planks	Tábuas de Cerejeira	1	57	57	57	0	E1AFA9
-cherry_sapling	Muda de Cerejeira	1	58	58	58	1	C188A7
+cherry_sapling	Muda de Cerejeira	2	58	58	58	1	C188A7
 chiseled_copper	Talhado Cobre	1	59	59	59	0	B45338
 chiseled_nether_bricks	Tijolos de Talhado Nether	1	60	60	60	0	301318
 chiseled_polished_blackstone	Talhado Polido Pedra Negra	1	61	61	61	0	3D3442
@@ -51,8 +51,8 @@ coal_block	Bloco de Carvão	1	68	68	68	0	0F0F0F
 coal_ore	Minério de Carvão	1	69	69	69	0	5F5E5F
 coarse_dirt	Grossa Terra	1	70	70	70	0	875737
 cobblestone_mossy	Pedregulho Musgoso	1	71	71	71	0	6F7B50
-compost	Compost	1	72	72	72	1	5B3513
-compost_ready	Compost Ready	1	73	73	73	1	735331
+compost	Compost	6	72	72	72	1	5B3513
+compost_ready	Compost Ready	6	73	73	73	1	735331
 concrete_black	Concreto Preto	1	74	74	74	0	090D13
 concrete_blue	Concreto Azul	1	75	75	75	0	3135AD
 concrete_brown	Concreto Marrom	1	76	76	76	0	703B1A
@@ -90,10 +90,10 @@ cracked_nether_bricks	Tijolos de Rachado Nether	1	107	107	107	0	281015
 cracked_polished_blackstone_bricks	Tijolos de Rachado Polido Pedra Negra	1	108	108	108	0	352C35
 crafter	Crafter	1	109	110	109	0	6B6263
 crafting_table	Criação Mesa	1	111	112	113	0	86572F
-crimson_fungus	Fungo Carmesim	1	114	114	114	1	992519
+crimson_fungus	Fungo Carmesim	7	114	114	114	1	992519
 crimson_nylium	Carmesim Nylium	1	115	115	116	0	991913
-crimson_roots	Raízes Carmesim	1	117	117	117	1	790502
-crimson_roots_pot	Carmesim Roots Vaso	1	118	118	118	1	7D0603
+crimson_roots	Raízes Carmesim	7	117	117	117	1	790502
+crimson_roots_pot	Carmesim Roots Vaso	6	118	118	118	1	7D0603
 cut_copper	Cortado Cobre	1	119	119	119	0	BA583B
 diamond_block	Bloco de Diamante	1	120	120	120	0	4AE3EB
 diamond_ore	Minério de Diamante	1	121	121	121	1	709B9F
@@ -108,21 +108,21 @@ exposed_chiseled_copper	Exposed Talhado Cobre	1	130	130	130	0	A56346
 exposed_copper	Exposed Cobre	1	131	131	131	0	B26E4C
 exposed_copper_grate	Exposed Cobre Grate	1	132	132	132	1	B16C4B
 exposed_cut_copper	Exposed Cortado Cobre	1	133	133	133	0	AD6749
-eyeblossom_dormant	Eyeblossom Dormant	1	134	134	134	1	75656A
-farmland_dry	Farmland Dry	1	135	135	135	0	8E5C39
-farmland_wet	Farmland Molhada	1	136	136	136	0	642E0B
-firefly_bush	Firefly Bush	1	137	137	137	1	675F2C
-firefly_bush_firefly	Firefly Bush Firefly	1	138	138	138	1	C9BF91
-fletcher_table_side1	Fletcher Mesa Side1	1	139	139	139	0	C29C73
-fletcher_table_side2	Fletcher Mesa Side2	1	140	140	140	0	B18F5C
-fletcher_table	Fletcher Mesa	1	141	141	141	0	C8A872
-frogspawn	Frogspawn	1	142	142	142	1	6C6565
-fungus_crimson_3d_pot	Fungus Carmesim 3D Vaso	1	143	143	143	1	7F251A
-fungus_crimson_3d	Fungus Carmesim 3D	1	144	144	145	1	AE2C1F
-fungus_crimson_3d_side_pot	Fungus Carmesim 3D Side Vaso	1	146	146	146	1	921418
-fungus_warped_3d_pot	Fungus Distorcido 3D Vaso	1	147	147	147	1	3A3741
-fungus_warped_3d	Fungus Distorcido 3D	1	148	148	149	1	3D8E62
-fungus_warped_3d_side_pot	Fungus Distorcido 3D Side Vaso	1	150	150	150	1	449061
+eyeblossom_dormant	Eyeblossom Dormant	2	134	134	134	1	75656A
+farmland_dry	Farmland Dry	6	135	135	135	0	8E5C39
+farmland_wet	Farmland Molhada	6	136	136	136	0	642E0B
+firefly_bush	Firefly Bush	2	137	137	137	1	675F2C
+firefly_bush_firefly	Firefly Bush Firefly	7	138	138	138	1	C9BF91
+fletcher_table_side1	Fletcher Mesa Side1	7	139	139	139	0	C29C73
+fletcher_table_side2	Fletcher Mesa Side2	7	140	140	140	0	B18F5C
+fletcher_table	Fletcher Mesa	1	141	7	139	0	C8A872
+frogspawn	Frogspawn	3	142	142	142	1	6C6565
+fungus_crimson_3d_pot	Fungus Carmesim 3D Vaso	6	143	143	143	1	7F251A
+fungus_crimson_3d	Fungus Carmesim 3D	7	144	144	145	1	AE2C1F
+fungus_crimson_3d_side_pot	Fungus Carmesim 3D Side Vaso	7	146	146	146	1	921418
+fungus_warped_3d_pot	Fungus Distorcido 3D Vaso	6	147	147	147	1	3A3741
+fungus_warped_3d	Fungus Distorcido 3D	7	148	148	149	1	3D8E62
+fungus_warped_3d_side_pot	Fungus Distorcido 3D Side Vaso	7	150	150	150	1	449061
 furnace	Fornalha	1	151	152	153	0	7D7D7D
 gilded_blackstone	Gilded Pedra Negra	1	154	154	154	0	372923
 glass_black	Vidro Preto	1	155	155	155	3	191919
@@ -155,12 +155,12 @@ glazed_terracotta_red	Esmaltada Terracota Vermelho	1	181	181	181	0	BF332E
 glazed_terracotta_silver	Esmaltada Terracota Cinza Claro	1	182	182	182	0	8DA5A7
 glazed_terracotta_white	Esmaltada Terracota Branco	1	183	183	183	0	B4D5C5
 glazed_terracotta_yellow	Esmaltada Terracota Amarelo	1	184	184	184	0	E6BD5D
-glow_lichen	Brilhante Lichen	1	185	185	185	1	57875D
+glow_lichen	Brilhante Lichen	3	185	185	185	1	57875D
 glowstone	Pedra Luminosa	1	186	186	186	0	C09055
 gold_block	Bloco de Ouro	1	187	187	187	0	F0BD39
 gold_ore	Minério de Ouro	1	188	188	188	1	A4834D
 grass_block_snow	Grama Bloco Neve	1	189	189	189	0	BFAC9D
-grass_path	Grama Path	1	190	190	191	0	936532
+grass_path	Grama Path	6	190	190	191	0	936532
 grass_side_snowed	Grama Side Snowed	1	192	192	192	0	BFAC9D
 gravel	Cascalho	1	193	193	193	0	8D8380
 hardened_clay	Endurecida Argila	1	194	194	194	0	9C4B2A
@@ -180,7 +180,7 @@ hardened_clay_stained_silver	Endurecida Argila Tingido Cinza Claro	1	207	207	207
 hardened_clay_stained_white	Endurecida Argila Tingido Branco	1	208	208	208	0	CFAEA0
 hardened_clay_stained_yellow	Endurecida Argila Tingido Amarelo	1	209	209	209	0	C48221
 hay_block	Bloco de Hay	1	210	210	211	0	E4A72A
-heavy_core	Heavy Core	1	212	212	212	1	4F5561
+heavy_core	Heavy Core	6	212	212	212	1	4F5561
 honey	Mel	1	213	214	215	1	FCA721
 honeycomb	Favo de Mel	1	216	216	216	0	E58B18
 ice	Gelo	1	217	217	217	3	68AAF8
@@ -189,7 +189,7 @@ iron_block	Bloco de Ferro	1	219	219	219	0	D6DDDE
 iron_ore	Minério de Ferro	1	220	220	220	0	8F8177
 lapis_block	Bloco de Lápis-lazúli	1	221	221	221	0	0546AC
 lapis_ore	Minério de Lápis-lazúli	1	222	222	222	0	5D687D
-large_amethyst_bud	Large Ametista Bud	1	223	223	223	1	B47AD4
+large_amethyst_bud	Large Ametista Bud	6	223	223	223	1	B47AD4
 log_acacia	Tronco de Acácia	1	224	224	225	0	925B3C
 log_big_oak	Tronco de Escuro Carvalho	1	226	226	227	0	432A0F
 log_birch	Tronco de Bétula	1	228	228	229	0	CEBA93
@@ -201,11 +201,11 @@ mangrove_leaves	Folhas de Mangue	1	236	236	236	1	8093A7
 mangrove_leaves_opaque	Mangue Folhas Opaque	1	237	237	237	0	8092A5
 mangrove_log	Tronco de Mangue	1	238	238	239	0	532B19
 mangrove_planks	Tábuas de Mangue	1	240	240	240	0	5A2019
-mangrove_propagule	Mangue Propagule	1	241	241	241	1	73A91F
+mangrove_propagule	Mangue Propagule	2	241	241	241	1	73A91F
 mangrove_roots	Mangue Roots	1	242	242	243	1	553B1A
-medium_amethyst_bud	Medium Ametista Bud	1	244	244	244	1	AB76CB
+medium_amethyst_bud	Medium Ametista Bud	6	244	244	244	1	AB76CB
 melon	Melancia	1	245	245	246	0	4F7E18
-missing_tile	Missing Tile	1	247	247	247	0	A96D18
+missing_tile	Missing Tile	7	247	247	247	0	A96D18
 moss_block	Bloco de Musgo	1	248	248	248	0	637F1E
 mud	Lama	1	249	249	249	0	5B3D22
 mud_bricks	Tijolos de Lama	1	250	250	250	0	885D40
@@ -213,18 +213,18 @@ muddy_mangrove_roots	Muddy Mangue Roots	1	251	251	252	0	4C341B
 mushroom_block_inside	Cogumelo Bloco Inside	1	253	253	253	0	DBAA6D
 mushroom_block_skin_brown	Cogumelo Bloco Skin Marrom	1	254	254	254	0	A37247
 mushroom_block_skin_red	Cogumelo Bloco Skin Vermelho	1	255	255	255	0	CD332F
-mushroom_brown	Cogumelo Marrom	1	256	256	256	1	B67955
-mushroom_brown_3d_pot	Cogumelo Marrom 3D Vaso	1	257	257	257	1	BA936F
-mushroom_brown_3d	Cogumelo Marrom 3D	1	258	258	259	1	D48D5D
-mushroom_brown_3d_side_pot	Cogumelo Marrom 3D Side Vaso	1	260	260	260	1	AD663C
-mushroom_red	Cogumelo Vermelho	1	261	261	261	1	D54633
-mushroom_red_3d_pot	Cogumelo Vermelho 3D Vaso	1	262	262	262	1	A48059
-mushroom_red_3d	Cogumelo Vermelho 3D	1	263	263	264	1	DF5839
-mushroom_red_3d_side_pot	Cogumelo Vermelho 3D Side Vaso	1	265	265	265	1	E34833
+mushroom_brown	Cogumelo Marrom	7	256	256	256	1	B67955
+mushroom_brown_3d_pot	Cogumelo Marrom 3D Vaso	6	257	257	257	1	BA936F
+mushroom_brown_3d	Cogumelo Marrom 3D	7	258	258	259	1	D48D5D
+mushroom_brown_3d_side_pot	Cogumelo Marrom 3D Side Vaso	7	260	260	260	1	AD663C
+mushroom_red	Cogumelo Vermelho	7	261	261	261	1	D54633
+mushroom_red_3d_pot	Cogumelo Vermelho 3D Vaso	6	262	262	262	1	A48059
+mushroom_red_3d	Cogumelo Vermelho 3D	7	263	263	264	1	DF5839
+mushroom_red_3d_side_pot	Cogumelo Vermelho 3D Side Vaso	7	265	265	265	1	E34833
 mycelium	Micélio	1	266	266	267	0	7B6561
 nether_brick	Nether Tijolo	1	268	268	268	0	2B1116
 nether_gold_ore	Minério de Nether Ouro	1	269	269	269	1	9A441A
-nether_sprouts	Brotos do Nether	1	270	270	270	1	119874
+nether_sprouts	Brotos do Nether	7	270	270	270	1	119874
 netherite_block	Bloco de Netherita	1	271	271	271	0	423C3E
 netherrack	Netherrack	1	272	272	272	0	6D1217
 obsidian	Obsidiana	1	273	273	273	0	140E21
@@ -234,15 +234,15 @@ oxidized_copper	Oxidized Cobre	1	277	277	277	0	35B489
 oxidized_copper_grate	Oxidized Cobre Grate	1	278	278	278	1	33AD80
 oxidized_cut_copper	Oxidized Cortado Cobre	1	279	279	279	0	30A77D
 packed_mud	Compactado Lama	1	280	280	280	0	936644
-pale_moss	Pálido Musgo	1	281	281	281	0	7D877E
+pale_moss	Pálido Musgo	6	281	281	281	0	7D877E
 pale_moss_block	Bloco de Pálido Musgo	1	282	282	282	0	7D877E
 pale_oak_leaves	Folhas de Pálido Carvalho	1	283	283	283	1	606762
 pale_oak_leaves_opaque	Pálido Carvalho Folhas Opaque	1	284	284	284	0	606762
 pale_oak_log	Tronco de Pálido Carvalho	1	285	285	286	0	A09491
 pale_oak_planks	Tábuas de Pálido Carvalho	1	287	287	287	0	E8DDDB
-pale_oak_sapling	Muda de Pálido Carvalho	1	288	288	288	1	66645E
+pale_oak_sapling	Muda de Pálido Carvalho	2	288	288	288	1	66645E
 pearlescent_froglight	Pearlescent Froglight	1	289	289	290	0	F1E9EA
-pink_petals	Pétalas Rosa	1	291	291	291	1	F695B6
+pink_petals	Pétalas Rosa	7	291	291	291	1	F695B6
 planks_acacia	Tábuas de Acácia	1	292	292	292	0	B55324
 planks_big_oak	Tábuas de Escuro Carvalho	1	293	293	293	0	4A2C10
 planks_birch	Tábuas de Bétula	1	294	294	294	0	D2B172
@@ -254,8 +254,8 @@ polished_basalt	Polido Basalto	1	299	299	300	0	5B5662
 polished_blackstone	Polido Pedra Negra	1	301	301	301	0	3C3642
 polished_blackstone_bricks	Tijolos de Polido Pedra Negra	1	302	302	302	0	38303B
 polished_tuff	Polido Tufo	1	303	303	303	0	616763
-potted_azalea_bush	Potted Azalea Bush	1	304	304	305	1	5E791B
-potted_flowering_azalea_bush	Potted Flowering Azalea Bush	1	306	306	307	1	717536
+potted_azalea_bush	Potted Azalea Bush	6	304	304	305	1	5E791B
+potted_flowering_azalea_bush	Potted Flowering Azalea Bush	6	306	306	307	1	717536
 powder_snow	Pó de Neve	1	308	308	308	0	EEF8FB
 prismarine_bricks	Tijolos de Prismarina	1	309	309	309	0	4FAF95
 prismarine_dark	Prismarina Escuro	1	310	310	310	0	325849
@@ -281,17 +281,17 @@ redstone_block	Bloco de Redstone	1	336	336	336	1	AF0B07
 redstone_ore	Minério de Redstone	1	337	337	337	1	7A4F4F
 resin_block	Bloco de Resin	1	338	338	338	0	DD6314
 resin_bricks	Tijolos de Resin	1	339	339	339	0	D05A14
-resin_clump	Resin Clump	1	340	340	340	1	DA6814
+resin_clump	Resin Clump	3	340	340	340	1	DA6814
 sandstone	Sandstone	1	341	342	341	0	F0D389
 sandstone_carved	Sandstone Carved	1	343	343	343	0	EAC780
 sandstone_smooth	Sandstone Liso	1	344	344	344	0	EFD088
-scuk_shrieker_can_summon_inner	Scuk Shrieker Can Summon Inner	1	345	345	345	1	3A5A54
+scuk_shrieker_can_summon_inner	Scuk Shrieker Can Summon Inner	7	345	345	345	1	3A5A54
 sculk	Sculk	1	346	346	346	1	081C24
-sea_pickle	Mar Pickle	1	347	347	347	1	555D1D
-short_dry_grass	Short Dry Grama	1	348	348	348	1	C79F61
+sea_pickle	Mar Pickle	6	347	347	347	1	555D1D
+short_dry_grass	Short Dry Grama	2	348	348	348	1	C79F61
 shroomlight	Shroomlight	1	349	349	349	0	F38A3E
 slime	Slime	1	350	350	350	1	77DB4B
-small_amethyst_bud	Small Ametista Bud	1	351	351	351	1	996DBA
+small_amethyst_bud	Small Ametista Bud	6	351	351	351	1	996DBA
 smoker	Smoker	1	352	353	354	0	645E57
 smooth_basalt	Liso Basalto	1	355	355	355	0	4A494F
 snow	Neve	1	356	356	356	0	EFF8FB
@@ -305,7 +305,7 @@ stone_diorite	Pedra Diorito	1	363	363	363	0	B2B2B3
 stone_diorite_smooth	Pedra Diorito Liso	1	364	364	364	0	BEBFC0
 stone_granite	Pedra Granito	1	365	365	365	0	956048
 stone_granite_smooth	Pedra Granito Liso	1	366	366	366	0	9A634C
-stone_slab	Laje de Pedra	1	367	367	368	0	9F9F9F
+stone_slab	Laje de Pedra	6	367	367	368	0	9F9F9F
 stonebrick	Stonebrick	1	369	369	369	0	787878
 stonebrick_carved	Stonebrick Carved	1	370	370	370	0	727272
 stonebrick_cracked	Stonebrick Rachado	1	371	371	371	0	757474
@@ -320,26 +320,26 @@ stripped_mangrove_log	Tronco de Stripped Mangue	1	385	385	386	0	571F18
 stripped_oak_log	Tronco de Stripped Carvalho	1	387	387	388	0	B38249
 stripped_pale_oak_log	Tronco de Stripped Pálido Carvalho	1	389	389	390	0	EEE5E3
 stripped_spruce_log	Tronco de Stripped Abeto	1	391	391	392	0	66431E
-tall_dry_grass	Tall Dry Grama	1	393	393	393	1	D1AB6A
+tall_dry_grass	Tall Dry Grama	2	393	393	393	1	D1AB6A
 tinted_glass	Tinted Vidro	1	394	394	394	3	28242A
-tril_spawner_side_inactive_ominous	Tril Spawner Side Inactive Ominous	1	395	395	395	1	203746
-triner_top_ejecting_reward_ominous	Triner Top Ejecting Reward Ominous	1	396	396	396	0	1F3947
-trip_wire	Trip Wire	1	397	397	397	1	A8A8A8
-trip_wire_source	Trip Wire Source	1	398	398	398	1	958879
+tril_spawner_side_inactive_ominous	Tril Spawner Side Inactive Ominous	7	395	395	395	1	203746
+triner_top_ejecting_reward_ominous	Triner Top Ejecting Reward Ominous	7	396	396	396	0	1F3947
+trip_wire	Trip Wire	3	397	397	397	1	A8A8A8
+trip_wire_source	Trip Wire Source	2	398	398	398	1	958879
 tuff	Tufo	1	399	399	399	0	707165
 tuff_bricks	Tijolos de Tufo	1	400	400	400	0	5F645D
 verdant_froglight	Verdant Froglight	1	401	401	402	0	D7ECD5
-warped_fungus	Fungo Distorcido	1	403	403	403	1	517855
+warped_fungus	Fungo Distorcido	7	403	403	403	1	517855
 warped_nylium	Distorcido Nylium	1	404	404	405	0	235D56
-warped_roots	Raízes Distorcidas	1	406	406	406	1	129882
-warped_roots_pot	Distorcido Roots Vaso	1	407	407	407	1	129682
+warped_roots	Raízes Distorcidas	7	406	406	406	1	129882
+warped_roots_pot	Distorcido Roots Vaso	6	407	407	407	1	129682
 warped_wart_block	Bloco de Distorcido Wart	1	408	408	408	0	177274
 weathered_chiseled_copper	Weathered Talhado Cobre	1	409	409	409	0	6B844C
 weathered_copper	Weathered Cobre	1	410	410	410	0	759154
 weathered_copper_grate	Weathered Cobre Grate	1	411	411	411	1	718E53
 weathered_cut_copper	Weathered Cortado Cobre	1	412	412	412	0	6E8A50
-web	Web	1	413	413	413	1	E9EDEE
-wildflowers	Flores Silvestres	1	414	414	414	1	F3D364
+web	Web	2	413	413	413	1	E9EDEE
+wildflowers	Flores Silvestres	7	414	414	414	1	F3D364
 wool_colored_black	Lã Preto	1	415	415	415	0	1C1C20
 wool_colored_blue	Lã Azul	1	416	416	416	0	3A439E
 wool_colored_brown	Lã Marrom	1	417	417	417	0	6E472E
@@ -376,11 +376,11 @@ flower_tulip_pink	Tulipa Rosa	2	447	447	447	1	888F58
 flower_tulip_red	Tulipa Vermelha	2	448	448	448	1	7C6521
 flower_tulip_white	Tulipa Branca	2	449	449	449	1	91AF63
 flower_wither_rose	Rosa Wither	2	450	450	450	1	292B18
-leaf_litter	Folhas Caídas	2	451	451	451	1	B19987
+leaf_litter	Folhas Caídas	3	451	451	451	1	B19987
 mushroom_brown	Cogumelo Marrom	2	452	452	452	1	B67955
 mushroom_red	Cogumelo Vermelho	2	453	453	453	1	D54633
 nether_sprouts	Brotos do Nether	2	454	454	454	1	119874
-pink_petals	Pétalas Rosa	2	455	455	455	1	F695B6
+pink_petals	Pétalas Rosa	3	455	455	455	1	F695B6
 reeds	Cana-de-Açúcar	2	456	456	456	1	B1C480
 sapling_acacia	Muda de Acácia	2	457	457	457	1	6D7314
 sapling_birch	Muda de Bétula	2	458	458	458	1	8BA55D
@@ -392,7 +392,7 @@ tallgrass	Grama Alta	2	463	463	463	1	5A9345
 torchflower	Flor-Tocha	2	464	464	464	1	7A5D55
 warped_fungus	Fungo Distorcido	2	465	465	465	1	517855
 warped_roots	Raízes Distorcidas	2	466	466	466	1	129882
-wildflowers	Flores Silvestres	2	467	467	467	1	F3D364
+wildflowers	Flores Silvestres	3	467	467	467	1	F3D364
 item_acacia_chest_boat	Barco de Acácia Baú	5	468	468	468	1	94491A
 item_acacia_hanging_sign	Placa de Acácia Hanging	5	469	469	469	1	9E4D2B
 item_amethyst_shard	Fragmento de Ametista	5	470	470	470	1	9669BC

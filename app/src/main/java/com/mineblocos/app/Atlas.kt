@@ -65,6 +65,8 @@ object Reg {
     const val K_FLAT = 3
     const val K_SLAB = 4
     const val K_ITEM = 5
+    const val K_MODEL = 6
+    const val K_HIDDEN = 7
 
     var count = 1
         private set
@@ -144,7 +146,8 @@ object Reg {
     /** Vidro, gelo, água: faces entre blocos iguais não são desenhadas. */
     fun glassy(b: Int): Boolean = ok(b) && (flags[b] and 2) != 0
 
-    fun solid(b: Int): Boolean = ok(b) && b != waterId && (kinds[b] == K_CUBE || kinds[b] == K_SLAB)
+    fun solid(b: Int): Boolean = ok(b) && b != waterId &&
+        (kinds[b] == K_CUBE || kinds[b] == K_SLAB || (kinds[b] == K_MODEL && Shapes.solid(b)))
 
     /** IDs de todos os blocos cúbicos (para o inventário). */
     fun cubes(): IntArray = list(K_CUBE)
@@ -152,7 +155,7 @@ object Reg {
     /** IDs de todos os registros de um dos tipos dados. */
     fun list(vararg k: Int): IntArray = (1 until count).filter { kinds[it] in k }.toIntArray()
 
-    fun placeable(b: Int): Boolean = ok(b) && kinds[b] != K_ITEM
+    fun placeable(b: Int): Boolean = ok(b) && kinds[b] != K_ITEM && kinds[b] != K_HIDDEN
 
     fun isPlant(b: Int): Boolean = ok(b) && (kinds[b] == K_CROSS || kinds[b] == K_FLAT)
 }

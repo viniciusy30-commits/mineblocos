@@ -24,6 +24,7 @@ class GameRenderer(
 ) : GLSurfaceView.Renderer {
 
     private class Mesh(var vbo: Int, var count: Int)
+    private val BB_FULL = floatArrayOf(0f, 0f, 0f, 1f, 1f, 1f)
     private class Hit(val x: Int, val y: Int, val z: Int, val nx: Int, val ny: Int, val nz: Int)
     private class Particle(
         var x: Float, var y: Float, var z: Float,
@@ -218,8 +219,11 @@ class GameRenderer(
         val minX = floor(x - 0.3f).toInt(); val maxX = floor(x + 0.3f).toInt()
         val minY = floor(y).toInt(); val maxY = floor(y + 1.8f).toInt()
         val minZ = floor(z - 0.3f).toInt(); val maxZ = floor(z + 0.3f).toInt()
-        for (iy in minY..maxY) for (iz in minZ..maxZ) for (ix in minX..maxX) {
-            if (world.solid(ix, iy, iz)) return true
+        // começa uma célula abaixo: cercas têm 1,5 bloco; lajes e terra batida têm altura parcial
+        for (iy in (minY - 1)..maxY) for (iz in minZ..maxZ) for (ix in minX..maxX) {
+            if (!world.solid(ix, iy, iz)) continue
+            val top = Shapes.top(world.get(ix, iy, iz))
+            if (y < iy + top && y + 1.8f > iy) return true
         }
         return false
     }
@@ -228,6 +232,50 @@ class GameRenderer(
         return s.px + 0.3f > x && s.px - 0.3f < x + 1 &&
             s.py + 1.8f > y && s.py < y + 1 &&
             s.pz + 0.3f > z && s.pz - 0.3f < z + 1
+    }
+
+    /** Raio contra as caixas de um bloco parcial; null se passar pelos vazios. */
+    private fun hitBoxes(
+        hb: FloatArray, x: Int, y: Int, z: Int,
+        ox: Float, oy: Float, oz: Float, dx: Float, dy: Float, dz: Float, maxDist: Float,
+        pnx: Int, pny: Int, pnz: Int
+    ): Hit? {
+        var best = Float.MAX_VALUE
+        var bnx = pnx; var bny = pny; var bnz = pnz
+        var i = 0
+        while (i < hb.size) {
+            var t0 = 0f
+            var t1 = maxDist
+            var fnx = 0; var fny = 0; var fnz = 0
+            var ok = true
+            for (a in 0 until 3) {
+                val o = if (a == 0) ox else if (a == 1) oy else oz
+                val d = if (a == 0) dx else if (a == 1) dy else dz
+                val lo = (if (a == 0) x else if (a == 1) y else z) + hb[i + a]
+                val hi = (if (a == 0) x else if (a == 1) y else z) + hb[i + 3 + a]
+                if (abs(d) < 1e-6f) {
+                    if (o < lo || o > hi) { ok = false; break }
+                } else {
+                    var ta = (lo - o) / d
+                    var tb = (hi - o) / d
+                    var sgn = -1
+                    if (ta > tb) { val tt = ta; ta = tb; tb = tt; sgn = 1 }
+                    if (ta > t0) {
+                        t0 = ta
+                        fnx = 0; fny = 0; fnz = 0
+                        if (a == 0) fnx = sgn else if (a == 1) fny = sgn else fnz = sgn
+                    }
+                    if (tb < t1) t1 = tb
+                    if (t0 > t1) { ok = false; break }
+                }
+            }
+            if (ok && t0 < best) {
+                best = t0
+                if (fnx != 0 || fny != 0 || fnz != 0) { bnx = fnx; bny = fny; bnz = fnz }
+            }
+            i += 6
+        }
+        return if (best < Float.MAX_VALUE) Hit(x, y, z, bnx, bny, bnz) else null
     }
 
     private fun raycast(ox: Float, oy: Float, oz: Float, dx: Float, dy: Float, dz: Float, maxDist: Float): Hit? {
@@ -247,7 +295,13 @@ class GameRenderer(
         var nx = 0; var ny = 0; var nz = 0
         var t = 0f
         while (t <= maxDist) {
-            if (world.get(x, y, z) != Blocks.AIR) return Hit(x, y, z, nx, ny, nz)
+            val bl = world.get(x, y, z)
+            if (bl != Blocks.AIR) {
+                val hb = Shapes.hitBoxes(world, x, y, z, bl)
+                if (hb == null) return Hit(x, y, z, nx, ny, nz)
+                val hh = hitBoxes(hb, x, y, z, ox, oy, oz, dx, dy, dz, maxDist, nx, ny, nz)
+                if (hh != null) return hh
+            }
             if (tmx < tmy && tmx < tmz) {
                 x += stepX; t = tmx; tmx += tdx; nx = -stepX; ny = 0; nz = 0
             } else if (tmy < tmz) {
@@ -556,13 +610,14 @@ class GameRenderer(
         if (mode != 0) drawPlayer(lum)
         val h = hit
         if (h != null) {
+            val bb = Shapes.bounds(world, h.x, h.y, h.z, world.get(h.x, h.y, h.z)) ?: BB_FULL
             if (breakProg > 0f) {
                 GLES20.glEnable(GLES20.GL_BLEND)
                 GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA)
                 GLES20.glDepthMask(false)
                 Matrix.setIdentityM(model, 0)
-                Matrix.translateM(model, 0, h.x - 0.004f, h.y - 0.004f, h.z - 0.004f)
-                Matrix.scaleM(model, 0, 1.008f, 1.008f, 1.008f)
+                Matrix.translateM(model, 0, h.x + bb[0] - 0.004f, h.y + bb[1] - 0.004f, h.z + bb[2] - 0.004f)
+                Matrix.scaleM(model, 0, bb[3] - bb[0] + 0.008f, bb[4] - bb[1] + 0.008f, bb[5] - bb[2] + 0.008f)
                 drawColorCube(model, 0f, 0f, 0f, breakProg * 0.65f)
                 GLES20.glDepthMask(true)
                 GLES20.glDisable(GLES20.GL_BLEND)
@@ -570,8 +625,8 @@ class GameRenderer(
             GLES20.glBindBuffer(GLES20.GL_ARRAY_BUFFER, lineVbo)
             GLES20.glVertexAttribPointer(cPos, 3, GLES20.GL_FLOAT, false, 12, 0)
             Matrix.setIdentityM(model, 0)
-            Matrix.translateM(model, 0, h.x - 0.005f, h.y - 0.005f, h.z - 0.005f)
-            Matrix.scaleM(model, 0, 1.01f, 1.01f, 1.01f)
+            Matrix.translateM(model, 0, h.x + bb[0] - 0.005f, h.y + bb[1] - 0.005f, h.z + bb[2] - 0.005f)
+            Matrix.scaleM(model, 0, bb[3] - bb[0] + 0.01f, bb[4] - bb[1] + 0.01f, bb[5] - bb[2] + 0.01f)
             Matrix.multiplyMM(mvp, 0, vp, 0, model, 0)
             GLES20.glUniformMatrix4fv(cMVP, 1, false, mvp, 0)
             GLES20.glUniform4f(cColor, 0f, 0f, 0f, 1f)
@@ -688,7 +743,7 @@ class GameRenderer(
         Matrix.rotateM(model, 0, -sw * 55f, 1f, 0f, 0f)
         Matrix.rotateM(model, 0, 28f, 0f, 1f, 0f)
         Matrix.rotateM(model, 0, -12f, 1f, 0f, 0f)
-        val flatHand = Reg.kind(handBlock) != Reg.K_CUBE
+        val flatHand = Reg.kind(handBlock) != Reg.K_CUBE && Reg.kind(handBlock) != Reg.K_MODEL
         if (flatHand) Matrix.rotateM(model, 0, 18f, 0f, 0f, 1f)
         val hk = if (flatHand) 0.62f else 0.36f
         Matrix.scaleM(model, 0, hk, hk, hk)

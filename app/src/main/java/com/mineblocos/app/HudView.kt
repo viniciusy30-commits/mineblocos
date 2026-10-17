@@ -56,7 +56,7 @@ class HudView(
 
     private fun loadTab() {
         cubes = when (invTab) {
-            0 -> Reg.list(Reg.K_CUBE)
+            0 -> Reg.list(Reg.K_CUBE, Reg.K_MODEL)
             1 -> Reg.list(Reg.K_CROSS, Reg.K_FLAT)
             else -> Reg.list(Reg.K_ITEM)
         }

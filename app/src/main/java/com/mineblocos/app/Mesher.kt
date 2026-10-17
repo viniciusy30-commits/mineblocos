@@ -99,7 +99,7 @@ object Mesher {
         return if (Blocks.opaque(w.getMesh(tmp[0], tmp[1], tmp[2]))) 1 else 0
     }
 
-    private fun emitCross(out: FloatList, ox: Float, oy: Float, oz: Float, tile: Int) {
+    private fun emitCross(out: FloatList, ox: Float, oy: Float, oz: Float, tile: Int, sc: Float = 1f, yo: Float = 0f) {
         val tx = (tile % Atlas.COLS) * 16f
         val ty = (tile / Atlas.COLS) * 16f
         val aw = Atlas.bitmap.width.toFloat()
@@ -109,14 +109,78 @@ object Mesher {
         val order = intArrayOf(0, 1, 2, 0, 2, 3)
         for (q in 0 until 2) {
             for (k in order) {
-                out.add(ox + px[q * 12 + k * 3])
-                out.add(oy + px[q * 12 + k * 3 + 1])
-                out.add(oz + px[q * 12 + k * 3 + 2])
+                out.add(ox + 0.5f + (px[q * 12 + k * 3] - 0.5f) * sc)
+                out.add(oy + yo + px[q * 12 + k * 3 + 1] * sc)
+                out.add(oz + 0.5f + (px[q * 12 + k * 3 + 2] - 0.5f) * sc)
                 out.add((tx + 0.05f + uvs[k * 2] * 15.9f) / aw)
                 out.add((ty + 0.05f + uvs[k * 2 + 1] * 15.9f) / ah)
                 out.add(0.95f)
             }
         }
+    }
+
+
+    /** UV automático por face (como no Minecraft): u,v em fração da célula. */
+    private fun faceU(f: Int, x: Float, z: Float): Float = when (f) {
+        0, 1, 4 -> x
+        2 -> 1f - z
+        3 -> z
+        else -> 1f - x
+    }
+
+    private fun faceV(f: Int, y: Float, z: Float): Float = if (f == 0 || f == 1) z else 1f - y
+
+    /** Emite uma caixa de modelo. [w] nulo = sem esconder faces (mão). */
+    private fun emitBox(out: FloatList, bx: Box, ox: Float, oy: Float, oz: Float, w: World?, cx: Int, cy: Int, cz: Int, lightMul: Float = 1f) {
+        val aw = Atlas.bitmap.width.toFloat()
+        val ah = Atlas.bitmap.height.toFloat()
+        val order = intArrayOf(0, 1, 2, 0, 2, 3)
+        for (f in 0 until 6) {
+            if ((bx.faces and (1 shl f)) == 0) continue
+            if (w != null) {
+                val edge = when (f) {
+                    0 -> bx.y1 >= 0.999f
+                    1 -> bx.y0 <= 0.001f
+                    2 -> bx.x1 >= 0.999f
+                    3 -> bx.x0 <= 0.001f
+                    4 -> bx.z1 >= 0.999f
+                    else -> bx.z0 <= 0.001f
+                }
+                if (edge) {
+                    val n = NORMALS[f]
+                    if (Blocks.opaque(w.getMesh(cx + n[0], cy + n[1], cz + n[2]))) continue
+                }
+            }
+            val tile = if (f == 0) bx.top else if (f == 1) bx.bot else bx.side
+            val tx = (tile % Atlas.COLS) * 16f
+            val ty = (tile / Atlas.COLS) * 16f
+            val c = CORNERS[f]
+            val light = SHADE[f] * 0.97f * lightMul
+            for (k in order) {
+                val fx = if (c[k * 3] == 1) bx.x1 else bx.x0
+                val fy = if (c[k * 3 + 1] == 1) bx.y1 else bx.y0
+                val fz = if (c[k * 3 + 2] == 1) bx.z1 else bx.z0
+                out.add(ox + fx)
+                out.add(oy + fy)
+                out.add(oz + fz)
+                out.add((tx + 0.02f + faceU(f, fx, fz) * 15.96f) / aw)
+                out.add((ty + 0.02f + faceV(f, fy, fz) * 15.96f) / ah)
+                out.add(light)
+            }
+        }
+    }
+
+    
+
+    /** Planta rasteira: camada fina no chão (pétalas, líquen, ovos de sapo...). */
+    private fun emitFloor(out: FloatList, ox: Float, oy: Float, oz: Float, tile: Int) {
+        val bx = Box(0f, 0.01f, 0f, 1f, 0.0625f, 1f, tile, tile, tile, 3)
+        emitBox(out, bx, ox, oy, oz, null, 0, 0, 0, 0.97f)
+    }
+
+    private fun emitModel(out: FloatList, m: Model, ox: Float, oy: Float, oz: Float, w: World?, cx: Int, cy: Int, cz: Int) {
+        for (bx in m.boxes) emitBox(out, bx, ox, oy, oz, w, cx, cy, cz)
+        if (m.cross >= 0) emitCross(out, ox, oy, oz, m.cross, m.crossScale, m.crossY)
     }
 
     /** Sprite plano com camadas finas (pseudo-espessura), para itens e plantas na mão. */
@@ -155,7 +219,16 @@ object Mesher {
                         emitCross(out, x.toFloat(), y.toFloat(), z.toFloat(), Reg.tile(b, 2))
                         continue
                     }
-                    if (Reg.kind(b) != Reg.K_CUBE) continue
+                    val kd = Reg.kind(b)
+                    if (kd == Reg.K_FLAT) {
+                        emitFloor(out, x.toFloat(), y.toFloat(), z.toFloat(), Reg.tile(b, 2))
+                        continue
+                    }
+                    if (kd == Reg.K_MODEL) {
+                        emitModel(out, Shapes.model(w, x, y, z, b), x.toFloat(), y.toFloat(), z.toFloat(), w, x, y, z)
+                        continue
+                    }
+                    if (kd != Reg.K_CUBE) continue
                     for (f in 0 until 6) {
                         val n = NORMALS[f]
                         val bx = x + n[0]
@@ -188,6 +261,10 @@ object Mesher {
     fun handMesh(b: Int): MeshData {
         val out = FloatList(256)
         val l = FloatArray(4)
+        if (Reg.kind(b) == Reg.K_MODEL) {
+            emitModel(out, Shapes.model(null, 0, 0, 0, b), 0f, 0f, 0f, null, 0, 0, 0)
+            return MeshData(out.a, out.n)
+        }
         if (Reg.kind(b) != Reg.K_CUBE) {
             emitFlat(out, Reg.tile(b, 2))
             return MeshData(out.a, out.n)

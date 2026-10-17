@@ -1,3 +1,14 @@
+#id 2026-10-17-f
+#titulo Formas reais dos blocos
+- Cerca e portão de bambu com formato de verdade (a cerca conecta nos vizinhos)
+- Cacto, laje, composteira, vasos de planta, terra de cultivo, caminho de terra, azaleia, brotos de ametista, picles-do-mar e núcleo pesado com a forma do Minecraft
+- Pétalas, líquen, ovos de sapo e fio de armadilha ficam coladinhos no chão
+- Teia, mudas, botão-de-olho e gramas secas viram plantas em cruz
+- A mira agora acerta só a parte do bloco que existe (cerca, laje, plantas)
+- Cercas têm 1,5 bloco de altura e lajes/caminho têm altura parcial
+- Blocos que eram só partes de textura foram escondidos do inventário
+- Mundos antigos continuam funcionando
+
 #id 2026-10-17-e
 #titulo Mundo plano com rio
 - Mundo plano, bem maior (512 x 512 blocos), com um rio sinuoso e margens de areia
