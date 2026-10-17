@@ -1,0 +1,7 @@
+#id 2026-10-17-a
+#titulo Primeira versão: mundo de blocos!
+- Mundo 3D de blocos com colinas, praias e árvores
+- Segure para quebrar e toque para colocar blocos
+- 10 tipos de blocos, modo voar e ciclo de dia e noite
+- O mundo é salvo automaticamente no celular
+- Atualização pelo próprio app (Configurações)
