@@ -9,7 +9,7 @@ object Prefs {
     fun setSens(c: Context, v: Int) = p(c).edit().putInt("sens", v).apply()
     fun sensRad(c: Context) = 0.0015f + sens(c) * 0.0007f
 
-    fun dist(c: Context) = p(c).getInt("dist", 5)
+    fun dist(c: Context) = p(c).getInt("dist", 6)
     fun setDist(c: Context, v: Int) = p(c).edit().putInt("dist", v).apply()
 
     fun showFps(c: Context) = p(c).getBoolean("fps", false)

@@ -41,6 +41,7 @@ class HudView(
     private var hbTop = 0f
     private var jumpX = 0f; private var jumpY = 0f; private var jumpR = 0f
     private var flyX = 0f; private var flyY = 0f; private var flyR = 0f
+    private var camX = 0f; private var camY = 0f; private var camR = 0f
     private var dnX = 0f; private var dnY = 0f; private var dnR = 0f
     private var pauseX = 0f; private var pauseY = 0f; private var pauseR = 0f
     private var joyDefX = 0f; private var joyDefY = 0f; private var joyR = 0f
@@ -77,6 +78,7 @@ class HudView(
         hbTop = h - slot - dp(8f)
         jumpR = dp(38f); jumpX = w - dp(72f); jumpY = h - dp(112f)
         flyR = dp(25f); flyX = w - dp(72f); flyY = h - dp(196f)
+        camR = dp(25f); camX = w - dp(152f); camY = h - dp(170f)
         dnR = dp(30f); dnX = w - dp(152f); dnY = h - dp(80f)
         pauseR = dp(22f); pauseX = w - dp(36f); pauseY = dp(36f)
         joyR = dp(56f); joyDefX = dp(108f); joyDefY = h - dp(116f)
@@ -112,6 +114,7 @@ class HudView(
         }
         if (inCircle(x, y, jumpX, jumpY, jumpR)) { jumpId = id; s.jump = true; return }
         if (inCircle(x, y, flyX, flyY, flyR)) { s.flying = !s.flying; if (!s.flying) s.down = false; return }
+        if (inCircle(x, y, camX, camY, camR)) { s.camMode = (s.camMode + 1) % 3; return }
         if (s.flying && inCircle(x, y, dnX, dnY, dnR)) { downId = id; s.down = true; return }
         if (x < width * 0.38f && joyId == -1) {
             joyId = id; joyOx = x; joyOy = y; joyX = x; joyY = y
@@ -217,6 +220,8 @@ class HudView(
         text.textSize = dp(10f)
         text.textAlign = Paint.Align.CENTER
         c.drawText("VOAR", flyX, flyY + dp(3.5f), text)
+        drawRound(c, camX, camY, camR, false, false)
+        c.drawText("CÂM", camX, camY + dp(3.5f), text)
         if (s.flying) {
             drawRound(c, dnX, dnY, dnR, downId != -1, false)
             drawChevron(c, dnX, dnY, dnR * 0.45f, false)

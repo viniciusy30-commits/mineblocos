@@ -189,6 +189,8 @@ class GameRenderer(
                 val dx = (i % World.CX) * 16 + 8 - s.px
                 val dz = (i / World.CX) * 16 + 8 - s.pz
                 val d = dx * dx + dz * dz
+                val lim = (renderDist + 2) * 16f
+                if (d > lim * lim) continue
                 if (d < bd) { bd = d; best = i }
             }
             if (best < 0) break
@@ -319,7 +321,7 @@ class GameRenderer(
         }
         physics(dt)
         if (s.py < -20f) {
-            s.py = (world.surfaceY(64, 64) + 2).toFloat(); s.px = 64.5f; s.pz = 64.5f; s.vy = 0f
+            s.py = (world.surfaceY(World.W / 2, World.D / 2) + 2).toFloat(); s.px = World.W / 2 + 0.5f; s.pz = World.D / 2 + 0.5f; s.vy = 0f
         }
 
         val spd = sqrt(s.vx * s.vx + s.vz * s.vz)
@@ -456,10 +458,27 @@ class GameRenderer(
         val dirY = sin(s.pitch)
         val dirZ = -cos(s.yaw) * cp
         val bob = if (s.onGround) sin(bobT) * 0.04f else 0f
-        val ex = s.px
-        val ey = s.py + 1.62f + bob
-        val ez = s.pz
-        Matrix.setLookAtM(view, 0, ex, ey, ez, ex + dirX, ey + dirY, ez + dirZ, 0f, 1f, 0f)
+        val eyeX = s.px
+        val eyeY = s.py + 1.62f + bob
+        val eyeZ = s.pz
+        var ex = eyeX
+        var ey = eyeY
+        var ez = eyeZ
+        val mode = s.camMode
+        if (mode == 0) {
+            Matrix.setLookAtM(view, 0, ex, ey, ez, ex + dirX, ey + dirY, ez + dirZ, 0f, 1f, 0f)
+        } else {
+            val sg = if (mode == 1) -1f else 1f
+            val t = camDist(eyeX, eyeY, eyeZ, dirX * sg, dirY * sg, dirZ * sg, 4.2f)
+            ex = eyeX + dirX * sg * t
+            ey = eyeY + dirY * sg * t
+            ez = eyeZ + dirZ * sg * t
+            if (mode == 1) {
+                Matrix.setLookAtM(view, 0, ex, ey, ez, ex + dirX, ey + dirY, ez + dirZ, 0f, 1f, 0f)
+            } else {
+                Matrix.setLookAtM(view, 0, ex, ey, ez, eyeX, eyeY, eyeZ, 0f, 1f, 0f)
+            }
+        }
         Matrix.multiplyMM(vp, 0, proj, 0, view, 0)
 
         // sol e lua
@@ -532,6 +551,7 @@ class GameRenderer(
             Matrix.translateM(model, 0, -0.5f, -0.5f, -0.5f)
             drawColorCube(model, p.r * lum, p.g * lum, p.b * lum, 1f)
         }
+        if (mode != 0) drawPlayer(lum)
         val h = hit
         if (h != null) {
             if (breakProg > 0f) {
@@ -558,7 +578,58 @@ class GameRenderer(
         }
         GLES20.glDisableVertexAttribArray(cPos)
 
-        drawHand(bright)
+        if (mode == 0) drawHand(bright)
+    }
+
+    private fun camDist(x: Float, y: Float, z: Float, dx: Float, dy: Float, dz: Float, maxD: Float): Float {
+        var t = 0.2f
+        while (t <= maxD) {
+            if (world.solid(floor(x + dx * t).toInt(), floor(y + dy * t).toInt(), floor(z + dz * t).toInt())) {
+                return max(0.3f, t - 0.3f)
+            }
+            t += 0.1f
+        }
+        return maxD
+    }
+
+    private val base = FloatArray(16)
+    private val pm = FloatArray(16)
+
+    private fun part(
+        pvx: Float, pvy: Float, pvz: Float, ang: Float,
+        cx: Float, cy: Float, cz: Float, sx: Float, sy: Float, sz: Float,
+        r: Float, g: Float, b: Float, lum: Float
+    ) {
+        System.arraycopy(base, 0, pm, 0, 16)
+        Matrix.translateM(pm, 0, pvx, pvy, pvz)
+        Matrix.rotateM(pm, 0, ang, 1f, 0f, 0f)
+        Matrix.translateM(pm, 0, cx - pvx, cy - pvy, cz - pvz)
+        Matrix.scaleM(pm, 0, sx, sy, sz)
+        drawColorCube(pm, r * lum, g * lum, b * lum, 1f)
+    }
+
+    private fun drawPlayer(lum: Float) {
+        Matrix.setIdentityM(base, 0)
+        Matrix.translateM(base, 0, s.px, s.py, s.pz)
+        Matrix.rotateM(base, 0, -Math.toDegrees(s.yaw.toDouble()).toFloat(), 0f, 1f, 0f)
+        val moveAmt = if (s.onGround) min(1f, (abs(s.vx) + abs(s.vz)) / 4f) else 0f
+        var sw = sin(bobT) * 45f * moveAmt
+        if (!s.onGround && !s.flying) sw = 25f
+        val head = Math.toDegrees(s.pitch.toDouble()).toFloat()
+        // pernas
+        part(-0.125f, 0.7f, 0f, sw, -0.25f, 0f, -0.125f, 0.25f, 0.7f, 0.25f, 0.22f, 0.22f, 0.58f, lum)
+        part(0.125f, 0.7f, 0f, -sw, 0f, 0f, -0.125f, 0.25f, 0.7f, 0.25f, 0.2f, 0.2f, 0.52f, lum)
+        // corpo
+        part(0f, 0.7f, 0f, 0f, -0.25f, 0.7f, -0.125f, 0.5f, 0.7f, 0.25f, 0.0f, 0.68f, 0.68f, lum)
+        // braços
+        part(-0.325f, 1.4f, 0f, -sw, -0.4f, 0.7f, -0.125f, 0.15f, 0.7f, 0.25f, 0.84f, 0.64f, 0.48f, lum)
+        part(0.325f, 1.4f, 0f, sw, 0.25f, 0.7f, -0.125f, 0.15f, 0.7f, 0.25f, 0.8f, 0.6f, 0.45f, lum)
+        // cabeça
+        part(0f, 1.4f, 0f, head, -0.2f, 1.4f, -0.2f, 0.4f, 0.4f, 0.4f, 0.86f, 0.66f, 0.5f, lum)
+        part(0f, 1.4f, 0f, head, -0.22f, 1.68f, -0.22f, 0.44f, 0.14f, 0.44f, 0.28f, 0.17f, 0.08f, lum)
+        part(0f, 1.4f, 0f, head, -0.22f, 1.4f, 0.14f, 0.44f, 0.3f, 0.08f, 0.28f, 0.17f, 0.08f, lum)
+        part(0f, 1.4f, 0f, head, -0.14f, 1.57f, -0.206f, 0.09f, 0.07f, 0.02f, 0.15f, 0.2f, 0.65f, lum)
+        part(0f, 1.4f, 0f, head, 0.05f, 1.57f, -0.206f, 0.09f, 0.07f, 0.02f, 0.15f, 0.2f, 0.65f, lum)
     }
 
     private fun drawHand(bright: Float) {

@@ -17,6 +17,7 @@ class GameState {
     @Volatile var breaking = false
     @Volatile var placeRequest = false
     @Volatile var selected = 0
+    @Volatile var camMode = 1 // 0 = 1ª pessoa, 1 = 3ª atrás, 2 = 3ª de frente
     @Volatile var fps = 0
     @Volatile var time = 0.3f
     @Volatile var ready = false

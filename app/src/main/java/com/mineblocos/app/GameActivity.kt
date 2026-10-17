@@ -52,9 +52,9 @@ class GameActivity : AppCompatActivity() {
             } else {
                 w = World(Random().nextInt())
                 w.generate { }
-                st.px = 64.5f
-                st.pz = 64.5f
-                st.py = (w.surfaceY(64, 64) + 1).toFloat()
+                st.px = World.W / 2 + 0.5f
+                st.pz = World.D / 2 + 0.5f
+                st.py = (w.surfaceY(World.W / 2, World.D / 2) + 1).toFloat()
             }
             Atlas.bitmap
             runOnUiThread { start(w, st) }

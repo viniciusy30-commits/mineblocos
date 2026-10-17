@@ -5,9 +5,9 @@ import kotlin.math.max
 
 class World(val seed: Int) {
     companion object {
-        const val W = 128
+        const val W = 256
         const val H = 64
-        const val D = 128
+        const val D = 256
         const val CS = 16
         const val CX = W / CS
         const val CZ = D / CS

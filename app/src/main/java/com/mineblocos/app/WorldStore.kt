@@ -12,7 +12,7 @@ import java.util.zip.GZIPInputStream
 import java.util.zip.GZIPOutputStream
 
 object WorldStore {
-    private const val MAGIC = 0x4D420002
+    private const val MAGIC = 0x4D420003
 
     class Loaded(
         val world: World,

@@ -64,7 +64,7 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         slider("Sensibilidade do olhar", 1, 10, Prefs.sens(this), { it.toString() }) { Prefs.setSens(this, it) }
-        slider("Distância de visão", 3, 8, Prefs.dist(this), { "$it chunks" }) { Prefs.setDist(this, it) }
+        slider("Distância de visão", 3, 10, Prefs.dist(this), { "$it chunks" }) { Prefs.setDist(this, it) }
 
         val cb = CheckBox(this)
         cb.text = "Mostrar FPS e coordenadas"

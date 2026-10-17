@@ -1,3 +1,10 @@
+#id 2026-10-17-b
+#titulo Visão em 3ª pessoa e mundo gigante
+- Câmera em 3ª pessoa com personagem animado (botão CÂM alterna 1ª, 3ª atrás e 3ª de frente)
+- Mundo 4 vezes maior (256 x 256 blocos)
+- Distância de visão até 10 chunks nas Configurações
+- Atenção: o mundo antigo não é compatível, um novo é criado
+
 #id 2026-10-17-a
 #titulo Primeira versão: mundo de blocos!
 - Mundo 3D de blocos com colinas, praias e árvores
