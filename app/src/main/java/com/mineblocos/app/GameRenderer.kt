@@ -688,7 +688,10 @@ class GameRenderer(
         Matrix.rotateM(model, 0, -sw * 55f, 1f, 0f, 0f)
         Matrix.rotateM(model, 0, 28f, 0f, 1f, 0f)
         Matrix.rotateM(model, 0, -12f, 1f, 0f, 0f)
-        Matrix.scaleM(model, 0, 0.36f, 0.36f, 0.36f)
+        val flatHand = Reg.kind(handBlock) != Reg.K_CUBE
+        if (flatHand) Matrix.rotateM(model, 0, 18f, 0f, 0f, 1f)
+        val hk = if (flatHand) 0.62f else 0.36f
+        Matrix.scaleM(model, 0, hk, hk, hk)
         Matrix.translateM(model, 0, -0.5f, -0.5f, -0.5f)
         Matrix.multiplyMM(mvp, 0, proj, 0, model, 0)
 

@@ -119,6 +119,29 @@ object Mesher {
         }
     }
 
+    /** Sprite plano com camadas finas (pseudo-espessura), para itens e plantas na mão. */
+    private fun emitFlat(out: FloatList, tile: Int) {
+        val tx = (tile % Atlas.COLS) * 16f
+        val ty = (tile / Atlas.COLS) * 16f
+        val aw = Atlas.bitmap.width.toFloat()
+        val ah = Atlas.bitmap.height.toFloat()
+        val px = floatArrayOf(0f, 0f, 1f, 0f, 1f, 1f, 0f, 1f)
+        val uvs = floatArrayOf(0f, 1f, 1f, 1f, 1f, 0f, 0f, 0f)
+        val order = intArrayOf(0, 1, 2, 0, 2, 3)
+        for (layer in 0 until 5) {
+            val z = 0.45f + layer * 0.025f
+            val light = if (layer == 2) 1f else 0.8f
+            for (k in order) {
+                out.add(px[k * 2])
+                out.add(px[k * 2 + 1])
+                out.add(z)
+                out.add((tx + 0.05f + uvs[k * 2] * 15.9f) / aw)
+                out.add((ty + 0.05f + uvs[k * 2 + 1] * 15.9f) / ah)
+                out.add(light)
+            }
+        }
+    }
+
     fun buildChunk(w: World, cx: Int, cz: Int): MeshData {
         val out = FloatList(24000)
         val x0 = cx * World.CS
@@ -165,6 +188,10 @@ object Mesher {
     fun handMesh(b: Int): MeshData {
         val out = FloatList(256)
         val l = FloatArray(4)
+        if (Reg.kind(b) != Reg.K_CUBE) {
+            emitFlat(out, Reg.tile(b, 2))
+            return MeshData(out.a, out.n)
+        }
         for (f in 0 until 6) {
             for (i in 0 until 4) l[i] = SHADE[f]
             emitQuad(out, f, 0f, 0f, 0f, Blocks.tile(b, kind(f)), l)
