@@ -123,6 +123,7 @@ object Reg {
         count = n
         waterId = index["water"] ?: -1
         ready = true
+        Shapes3D.load(c)
     }
 
     private fun ok(b: Int) = b > 0 && b < count
@@ -172,7 +173,10 @@ object Reg {
         if (!ok(b)) return false
         val k = ids[b]
         if (k == "stone_slab") return true
-        if (kinds[b] == K_MODEL && (k.endsWith("_drz_stairs") || k.endsWith("_drz_slab"))) return true
+        if (kinds[b] == K_MODEL && (k.endsWith("_drz_stairs") || k.endsWith("_drz_slab") ||
+            k.endsWith("_drz_vslab") || k.endsWith("_drz_pilar") || k.endsWith("_drz_quinae") || k.endsWith("_drz_quinad") ||
+            k.endsWith("_drz_circulo") || k.endsWith("_drz_curva") || k.endsWith("_drz_curvah") ||
+            k.endsWith("_drz_diagonal") || k.endsWith("_drz_ventila") || k.endsWith("_drz_muro"))) return true
         if (kinds[b] != K_CUBE) return false
         if (k.endsWith("_ore") || k in NOT_BUILDING) return false
         return true
@@ -180,6 +184,21 @@ object Reg {
 
     /** IDs dos blocos de construção (para o inventário). */
     fun buildingList(): IntArray = (1 until count).filter { building(it) }.toIntArray()
+
+    /** Aba do inventário: 0 = blocos, 1 = escadas e lajes, 2 = formas especiais. */
+    private fun category(b: Int): Int {
+        val k = ids[b]
+        if (k == "stone_slab") return 1
+        return when {
+            k.endsWith("_drz_stairs") || k.endsWith("_drz_slab") || k.endsWith("_drz_vslab") ||
+                k.endsWith("_drz_pilar") || k.endsWith("_drz_quinae") || k.endsWith("_drz_quinad") -> 1
+            k.endsWith("_drz_circulo") || k.endsWith("_drz_curva") || k.endsWith("_drz_curvah") ||
+                k.endsWith("_drz_diagonal") || k.endsWith("_drz_ventila") || k.endsWith("_drz_muro") -> 2
+            else -> 0
+        }
+    }
+
+    fun buildingList(tab: Int): IntArray = (1 until count).filter { building(it) && category(it) == tab }.toIntArray()
 
     fun placeable(b: Int): Boolean = building(b)
 

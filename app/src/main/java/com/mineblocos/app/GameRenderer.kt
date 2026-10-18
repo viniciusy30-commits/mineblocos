@@ -224,6 +224,15 @@ class GameRenderer(
             if (!world.solid(ix, iy, iz)) continue
             val bk = world.get(ix, iy, iz)
             val mt = world.getMeta(ix, iy, iz)
+            if (Shapes.boxCollide(bk)) {
+                for (q in Shapes.model(world, ix, iy, iz, bk, true).boxes) {
+                    if (x + 0.3f > ix + q.x0 && x - 0.3f < ix + q.x1 &&
+                        y + 1.8f > iy + q.y0 && y < iy + q.y1 &&
+                        z + 0.3f > iz + q.z0 && z - 0.3f < iz + q.z1
+                    ) return true
+                }
+                continue
+            }
             if (y < iy + Shapes.hi(bk, mt) && y + 1.8f > iy + Shapes.lo(bk, mt)) return true
         }
         return false
@@ -325,6 +334,9 @@ class GameRenderer(
             val nx = s.px + s.vx * h
             if (!collides(nx, s.py, s.pz)) {
                 s.px = nx
+            } else if (moving && wasGround && !s.flying && !collides(nx, s.py + 0.51f, s.pz)) {
+                s.py += 0.51f
+                s.px = nx
             } else if (moving && wasGround && !s.flying && !collides(nx, s.py + 1.05f, s.pz)) {
                 s.vy = 8.6f
             } else {
@@ -332,6 +344,9 @@ class GameRenderer(
             }
             val nz = s.pz + s.vz * h
             if (!collides(s.px, s.py, nz)) {
+                s.pz = nz
+            } else if (moving && wasGround && !s.flying && !collides(s.px, s.py + 0.51f, nz)) {
+                s.py += 0.51f
                 s.pz = nz
             } else if (moving && wasGround && !s.flying && !collides(s.px, s.py + 1.05f, nz)) {
                 s.vy = 8.6f
@@ -480,6 +495,15 @@ class GameRenderer(
                 return
             }
         }
+        // laje vertical: clicar na face de dentro completa o bloco
+        if (Shapes.isVSlab(tb) && tb == blk && (tm and Shapes.M_SECOND) == 0 && (h.nx != 0 || h.nz != 0)) {
+            val tf = tm and 3
+            if (h.nx == -Shapes.dirX(tf) && h.nz == -Shapes.dirZ(tf)) {
+                world.setMeta(h.x, h.y, h.z, tm or Shapes.M_SECOND)
+                punch = 1f
+                return
+            }
+        }
         val bx = h.x + h.nx
         val by = h.y + h.ny
         val bz = h.z + h.nz
@@ -508,8 +532,13 @@ class GameRenderer(
         }
         if (intersectsPlayer(bx, by, bz) && Reg.solid(blk)) return
         var meta = face
-        if (Shapes.isSlab(blk) || Shapes.isStairs(blk)) {
+        if (Shapes.isSlab(blk) || Shapes.flippable(blk)) {
             meta = face or (if (h.ny == -1 || (h.ny == 0 && frac > 0.5f)) Shapes.M_UPPER else 0)
+        }
+        if (Shapes.isVSlab(blk) && (h.nx != 0 || h.nz != 0)) {
+            // metade que encosta no bloco clicado
+            val ox = -h.nx; val oz = -h.nz
+            meta = if (oz < 0) 0 else if (ox > 0) 1 else if (oz > 0) 2 else 3
         }
         world.set(bx, by, bz, blk, meta)
         punch = 1f

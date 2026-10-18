@@ -1,5 +1,7 @@
 package com.mineblocos.app
 
+import kotlin.math.abs
+
 class FloatList(cap: Int) {
     var a = FloatArray(cap)
     var n = 0
@@ -179,8 +181,56 @@ object Mesher {
         emitBox(out, bx, ox, oy, oz, null, 0, 0, 0, 0.97f)
     }
 
+    /** Caixas giradas (círculo, curva, diagonal...): UV pela posição sem rotação, luz pela normal girada. */
+    private fun emitRot(out: FloatList, m: Model, rc: Array<RCube>, ox: Float, oy: Float, oz: Float) {
+        val aw = Atlas.bitmap.width.toFloat()
+        val ah = Atlas.bitmap.height.toFloat()
+        val order = intArrayOf(0, 1, 2, 0, 2, 3)
+        val rw = FloatArray(24)
+        for (q in rc) {
+            var mx = 0f; var my = 0f; var mz = 0f
+            for (i in 0 until 8) {
+                var wx = q.wor[i * 3]; val wy = q.wor[i * 3 + 1]; var wz = q.wor[i * 3 + 2]
+                for (r in 0 until m.rf) { val nx = 1f - wz; val nz = wx; wx = nx; wz = nz }
+                rw[i * 3] = wx; rw[i * 3 + 1] = wy; rw[i * 3 + 2] = wz
+                mx += wx; my += wy; mz += wz
+            }
+            mx /= 8f; my /= 8f; mz /= 8f
+            for (f in 0 until 6) {
+                val c = CORNERS[f]
+                var fx = 0f; var fy = 0f; var fz = 0f
+                for (k in 0 until 4) {
+                    val ci = (if (c[k * 3] == 1) 1 else 0) + (if (c[k * 3 + 1] == 1) 2 else 0) + (if (c[k * 3 + 2] == 1) 4 else 0)
+                    fx += rw[ci * 3]; fy += rw[ci * 3 + 1]; fz += rw[ci * 3 + 2]
+                }
+                val nx = fx / 4f - mx; val ny = fy / 4f - my; val nz = fz / 4f - mz
+                val idx = if (abs(ny) >= abs(nx) && abs(ny) >= abs(nz)) (if (ny > 0f) 0 else 1)
+                else if (abs(nx) >= abs(nz)) (if (nx > 0f) 2 else 3)
+                else (if (nz > 0f) 4 else 5)
+                val light = SHADE[idx] * 0.97f
+                val tile = if (f == 0) m.rt else if (f == 1) m.rb else m.rs
+                val tx = (tile % Atlas.COLS) * 16f
+                val ty = (tile / Atlas.COLS) * 16f
+                for (k in order) {
+                    val ci = (if (c[k * 3] == 1) 1 else 0) + (if (c[k * 3 + 1] == 1) 2 else 0) + (if (c[k * 3 + 2] == 1) 4 else 0)
+                    out.add(ox + rw[ci * 3])
+                    out.add(oy + rw[ci * 3 + 1])
+                    out.add(oz + rw[ci * 3 + 2])
+                    val lx = q.loc[ci * 3].coerceIn(0f, 1f)
+                    val ly = q.loc[ci * 3 + 1].coerceIn(0f, 1f)
+                    val lz = q.loc[ci * 3 + 2].coerceIn(0f, 1f)
+                    out.add((tx + 0.02f + faceU(f, lx, lz) * 15.96f) / aw)
+                    out.add((ty + 0.02f + faceV(f, ly, lz) * 15.96f) / ah)
+                    out.add(light)
+                }
+            }
+        }
+    }
+
     private fun emitModel(out: FloatList, m: Model, ox: Float, oy: Float, oz: Float, w: World?, cx: Int, cy: Int, cz: Int) {
         for (bx in m.boxes) emitBox(out, bx, ox, oy, oz, w, cx, cy, cz)
+        val rc = m.rc
+        if (rc != null && rc.isNotEmpty()) emitRot(out, m, rc, ox, oy, oz)
         if (m.cross >= 0) emitCross(out, ox, oy, oz, m.cross, m.crossScale, m.crossY)
     }
 

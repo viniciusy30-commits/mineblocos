@@ -17,7 +17,8 @@ object BlockIcons {
         val cv = Canvas(bmp)
         val atlas = Atlas.bitmap
         if (Reg.kind(b) == Reg.K_MODEL && !Shapes.spriteItem(b)) {
-            modelIcon(cv, atlas, Shapes.model(null, 0, 0, 0, b), size)
+            val m0 = Shapes.model(null, 0, 0, 0, b)
+            modelIcon(cv, atlas, if (m0.rc != null) Shapes.model(null, 0, 0, 0, b, true) else m0, size)
             return bmp
         }
         if (Reg.kind(b) != Reg.K_CUBE) {

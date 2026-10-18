@@ -15,7 +15,12 @@ class Model(
     val boxes: Array<Box>,
     val cross: Int = -1,
     val crossScale: Float = 1f,
-    val crossY: Float = 0f
+    val crossY: Float = 0f,
+    val rc: Array<RCube>? = null,
+    val rf: Int = 0,
+    val rt: Int = 0,
+    val rb: Int = 0,
+    val rs: Int = 0
 )
 
 /**
@@ -54,6 +59,16 @@ object Shapes {
     private const val CAKE = 28
     private const val DIODE = 29
     private const val STAIRS = 30
+    private const val VSLAB = 31
+    private const val PILLAR = 32
+    private const val QCL = 33
+    private const val QCR = 34
+    private const val CIRCLE = 35
+    private const val CURVE = 36
+    private const val CURVEH = 37
+    private const val DIAG = 38
+    private const val VENT = 39
+    private const val FWALL = 40
 
     /** Bits do estado do bloco (World.meta). */
     const val M_OPEN = 4
@@ -103,6 +118,16 @@ object Shapes {
                     else -> {
                         val k = Reg.key(i)
                         if (k.endsWith("_drz_stairs")) STAIRS
+                        else if (k.endsWith("_drz_vslab")) VSLAB
+                        else if (k.endsWith("_drz_pilar")) PILLAR
+                        else if (k.endsWith("_drz_circulo")) CIRCLE
+                        else if (k.endsWith("_drz_curva")) CURVE
+                        else if (k.endsWith("_drz_curvah")) CURVEH
+                        else if (k.endsWith("_drz_diagonal")) DIAG
+                        else if (k.endsWith("_drz_ventila")) VENT
+                        else if (k.endsWith("_drz_muro")) FWALL
+                        else if (k.endsWith("_drz_quinae")) QCL
+                        else if (k.endsWith("_drz_quinad")) QCR
                         else if (k.endsWith("_drz_slab")) SLAB
                         else if (k.startsWith("item_bed_")) BED
                         else if (k.startsWith("item_") && k.contains("sign")) SIGN
@@ -147,7 +172,7 @@ object Shapes {
     }
 
     fun solid(b: Int): Boolean = when (shapeOf(b)) {
-        FENCE, GATE, CACTUS, SLAB, STAIRS, COMPOSTER, POT, POT_AZALEA, POT_EMPTY, FARMLAND, PATH, HEAVY_CORE, AZALEA,
+        FENCE, GATE, CACTUS, SLAB, STAIRS, VSLAB, PILLAR, QCL, QCR, CIRCLE, CURVE, CURVEH, DIAG, VENT, FWALL, COMPOSTER, POT, POT_AZALEA, POT_EMPTY, FARMLAND, PATH, HEAVY_CORE, AZALEA,
         DOOR, BED, CAULDRON, HOPPER, CAKE, DIODE, CAMPFIRE -> true
         else -> false
     }
@@ -164,6 +189,48 @@ object Shapes {
 
     fun isSlab(b: Int) = shapeOf(b) == SLAB
     fun isStairs(b: Int) = shapeOf(b) == STAIRS
+    fun isVSlab(b: Int) = shapeOf(b) == VSLAB
+
+    /** Formas cuja colisão segue as caixas do modelo (escadas, lajes verticais, pilares, quinas). */
+    fun boxCollide(b: Int): Boolean { val s = shapeOf(b); return s == STAIRS || s == VSLAB || s == PILLAR || s == QCL || s == QCR ||
+        s == CIRCLE || s == CURVE || s == CURVEH || s == DIAG || s == VENT || s == FWALL }
+
+    /** Escadas, círculos e curvas podem ser colocados de cabeça para baixo (M_UPPER). */
+    fun flippable(b: Int): Boolean { val s = shapeOf(b); return s == STAIRS || s == CIRCLE || s == CURVE }
+
+    private fun stairFacing(w: World, x: Int, y: Int, z: Int, up: Int): Int {
+        val n = w.get(x, y, z)
+        if (shapeOf(n) != STAIRS) return -1
+        val m = w.getMeta(x, y, z)
+        return if ((m and M_UPPER) == up) (m and 3) else -1
+    }
+
+    /** A vizinha pode "tomar" o formato? (regra do Minecraft para cantos de escada) */
+    private fun canTake(w: World, x: Int, y: Int, z: Int, f: Int, up: Int): Boolean {
+        val n = w.get(x, y, z)
+        if (shapeOf(n) != STAIRS) return true
+        val m = w.getMeta(x, y, z)
+        return (m and 3) != f || (m and M_UPPER) != up
+    }
+
+    /** 0 = reta, 1 = externa esq., 2 = externa dir., 3 = interna esq., 4 = interna dir. */
+    private fun stairShape(w: World?, x: Int, y: Int, z: Int, m: Int): Int {
+        if (w == null) return 0
+        val f = m and 3
+        val up = m and M_UPPER
+        val dx = dirX(f); val dz = dirZ(f)
+        val left = (f + 3) and 3
+        val back = stairFacing(w, x + dx, y, z + dz, up)
+        if (back >= 0 && ((back xor f) and 1) == 1) {
+            val o = (back + 2) and 3
+            if (canTake(w, x + dirX(o), y, z + dirZ(o), f, up)) return if (back == left) 1 else 2
+        }
+        val front = stairFacing(w, x - dx, y, z - dz, up)
+        if (front >= 0 && ((front xor f) and 1) == 1) {
+            if (canTake(w, x + dirX(front), y, z + dirZ(front), f, up)) return if (front == left) 3 else 4
+        }
+        return 0
+    }
     fun isDoor(b: Int) = shapeOf(b) == DOOR
     fun isBed(b: Int) = shapeOf(b) == BED
 
@@ -301,15 +368,44 @@ object Shapes {
                 else Model(arrayOf(bx(0f, 0f, 0f, 16f, 8f, 16f, top, bot, side)))
             }
             STAIRS -> {
-                // modelo olhando para -Z: degrau alto no fundo; M_UPPER = escada invertida
-                val boxes = if ((m and M_UPPER) != 0) arrayOf(
-                    bx(0f, 8f, 0f, 16f, 16f, 16f, top, bot, side),
-                    bx(0f, 0f, 0f, 16f, 8f, 8f, top, bot, side, 62)
-                ) else arrayOf(
-                    bx(0f, 0f, 0f, 16f, 8f, 16f, top, bot, side),
-                    bx(0f, 8f, 0f, 16f, 16f, 8f, top, bot, side, 61)
+                // modelo olhando para -Z: degrau alto no fundo; M_UPPER = escada invertida; cantos automáticos
+                val up = (m and M_UPPER) != 0
+                val sh = stairShape(w, x, y, z, m)
+                val lower = bx(0f, if (up) 8f else 0f, 0f, 16f, if (up) 16f else 8f, 16f, top, bot, side)
+                val uy0 = if (up) 0f else 8f
+                val uy1 = if (up) 8f else 16f
+                val mk = if (up) 62 else 61
+                val mk2 = mk and 32.inv()
+                val ups: Array<Box> = when (sh) {
+                    1 -> arrayOf(bx(0f, uy0, 0f, 8f, uy1, 8f, top, bot, side, mk))
+                    2 -> arrayOf(bx(8f, uy0, 0f, 16f, uy1, 8f, top, bot, side, mk))
+                    3 -> arrayOf(bx(0f, uy0, 0f, 16f, uy1, 8f, top, bot, side, mk), bx(0f, uy0, 8f, 8f, uy1, 16f, top, bot, side, mk2))
+                    4 -> arrayOf(bx(0f, uy0, 0f, 16f, uy1, 8f, top, bot, side, mk), bx(8f, uy0, 8f, 16f, uy1, 16f, top, bot, side, mk2))
+                    else -> arrayOf(bx(0f, uy0, 0f, 16f, uy1, 8f, top, bot, side, mk))
+                }
+                return Model(rot(arrayOf(lower) + ups, f))
+            }
+            VSLAB -> {
+                if ((m and M_SECOND) != 0) return Model(arrayOf(bx(0f, 0f, 0f, 16f, 16f, 16f, top, bot, side)))
+                return Model(rot(arrayOf(bx(0f, 0f, 0f, 16f, 16f, 8f, top, bot, side)), f))
+            }
+            PILLAR -> return Model(arrayOf(bx(4f, 0f, 4f, 12f, 16f, 12f, top, bot, side)))
+            QCL -> return Model(rot(arrayOf(bx(0f, 0f, 0f, 8f, 16f, 8f, top, bot, side)), f))
+            QCR -> return Model(rot(arrayOf(bx(8f, 0f, 0f, 16f, 16f, 8f, top, bot, side)), f))
+            FWALL -> return Model(rot(arrayOf(bx(0f, 0f, 4f, 16f, 16f, 12f, top, bot, side)), f))
+            CIRCLE, CURVE, CURVEH, DIAG, VENT -> {
+                val up = (m and M_UPPER) != 0
+                val n = when (shapeOf(b)) {
+                    CIRCLE -> if (up) "circle_flip" else "circle"
+                    CURVE -> if (up) "curve_flip" else "curve"
+                    CURVEH -> "curveh"
+                    DIAG -> "diag"
+                    else -> "vent"
+                }
+                return Model(
+                    if (hit) rot(Shapes3D.coll(n), f) else emptyArray(),
+                    rc = Shapes3D.cubes(n), rf = f, rt = top, rb = bot, rs = side
                 )
-                return Model(rot(boxes, f))
             }
             COMPOSTER -> {
                 val wall = Reg.tile(Reg.id("planks_spruce"), 2)

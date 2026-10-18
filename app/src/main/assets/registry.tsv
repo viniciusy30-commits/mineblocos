@@ -1802,3 +1802,2363 @@ wood_vinyl_dark_drz_slab	Laje Wood Vinyl Dark	6	1401	1401	1401	0	48240F
 wood_vinyl_light_drz_slab	Laje Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
 wood_vinyl_white_drz_slab	Laje Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
 wood_white_drz_slab	Laje Wood White	6	1404	1404	1404	0	E8DED9
+asphalt_1_drz_vslab	Laje Vertical Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_pilar	Pilar Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_quinae	Quina Esq. Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_quinad	Quina Dir. Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1a_drz_vslab	Laje Vertical Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_pilar	Pilar Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_quinae	Quina Esq. Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_quinad	Quina Dir. Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_2_drz_vslab	Laje Vertical Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_pilar	Pilar Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_quinae	Quina Esq. Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_quinad	Quina Dir. Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2a_drz_vslab	Laje Vertical Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_pilar	Pilar Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_quinae	Quina Esq. Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_quinad	Quina Dir. Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_3_drz_vslab	Laje Vertical Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_pilar	Pilar Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_quinae	Quina Esq. Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_quinad	Quina Dir. Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_4_drz_vslab	Laje Vertical Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_pilar	Pilar Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_quinae	Quina Esq. Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_quinad	Quina Dir. Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4a_drz_vslab	Laje Vertical Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_pilar	Pilar Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_quinae	Quina Esq. Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_quinad	Quina Dir. Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4b_drz_vslab	Laje Vertical Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_pilar	Pilar Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_quinae	Quina Esq. Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_quinad	Quina Dir. Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4c_drz_vslab	Laje Vertical Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_pilar	Pilar Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_quinae	Quina Esq. Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_quinad	Quina Dir. Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4d_drz_vslab	Laje Vertical Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_pilar	Pilar Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_quinae	Quina Esq. Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_quinad	Quina Dir. Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_5_drz_vslab	Laje Vertical Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_pilar	Pilar Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_quinae	Quina Esq. Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_quinad	Quina Dir. Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5a_drz_vslab	Laje Vertical Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_pilar	Pilar Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_quinae	Quina Esq. Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_quinad	Quina Dir. Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5b_drz_vslab	Laje Vertical Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_pilar	Pilar Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_quinae	Quina Esq. Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_quinad	Quina Dir. Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5c_drz_vslab	Laje Vertical Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_pilar	Pilar Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_quinae	Quina Esq. Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_quinad	Quina Dir. Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_6_drz_vslab	Laje Vertical Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_pilar	Pilar Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_quinae	Quina Esq. Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_quinad	Quina Dir. Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6a_drz_vslab	Laje Vertical Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_pilar	Pilar Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_quinae	Quina Esq. Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_quinad	Quina Dir. Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_drz_vslab	Laje Vertical Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_pilar	Pilar Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_quinae	Quina Esq. Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_quinad	Quina Dir. Asphalt	6	1170	1170	1170	0	545454
+asphalt_bike_1_drz_vslab	Laje Vertical Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_pilar	Pilar Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_quinae	Quina Esq. Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_quinad	Quina Dir. Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_vslab	Laje Vertical Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_pilar	Pilar Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_quinae	Quina Esq. Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_quinad	Quina Dir. Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_vslab	Laje Vertical Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_pilar	Pilar Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_quinae	Quina Esq. Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_quinad	Quina Dir. Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_2_drz_vslab	Laje Vertical Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_pilar	Pilar Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_quinae	Quina Esq. Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_quinad	Quina Dir. Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_3_drz_vslab	Laje Vertical Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_pilar	Pilar Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_quinae	Quina Esq. Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_quinad	Quina Dir. Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_4_drz_vslab	Laje Vertical Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_pilar	Pilar Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_quinae	Quina Esq. Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_quinad	Quina Dir. Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_vslab	Laje Vertical Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_pilar	Pilar Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_quinae	Quina Esq. Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_quinad	Quina Dir. Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_vslab	Laje Vertical Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_pilar	Pilar Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_quinae	Quina Esq. Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_quinad	Quina Dir. Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_vslab	Laje Vertical Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_pilar	Pilar Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_quinae	Quina Esq. Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_quinad	Quina Dir. Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_5_drz_vslab	Laje Vertical Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_pilar	Pilar Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_quinae	Quina Esq. Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_quinad	Quina Dir. Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_vslab	Laje Vertical Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_pilar	Pilar Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_quinae	Quina Esq. Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_quinad	Quina Dir. Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_vslab	Laje Vertical Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_pilar	Pilar Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_quinae	Quina Esq. Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_quinad	Quina Dir. Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_drz_vslab	Laje Vertical Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_pilar	Pilar Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_quinae	Quina Esq. Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_quinad	Quina Dir. Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_blue_1_drz_vslab	Laje Vertical Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_pilar	Pilar Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_quinae	Quina Esq. Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_quinad	Quina Dir. Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_vslab	Laje Vertical Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_pilar	Pilar Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_quinae	Quina Esq. Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_quinad	Quina Dir. Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_vslab	Laje Vertical Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_pilar	Pilar Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_quinae	Quina Esq. Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_quinad	Quina Dir. Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_vslab	Laje Vertical Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_pilar	Pilar Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_quinae	Quina Esq. Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_quinad	Quina Dir. Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_vslab	Laje Vertical Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_pilar	Pilar Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_quinae	Quina Esq. Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_quinad	Quina Dir. Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_vslab	Laje Vertical Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_pilar	Pilar Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_quinae	Quina Esq. Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_quinad	Quina Dir. Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_vslab	Laje Vertical Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_pilar	Pilar Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_quinae	Quina Esq. Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_quinad	Quina Dir. Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_vslab	Laje Vertical Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_pilar	Pilar Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_quinae	Quina Esq. Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_quinad	Quina Dir. Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_vslab	Laje Vertical Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_pilar	Pilar Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_quinae	Quina Esq. Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_quinad	Quina Dir. Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_vslab	Laje Vertical Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_pilar	Pilar Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_quinae	Quina Esq. Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_quinad	Quina Dir. Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_vslab	Laje Vertical Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_pilar	Pilar Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_quinae	Quina Esq. Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_quinad	Quina Dir. Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_vslab	Laje Vertical Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_pilar	Pilar Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_quinae	Quina Esq. Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_quinad	Quina Dir. Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_drz_vslab	Laje Vertical Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_pilar	Pilar Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_quinae	Quina Esq. Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_quinad	Quina Dir. Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bus_1_drz_vslab	Laje Vertical Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_pilar	Pilar Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_quinae	Quina Esq. Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_quinad	Quina Dir. Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1a_drz_vslab	Laje Vertical Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_pilar	Pilar Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_quinae	Quina Esq. Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_quinad	Quina Dir. Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1b_drz_vslab	Laje Vertical Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_pilar	Pilar Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_quinae	Quina Esq. Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_quinad	Quina Dir. Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1c_drz_vslab	Laje Vertical Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_pilar	Pilar Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_quinae	Quina Esq. Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_quinad	Quina Dir. Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_2_drz_vslab	Laje Vertical Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_pilar	Pilar Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_quinae	Quina Esq. Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_quinad	Quina Dir. Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_3_drz_vslab	Laje Vertical Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_pilar	Pilar Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_quinae	Quina Esq. Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_quinad	Quina Dir. Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_4_drz_vslab	Laje Vertical Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_pilar	Pilar Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_quinae	Quina Esq. Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_quinad	Quina Dir. Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4a_drz_vslab	Laje Vertical Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_pilar	Pilar Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_quinae	Quina Esq. Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_quinad	Quina Dir. Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_drz_vslab	Laje Vertical Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_pilar	Pilar Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_quinae	Quina Esq. Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_quinad	Quina Dir. Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_gray_1_drz_vslab	Laje Vertical Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_pilar	Pilar Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_quinae	Quina Esq. Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_quinad	Quina Dir. Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1a_drz_vslab	Laje Vertical Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_pilar	Pilar Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_quinae	Quina Esq. Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_quinad	Quina Dir. Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_2_drz_vslab	Laje Vertical Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_pilar	Pilar Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_quinae	Quina Esq. Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_quinad	Quina Dir. Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2a_drz_vslab	Laje Vertical Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_pilar	Pilar Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_quinae	Quina Esq. Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_quinad	Quina Dir. Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_3_drz_vslab	Laje Vertical Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_pilar	Pilar Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_quinae	Quina Esq. Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_quinad	Quina Dir. Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_4_drz_vslab	Laje Vertical Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_pilar	Pilar Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_quinae	Quina Esq. Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_quinad	Quina Dir. Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4a_drz_vslab	Laje Vertical Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_pilar	Pilar Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_quinae	Quina Esq. Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_quinad	Quina Dir. Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4b_drz_vslab	Laje Vertical Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_pilar	Pilar Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_quinae	Quina Esq. Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_quinad	Quina Dir. Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4c_drz_vslab	Laje Vertical Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_pilar	Pilar Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_quinae	Quina Esq. Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_quinad	Quina Dir. Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4d_drz_vslab	Laje Vertical Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_pilar	Pilar Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_quinae	Quina Esq. Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_quinad	Quina Dir. Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_5_drz_vslab	Laje Vertical Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_pilar	Pilar Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_quinae	Quina Esq. Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_quinad	Quina Dir. Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5a_drz_vslab	Laje Vertical Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_pilar	Pilar Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_quinae	Quina Esq. Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_quinad	Quina Dir. Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5b_drz_vslab	Laje Vertical Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_pilar	Pilar Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_quinae	Quina Esq. Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_quinad	Quina Dir. Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5c_drz_vslab	Laje Vertical Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_pilar	Pilar Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_quinae	Quina Esq. Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_quinad	Quina Dir. Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_6_drz_vslab	Laje Vertical Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_pilar	Pilar Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_quinae	Quina Esq. Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_quinad	Quina Dir. Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6a_drz_vslab	Laje Vertical Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_pilar	Pilar Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_quinae	Quina Esq. Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_quinad	Quina Dir. Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_drz_vslab	Laje Vertical Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_pilar	Pilar Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_quinae	Quina Esq. Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_quinad	Quina Dir. Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_pink_drz_vslab	Laje Vertical Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_pilar	Pilar Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_quinae	Quina Esq. Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_quinad	Quina Dir. Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_white_drz_vslab	Laje Vertical Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_pilar	Pilar Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_quinae	Quina Esq. Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_quinad	Quina Dir. Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_yellow_drz_vslab	Laje Vertical Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_pilar	Pilar Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_quinae	Quina Esq. Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_quinad	Quina Dir. Asphalt Yellow	6	1240	1240	1240	0	CFC949
+container_a_drz_vslab	Laje Vertical Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_pilar	Pilar Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_quinae	Quina Esq. Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_quinad	Quina Dir. Container A	6	1241	1241	1241	0	A56D28
+container_b_drz_vslab	Laje Vertical Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_pilar	Pilar Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_quinae	Quina Esq. Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_quinad	Quina Dir. Container B	6	1242	1242	1242	0	608D2E
+container_c_drz_vslab	Laje Vertical Container C	6	1243	1243	1243	0	389C87
+container_c_drz_pilar	Pilar Container C	6	1243	1243	1243	0	389C87
+container_c_drz_quinae	Quina Esq. Container C	6	1243	1243	1243	0	389C87
+container_c_drz_quinad	Quina Dir. Container C	6	1243	1243	1243	0	389C87
+container_d_drz_vslab	Laje Vertical Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_pilar	Pilar Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_quinae	Quina Esq. Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_quinad	Quina Dir. Container D	6	1244	1244	1244	0	4A78A2
+container_drz_vslab	Laje Vertical Container	6	1245	1245	1245	0	8D3131
+container_drz_pilar	Pilar Container	6	1245	1245	1245	0	8D3131
+container_drz_quinae	Quina Esq. Container	6	1245	1245	1245	0	8D3131
+container_drz_quinad	Quina Dir. Container	6	1245	1245	1245	0	8D3131
+container_e_drz_vslab	Laje Vertical Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_pilar	Pilar Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_quinae	Quina Esq. Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_quinad	Quina Dir. Container E	6	1246	1246	1246	0	BCBCBC
+container_f_drz_vslab	Laje Vertical Container F	6	1247	1247	1247	0	202020
+container_f_drz_pilar	Pilar Container F	6	1247	1247	1247	0	202020
+container_f_drz_quinae	Quina Esq. Container F	6	1247	1247	1247	0	202020
+container_f_drz_quinad	Quina Dir. Container F	6	1247	1247	1247	0	202020
+embedded_track_drz_vslab	Laje Vertical Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_pilar	Pilar Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_quinae	Quina Esq. Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_quinad	Quina Dir. Embedded Track	6	1248	1248	1248	0	AAA6A4
+escalator_block_a_drz_vslab	Laje Vertical Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_pilar	Pilar Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_quinae	Quina Esq. Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_quinad	Quina Dir. Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_b_drz_vslab	Laje Vertical Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_pilar	Pilar Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_quinae	Quina Esq. Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_quinad	Quina Dir. Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_c_drz_vslab	Laje Vertical Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_pilar	Pilar Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_quinae	Quina Esq. Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_quinad	Quina Dir. Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_drz_vslab	Laje Vertical Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_pilar	Pilar Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_quinae	Quina Esq. Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_quinad	Quina Dir. Escalator Block	6	1252	1252	1252	0	31363F
+marble_1_drz_vslab	Laje Vertical Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_pilar	Pilar Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_quinae	Quina Esq. Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_quinad	Quina Dir. Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1a_drz_vslab	Laje Vertical Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_pilar	Pilar Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_quinae	Quina Esq. Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_quinad	Quina Dir. Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1b_drz_vslab	Laje Vertical Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_pilar	Pilar Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_quinae	Quina Esq. Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_quinad	Quina Dir. Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1c_drz_vslab	Laje Vertical Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_pilar	Pilar Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_quinae	Quina Esq. Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_quinad	Quina Dir. Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_white_drz_vslab	Laje Vertical Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_pilar	Pilar Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_quinae	Quina Esq. Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_quinad	Quina Dir. Marble White	6	1257	1257	1257	0	EDEDED
+metal_drz_vslab	Laje Vertical Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_pilar	Pilar Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_quinae	Quina Esq. Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_quinad	Quina Dir. Metal	6	1258	1258	1258	0	F1F2F3
+metal_gray_drz_vslab	Laje Vertical Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_pilar	Pilar Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_quinae	Quina Esq. Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_quinad	Quina Dir. Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_rusted_a_drz_vslab	Laje Vertical Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_pilar	Pilar Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_quinae	Quina Esq. Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_quinad	Quina Dir. Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_drz_vslab	Laje Vertical Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_pilar	Pilar Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_quinae	Quina Esq. Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_quinad	Quina Dir. Metal Rusted	6	1261	1261	1261	0	E2CEBF
+monodeus_script_a_drz_vslab	Laje Vertical Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_pilar	Pilar Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_quinae	Quina Esq. Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_quinad	Quina Dir. Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_adios_drz_vslab	Laje Vertical Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_pilar	Pilar Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_quinae	Quina Esq. Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_quinad	Quina Dir. Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_coic_drz_vslab	Laje Vertical Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_pilar	Pilar Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_quinae	Quina Esq. Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_quinad	Quina Dir. Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_dah_drz_vslab	Laje Vertical Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_pilar	Pilar Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_quinae	Quina Esq. Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_quinad	Quina Dir. Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dou_drz_vslab	Laje Vertical Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_pilar	Pilar Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_quinae	Quina Esq. Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_quinad	Quina Dir. Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_ga_drz_vslab	Laje Vertical Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_pilar	Pilar Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_quinae	Quina Esq. Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_quinad	Quina Dir. Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_gard_drz_vslab	Laje Vertical Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_pilar	Pilar Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_quinae	Quina Esq. Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_quinad	Quina Dir. Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gate_drz_vslab	Laje Vertical Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_pilar	Pilar Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_quinae	Quina Esq. Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_quinad	Quina Dir. Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_geon_drz_vslab	Laje Vertical Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_pilar	Pilar Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_quinae	Quina Esq. Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_quinad	Quina Dir. Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_grac_drz_vslab	Laje Vertical Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_pilar	Pilar Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_quinae	Quina Esq. Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_quinad	Quina Dir. Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_guro_drz_vslab	Laje Vertical Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_pilar	Pilar Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_quinae	Quina Esq. Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_quinad	Quina Dir. Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_hm_drz_vslab	Laje Vertical Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_pilar	Pilar Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_quinae	Quina Esq. Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_quinad	Quina Dir. Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_i_drz_vslab	Laje Vertical Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_pilar	Pilar Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_quinae	Quina Esq. Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_quinad	Quina Dir. Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_ii_drz_vslab	Laje Vertical Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_pilar	Pilar Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_quinae	Quina Esq. Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_quinad	Quina Dir. Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_iii_drz_vslab	Laje Vertical Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_pilar	Pilar Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_quinae	Quina Esq. Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_quinad	Quina Dir. Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_light_drz_vslab	Laje Vertical Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_pilar	Pilar Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_quinae	Quina Esq. Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_quinad	Quina Dir. Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_mon_drz_vslab	Laje Vertical Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_pilar	Pilar Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_quinae	Quina Esq. Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_quinad	Quina Dir. Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_moni_drz_vslab	Laje Vertical Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_pilar	Pilar Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_quinae	Quina Esq. Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_quinad	Quina Dir. Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_monodeco_drz_vslab	Laje Vertical Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_pilar	Pilar Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_quinae	Quina Esq. Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_quinad	Quina Dir. Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_moon_drz_vslab	Laje Vertical Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_pilar	Pilar Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_quinae	Quina Esq. Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_quinad	Quina Dir. Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moongate_drz_vslab	Laje Vertical Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_pilar	Pilar Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_quinae	Quina Esq. Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_quinad	Quina Dir. Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_mt_drz_vslab	Laje Vertical Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_pilar	Pilar Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_quinae	Quina Esq. Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_quinad	Quina Dir. Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_nox_drz_vslab	Laje Vertical Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_pilar	Pilar Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_quinae	Quina Esq. Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_quinad	Quina Dir. Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_orc_drz_vslab	Laje Vertical Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_pilar	Pilar Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_quinae	Quina Esq. Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_quinad	Quina Dir. Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orca_drz_vslab	Laje Vertical Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_pilar	Pilar Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_quinae	Quina Esq. Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_quinad	Quina Dir. Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orion_drz_vslab	Laje Vertical Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_pilar	Pilar Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_quinae	Quina Esq. Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_quinad	Quina Dir. Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_pur_drz_vslab	Laje Vertical Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_pilar	Pilar Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_quinae	Quina Esq. Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_quinad	Quina Dir. Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_req_drz_vslab	Laje Vertical Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_pilar	Pilar Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_quinae	Quina Esq. Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_quinad	Quina Dir. Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_rod_drz_vslab	Laje Vertical Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_pilar	Pilar Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_quinae	Quina Esq. Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_quinad	Quina Dir. Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_skar_drz_vslab	Laje Vertical Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_pilar	Pilar Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_quinae	Quina Esq. Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_quinad	Quina Dir. Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_sol_drz_vslab	Laje Vertical Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_pilar	Pilar Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_quinae	Quina Esq. Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_quinad	Quina Dir. Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_space_drz_vslab	Laje Vertical Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_pilar	Pilar Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_quinae	Quina Esq. Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_quinad	Quina Dir. Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_v_drz_vslab	Laje Vertical Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_pilar	Pilar Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_quinae	Quina Esq. Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_quinad	Quina Dir. Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_val_drz_vslab	Laje Vertical Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_pilar	Pilar Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_quinae	Quina Esq. Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_quinad	Quina Dir. Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_vis_drz_vslab	Laje Vertical Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_pilar	Pilar Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_quinae	Quina Esq. Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_quinad	Quina Dir. Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_x_drz_vslab	Laje Vertical Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_pilar	Pilar Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_quinae	Quina Esq. Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_quinad	Quina Dir. Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_ysk_drz_vslab	Laje Vertical Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_pilar	Pilar Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_quinae	Quina Esq. Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_quinad	Quina Dir. Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_zen_drz_vslab	Laje Vertical Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_pilar	Pilar Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_quinae	Quina Esq. Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_quinad	Quina Dir. Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+sidewalk_6_drz_vslab	Laje Vertical Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_pilar	Pilar Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_quinae	Quina Esq. Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_quinad	Quina Dir. Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6a_drz_vslab	Laje Vertical Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_pilar	Pilar Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_quinae	Quina Esq. Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_quinad	Quina Dir. Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6b_drz_vslab	Laje Vertical Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_pilar	Pilar Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_quinae	Quina Esq. Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_quinad	Quina Dir. Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_1_drz_vslab	Laje Vertical Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_pilar	Pilar Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_quinae	Quina Esq. Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_quinad	Quina Dir. Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1a_drz_vslab	Laje Vertical Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_pilar	Pilar Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_quinae	Quina Esq. Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_quinad	Quina Dir. Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_2_drz_vslab	Laje Vertical Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_pilar	Pilar Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_quinae	Quina Esq. Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_quinad	Quina Dir. Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2a_drz_vslab	Laje Vertical Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_pilar	Pilar Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_quinae	Quina Esq. Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_quinad	Quina Dir. Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_3_drz_vslab	Laje Vertical Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_pilar	Pilar Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_quinae	Quina Esq. Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_quinad	Quina Dir. Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_4_drz_vslab	Laje Vertical Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_pilar	Pilar Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_quinae	Quina Esq. Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_quinad	Quina Dir. Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_5_drz_vslab	Laje Vertical Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_pilar	Pilar Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_quinae	Quina Esq. Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_quinad	Quina Dir. Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5a_drz_vslab	Laje Vertical Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_pilar	Pilar Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_quinae	Quina Esq. Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_quinad	Quina Dir. Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5b_drz_vslab	Laje Vertical Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_pilar	Pilar Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_quinae	Quina Esq. Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_quinad	Quina Dir. Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_drz_vslab	Laje Vertical Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_pilar	Pilar Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_quinae	Quina Esq. Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_quinad	Quina Dir. Sidewalk	6	1312	1312	1312	0	A2A2A2
+tiles_black_drz_vslab	Laje Vertical Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_pilar	Pilar Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_quinae	Quina Esq. Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_quinad	Quina Dir. Tiles Black	6	1313	1313	1313	0	878789
+tiles_blue_drz_vslab	Laje Vertical Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_pilar	Pilar Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_quinae	Quina Esq. Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_quinad	Quina Dir. Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_green_drz_vslab	Laje Vertical Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_pilar	Pilar Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_quinae	Quina Esq. Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_quinad	Quina Dir. Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_red_drz_vslab	Laje Vertical Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_pilar	Pilar Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_quinae	Quina Esq. Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_quinad	Quina Dir. Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_white_drz_vslab	Laje Vertical Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_pilar	Pilar Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_quinae	Quina Esq. Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_quinad	Quina Dir. Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_yellow_drz_vslab	Laje Vertical Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_pilar	Pilar Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_quinae	Quina Esq. Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_quinad	Quina Dir. Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_1_drz_vslab	Laje Vertical Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_pilar	Pilar Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_quinae	Quina Esq. Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_quinad	Quina Dir. Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1a_drz_vslab	Laje Vertical Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_pilar	Pilar Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_quinae	Quina Esq. Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_quinad	Quina Dir. Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_2_drz_vslab	Laje Vertical Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_pilar	Pilar Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_quinae	Quina Esq. Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_quinad	Quina Dir. Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2a_drz_vslab	Laje Vertical Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_pilar	Pilar Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_quinae	Quina Esq. Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_quinad	Quina Dir. Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_3_drz_vslab	Laje Vertical Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_pilar	Pilar Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_quinae	Quina Esq. Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_quinad	Quina Dir. Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3a_drz_vslab	Laje Vertical Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_pilar	Pilar Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_quinae	Quina Esq. Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_quinad	Quina Dir. Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_4_drz_vslab	Laje Vertical Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_pilar	Pilar Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_quinae	Quina Esq. Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_quinad	Quina Dir. Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4a_drz_vslab	Laje Vertical Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_pilar	Pilar Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_quinae	Quina Esq. Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_quinad	Quina Dir. Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4b_drz_vslab	Laje Vertical Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_pilar	Pilar Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_quinae	Quina Esq. Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_quinad	Quina Dir. Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4c_drz_vslab	Laje Vertical Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_pilar	Pilar Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_quinae	Quina Esq. Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_quinad	Quina Dir. Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4d_drz_vslab	Laje Vertical Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_pilar	Pilar Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_quinae	Quina Esq. Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_quinad	Quina Dir. Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4e_drz_vslab	Laje Vertical Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_pilar	Pilar Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_quinae	Quina Esq. Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_quinad	Quina Dir. Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4f_drz_vslab	Laje Vertical Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_pilar	Pilar Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_quinae	Quina Esq. Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_quinad	Quina Dir. Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4g_drz_vslab	Laje Vertical Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_pilar	Pilar Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_quinae	Quina Esq. Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_quinad	Quina Dir. Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4h_drz_vslab	Laje Vertical Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_pilar	Pilar Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_quinae	Quina Esq. Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_quinad	Quina Dir. Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4i_drz_vslab	Laje Vertical Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_pilar	Pilar Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_quinae	Quina Esq. Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_quinad	Quina Dir. Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4j_drz_vslab	Laje Vertical Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_pilar	Pilar Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_quinae	Quina Esq. Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_quinad	Quina Dir. Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4k_drz_vslab	Laje Vertical Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_pilar	Pilar Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_quinae	Quina Esq. Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_quinad	Quina Dir. Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4l_drz_vslab	Laje Vertical Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_pilar	Pilar Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_quinae	Quina Esq. Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_quinad	Quina Dir. Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_a_black_drz_vslab	Laje Vertical Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_pilar	Pilar Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_quinae	Quina Esq. Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_quinad	Quina Dir. Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_blue_drz_vslab	Laje Vertical Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_pilar	Pilar Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_quinae	Quina Esq. Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_quinad	Quina Dir. Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_green_drz_vslab	Laje Vertical Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_pilar	Pilar Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_quinae	Quina Esq. Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_quinad	Quina Dir. Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_pink_drz_vslab	Laje Vertical Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_pilar	Pilar Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_quinae	Quina Esq. Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_quinad	Quina Dir. Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_red_drz_vslab	Laje Vertical Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_pilar	Pilar Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_quinae	Quina Esq. Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_quinad	Quina Dir. Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_white_drz_vslab	Laje Vertical Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_pilar	Pilar Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_quinae	Quina Esq. Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_quinad	Quina Dir. Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_yellow_drz_vslab	Laje Vertical Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_pilar	Pilar Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_quinae	Quina Esq. Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_quinad	Quina Dir. Tiles A Yellow	6	1344	1344	1344	0	D6C857
+wall_1_drz_vslab	Laje Vertical Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_pilar	Pilar Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_quinae	Quina Esq. Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_quinad	Quina Dir. Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1a_drz_vslab	Laje Vertical Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_pilar	Pilar Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_quinae	Quina Esq. Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_quinad	Quina Dir. Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_2_drz_vslab	Laje Vertical Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_pilar	Pilar Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_quinae	Quina Esq. Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_quinad	Quina Dir. Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2a_drz_vslab	Laje Vertical Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_pilar	Pilar Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_quinae	Quina Esq. Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_quinad	Quina Dir. Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2b_drz_vslab	Laje Vertical Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_pilar	Pilar Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_quinae	Quina Esq. Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_quinad	Quina Dir. Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2c_drz_vslab	Laje Vertical Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_pilar	Pilar Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_quinae	Quina Esq. Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_quinad	Quina Dir. Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2d_drz_vslab	Laje Vertical Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_pilar	Pilar Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_quinae	Quina Esq. Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_quinad	Quina Dir. Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2e_drz_vslab	Laje Vertical Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_pilar	Pilar Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_quinae	Quina Esq. Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_quinad	Quina Dir. Wall 2E	6	1353	1353	1353	0	27272D
+wall_2f_drz_vslab	Laje Vertical Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_pilar	Pilar Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_quinae	Quina Esq. Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_quinad	Quina Dir. Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2g_drz_vslab	Laje Vertical Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_pilar	Pilar Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_quinae	Quina Esq. Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_quinad	Quina Dir. Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2h_drz_vslab	Laje Vertical Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_pilar	Pilar Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_quinae	Quina Esq. Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_quinad	Quina Dir. Wall 2H	6	1356	1356	1356	0	213555
+wall_2i_drz_vslab	Laje Vertical Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_pilar	Pilar Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_quinae	Quina Esq. Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_quinad	Quina Dir. Wall 2I	6	1357	1357	1357	0	86A788
+wall_2j_drz_vslab	Laje Vertical Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_pilar	Pilar Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_quinae	Quina Esq. Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_quinad	Quina Dir. Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2k_drz_vslab	Laje Vertical Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_pilar	Pilar Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_quinae	Quina Esq. Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_quinad	Quina Dir. Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2l_drz_vslab	Laje Vertical Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_pilar	Pilar Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_quinae	Quina Esq. Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_quinad	Quina Dir. Wall 2L	6	1360	1360	1360	0	7C444F
+wall_3_brown_drz_vslab	Laje Vertical Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_pilar	Pilar Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_quinae	Quina Esq. Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_quinad	Quina Dir. Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_gray_drz_vslab	Laje Vertical Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_pilar	Pilar Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_quinae	Quina Esq. Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_quinad	Quina Dir. Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_white_drz_vslab	Laje Vertical Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_pilar	Pilar Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_quinae	Quina Esq. Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_quinad	Quina Dir. Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_4_drz_vslab	Laje Vertical Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_pilar	Pilar Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_quinae	Quina Esq. Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_quinad	Quina Dir. Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4a_drz_vslab	Laje Vertical Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_pilar	Pilar Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_quinae	Quina Esq. Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_quinad	Quina Dir. Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4b_drz_vslab	Laje Vertical Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_pilar	Pilar Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_quinae	Quina Esq. Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_quinad	Quina Dir. Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4c_drz_vslab	Laje Vertical Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_pilar	Pilar Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_quinae	Quina Esq. Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_quinad	Quina Dir. Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4d_drz_vslab	Laje Vertical Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_pilar	Pilar Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_quinae	Quina Esq. Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_quinad	Quina Dir. Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4e_drz_vslab	Laje Vertical Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_pilar	Pilar Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_quinae	Quina Esq. Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_quinad	Quina Dir. Wall 4E	6	1368	1368	1368	0	27272D
+wall_4f_drz_vslab	Laje Vertical Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_pilar	Pilar Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_quinae	Quina Esq. Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_quinad	Quina Dir. Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4g_drz_vslab	Laje Vertical Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_pilar	Pilar Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_quinae	Quina Esq. Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_quinad	Quina Dir. Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4h_drz_vslab	Laje Vertical Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_pilar	Pilar Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_quinae	Quina Esq. Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_quinad	Quina Dir. Wall 4H	6	1371	1371	1371	0	213555
+wall_4i_drz_vslab	Laje Vertical Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_pilar	Pilar Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_quinae	Quina Esq. Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_quinad	Quina Dir. Wall 4I	6	1372	1372	1372	0	86A788
+wall_4j_drz_vslab	Laje Vertical Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_pilar	Pilar Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_quinae	Quina Esq. Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_quinad	Quina Dir. Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4k_drz_vslab	Laje Vertical Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_pilar	Pilar Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_quinae	Quina Esq. Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_quinad	Quina Dir. Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4l_drz_vslab	Laje Vertical Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_pilar	Pilar Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_quinae	Quina Esq. Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_quinad	Quina Dir. Wall 4L	6	1375	1375	1375	0	7C444F
+wall_blue_drz_vslab	Laje Vertical Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_pilar	Pilar Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_quinae	Quina Esq. Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_quinad	Quina Dir. Wall Blue	6	1376	1376	1376	0	2885DE
+wall_green_drz_vslab	Laje Vertical Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_pilar	Pilar Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_quinae	Quina Esq. Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_quinad	Quina Dir. Wall Green	6	1377	1377	1377	0	27D95D
+wall_red_drz_vslab	Laje Vertical Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_pilar	Pilar Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_quinae	Quina Esq. Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_quinad	Quina Dir. Wall Red	6	1378	1378	1378	0	D53521
+wall_yellow_drz_vslab	Laje Vertical Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_pilar	Pilar Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_quinae	Quina Esq. Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_quinad	Quina Dir. Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_5_drz_vslab	Laje Vertical Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_pilar	Pilar Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_quinae	Quina Esq. Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_quinad	Quina Dir. Wall 5	6	1380	1380	1380	0	928F89
+wall_5a_drz_vslab	Laje Vertical Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_pilar	Pilar Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_quinae	Quina Esq. Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_quinad	Quina Dir. Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5b_drz_vslab	Laje Vertical Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_pilar	Pilar Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_quinae	Quina Esq. Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_quinad	Quina Dir. Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5c_drz_vslab	Laje Vertical Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_pilar	Pilar Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_quinae	Quina Esq. Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_quinad	Quina Dir. Wall 5C	6	1383	1383	1383	0	888B80
+wall_6_drz_vslab	Laje Vertical Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_pilar	Pilar Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_quinae	Quina Esq. Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_quinad	Quina Dir. Wall 6	6	1384	1384	1384	0	474747
+wall_6a_drz_vslab	Laje Vertical Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_pilar	Pilar Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_quinae	Quina Esq. Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_quinad	Quina Dir. Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6b_drz_vslab	Laje Vertical Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_pilar	Pilar Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_quinae	Quina Esq. Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_quinad	Quina Dir. Wall 6B	6	1386	1386	1386	0	44587A
+wall_6c_drz_vslab	Laje Vertical Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_pilar	Pilar Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_quinae	Quina Esq. Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_quinad	Quina Dir. Wall 6C	6	1387	1387	1387	0	736154
+wall_6d_drz_vslab	Laje Vertical Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_pilar	Pilar Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_quinae	Quina Esq. Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_quinad	Quina Dir. Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6e_drz_vslab	Laje Vertical Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_pilar	Pilar Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_quinae	Quina Esq. Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_quinad	Quina Dir. Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6f_drz_vslab	Laje Vertical Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_pilar	Pilar Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_quinae	Quina Esq. Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_quinad	Quina Dir. Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_7_drz_vslab	Laje Vertical Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_pilar	Pilar Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_quinae	Quina Esq. Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_quinad	Quina Dir. Wall 7	6	1391	1391	1391	0	999999
+wall_7a_drz_vslab	Laje Vertical Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_pilar	Pilar Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_quinae	Quina Esq. Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_quinad	Quina Dir. Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7b_drz_vslab	Laje Vertical Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_pilar	Pilar Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_quinae	Quina Esq. Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_quinad	Quina Dir. Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7c_drz_vslab	Laje Vertical Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_pilar	Pilar Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_quinae	Quina Esq. Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_quinad	Quina Dir. Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_metal_drz_vslab	Laje Vertical Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_pilar	Pilar Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_quinae	Quina Esq. Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_quinad	Quina Dir. Wall Metal	6	1395	1395	1395	0	B1B3B5
+wood_black_drz_vslab	Laje Vertical Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_pilar	Pilar Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_quinae	Quina Esq. Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_quinad	Quina Dir. Wood Black	6	1396	1396	1396	0	262523
+wood_brown_drz_vslab	Laje Vertical Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_pilar	Pilar Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_quinae	Quina Esq. Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_quinad	Quina Dir. Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_gray_drz_vslab	Laje Vertical Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_pilar	Pilar Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_quinae	Quina Esq. Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_quinad	Quina Dir. Wood Gray	6	1398	1398	1398	0	63605C
+wood_light_drz_vslab	Laje Vertical Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_pilar	Pilar Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_quinae	Quina Esq. Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_quinad	Quina Dir. Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_vinyl_brown_drz_vslab	Laje Vertical Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_pilar	Pilar Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_quinae	Quina Esq. Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_quinad	Quina Dir. Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_dark_drz_vslab	Laje Vertical Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_pilar	Pilar Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_quinae	Quina Esq. Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_quinad	Quina Dir. Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_light_drz_vslab	Laje Vertical Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_pilar	Pilar Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_quinae	Quina Esq. Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_quinad	Quina Dir. Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_white_drz_vslab	Laje Vertical Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_pilar	Pilar Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_quinae	Quina Esq. Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_quinad	Quina Dir. Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_white_drz_vslab	Laje Vertical Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_pilar	Pilar Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_quinae	Quina Esq. Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_quinad	Quina Dir. Wood White	6	1404	1404	1404	0	E8DED9
+asphalt_1_drz_circulo	Círculo Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_curva	Curva Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_curvah	Curva Horizontal Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_diagonal	Diagonal Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_muro	Muro Fino Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1_drz_ventila	Ventilação Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1a_drz_circulo	Círculo Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_curva	Curva Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_curvah	Curva Horizontal Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_diagonal	Diagonal Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_muro	Muro Fino Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_1a_drz_ventila	Ventilação Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_2_drz_circulo	Círculo Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_curva	Curva Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_curvah	Curva Horizontal Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_diagonal	Diagonal Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_muro	Muro Fino Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2_drz_ventila	Ventilação Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2a_drz_circulo	Círculo Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_curva	Curva Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_curvah	Curva Horizontal Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_diagonal	Diagonal Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_muro	Muro Fino Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_2a_drz_ventila	Ventilação Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_3_drz_circulo	Círculo Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_curva	Curva Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_curvah	Curva Horizontal Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_diagonal	Diagonal Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_muro	Muro Fino Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_3_drz_ventila	Ventilação Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_4_drz_circulo	Círculo Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_curva	Curva Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_curvah	Curva Horizontal Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_diagonal	Diagonal Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_muro	Muro Fino Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4_drz_ventila	Ventilação Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4a_drz_circulo	Círculo Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_curva	Curva Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_curvah	Curva Horizontal Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_diagonal	Diagonal Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_muro	Muro Fino Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4a_drz_ventila	Ventilação Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4b_drz_circulo	Círculo Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_curva	Curva Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_curvah	Curva Horizontal Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_diagonal	Diagonal Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_muro	Muro Fino Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4b_drz_ventila	Ventilação Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4c_drz_circulo	Círculo Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_curva	Curva Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_curvah	Curva Horizontal Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_diagonal	Diagonal Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_muro	Muro Fino Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4c_drz_ventila	Ventilação Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4d_drz_circulo	Círculo Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_curva	Curva Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_curvah	Curva Horizontal Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_diagonal	Diagonal Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_muro	Muro Fino Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_4d_drz_ventila	Ventilação Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_5_drz_circulo	Círculo Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_curva	Curva Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_curvah	Curva Horizontal Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_diagonal	Diagonal Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_muro	Muro Fino Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5_drz_ventila	Ventilação Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5a_drz_circulo	Círculo Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_curva	Curva Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_curvah	Curva Horizontal Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_diagonal	Diagonal Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_muro	Muro Fino Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5a_drz_ventila	Ventilação Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5b_drz_circulo	Círculo Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_curva	Curva Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_curvah	Curva Horizontal Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_diagonal	Diagonal Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_muro	Muro Fino Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5b_drz_ventila	Ventilação Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5c_drz_circulo	Círculo Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_curva	Curva Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_curvah	Curva Horizontal Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_diagonal	Diagonal Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_muro	Muro Fino Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_5c_drz_ventila	Ventilação Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_6_drz_circulo	Círculo Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_curva	Curva Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_curvah	Curva Horizontal Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_diagonal	Diagonal Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_muro	Muro Fino Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6_drz_ventila	Ventilação Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6a_drz_circulo	Círculo Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_curva	Curva Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_curvah	Curva Horizontal Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_diagonal	Diagonal Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_muro	Muro Fino Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_6a_drz_ventila	Ventilação Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_drz_circulo	Círculo Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_curva	Curva Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_curvah	Curva Horizontal Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_diagonal	Diagonal Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_muro	Muro Fino Asphalt	6	1170	1170	1170	0	545454
+asphalt_drz_ventila	Ventilação Asphalt	6	1170	1170	1170	0	545454
+asphalt_bike_1_drz_circulo	Círculo Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_curva	Curva Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_curvah	Curva Horizontal Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_diagonal	Diagonal Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_muro	Muro Fino Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1_drz_ventila	Ventilação Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_circulo	Círculo Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_curva	Curva Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_curvah	Curva Horizontal Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_diagonal	Diagonal Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_muro	Muro Fino Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_ventila	Ventilação Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_circulo	Círculo Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_curva	Curva Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_curvah	Curva Horizontal Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_diagonal	Diagonal Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_muro	Muro Fino Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_ventila	Ventilação Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_2_drz_circulo	Círculo Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_curva	Curva Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_curvah	Curva Horizontal Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_diagonal	Diagonal Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_muro	Muro Fino Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_2_drz_ventila	Ventilação Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_3_drz_circulo	Círculo Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_curva	Curva Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_curvah	Curva Horizontal Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_diagonal	Diagonal Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_muro	Muro Fino Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_3_drz_ventila	Ventilação Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_4_drz_circulo	Círculo Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_curva	Curva Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_curvah	Curva Horizontal Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_diagonal	Diagonal Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_muro	Muro Fino Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4_drz_ventila	Ventilação Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_circulo	Círculo Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_curva	Curva Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_curvah	Curva Horizontal Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_diagonal	Diagonal Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_muro	Muro Fino Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_ventila	Ventilação Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_circulo	Círculo Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_curva	Curva Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_curvah	Curva Horizontal Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_diagonal	Diagonal Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_muro	Muro Fino Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_ventila	Ventilação Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_circulo	Círculo Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_curva	Curva Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_curvah	Curva Horizontal Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_diagonal	Diagonal Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_muro	Muro Fino Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_ventila	Ventilação Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_5_drz_circulo	Círculo Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_curva	Curva Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_curvah	Curva Horizontal Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_diagonal	Diagonal Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_muro	Muro Fino Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5_drz_ventila	Ventilação Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_circulo	Círculo Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_curva	Curva Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_curvah	Curva Horizontal Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_diagonal	Diagonal Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_muro	Muro Fino Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_ventila	Ventilação Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_circulo	Círculo Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_curva	Curva Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_curvah	Curva Horizontal Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_diagonal	Diagonal Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_muro	Muro Fino Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_ventila	Ventilação Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_drz_circulo	Círculo Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_curva	Curva Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_curvah	Curva Horizontal Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_diagonal	Diagonal Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_muro	Muro Fino Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_drz_ventila	Ventilação Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_blue_1_drz_circulo	Círculo Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_curva	Curva Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_curvah	Curva Horizontal Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_diagonal	Diagonal Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_muro	Muro Fino Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1_drz_ventila	Ventilação Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_circulo	Círculo Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_curva	Curva Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_curvah	Curva Horizontal Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_diagonal	Diagonal Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_muro	Muro Fino Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_ventila	Ventilação Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_circulo	Círculo Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_curva	Curva Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_curvah	Curva Horizontal Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_diagonal	Diagonal Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_muro	Muro Fino Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_ventila	Ventilação Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_circulo	Círculo Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_curva	Curva Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_curvah	Curva Horizontal Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_diagonal	Diagonal Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_muro	Muro Fino Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_ventila	Ventilação Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_circulo	Círculo Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_curva	Curva Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_curvah	Curva Horizontal Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_diagonal	Diagonal Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_muro	Muro Fino Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_ventila	Ventilação Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_circulo	Círculo Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_curva	Curva Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_curvah	Curva Horizontal Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_diagonal	Diagonal Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_muro	Muro Fino Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_ventila	Ventilação Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_circulo	Círculo Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_curva	Curva Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_curvah	Curva Horizontal Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_diagonal	Diagonal Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_muro	Muro Fino Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_ventila	Ventilação Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_circulo	Círculo Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_curva	Curva Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_curvah	Curva Horizontal Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_diagonal	Diagonal Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_muro	Muro Fino Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_ventila	Ventilação Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_circulo	Círculo Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_curva	Curva Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_curvah	Curva Horizontal Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_diagonal	Diagonal Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_muro	Muro Fino Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_ventila	Ventilação Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_circulo	Círculo Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_curva	Curva Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_curvah	Curva Horizontal Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_diagonal	Diagonal Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_muro	Muro Fino Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_ventila	Ventilação Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_circulo	Círculo Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_curva	Curva Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_curvah	Curva Horizontal Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_diagonal	Diagonal Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_muro	Muro Fino Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_ventila	Ventilação Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_circulo	Círculo Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_curva	Curva Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_curvah	Curva Horizontal Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_diagonal	Diagonal Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_muro	Muro Fino Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_ventila	Ventilação Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_drz_circulo	Círculo Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_curva	Curva Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_curvah	Curva Horizontal Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_diagonal	Diagonal Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_muro	Muro Fino Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bike_blue_drz_ventila	Ventilação Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bus_1_drz_circulo	Círculo Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_curva	Curva Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_curvah	Curva Horizontal Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_diagonal	Diagonal Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_muro	Muro Fino Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1_drz_ventila	Ventilação Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1a_drz_circulo	Círculo Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_curva	Curva Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_curvah	Curva Horizontal Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_diagonal	Diagonal Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_muro	Muro Fino Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1a_drz_ventila	Ventilação Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1b_drz_circulo	Círculo Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_curva	Curva Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_curvah	Curva Horizontal Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_diagonal	Diagonal Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_muro	Muro Fino Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1b_drz_ventila	Ventilação Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1c_drz_circulo	Círculo Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_curva	Curva Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_curvah	Curva Horizontal Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_diagonal	Diagonal Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_muro	Muro Fino Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_1c_drz_ventila	Ventilação Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_2_drz_circulo	Círculo Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_curva	Curva Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_curvah	Curva Horizontal Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_diagonal	Diagonal Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_muro	Muro Fino Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_2_drz_ventila	Ventilação Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_3_drz_circulo	Círculo Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_curva	Curva Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_curvah	Curva Horizontal Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_diagonal	Diagonal Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_muro	Muro Fino Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_3_drz_ventila	Ventilação Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_4_drz_circulo	Círculo Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_curva	Curva Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_curvah	Curva Horizontal Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_diagonal	Diagonal Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_muro	Muro Fino Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4_drz_ventila	Ventilação Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4a_drz_circulo	Círculo Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_curva	Curva Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_curvah	Curva Horizontal Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_diagonal	Diagonal Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_muro	Muro Fino Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_4a_drz_ventila	Ventilação Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_drz_circulo	Círculo Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_curva	Curva Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_curvah	Curva Horizontal Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_diagonal	Diagonal Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_muro	Muro Fino Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_bus_drz_ventila	Ventilação Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_gray_1_drz_circulo	Círculo Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_curva	Curva Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_curvah	Curva Horizontal Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_diagonal	Diagonal Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_muro	Muro Fino Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1_drz_ventila	Ventilação Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1a_drz_circulo	Círculo Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_curva	Curva Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_curvah	Curva Horizontal Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_diagonal	Diagonal Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_muro	Muro Fino Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_1a_drz_ventila	Ventilação Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_2_drz_circulo	Círculo Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_curva	Curva Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_curvah	Curva Horizontal Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_diagonal	Diagonal Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_muro	Muro Fino Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2_drz_ventila	Ventilação Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2a_drz_circulo	Círculo Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_curva	Curva Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_curvah	Curva Horizontal Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_diagonal	Diagonal Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_muro	Muro Fino Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_2a_drz_ventila	Ventilação Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_3_drz_circulo	Círculo Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_curva	Curva Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_curvah	Curva Horizontal Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_diagonal	Diagonal Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_muro	Muro Fino Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_3_drz_ventila	Ventilação Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_4_drz_circulo	Círculo Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_curva	Curva Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_curvah	Curva Horizontal Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_diagonal	Diagonal Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_muro	Muro Fino Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4_drz_ventila	Ventilação Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4a_drz_circulo	Círculo Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_curva	Curva Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_curvah	Curva Horizontal Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_diagonal	Diagonal Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_muro	Muro Fino Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4a_drz_ventila	Ventilação Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4b_drz_circulo	Círculo Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_curva	Curva Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_curvah	Curva Horizontal Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_diagonal	Diagonal Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_muro	Muro Fino Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4b_drz_ventila	Ventilação Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4c_drz_circulo	Círculo Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_curva	Curva Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_curvah	Curva Horizontal Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_diagonal	Diagonal Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_muro	Muro Fino Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4c_drz_ventila	Ventilação Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4d_drz_circulo	Círculo Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_curva	Curva Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_curvah	Curva Horizontal Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_diagonal	Diagonal Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_muro	Muro Fino Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_4d_drz_ventila	Ventilação Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_5_drz_circulo	Círculo Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_curva	Curva Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_curvah	Curva Horizontal Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_diagonal	Diagonal Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_muro	Muro Fino Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5_drz_ventila	Ventilação Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5a_drz_circulo	Círculo Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_curva	Curva Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_curvah	Curva Horizontal Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_diagonal	Diagonal Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_muro	Muro Fino Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5a_drz_ventila	Ventilação Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5b_drz_circulo	Círculo Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_curva	Curva Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_curvah	Curva Horizontal Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_diagonal	Diagonal Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_muro	Muro Fino Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5b_drz_ventila	Ventilação Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5c_drz_circulo	Círculo Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_curva	Curva Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_curvah	Curva Horizontal Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_diagonal	Diagonal Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_muro	Muro Fino Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_5c_drz_ventila	Ventilação Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_6_drz_circulo	Círculo Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_curva	Curva Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_curvah	Curva Horizontal Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_diagonal	Diagonal Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_muro	Muro Fino Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6_drz_ventila	Ventilação Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6a_drz_circulo	Círculo Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_curva	Curva Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_curvah	Curva Horizontal Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_diagonal	Diagonal Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_muro	Muro Fino Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_6a_drz_ventila	Ventilação Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_drz_circulo	Círculo Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_curva	Curva Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_curvah	Curva Horizontal Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_diagonal	Diagonal Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_muro	Muro Fino Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_gray_drz_ventila	Ventilação Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_pink_drz_circulo	Círculo Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_curva	Curva Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_curvah	Curva Horizontal Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_diagonal	Diagonal Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_muro	Muro Fino Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_pink_drz_ventila	Ventilação Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_white_drz_circulo	Círculo Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_curva	Curva Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_curvah	Curva Horizontal Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_diagonal	Diagonal Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_muro	Muro Fino Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_white_drz_ventila	Ventilação Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_yellow_drz_circulo	Círculo Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_curva	Curva Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_curvah	Curva Horizontal Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_diagonal	Diagonal Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_muro	Muro Fino Asphalt Yellow	6	1240	1240	1240	0	CFC949
+asphalt_yellow_drz_ventila	Ventilação Asphalt Yellow	6	1240	1240	1240	0	CFC949
+container_a_drz_circulo	Círculo Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_curva	Curva Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_curvah	Curva Horizontal Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_diagonal	Diagonal Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_muro	Muro Fino Container A	6	1241	1241	1241	0	A56D28
+container_a_drz_ventila	Ventilação Container A	6	1241	1241	1241	0	A56D28
+container_b_drz_circulo	Círculo Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_curva	Curva Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_curvah	Curva Horizontal Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_diagonal	Diagonal Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_muro	Muro Fino Container B	6	1242	1242	1242	0	608D2E
+container_b_drz_ventila	Ventilação Container B	6	1242	1242	1242	0	608D2E
+container_c_drz_circulo	Círculo Container C	6	1243	1243	1243	0	389C87
+container_c_drz_curva	Curva Container C	6	1243	1243	1243	0	389C87
+container_c_drz_curvah	Curva Horizontal Container C	6	1243	1243	1243	0	389C87
+container_c_drz_diagonal	Diagonal Container C	6	1243	1243	1243	0	389C87
+container_c_drz_muro	Muro Fino Container C	6	1243	1243	1243	0	389C87
+container_c_drz_ventila	Ventilação Container C	6	1243	1243	1243	0	389C87
+container_d_drz_circulo	Círculo Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_curva	Curva Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_curvah	Curva Horizontal Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_diagonal	Diagonal Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_muro	Muro Fino Container D	6	1244	1244	1244	0	4A78A2
+container_d_drz_ventila	Ventilação Container D	6	1244	1244	1244	0	4A78A2
+container_drz_circulo	Círculo Container	6	1245	1245	1245	0	8D3131
+container_drz_curva	Curva Container	6	1245	1245	1245	0	8D3131
+container_drz_curvah	Curva Horizontal Container	6	1245	1245	1245	0	8D3131
+container_drz_diagonal	Diagonal Container	6	1245	1245	1245	0	8D3131
+container_drz_muro	Muro Fino Container	6	1245	1245	1245	0	8D3131
+container_drz_ventila	Ventilação Container	6	1245	1245	1245	0	8D3131
+container_e_drz_circulo	Círculo Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_curva	Curva Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_curvah	Curva Horizontal Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_diagonal	Diagonal Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_muro	Muro Fino Container E	6	1246	1246	1246	0	BCBCBC
+container_e_drz_ventila	Ventilação Container E	6	1246	1246	1246	0	BCBCBC
+container_f_drz_circulo	Círculo Container F	6	1247	1247	1247	0	202020
+container_f_drz_curva	Curva Container F	6	1247	1247	1247	0	202020
+container_f_drz_curvah	Curva Horizontal Container F	6	1247	1247	1247	0	202020
+container_f_drz_diagonal	Diagonal Container F	6	1247	1247	1247	0	202020
+container_f_drz_muro	Muro Fino Container F	6	1247	1247	1247	0	202020
+container_f_drz_ventila	Ventilação Container F	6	1247	1247	1247	0	202020
+embedded_track_drz_circulo	Círculo Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_curva	Curva Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_curvah	Curva Horizontal Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_diagonal	Diagonal Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_muro	Muro Fino Embedded Track	6	1248	1248	1248	0	AAA6A4
+embedded_track_drz_ventila	Ventilação Embedded Track	6	1248	1248	1248	0	AAA6A4
+escalator_block_a_drz_circulo	Círculo Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_curva	Curva Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_curvah	Curva Horizontal Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_diagonal	Diagonal Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_muro	Muro Fino Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_a_drz_ventila	Ventilação Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_b_drz_circulo	Círculo Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_curva	Curva Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_curvah	Curva Horizontal Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_diagonal	Diagonal Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_muro	Muro Fino Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_b_drz_ventila	Ventilação Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_c_drz_circulo	Círculo Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_curva	Curva Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_curvah	Curva Horizontal Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_diagonal	Diagonal Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_muro	Muro Fino Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_c_drz_ventila	Ventilação Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_drz_circulo	Círculo Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_curva	Curva Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_curvah	Curva Horizontal Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_diagonal	Diagonal Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_muro	Muro Fino Escalator Block	6	1252	1252	1252	0	31363F
+escalator_block_drz_ventila	Ventilação Escalator Block	6	1252	1252	1252	0	31363F
+marble_1_drz_circulo	Círculo Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_curva	Curva Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_curvah	Curva Horizontal Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_diagonal	Diagonal Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_muro	Muro Fino Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1_drz_ventila	Ventilação Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1a_drz_circulo	Círculo Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_curva	Curva Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_curvah	Curva Horizontal Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_diagonal	Diagonal Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_muro	Muro Fino Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1a_drz_ventila	Ventilação Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1b_drz_circulo	Círculo Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_curva	Curva Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_curvah	Curva Horizontal Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_diagonal	Diagonal Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_muro	Muro Fino Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1b_drz_ventila	Ventilação Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1c_drz_circulo	Círculo Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_curva	Curva Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_curvah	Curva Horizontal Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_diagonal	Diagonal Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_muro	Muro Fino Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_1c_drz_ventila	Ventilação Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_white_drz_circulo	Círculo Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_curva	Curva Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_curvah	Curva Horizontal Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_diagonal	Diagonal Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_muro	Muro Fino Marble White	6	1257	1257	1257	0	EDEDED
+marble_white_drz_ventila	Ventilação Marble White	6	1257	1257	1257	0	EDEDED
+metal_drz_circulo	Círculo Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_curva	Curva Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_curvah	Curva Horizontal Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_diagonal	Diagonal Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_muro	Muro Fino Metal	6	1258	1258	1258	0	F1F2F3
+metal_drz_ventila	Ventilação Metal	6	1258	1258	1258	0	F1F2F3
+metal_gray_drz_circulo	Círculo Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_curva	Curva Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_curvah	Curva Horizontal Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_diagonal	Diagonal Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_muro	Muro Fino Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_gray_drz_ventila	Ventilação Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_rusted_a_drz_circulo	Círculo Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_curva	Curva Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_curvah	Curva Horizontal Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_diagonal	Diagonal Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_muro	Muro Fino Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_a_drz_ventila	Ventilação Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_drz_circulo	Círculo Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_curva	Curva Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_curvah	Curva Horizontal Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_diagonal	Diagonal Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_muro	Muro Fino Metal Rusted	6	1261	1261	1261	0	E2CEBF
+metal_rusted_drz_ventila	Ventilação Metal Rusted	6	1261	1261	1261	0	E2CEBF
+monodeus_script_a_drz_circulo	Círculo Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_curva	Curva Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_curvah	Curva Horizontal Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_diagonal	Diagonal Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_muro	Muro Fino Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_a_drz_ventila	Ventilação Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_adios_drz_circulo	Círculo Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_curva	Curva Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_curvah	Curva Horizontal Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_diagonal	Diagonal Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_muro	Muro Fino Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_adios_drz_ventila	Ventilação Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_coic_drz_circulo	Círculo Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_curva	Curva Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_curvah	Curva Horizontal Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_diagonal	Diagonal Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_muro	Muro Fino Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_coic_drz_ventila	Ventilação Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_dah_drz_circulo	Círculo Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_curva	Curva Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_curvah	Curva Horizontal Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_diagonal	Diagonal Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_muro	Muro Fino Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dah_drz_ventila	Ventilação Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dou_drz_circulo	Círculo Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_curva	Curva Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_curvah	Curva Horizontal Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_diagonal	Diagonal Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_muro	Muro Fino Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_dou_drz_ventila	Ventilação Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_ga_drz_circulo	Círculo Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_curva	Curva Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_curvah	Curva Horizontal Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_diagonal	Diagonal Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_muro	Muro Fino Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_ga_drz_ventila	Ventilação Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_gard_drz_circulo	Círculo Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_curva	Curva Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_curvah	Curva Horizontal Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_diagonal	Diagonal Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_muro	Muro Fino Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gard_drz_ventila	Ventilação Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gate_drz_circulo	Círculo Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_curva	Curva Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_curvah	Curva Horizontal Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_diagonal	Diagonal Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_muro	Muro Fino Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_gate_drz_ventila	Ventilação Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_geon_drz_circulo	Círculo Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_curva	Curva Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_curvah	Curva Horizontal Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_diagonal	Diagonal Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_muro	Muro Fino Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_geon_drz_ventila	Ventilação Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_grac_drz_circulo	Círculo Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_curva	Curva Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_curvah	Curva Horizontal Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_diagonal	Diagonal Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_muro	Muro Fino Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_grac_drz_ventila	Ventilação Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_guro_drz_circulo	Círculo Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_curva	Curva Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_curvah	Curva Horizontal Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_diagonal	Diagonal Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_muro	Muro Fino Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_guro_drz_ventila	Ventilação Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_hm_drz_circulo	Círculo Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_curva	Curva Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_curvah	Curva Horizontal Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_diagonal	Diagonal Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_muro	Muro Fino Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_hm_drz_ventila	Ventilação Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_i_drz_circulo	Círculo Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_curva	Curva Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_curvah	Curva Horizontal Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_diagonal	Diagonal Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_muro	Muro Fino Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_i_drz_ventila	Ventilação Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_ii_drz_circulo	Círculo Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_curva	Curva Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_curvah	Curva Horizontal Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_diagonal	Diagonal Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_muro	Muro Fino Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_ii_drz_ventila	Ventilação Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_iii_drz_circulo	Círculo Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_curva	Curva Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_curvah	Curva Horizontal Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_diagonal	Diagonal Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_muro	Muro Fino Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_iii_drz_ventila	Ventilação Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_light_drz_circulo	Círculo Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_curva	Curva Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_curvah	Curva Horizontal Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_diagonal	Diagonal Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_muro	Muro Fino Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_light_drz_ventila	Ventilação Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_mon_drz_circulo	Círculo Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_curva	Curva Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_curvah	Curva Horizontal Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_diagonal	Diagonal Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_muro	Muro Fino Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_mon_drz_ventila	Ventilação Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_moni_drz_circulo	Círculo Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_curva	Curva Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_curvah	Curva Horizontal Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_diagonal	Diagonal Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_muro	Muro Fino Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_moni_drz_ventila	Ventilação Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_monodeco_drz_circulo	Círculo Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_curva	Curva Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_curvah	Curva Horizontal Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_diagonal	Diagonal Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_muro	Muro Fino Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_monodeco_drz_ventila	Ventilação Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_moon_drz_circulo	Círculo Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_curva	Curva Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_curvah	Curva Horizontal Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_diagonal	Diagonal Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_muro	Muro Fino Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moon_drz_ventila	Ventilação Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moongate_drz_circulo	Círculo Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_curva	Curva Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_curvah	Curva Horizontal Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_diagonal	Diagonal Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_muro	Muro Fino Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_moongate_drz_ventila	Ventilação Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_mt_drz_circulo	Círculo Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_curva	Curva Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_curvah	Curva Horizontal Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_diagonal	Diagonal Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_muro	Muro Fino Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_mt_drz_ventila	Ventilação Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_nox_drz_circulo	Círculo Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_curva	Curva Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_curvah	Curva Horizontal Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_diagonal	Diagonal Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_muro	Muro Fino Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_nox_drz_ventila	Ventilação Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_orc_drz_circulo	Círculo Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_curva	Curva Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_curvah	Curva Horizontal Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_diagonal	Diagonal Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_muro	Muro Fino Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orc_drz_ventila	Ventilação Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orca_drz_circulo	Círculo Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_curva	Curva Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_curvah	Curva Horizontal Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_diagonal	Diagonal Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_muro	Muro Fino Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orca_drz_ventila	Ventilação Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orion_drz_circulo	Círculo Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_curva	Curva Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_curvah	Curva Horizontal Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_diagonal	Diagonal Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_muro	Muro Fino Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_orion_drz_ventila	Ventilação Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_pur_drz_circulo	Círculo Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_curva	Curva Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_curvah	Curva Horizontal Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_diagonal	Diagonal Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_muro	Muro Fino Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_pur_drz_ventila	Ventilação Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_req_drz_circulo	Círculo Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_curva	Curva Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_curvah	Curva Horizontal Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_diagonal	Diagonal Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_muro	Muro Fino Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_req_drz_ventila	Ventilação Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_rod_drz_circulo	Círculo Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_curva	Curva Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_curvah	Curva Horizontal Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_diagonal	Diagonal Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_muro	Muro Fino Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_rod_drz_ventila	Ventilação Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_skar_drz_circulo	Círculo Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_curva	Curva Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_curvah	Curva Horizontal Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_diagonal	Diagonal Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_muro	Muro Fino Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_skar_drz_ventila	Ventilação Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_sol_drz_circulo	Círculo Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_curva	Curva Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_curvah	Curva Horizontal Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_diagonal	Diagonal Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_muro	Muro Fino Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_sol_drz_ventila	Ventilação Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_space_drz_circulo	Círculo Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_curva	Curva Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_curvah	Curva Horizontal Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_diagonal	Diagonal Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_muro	Muro Fino Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_space_drz_ventila	Ventilação Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_v_drz_circulo	Círculo Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_curva	Curva Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_curvah	Curva Horizontal Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_diagonal	Diagonal Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_muro	Muro Fino Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_v_drz_ventila	Ventilação Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_val_drz_circulo	Círculo Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_curva	Curva Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_curvah	Curva Horizontal Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_diagonal	Diagonal Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_muro	Muro Fino Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_val_drz_ventila	Ventilação Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_vis_drz_circulo	Círculo Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_curva	Curva Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_curvah	Curva Horizontal Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_diagonal	Diagonal Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_muro	Muro Fino Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_vis_drz_ventila	Ventilação Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_x_drz_circulo	Círculo Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_curva	Curva Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_curvah	Curva Horizontal Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_diagonal	Diagonal Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_muro	Muro Fino Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_x_drz_ventila	Ventilação Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_ysk_drz_circulo	Círculo Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_curva	Curva Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_curvah	Curva Horizontal Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_diagonal	Diagonal Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_muro	Muro Fino Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_ysk_drz_ventila	Ventilação Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_zen_drz_circulo	Círculo Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_curva	Curva Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_curvah	Curva Horizontal Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_diagonal	Diagonal Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_muro	Muro Fino Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+monodeus_script_zen_drz_ventila	Ventilação Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+sidewalk_6_drz_circulo	Círculo Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_curva	Curva Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_curvah	Curva Horizontal Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_diagonal	Diagonal Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_muro	Muro Fino Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6_drz_ventila	Ventilação Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6a_drz_circulo	Círculo Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_curva	Curva Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_curvah	Curva Horizontal Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_diagonal	Diagonal Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_muro	Muro Fino Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6a_drz_ventila	Ventilação Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6b_drz_circulo	Círculo Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_curva	Curva Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_curvah	Curva Horizontal Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_diagonal	Diagonal Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_muro	Muro Fino Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_6b_drz_ventila	Ventilação Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_1_drz_circulo	Círculo Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_curva	Curva Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_curvah	Curva Horizontal Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_diagonal	Diagonal Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_muro	Muro Fino Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1_drz_ventila	Ventilação Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1a_drz_circulo	Círculo Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_curva	Curva Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_curvah	Curva Horizontal Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_diagonal	Diagonal Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_muro	Muro Fino Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_1a_drz_ventila	Ventilação Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_2_drz_circulo	Círculo Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_curva	Curva Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_curvah	Curva Horizontal Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_diagonal	Diagonal Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_muro	Muro Fino Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2_drz_ventila	Ventilação Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2a_drz_circulo	Círculo Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_curva	Curva Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_curvah	Curva Horizontal Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_diagonal	Diagonal Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_muro	Muro Fino Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_2a_drz_ventila	Ventilação Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_3_drz_circulo	Círculo Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_curva	Curva Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_curvah	Curva Horizontal Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_diagonal	Diagonal Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_muro	Muro Fino Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_3_drz_ventila	Ventilação Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_4_drz_circulo	Círculo Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_curva	Curva Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_curvah	Curva Horizontal Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_diagonal	Diagonal Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_muro	Muro Fino Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_4_drz_ventila	Ventilação Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_5_drz_circulo	Círculo Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_curva	Curva Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_curvah	Curva Horizontal Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_diagonal	Diagonal Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_muro	Muro Fino Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5_drz_ventila	Ventilação Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5a_drz_circulo	Círculo Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_curva	Curva Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_curvah	Curva Horizontal Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_diagonal	Diagonal Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_muro	Muro Fino Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5a_drz_ventila	Ventilação Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5b_drz_circulo	Círculo Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_curva	Curva Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_curvah	Curva Horizontal Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_diagonal	Diagonal Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_muro	Muro Fino Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_5b_drz_ventila	Ventilação Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_drz_circulo	Círculo Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_curva	Curva Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_curvah	Curva Horizontal Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_diagonal	Diagonal Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_muro	Muro Fino Sidewalk	6	1312	1312	1312	0	A2A2A2
+sidewalk_drz_ventila	Ventilação Sidewalk	6	1312	1312	1312	0	A2A2A2
+tiles_black_drz_circulo	Círculo Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_curva	Curva Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_curvah	Curva Horizontal Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_diagonal	Diagonal Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_muro	Muro Fino Tiles Black	6	1313	1313	1313	0	878789
+tiles_black_drz_ventila	Ventilação Tiles Black	6	1313	1313	1313	0	878789
+tiles_blue_drz_circulo	Círculo Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_curva	Curva Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_curvah	Curva Horizontal Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_diagonal	Diagonal Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_muro	Muro Fino Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_blue_drz_ventila	Ventilação Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_green_drz_circulo	Círculo Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_curva	Curva Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_curvah	Curva Horizontal Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_diagonal	Diagonal Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_muro	Muro Fino Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_green_drz_ventila	Ventilação Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_red_drz_circulo	Círculo Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_curva	Curva Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_curvah	Curva Horizontal Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_diagonal	Diagonal Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_muro	Muro Fino Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_red_drz_ventila	Ventilação Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_white_drz_circulo	Círculo Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_curva	Curva Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_curvah	Curva Horizontal Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_diagonal	Diagonal Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_muro	Muro Fino Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_white_drz_ventila	Ventilação Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_yellow_drz_circulo	Círculo Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_curva	Curva Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_curvah	Curva Horizontal Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_diagonal	Diagonal Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_muro	Muro Fino Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_yellow_drz_ventila	Ventilação Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_1_drz_circulo	Círculo Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_curva	Curva Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_curvah	Curva Horizontal Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_diagonal	Diagonal Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_muro	Muro Fino Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1_drz_ventila	Ventilação Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1a_drz_circulo	Círculo Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_curva	Curva Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_curvah	Curva Horizontal Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_diagonal	Diagonal Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_muro	Muro Fino Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_1a_drz_ventila	Ventilação Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_2_drz_circulo	Círculo Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_curva	Curva Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_curvah	Curva Horizontal Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_diagonal	Diagonal Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_muro	Muro Fino Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2_drz_ventila	Ventilação Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2a_drz_circulo	Círculo Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_curva	Curva Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_curvah	Curva Horizontal Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_diagonal	Diagonal Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_muro	Muro Fino Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_2a_drz_ventila	Ventilação Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_3_drz_circulo	Círculo Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_curva	Curva Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_curvah	Curva Horizontal Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_diagonal	Diagonal Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_muro	Muro Fino Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3_drz_ventila	Ventilação Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3a_drz_circulo	Círculo Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_curva	Curva Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_curvah	Curva Horizontal Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_diagonal	Diagonal Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_muro	Muro Fino Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_3a_drz_ventila	Ventilação Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_4_drz_circulo	Círculo Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_curva	Curva Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_curvah	Curva Horizontal Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_diagonal	Diagonal Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_muro	Muro Fino Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4_drz_ventila	Ventilação Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4a_drz_circulo	Círculo Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_curva	Curva Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_curvah	Curva Horizontal Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_diagonal	Diagonal Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_muro	Muro Fino Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4a_drz_ventila	Ventilação Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4b_drz_circulo	Círculo Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_curva	Curva Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_curvah	Curva Horizontal Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_diagonal	Diagonal Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_muro	Muro Fino Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4b_drz_ventila	Ventilação Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4c_drz_circulo	Círculo Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_curva	Curva Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_curvah	Curva Horizontal Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_diagonal	Diagonal Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_muro	Muro Fino Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4c_drz_ventila	Ventilação Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4d_drz_circulo	Círculo Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_curva	Curva Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_curvah	Curva Horizontal Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_diagonal	Diagonal Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_muro	Muro Fino Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4d_drz_ventila	Ventilação Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4e_drz_circulo	Círculo Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_curva	Curva Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_curvah	Curva Horizontal Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_diagonal	Diagonal Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_muro	Muro Fino Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4e_drz_ventila	Ventilação Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4f_drz_circulo	Círculo Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_curva	Curva Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_curvah	Curva Horizontal Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_diagonal	Diagonal Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_muro	Muro Fino Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4f_drz_ventila	Ventilação Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4g_drz_circulo	Círculo Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_curva	Curva Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_curvah	Curva Horizontal Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_diagonal	Diagonal Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_muro	Muro Fino Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4g_drz_ventila	Ventilação Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4h_drz_circulo	Círculo Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_curva	Curva Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_curvah	Curva Horizontal Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_diagonal	Diagonal Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_muro	Muro Fino Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4h_drz_ventila	Ventilação Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4i_drz_circulo	Círculo Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_curva	Curva Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_curvah	Curva Horizontal Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_diagonal	Diagonal Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_muro	Muro Fino Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4i_drz_ventila	Ventilação Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4j_drz_circulo	Círculo Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_curva	Curva Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_curvah	Curva Horizontal Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_diagonal	Diagonal Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_muro	Muro Fino Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4j_drz_ventila	Ventilação Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4k_drz_circulo	Círculo Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_curva	Curva Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_curvah	Curva Horizontal Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_diagonal	Diagonal Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_muro	Muro Fino Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4k_drz_ventila	Ventilação Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4l_drz_circulo	Círculo Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_curva	Curva Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_curvah	Curva Horizontal Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_diagonal	Diagonal Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_muro	Muro Fino Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_4l_drz_ventila	Ventilação Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_a_black_drz_circulo	Círculo Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_curva	Curva Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_curvah	Curva Horizontal Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_diagonal	Diagonal Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_muro	Muro Fino Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_black_drz_ventila	Ventilação Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_blue_drz_circulo	Círculo Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_curva	Curva Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_curvah	Curva Horizontal Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_diagonal	Diagonal Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_muro	Muro Fino Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_blue_drz_ventila	Ventilação Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_green_drz_circulo	Círculo Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_curva	Curva Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_curvah	Curva Horizontal Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_diagonal	Diagonal Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_muro	Muro Fino Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_green_drz_ventila	Ventilação Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_pink_drz_circulo	Círculo Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_curva	Curva Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_curvah	Curva Horizontal Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_diagonal	Diagonal Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_muro	Muro Fino Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_pink_drz_ventila	Ventilação Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_red_drz_circulo	Círculo Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_curva	Curva Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_curvah	Curva Horizontal Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_diagonal	Diagonal Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_muro	Muro Fino Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_red_drz_ventila	Ventilação Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_white_drz_circulo	Círculo Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_curva	Curva Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_curvah	Curva Horizontal Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_diagonal	Diagonal Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_muro	Muro Fino Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_white_drz_ventila	Ventilação Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_yellow_drz_circulo	Círculo Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_curva	Curva Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_curvah	Curva Horizontal Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_diagonal	Diagonal Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_muro	Muro Fino Tiles A Yellow	6	1344	1344	1344	0	D6C857
+tiles_a_yellow_drz_ventila	Ventilação Tiles A Yellow	6	1344	1344	1344	0	D6C857
+wall_1_drz_circulo	Círculo Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_curva	Curva Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_curvah	Curva Horizontal Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_diagonal	Diagonal Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_muro	Muro Fino Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1_drz_ventila	Ventilação Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1a_drz_circulo	Círculo Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_curva	Curva Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_curvah	Curva Horizontal Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_diagonal	Diagonal Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_muro	Muro Fino Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_1a_drz_ventila	Ventilação Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_2_drz_circulo	Círculo Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_curva	Curva Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_curvah	Curva Horizontal Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_diagonal	Diagonal Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_muro	Muro Fino Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2_drz_ventila	Ventilação Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2a_drz_circulo	Círculo Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_curva	Curva Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_curvah	Curva Horizontal Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_diagonal	Diagonal Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_muro	Muro Fino Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2a_drz_ventila	Ventilação Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2b_drz_circulo	Círculo Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_curva	Curva Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_curvah	Curva Horizontal Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_diagonal	Diagonal Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_muro	Muro Fino Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2b_drz_ventila	Ventilação Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2c_drz_circulo	Círculo Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_curva	Curva Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_curvah	Curva Horizontal Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_diagonal	Diagonal Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_muro	Muro Fino Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2c_drz_ventila	Ventilação Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2d_drz_circulo	Círculo Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_curva	Curva Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_curvah	Curva Horizontal Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_diagonal	Diagonal Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_muro	Muro Fino Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2d_drz_ventila	Ventilação Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2e_drz_circulo	Círculo Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_curva	Curva Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_curvah	Curva Horizontal Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_diagonal	Diagonal Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_muro	Muro Fino Wall 2E	6	1353	1353	1353	0	27272D
+wall_2e_drz_ventila	Ventilação Wall 2E	6	1353	1353	1353	0	27272D
+wall_2f_drz_circulo	Círculo Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_curva	Curva Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_curvah	Curva Horizontal Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_diagonal	Diagonal Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_muro	Muro Fino Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2f_drz_ventila	Ventilação Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2g_drz_circulo	Círculo Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_curva	Curva Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_curvah	Curva Horizontal Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_diagonal	Diagonal Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_muro	Muro Fino Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2g_drz_ventila	Ventilação Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2h_drz_circulo	Círculo Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_curva	Curva Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_curvah	Curva Horizontal Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_diagonal	Diagonal Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_muro	Muro Fino Wall 2H	6	1356	1356	1356	0	213555
+wall_2h_drz_ventila	Ventilação Wall 2H	6	1356	1356	1356	0	213555
+wall_2i_drz_circulo	Círculo Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_curva	Curva Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_curvah	Curva Horizontal Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_diagonal	Diagonal Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_muro	Muro Fino Wall 2I	6	1357	1357	1357	0	86A788
+wall_2i_drz_ventila	Ventilação Wall 2I	6	1357	1357	1357	0	86A788
+wall_2j_drz_circulo	Círculo Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_curva	Curva Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_curvah	Curva Horizontal Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_diagonal	Diagonal Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_muro	Muro Fino Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2j_drz_ventila	Ventilação Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2k_drz_circulo	Círculo Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_curva	Curva Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_curvah	Curva Horizontal Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_diagonal	Diagonal Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_muro	Muro Fino Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2k_drz_ventila	Ventilação Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2l_drz_circulo	Círculo Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_curva	Curva Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_curvah	Curva Horizontal Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_diagonal	Diagonal Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_muro	Muro Fino Wall 2L	6	1360	1360	1360	0	7C444F
+wall_2l_drz_ventila	Ventilação Wall 2L	6	1360	1360	1360	0	7C444F
+wall_3_brown_drz_circulo	Círculo Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_curva	Curva Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_curvah	Curva Horizontal Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_diagonal	Diagonal Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_muro	Muro Fino Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_brown_drz_ventila	Ventilação Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_gray_drz_circulo	Círculo Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_curva	Curva Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_curvah	Curva Horizontal Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_diagonal	Diagonal Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_muro	Muro Fino Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_gray_drz_ventila	Ventilação Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_white_drz_circulo	Círculo Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_curva	Curva Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_curvah	Curva Horizontal Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_diagonal	Diagonal Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_muro	Muro Fino Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_3_white_drz_ventila	Ventilação Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_4_drz_circulo	Círculo Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_curva	Curva Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_curvah	Curva Horizontal Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_diagonal	Diagonal Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_muro	Muro Fino Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4_drz_ventila	Ventilação Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4a_drz_circulo	Círculo Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_curva	Curva Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_curvah	Curva Horizontal Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_diagonal	Diagonal Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_muro	Muro Fino Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4a_drz_ventila	Ventilação Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4b_drz_circulo	Círculo Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_curva	Curva Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_curvah	Curva Horizontal Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_diagonal	Diagonal Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_muro	Muro Fino Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4b_drz_ventila	Ventilação Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4c_drz_circulo	Círculo Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_curva	Curva Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_curvah	Curva Horizontal Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_diagonal	Diagonal Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_muro	Muro Fino Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4c_drz_ventila	Ventilação Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4d_drz_circulo	Círculo Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_curva	Curva Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_curvah	Curva Horizontal Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_diagonal	Diagonal Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_muro	Muro Fino Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4d_drz_ventila	Ventilação Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4e_drz_circulo	Círculo Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_curva	Curva Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_curvah	Curva Horizontal Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_diagonal	Diagonal Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_muro	Muro Fino Wall 4E	6	1368	1368	1368	0	27272D
+wall_4e_drz_ventila	Ventilação Wall 4E	6	1368	1368	1368	0	27272D
+wall_4f_drz_circulo	Círculo Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_curva	Curva Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_curvah	Curva Horizontal Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_diagonal	Diagonal Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_muro	Muro Fino Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4f_drz_ventila	Ventilação Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4g_drz_circulo	Círculo Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_curva	Curva Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_curvah	Curva Horizontal Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_diagonal	Diagonal Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_muro	Muro Fino Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4g_drz_ventila	Ventilação Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4h_drz_circulo	Círculo Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_curva	Curva Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_curvah	Curva Horizontal Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_diagonal	Diagonal Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_muro	Muro Fino Wall 4H	6	1371	1371	1371	0	213555
+wall_4h_drz_ventila	Ventilação Wall 4H	6	1371	1371	1371	0	213555
+wall_4i_drz_circulo	Círculo Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_curva	Curva Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_curvah	Curva Horizontal Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_diagonal	Diagonal Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_muro	Muro Fino Wall 4I	6	1372	1372	1372	0	86A788
+wall_4i_drz_ventila	Ventilação Wall 4I	6	1372	1372	1372	0	86A788
+wall_4j_drz_circulo	Círculo Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_curva	Curva Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_curvah	Curva Horizontal Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_diagonal	Diagonal Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_muro	Muro Fino Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4j_drz_ventila	Ventilação Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4k_drz_circulo	Círculo Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_curva	Curva Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_curvah	Curva Horizontal Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_diagonal	Diagonal Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_muro	Muro Fino Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4k_drz_ventila	Ventilação Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4l_drz_circulo	Círculo Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_curva	Curva Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_curvah	Curva Horizontal Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_diagonal	Diagonal Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_muro	Muro Fino Wall 4L	6	1375	1375	1375	0	7C444F
+wall_4l_drz_ventila	Ventilação Wall 4L	6	1375	1375	1375	0	7C444F
+wall_blue_drz_circulo	Círculo Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_curva	Curva Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_curvah	Curva Horizontal Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_diagonal	Diagonal Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_muro	Muro Fino Wall Blue	6	1376	1376	1376	0	2885DE
+wall_blue_drz_ventila	Ventilação Wall Blue	6	1376	1376	1376	0	2885DE
+wall_green_drz_circulo	Círculo Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_curva	Curva Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_curvah	Curva Horizontal Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_diagonal	Diagonal Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_muro	Muro Fino Wall Green	6	1377	1377	1377	0	27D95D
+wall_green_drz_ventila	Ventilação Wall Green	6	1377	1377	1377	0	27D95D
+wall_red_drz_circulo	Círculo Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_curva	Curva Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_curvah	Curva Horizontal Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_diagonal	Diagonal Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_muro	Muro Fino Wall Red	6	1378	1378	1378	0	D53521
+wall_red_drz_ventila	Ventilação Wall Red	6	1378	1378	1378	0	D53521
+wall_yellow_drz_circulo	Círculo Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_curva	Curva Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_curvah	Curva Horizontal Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_diagonal	Diagonal Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_muro	Muro Fino Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_yellow_drz_ventila	Ventilação Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_5_drz_circulo	Círculo Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_curva	Curva Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_curvah	Curva Horizontal Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_diagonal	Diagonal Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_muro	Muro Fino Wall 5	6	1380	1380	1380	0	928F89
+wall_5_drz_ventila	Ventilação Wall 5	6	1380	1380	1380	0	928F89
+wall_5a_drz_circulo	Círculo Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_curva	Curva Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_curvah	Curva Horizontal Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_diagonal	Diagonal Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_muro	Muro Fino Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5a_drz_ventila	Ventilação Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5b_drz_circulo	Círculo Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_curva	Curva Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_curvah	Curva Horizontal Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_diagonal	Diagonal Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_muro	Muro Fino Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5b_drz_ventila	Ventilação Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5c_drz_circulo	Círculo Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_curva	Curva Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_curvah	Curva Horizontal Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_diagonal	Diagonal Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_muro	Muro Fino Wall 5C	6	1383	1383	1383	0	888B80
+wall_5c_drz_ventila	Ventilação Wall 5C	6	1383	1383	1383	0	888B80
+wall_6_drz_circulo	Círculo Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_curva	Curva Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_curvah	Curva Horizontal Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_diagonal	Diagonal Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_muro	Muro Fino Wall 6	6	1384	1384	1384	0	474747
+wall_6_drz_ventila	Ventilação Wall 6	6	1384	1384	1384	0	474747
+wall_6a_drz_circulo	Círculo Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_curva	Curva Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_curvah	Curva Horizontal Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_diagonal	Diagonal Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_muro	Muro Fino Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6a_drz_ventila	Ventilação Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6b_drz_circulo	Círculo Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_curva	Curva Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_curvah	Curva Horizontal Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_diagonal	Diagonal Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_muro	Muro Fino Wall 6B	6	1386	1386	1386	0	44587A
+wall_6b_drz_ventila	Ventilação Wall 6B	6	1386	1386	1386	0	44587A
+wall_6c_drz_circulo	Círculo Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_curva	Curva Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_curvah	Curva Horizontal Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_diagonal	Diagonal Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_muro	Muro Fino Wall 6C	6	1387	1387	1387	0	736154
+wall_6c_drz_ventila	Ventilação Wall 6C	6	1387	1387	1387	0	736154
+wall_6d_drz_circulo	Círculo Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_curva	Curva Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_curvah	Curva Horizontal Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_diagonal	Diagonal Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_muro	Muro Fino Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6d_drz_ventila	Ventilação Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6e_drz_circulo	Círculo Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_curva	Curva Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_curvah	Curva Horizontal Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_diagonal	Diagonal Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_muro	Muro Fino Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6e_drz_ventila	Ventilação Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6f_drz_circulo	Círculo Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_curva	Curva Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_curvah	Curva Horizontal Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_diagonal	Diagonal Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_muro	Muro Fino Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_6f_drz_ventila	Ventilação Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_7_drz_circulo	Círculo Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_curva	Curva Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_curvah	Curva Horizontal Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_diagonal	Diagonal Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_muro	Muro Fino Wall 7	6	1391	1391	1391	0	999999
+wall_7_drz_ventila	Ventilação Wall 7	6	1391	1391	1391	0	999999
+wall_7a_drz_circulo	Círculo Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_curva	Curva Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_curvah	Curva Horizontal Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_diagonal	Diagonal Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_muro	Muro Fino Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7a_drz_ventila	Ventilação Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7b_drz_circulo	Círculo Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_curva	Curva Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_curvah	Curva Horizontal Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_diagonal	Diagonal Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_muro	Muro Fino Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7b_drz_ventila	Ventilação Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7c_drz_circulo	Círculo Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_curva	Curva Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_curvah	Curva Horizontal Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_diagonal	Diagonal Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_muro	Muro Fino Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_7c_drz_ventila	Ventilação Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_metal_drz_circulo	Círculo Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_curva	Curva Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_curvah	Curva Horizontal Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_diagonal	Diagonal Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_muro	Muro Fino Wall Metal	6	1395	1395	1395	0	B1B3B5
+wall_metal_drz_ventila	Ventilação Wall Metal	6	1395	1395	1395	0	B1B3B5
+wood_black_drz_circulo	Círculo Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_curva	Curva Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_curvah	Curva Horizontal Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_diagonal	Diagonal Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_muro	Muro Fino Wood Black	6	1396	1396	1396	0	262523
+wood_black_drz_ventila	Ventilação Wood Black	6	1396	1396	1396	0	262523
+wood_brown_drz_circulo	Círculo Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_curva	Curva Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_curvah	Curva Horizontal Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_diagonal	Diagonal Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_muro	Muro Fino Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_brown_drz_ventila	Ventilação Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_gray_drz_circulo	Círculo Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_curva	Curva Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_curvah	Curva Horizontal Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_diagonal	Diagonal Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_muro	Muro Fino Wood Gray	6	1398	1398	1398	0	63605C
+wood_gray_drz_ventila	Ventilação Wood Gray	6	1398	1398	1398	0	63605C
+wood_light_drz_circulo	Círculo Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_curva	Curva Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_curvah	Curva Horizontal Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_diagonal	Diagonal Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_muro	Muro Fino Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_light_drz_ventila	Ventilação Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_vinyl_brown_drz_circulo	Círculo Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_curva	Curva Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_curvah	Curva Horizontal Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_diagonal	Diagonal Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_muro	Muro Fino Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_brown_drz_ventila	Ventilação Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_dark_drz_circulo	Círculo Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_curva	Curva Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_curvah	Curva Horizontal Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_diagonal	Diagonal Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_muro	Muro Fino Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_dark_drz_ventila	Ventilação Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_light_drz_circulo	Círculo Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_curva	Curva Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_curvah	Curva Horizontal Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_diagonal	Diagonal Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_muro	Muro Fino Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_light_drz_ventila	Ventilação Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_white_drz_circulo	Círculo Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_curva	Curva Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_curvah	Curva Horizontal Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_diagonal	Diagonal Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_muro	Muro Fino Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_vinyl_white_drz_ventila	Ventilação Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_white_drz_circulo	Círculo Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_curva	Curva Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_curvah	Curva Horizontal Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_diagonal	Diagonal Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_muro	Muro Fino Wood White	6	1404	1404	1404	0	E8DED9
+wood_white_drz_ventila	Ventilação Wood White	6	1404	1404	1404	0	E8DED9

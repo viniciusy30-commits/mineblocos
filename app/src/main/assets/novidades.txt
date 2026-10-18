@@ -1,8 +1,18 @@
+#id 2026-10-18-b
+#titulo Addon monoDeco: formas especiais
+- Círculo, curva, curva horizontal, diagonal, muro fino e ventilação para todos os 236 blocos
+- Círculo e curva podem ser colocados de cabeça para baixo (mire na metade de cima)
+- Inventário com 3 abas: Blocos, Escadas (lajes, pilares, quinas) e Formas
+- Dá para subir diagonais e curvas andando
+- Mundos antigos continuam funcionando
+
 #id 2026-10-18-a
 #titulo Addon monoDeco: cubos, escadas e lajes
 - 236 blocos do addon monoDeco (asfalto, pisos, azulejos, paredes, madeiras, mármores, metais...)
-- Cada bloco ganhou versão em escada e em laje (coloque mirando na metade de cima para inverter)
-- A escada sobe na direção em que você olha
+- Cada bloco ganhou versão em escada, laje, laje vertical, pilar e quinas (esquerda e direita)
+- Escadas: sobem na direção em que você olha, viram canto interno/externo sozinhas e dá para subir andando
+- Laje vertical: encosta no bloco que você mira; clique na face de dentro para completar o bloco
+- Mirando na metade de cima, escadas e lajes são colocadas invertidas
 - Mundos antigos continuam funcionando
 
 #id 2026-10-17-h
