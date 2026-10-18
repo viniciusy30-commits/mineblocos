@@ -105,11 +105,12 @@ class GameActivity : AppCompatActivity() {
         val w = world ?: return
         val s = state ?: return
         val copy = w.blocks.clone()
+        val metaCopy = w.meta.clone()
         val seed = w.seed
         val px = s.px; val py = s.py; val pz = s.pz
         val yaw = s.yaw; val pitch = s.pitch; val time = s.time
         val app = applicationContext
-        Thread { WorldStore.save(app, copy, seed, px, py, pz, yaw, pitch, time) }.start()
+        Thread { WorldStore.save(app, copy, metaCopy, seed, px, py, pz, yaw, pitch, time) }.start()
     }
 
     override fun onPause() {

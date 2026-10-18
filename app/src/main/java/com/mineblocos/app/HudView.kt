@@ -56,9 +56,9 @@ class HudView(
 
     private fun loadTab() {
         cubes = when (invTab) {
-            0 -> Reg.list(Reg.K_CUBE, Reg.K_MODEL)
+            0 -> Reg.list(Reg.K_CUBE, Reg.K_MODEL).filter { !Shapes.spriteItem(it) }.toIntArray()
             1 -> Reg.list(Reg.K_CROSS, Reg.K_FLAT)
-            else -> Reg.list(Reg.K_ITEM)
+            else -> Reg.list(Reg.K_ITEM, Reg.K_MODEL).filter { Reg.kind(it) == Reg.K_ITEM || Shapes.spriteItem(it) }.toIntArray()
         }
         invScroll = 0f
     }

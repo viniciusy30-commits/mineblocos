@@ -5,7 +5,9 @@ class Box(
     val x0: Float, val y0: Float, val z0: Float,
     val x1: Float, val y1: Float, val z1: Float,
     val top: Int, val bot: Int, val side: Int,
-    val faces: Int = 63
+    val faces: Int = 63,
+    val vOff: Float = 0f,
+    val vMul: Float = 1f
 )
 
 /** Modelo completo: caixas + (opcionalmente) um sprite em cruz, como a planta dentro do vaso. */
@@ -38,6 +40,29 @@ object Shapes {
     private const val BUD_L = 14
     private const val SEA_PICKLE = 15
     private const val CARPET = 16
+    private const val DOOR = 17
+    private const val BED = 18
+    private const val SIGN = 19
+    private const val LANTERN = 20
+    private const val CHAIN = 21
+    private const val CAMPFIRE = 22
+    private const val CAULDRON = 23
+    private const val HOPPER = 24
+    private const val BREWING = 25
+    private const val LEVER = 26
+    private const val POT_EMPTY = 27
+    private const val CAKE = 28
+    private const val DIODE = 29
+
+    /** Bits do estado do bloco (World.meta). */
+    const val M_OPEN = 4
+    const val M_UPPER = 8
+    const val M_SECOND = 16
+
+    private var sprite = BooleanArray(0)
+
+    /** Itens que viraram blocos: no inventário continuam como ícone plano. */
+    fun spriteItem(b: Int): Boolean { shapeOf(b); return b > 0 && b < sprite.size && sprite[b] }
 
     private var cache = IntArray(0)
 
@@ -62,9 +87,28 @@ object Shapes {
                     "large_amethyst_bud" -> BUD_L
                     "sea_pickle" -> SEA_PICKLE
                     "pale_moss" -> CARPET
-                    else -> NONE
+                    "item_lantern", "item_soul_lantern", "item_copper_lantern", "item_exposed_copper_lantern",
+                    "item_weathered_copper_lantern", "item_oxidized_copper_lantern" -> LANTERN
+                    "item_chain", "item_copper_chain", "item_exposed_copper_chain",
+                    "item_weathered_copper_chain", "item_oxidized_copper_chain" -> CHAIN
+                    "item_campfire", "item_soul_campfire" -> CAMPFIRE
+                    "item_cauldron" -> CAULDRON
+                    "item_hopper" -> HOPPER
+                    "item_brewing_stand" -> BREWING
+                    "item_lever" -> LEVER
+                    "item_flower_pot" -> POT_EMPTY
+                    "item_cake" -> CAKE
+                    "item_repeater", "item_comparator" -> DIODE
+                    else -> {
+                        val k = Reg.key(i)
+                        if (k.startsWith("item_bed_")) BED
+                        else if (k.startsWith("item_") && k.contains("sign")) SIGN
+                        else if (k.startsWith("item_") && k.contains("door") && Reg.kind(i) == Reg.K_MODEL) DOOR
+                        else NONE
+                    }
                 }
             }
+            sprite = BooleanArray(Reg.count) { i -> i > 0 && Reg.key(i).startsWith("item_") && cache[i] != NONE }
         }
         return if (b > 0 && b < cache.size) cache[b] else NONE
     }
@@ -83,19 +127,95 @@ object Shapes {
     /** Cercas e portões: colisão de 1,5 bloco de altura. */
     fun tall(b: Int): Boolean { val s = shapeOf(b); return s == FENCE || s == GATE }
 
-    /** Altura da colisão (0..1,5) para blocos sólidos. */
-    fun top(b: Int): Float = when (shapeOf(b)) {
+    /** Parte de baixo da colisão (0..1) dentro da célula. */
+    fun lo(b: Int, m: Int): Float = if (shapeOf(b) == SLAB && (m and M_UPPER) != 0 && (m and M_SECOND) == 0) 0.5f else 0f
+
+    /** Topo da colisão (0..1,5) dentro da célula. */
+    fun hi(b: Int, m: Int): Float = when (shapeOf(b)) {
         FENCE, GATE -> 1.5f
-        SLAB -> 0.5f
+        SLAB -> if ((m and M_SECOND) != 0 || (m and M_UPPER) != 0) 1f else 0.5f
         FARMLAND, PATH -> 0.9375f
-        POT, POT_AZALEA -> 0.375f
-        HEAVY_CORE -> 0.5f
+        POT, POT_AZALEA, POT_EMPTY -> 0.375f
+        HEAVY_CORE, CAKE -> 0.5f
+        BED -> 0.5625f
+        CAMPFIRE -> 0.4375f
+        DIODE -> 0.125f
         else -> 1f
     }
 
     fun solid(b: Int): Boolean = when (shapeOf(b)) {
-        FENCE, GATE, CACTUS, SLAB, COMPOSTER, POT, POT_AZALEA, FARMLAND, PATH, HEAVY_CORE, AZALEA -> true
+        FENCE, GATE, CACTUS, SLAB, COMPOSTER, POT, POT_AZALEA, POT_EMPTY, FARMLAND, PATH, HEAVY_CORE, AZALEA,
+        DOOR, BED, CAULDRON, HOPPER, CAKE, DIODE, CAMPFIRE -> true
         else -> false
+    }
+
+    /** Portas e portões abertos não bloqueiam. */
+    fun solidAt(b: Int, m: Int): Boolean {
+        val sh = shapeOf(b)
+        if ((sh == GATE || sh == DOOR) && (m and M_OPEN) != 0) return false
+        return true
+    }
+
+    /** Portas e portões abrem/fecham ao tocar. */
+    fun interactive(b: Int): Boolean { val sh = shapeOf(b); return sh == GATE || sh == DOOR }
+
+    fun isSlab(b: Int) = shapeOf(b) == SLAB
+    fun isDoor(b: Int) = shapeOf(b) == DOOR
+    fun isBed(b: Int) = shapeOf(b) == BED
+
+    private val DX = intArrayOf(0, 1, 0, -1)
+    private val DZ = intArrayOf(-1, 0, 1, 0)
+    fun dirX(f: Int) = DX[f and 3]
+    fun dirZ(f: Int) = DZ[f and 3]
+
+    /** Rotaciona caixas (modelo feito olhando para -Z) conforme a direção f (0..3). */
+    private fun rot(src: Array<Box>, f: Int): Array<Box> {
+        if (f == 0) return src
+        return Array(src.size) { i ->
+            val q = src[i]
+            var x0 = q.x0; var z0 = q.z0; var x1 = q.x1; var z1 = q.z1
+            var mask = q.faces
+            for (k in 0 until f) {
+                val nx0 = 1f - z1; val nx1 = 1f - z0; val nz0 = x0; val nz1 = x1
+                x0 = nx0; x1 = nx1; z0 = nz0; z1 = nz1
+                var nm = mask and 3
+                if ((mask and 32) != 0) nm = nm or 4   // -Z -> +X
+                if ((mask and 4) != 0) nm = nm or 16   // +X -> +Z
+                if ((mask and 16) != 0) nm = nm or 8   // +Z -> -X
+                if ((mask and 8) != 0) nm = nm or 32   // -X -> -Z
+                mask = nm
+            }
+            Box(x0, q.y0, z0, x1, q.y1, z1, q.top, q.bot, q.side, mask, q.vOff, q.vMul)
+        }
+    }
+
+    private fun woodTile(key: String): Int {
+        val n = when {
+            key.contains("bamboo") -> "bamboo_planks"
+            key.contains("cherry") -> "cherry_planks"
+            key.contains("crimson") -> "red_nether_brick"
+            key.contains("warped") -> "warped_wart_block"
+            key.contains("mangrove") -> "mangrove_planks"
+            key.contains("pale_oak") -> "pale_oak_planks"
+            key.contains("acacia") -> "planks_acacia"
+            key.contains("birch") -> "planks_birch"
+            key.contains("dark_oak") || key.contains("darkoak") -> "planks_big_oak"
+            key.contains("jungle") -> "planks_jungle"
+            key.contains("spruce") -> "planks_spruce"
+            key.contains("iron") -> "iron_block"
+            key.contains("oxidized_copper") -> "oxidized_copper"
+            key.contains("weathered_copper") -> "weathered_copper"
+            key.contains("exposed_copper") -> "exposed_copper"
+            key.contains("copper") -> "copper_block"
+            else -> "planks"
+        }
+        return Reg.tile(Reg.id(n), 2)
+    }
+
+    private fun woolTile(key: String): Int {
+        var c = key.removePrefix("item_bed_")
+        c = when (c) { "light_blue" -> "blue"; "light_gray" -> "silver"; else -> c }
+        return Reg.tile(Reg.id("wool_colored_$c"), 2)
     }
 
     private fun connects(w: World, x: Int, y: Int, z: Int): Boolean {
@@ -121,24 +241,28 @@ object Shapes {
         return l.toTypedArray()
     }
 
-    private fun gateBoxes(t: Int, alongZ: Boolean, hit: Boolean): Array<Box> {
+    private fun gateBoxes(t: Int, open: Boolean, hit: Boolean): Array<Box> {
         val l = ArrayList<Box>()
         if (hit) {
-            l.add(bx(0f, 5f, 7f, 16f, 16f, 9f, t))
+            if (open) {
+                l.add(bx(0f, 5f, 7f, 2f, 16f, 9f, t)); l.add(bx(14f, 5f, 7f, 16f, 16f, 9f, t))
+            } else l.add(bx(0f, 5f, 7f, 16f, 16f, 9f, t))
         } else {
             l.add(bx(0f, 5f, 7f, 2f, 16f, 9f, t))
             l.add(bx(14f, 5f, 7f, 16f, 16f, 9f, t))
-            l.add(bx(2f, 6f, 7f, 14f, 9f, 9f, t))
-            l.add(bx(2f, 12f, 7f, 14f, 15f, 9f, t))
-            l.add(bx(2f, 9f, 7f, 6f, 12f, 9f, t))
-            l.add(bx(10f, 9f, 7f, 14f, 12f, 9f, t))
-            l.add(bx(6f, 9f, 7f, 10f, 12f, 9f, t))
+            if (open) {
+                l.add(bx(0f, 6f, 9f, 2f, 9f, 15f, t)); l.add(bx(0f, 12f, 9f, 2f, 15f, 15f, t))
+                l.add(bx(14f, 6f, 9f, 16f, 9f, 15f, t)); l.add(bx(14f, 12f, 9f, 16f, 15f, 15f, t))
+                l.add(bx(0f, 9f, 13f, 2f, 12f, 15f, t)); l.add(bx(14f, 9f, 13f, 16f, 12f, 15f, t))
+            } else {
+                l.add(bx(2f, 6f, 7f, 14f, 9f, 9f, t))
+                l.add(bx(2f, 12f, 7f, 14f, 15f, 9f, t))
+                l.add(bx(2f, 9f, 7f, 6f, 12f, 9f, t))
+                l.add(bx(10f, 9f, 7f, 14f, 12f, 9f, t))
+                l.add(bx(6f, 9f, 7f, 10f, 12f, 9f, t))
+            }
         }
-        if (!alongZ) return l.toTypedArray()
-        return Array(l.size) { i ->
-            val b = l[i]
-            Box(b.z0, b.y0, b.x0, b.z1, b.y1, b.x1, b.top, b.bot, b.side, b.faces)
-        }
+        return l.toTypedArray()
     }
 
     /**
@@ -149,6 +273,8 @@ object Shapes {
         val side = Reg.tile(b, 2)
         val top = Reg.tile(b, 0)
         val bot = Reg.tile(b, 1)
+        val m = w?.getMeta(x, y, z) ?: 0
+        val f = m and 3
         when (shapeOf(b)) {
             FENCE -> {
                 val t = Reg.tile(Reg.id("bamboo_planks"), 2)
@@ -162,16 +288,14 @@ object Shapes {
             }
             GATE -> {
                 val t = Reg.tile(Reg.id("bamboo_planks"), 2)
-                var alongZ = false
-                if (w != null) {
-                    val ns = connects(w, x, y, z - 1) || connects(w, x, y, z + 1)
-                    val ew = connects(w, x + 1, y, z) || connects(w, x - 1, y, z)
-                    alongZ = ns && !ew
-                }
-                return Model(gateBoxes(t, alongZ, hit))
+                return Model(rot(gateBoxes(t, (m and M_OPEN) != 0, hit), f))
             }
             CACTUS -> return Model(arrayOf(bx(1f, 0f, 1f, 15f, 16f, 15f, top, bot, side)))
-            SLAB -> return Model(arrayOf(bx(0f, 0f, 0f, 16f, 8f, 16f, top)))
+            SLAB -> {
+                if ((m and M_SECOND) != 0) return Model(arrayOf(bx(0f, 0f, 0f, 16f, 16f, 16f, top)))
+                return if ((m and M_UPPER) != 0) Model(arrayOf(bx(0f, 8f, 0f, 16f, 16f, 16f, top)))
+                else Model(arrayOf(bx(0f, 0f, 0f, 16f, 8f, 16f, top)))
+            }
             COMPOSTER -> {
                 val wall = Reg.tile(Reg.id("planks_spruce"), 2)
                 val level = if (Reg.key(b) == "compost_ready") 13f else 7f
@@ -246,6 +370,114 @@ object Shapes {
                 )
             }
             SEA_PICKLE -> return Model(arrayOf(bx(6f, 0f, 6f, 10f, 6f, 10f, top, bot, side)))
+            DOOR -> {
+                val key = Reg.key(b)
+                val wood = woodTile(key)
+                val open = (m and M_OPEN) != 0
+                val upper = (m and M_UPPER) != 0
+                val vo = if (upper) 0f else 0.5f
+                val closed = !open
+                val frontMask = if (closed) 48 else 12
+                val edgeMask = 63 and frontMask.inv()
+                val x0 = if (closed) 0f else 13f
+                val z0 = if (closed) 13f else 0f
+                val x1 = 16f
+                val z1 = 16f
+                val boxes = arrayOf(
+                    Box(x0 / 16f, 0f, z0 / 16f, x1 / 16f, 1f, z1 / 16f, side, side, side, frontMask, vo, 0.5f),
+                    Box(x0 / 16f, 0f, z0 / 16f, x1 / 16f, 1f, z1 / 16f, wood, wood, wood, edgeMask)
+                )
+                return Model(rot(boxes, f))
+            }
+            BED -> {
+                val key = Reg.key(b)
+                val wool = woolTile(key)
+                val white = Reg.tile(Reg.id("wool_colored_white"), 2)
+                val plank = Reg.tile(Reg.id("planks"), 2)
+                val head = (m and M_SECOND) != 0
+                val l = ArrayList<Box>()
+                l.add(bx(0f, 3f, 0f, 16f, 9f, 16f, wool))
+                if (head) {
+                    l.add(bx(1f, 9f, 1f, 15f, 11f, 8f, white))
+                    l.add(bx(0f, 0f, 0f, 3f, 3f, 3f, plank)); l.add(bx(13f, 0f, 0f, 16f, 3f, 3f, plank))
+                } else {
+                    l.add(bx(0f, 0f, 13f, 3f, 3f, 16f, plank)); l.add(bx(13f, 0f, 13f, 16f, 3f, 16f, plank))
+                }
+                return Model(rot(l.toTypedArray(), f))
+            }
+            SIGN -> {
+                val t = woodTile(Reg.key(b))
+                return Model(rot(arrayOf(bx(7f, 0f, 7f, 9f, 8f, 9f, t), bx(0f, 8f, 7f, 16f, 15f, 9f, t)), f))
+            }
+            LANTERN -> return Model(arrayOf(bx(5f, 0f, 5f, 11f, 7f, 11f, side), bx(6f, 7f, 6f, 10f, 9f, 10f, side)))
+            CHAIN -> {
+                val t = Reg.tile(Reg.id("iron_block"), 2)
+                return Model(arrayOf(bx(6.5f, 0f, 7.75f, 9.5f, 16f, 8.25f, t), bx(7.75f, 0f, 6.5f, 8.25f, 16f, 9.5f, t)))
+            }
+            CAMPFIRE -> {
+                val logTop = Reg.tile(Reg.id("log"), 0)
+                val logSide = Reg.tile(Reg.id("log"), 2)
+                return Model(
+                    arrayOf(
+                        bx(0f, 0f, 0f, 16f, 3f, 4f, logTop, logTop, logSide),
+                        bx(0f, 0f, 12f, 16f, 3f, 16f, logTop, logTop, logSide),
+                        bx(0f, 3f, 0f, 4f, 6f, 16f, logSide, logSide, logSide),
+                        bx(12f, 3f, 0f, 16f, 6f, 16f, logSide, logSide, logSide)
+                    )
+                )
+            }
+            CAULDRON -> {
+                val t = Reg.tile(Reg.id("polished_blackstone"), 2)
+                return Model(
+                    arrayOf(
+                        bx(0f, 3f, 0f, 16f, 4f, 16f, t),
+                        bx(0f, 4f, 0f, 16f, 16f, 2f, t), bx(0f, 4f, 14f, 16f, 16f, 16f, t),
+                        bx(0f, 4f, 2f, 2f, 16f, 14f, t), bx(14f, 4f, 2f, 16f, 16f, 14f, t),
+                        bx(0f, 0f, 0f, 4f, 3f, 2f, t), bx(12f, 0f, 0f, 16f, 3f, 2f, t),
+                        bx(0f, 0f, 14f, 4f, 3f, 16f, t), bx(12f, 0f, 14f, 16f, 3f, 16f, t)
+                    )
+                )
+            }
+            HOPPER -> {
+                val t = Reg.tile(Reg.id("polished_blackstone"), 2)
+                return Model(
+                    arrayOf(
+                        bx(0f, 10f, 0f, 16f, 16f, 2f, t), bx(0f, 10f, 14f, 16f, 16f, 16f, t),
+                        bx(0f, 10f, 2f, 2f, 16f, 14f, t), bx(14f, 10f, 2f, 16f, 16f, 14f, t),
+                        bx(2f, 10f, 2f, 14f, 11f, 14f, t),
+                        bx(4f, 4f, 4f, 12f, 10f, 12f, t), bx(6f, 0f, 6f, 10f, 4f, 10f, t)
+                    )
+                )
+            }
+            BREWING -> {
+                val stone = Reg.tile(Reg.id("stone_slab"), 2)
+                val gold = Reg.tile(Reg.id("gold_block"), 2)
+                return Model(arrayOf(bx(1f, 0f, 1f, 15f, 2f, 15f, stone), bx(7f, 2f, 7f, 9f, 14f, 9f, gold)))
+            }
+            LEVER -> {
+                val cob = Reg.tile(Reg.id("cobble"), 2)
+                val pl = Reg.tile(Reg.id("planks"), 2)
+                return Model(arrayOf(bx(5f, 0f, 4f, 11f, 3f, 12f, cob), bx(7f, 3f, 7f, 9f, 10f, 9f, pl)))
+            }
+            POT_EMPTY -> {
+                val clay = Reg.tile(Reg.id("hardened_clay"), 2)
+                val dirt = Reg.tile(Reg.id("dirt"), 2)
+                return Model(
+                    arrayOf(
+                        bx(5f, 0f, 5f, 11f, 1f, 11f, clay),
+                        bx(5f, 1f, 5f, 11f, 6f, 6f, clay), bx(5f, 1f, 10f, 11f, 6f, 11f, clay),
+                        bx(5f, 1f, 6f, 6f, 6f, 10f, clay), bx(10f, 1f, 6f, 11f, 6f, 10f, clay)
+                    )
+                )
+            }
+            CAKE -> {
+                val white = Reg.tile(Reg.id("wool_colored_white"), 2)
+                return Model(arrayOf(bx(1f, 0f, 1f, 15f, 8f, 15f, white, white, side)))
+            }
+            DIODE -> {
+                val stone = Reg.tile(Reg.id("stone_slab"), 2)
+                return Model(rot(arrayOf(bx(0f, 0f, 0f, 16f, 2f, 16f, side, stone, stone)), f))
+            }
             CARPET -> return Model(arrayOf(bx(0f, 0f, 0f, 16f, 1f, 16f, top, bot, side)))
         }
         return Model(arrayOf(bx(0f, 0f, 0f, 16f, 16f, 16f, top, bot, side)))

@@ -394,7 +394,7 @@ warped_fungus	Fungo Distorcido	2	465	465	465	1	517855
 warped_roots	Raízes Distorcidas	2	466	466	466	1	129882
 wildflowers	Flores Silvestres	3	467	467	467	1	F3D364
 item_acacia_chest_boat	Barco de Acácia Baú	5	468	468	468	1	94491A
-item_acacia_hanging_sign	Placa de Acácia Hanging	5	469	469	469	1	9E4D2B
+item_acacia_hanging_sign	Placa de Acácia Hanging	6	469	469	469	1	9E4D2B
 item_amethyst_shard	Fragmento de Ametista	5	470	470	470	1	9669BC
 item_angler_pottery_sherd	Angler Pottery Sherd	5	471	471	471	1	783725
 item_apple	Maçã	5	472	472	472	1	96321B
@@ -404,35 +404,35 @@ item_armadillo_scute	Armadillo Scute	5	475	475	475	1	834C4B
 item_armor_stand	Armor Stand	5	476	476	476	1	775840
 item_arms_up_pottery_sherd	Arms Up Pottery Sherd	5	477	477	477	1	783725
 item_arrow	Flecha	5	478	478	478	1	8D7A67
-item_bamboo	Bambu	5	479	479	479	1	517B1F
+item_bamboo	Bambu	2	479	479	479	1	517B1F
 item_bamboo_chest_raft	Bambu Baú Raft	5	480	480	480	1	806228
-item_bamboo_door	Porta de Bambu	5	481	481	481	1	BDAA4C
-item_bamboo_hanging_sign	Placa de Bambu Hanging	5	482	482	482	1	A6974D
+item_bamboo_door	Porta de Bambu	6	481	481	481	1	BDAA4C
+item_bamboo_hanging_sign	Placa de Bambu Hanging	6	482	482	482	1	A6974D
 item_bamboo_raft	Bambu Raft	5	483	483	483	1	837639
-item_bamboo_sign	Placa de Bambu	5	484	484	484	1	A99845
+item_bamboo_sign	Placa de Bambu	6	484	484	484	1	A99845
 item_banner_pattern	Banner Pattern	5	485	485	485	1	B6A58B
-item_bed_black	Cama de Preto	5	486	486	486	1	6E5D5B
-item_bed_blue	Cama de Azul	5	487	487	487	1	716D84
-item_bed_brown	Cama de Marrom	5	488	488	488	1	8F6C50
-item_bed_cyan	Cama de Ciano	5	489	489	489	1	638476
-item_bed_gray	Cama de Cinza	5	490	490	490	1	7D7569
-item_bed_green	Cama de Verde	5	491	491	491	1	7E7A45
-item_bed_light_blue	Cama de Claro Azul	5	492	492	492	1	6B818F
-item_bed_lime	Cama de Lima	5	493	493	493	1	88954D
-item_bed_magenta	Cama de Magenta	5	494	494	494	1	9E607B
-item_bed_orange	Cama de Laranja	5	495	495	495	1	B47943
-item_bed_pink	Cama de Rosa	5	496	496	496	1	B47577
-item_bed_purple	Cama de Roxo	5	497	497	497	1	885880
-item_bed_red	Cama de Vermelho	5	498	498	498	1	9B5544
-item_bed_silver	Cama de Cinza Claro	5	499	499	499	1	958573
-item_bed_white	Cama de Branco	5	500	500	500	1	ADA294
-item_bed_yellow	Cama de Amarelo	5	501	501	501	1	BD9554
+item_bed_black	Cama de Preto	6	486	486	486	1	6E5D5B
+item_bed_blue	Cama de Azul	6	487	487	487	1	716D84
+item_bed_brown	Cama de Marrom	6	488	488	488	1	8F6C50
+item_bed_cyan	Cama de Ciano	6	489	489	489	1	638476
+item_bed_gray	Cama de Cinza	6	490	490	490	1	7D7569
+item_bed_green	Cama de Verde	6	491	491	491	1	7E7A45
+item_bed_light_blue	Cama de Claro Azul	6	492	492	492	1	6B818F
+item_bed_lime	Cama de Lima	6	493	493	493	1	88954D
+item_bed_magenta	Cama de Magenta	6	494	494	494	1	9E607B
+item_bed_orange	Cama de Laranja	6	495	495	495	1	B47943
+item_bed_pink	Cama de Rosa	6	496	496	496	1	B47577
+item_bed_purple	Cama de Roxo	6	497	497	497	1	885880
+item_bed_red	Cama de Vermelho	6	498	498	498	1	9B5544
+item_bed_silver	Cama de Cinza Claro	6	499	499	499	1	958573
+item_bed_white	Cama de Branco	6	500	500	500	1	ADA294
+item_bed_yellow	Cama de Amarelo	6	501	501	501	1	BD9554
 item_beef_cooked	Carne Cozido	5	502	502	502	1	762E17
 item_beef_raw	Carne Bruto	5	503	503	503	1	A5413C
 item_beetroot	Beterraba	5	504	504	504	1	78472C
 item_beetroot_soup	Beterraba Sopa	5	505	505	505	1	742D13
 item_birch_chest_boat	Barco de Bétula Baú	5	506	506	506	1	99713C
-item_birch_hanging_sign	Placa de Bétula Hanging	5	507	507	507	1	B5996A
+item_birch_hanging_sign	Placa de Bétula Hanging	6	507	507	507	1	B5996A
 item_blade_pottery_sherd	Blade Pottery Sherd	5	508	508	508	1	793725
 item_blaze_powder	Pó de Chama	5	509	509	509	1	C06E10
 item_blaze_rod	Chama Vara	5	510	510	510	1	C97612
@@ -457,7 +457,7 @@ item_bowl	Tigela	5	528	528	528	1	5C2F0E
 item_bread	Pão	5	529	529	529	1	9F5E20
 item_breeze_rod	Breeze Vara	5	530	530	530	1	7E80C0
 item_brewer_pottery_sherd	Brewer Pottery Sherd	5	531	531	531	1	743524
-item_brewing_stand	Brewing Stand	5	532	532	532	1	7E6E5F
+item_brewing_stand	Brewing Stand	6	532	532	532	1	7E6E5F
 item_broken_elytra	Broken Elytra	5	533	533	533	1	65607B
 item_brown_egg	Marrom Ovo	5	534	534	534	1	A1533E
 item_brush	Brush	5	535	535	535	1	A86A4D
@@ -539,13 +539,13 @@ item_bundle_yellow_open	Bundle Amarelo Open	5	610	610	610	1	C38D37
 item_bundle_yellow_open_back	Bundle Amarelo Open Back	5	611	611	611	1	9E671C
 item_bundle_yellow_open_front	Bundle Amarelo Open Front	5	612	612	612	1	D9A548
 item_burn_pottery_sherd	Burn Pottery Sherd	5	613	613	613	1	753624
-item_cake	Bolo	5	614	614	614	1	D29A82
-item_campfire	Campfire	5	615	615	615	1	AB661D
+item_cake	Bolo	6	614	614	614	1	D29A82
+item_campfire	Campfire	6	615	615	615	1	AB661D
 item_carrot	Cenoura	5	616	616	616	1	9D7215
 item_carrot_golden	Cenoura Dourado	5	617	617	617	1	996912
 item_carrot_on_a_stick	Cenoura On A Graveto	5	618	618	618	1	9A652C
-item_cauldron	Cauldron	5	619	619	619	1	3F3E41
-item_chain	Corrente	5	620	620	620	1	495476
+item_cauldron	Cauldron	6	619	619	619	1	3F3E41
+item_chain	Corrente	6	620	620	620	1	495476
 item_chainmail_boots	Botas de Malha	5	621	621	621	1	6D7A7F
 item_chainmail_chestplate	Peitoral de Malha	5	622	622	622	1	717D82
 item_chainmail_helmet	Capacete de Malha	5	623	623	623	1	5B676D
@@ -553,9 +553,9 @@ item_chainmail_leggings	Calças de Malha	5	624	624	624	1	657278
 item_charcoal	Charcoal	5	625	625	625	1	3C3325
 item_cherry_boat	Barco de Cerejeira	5	626	626	626	1	C1827D
 item_cherry_chest_boat	Barco de Cerejeira Baú	5	627	627	627	1	AF775E
-item_cherry_door	Porta de Cerejeira	5	628	628	628	1	D49993
-item_cherry_hanging_sign	Placa de Cerejeira Hanging	5	629	629	629	1	C79493
-item_cherry_sign	Placa de Cerejeira	5	630	630	630	1	C28B88
+item_cherry_door	Porta de Cerejeira	6	628	628	628	1	D49993
+item_cherry_hanging_sign	Placa de Cerejeira Hanging	6	629	629	629	1	C79493
+item_cherry_sign	Placa de Cerejeira	6	630	630	630	1	C28B88
 item_chicken_cooked	Frango Cozido	5	631	631	631	1	CD7C39
 item_chicken_raw	Frango Bruto	5	632	632	632	1	D5A592
 item_chorus_fruit	Chorus Fruit	5	633	633	633	1	A250BA
@@ -564,34 +564,34 @@ item_clay_ball	Argila Ball	5	635	635	635	1	777F96
 item_clock_item	Relógio	5	636	636	636	1	AC8C47
 item_coal	Carvão	5	637	637	637	1	28262A
 item_coast_armor_trim_smithing_template	Coast Armor Trim Smithing Template	5	638	638	638	1	566068
-item_comparator	Comparator	5	639	639	639	1	824D4E
+item_comparator	Comparator	6	639	639	639	1	824D4E
 item_compass_atlas	Bússola Atlas	5	640	640	640	1	808080
 item_compass_item	Bússola	5	641	641	641	1	676064
 item_cookie	Biscoito	5	642	642	642	1	B1692E
 item_copper_axe	Machado de Cobre	5	643	643	643	1	A5502C
 item_copper_boots	Botas de Cobre	5	644	644	644	1	A84D2C
-item_copper_chain	Corrente de Cobre	5	645	645	645	1	904326
+item_copper_chain	Corrente de Cobre	6	645	645	645	1	904326
 item_copper_chestplate	Peitoral de Cobre	5	646	646	646	1	9D4829
-item_copper_door	Porta de Cobre	5	647	647	647	1	9F4D2C
+item_copper_door	Porta de Cobre	6	647	647	647	1	9F4D2C
 item_copper_helmet	Capacete de Cobre	5	648	648	648	1	A95333
 item_copper_hoe	Enxada de Cobre	5	649	649	649	1	974825
 item_copper_horse_armor	Cobre Horse Armor	5	650	650	650	1	9D6444
 item_copper_ingot	Lingote de Cobre	5	651	651	651	1	BA5634
-item_copper_lantern	Lanterna de Cobre	5	652	652	652	1	9A5B25
+item_copper_lantern	Lanterna de Cobre	6	652	652	652	1	9A5B25
 item_copper_leggings	Calças de Cobre	5	653	653	653	1	A54B2C
 item_copper_nugget	Pepita de Cobre	5	654	654	654	1	B35330
 item_copper_pickaxe	Picareta de Cobre	5	655	655	655	1	9F4925
 item_copper_shovel	Pá de Cobre	5	656	656	656	1	A9532D
 item_copper_sword	Espada de Cobre	5	657	657	657	1	964121
 item_creeper_banner_pattern	Creeper Banner Pattern	5	658	658	658	1	B9AC9C
-item_crimson_door	Porta de Carmesim	5	659	659	659	1	67334A
-item_crimson_hanging_sign	Placa de Carmesim Hanging	5	660	660	660	1	66354D
+item_crimson_door	Porta de Carmesim	6	659	659	659	1	67334A
+item_crimson_hanging_sign	Placa de Carmesim Hanging	6	660	660	660	1	66354D
 item_crossbow_arrow	Crossbow Flecha	5	661	661	661	1	764E2E
 item_crossbow_firework	Crossbow Firework	5	662	662	662	1	82452B
 item_crossbow_standby	Crossbow Standby	5	663	663	663	1	673A1A
 item_danger_pottery_sherd	Danger Pottery Sherd	5	664	664	664	1	733524
 item_dark_oak_chest_boat	Barco de Escuro Carvalho Baú	5	665	665	665	1	5B3510
-item_dark_oak_hanging_sign	Placa de Escuro Carvalho Hanging	5	666	666	666	1	543D27
+item_dark_oak_hanging_sign	Placa de Escuro Carvalho Hanging	6	666	666	666	1	543D27
 item_diamond	Diamante	5	667	667	667	1	37ADC6
 item_diamond_axe	Machado de Diamante	5	668	668	668	1	3C8696
 item_diamond_boots	Botas de Diamante	5	669	669	669	1	308EB1
@@ -603,13 +603,13 @@ item_diamond_leggings	Calças de Diamante	5	674	674	674	1	259FC0
 item_diamond_pickaxe	Picareta de Diamante	5	675	675	675	1	3C7E8E
 item_diamond_shovel	Pá de Diamante	5	676	676	676	1	338DA2
 item_diamond_sword	Espada de Diamante	5	677	677	677	1	2F93B1
-item_door_acacia	Porta de Acácia	5	678	678	678	1	A14B24
-item_door_birch	Porta de Bétula	5	679	679	679	1	C3A97C
-item_door_dark_oak	Porta de Escuro Carvalho	5	680	680	680	1	3E2915
-item_door_iron	Porta de Ferro	5	681	681	681	1	9CA7AB
-item_door_jungle	Porta de Selva	5	682	682	682	1	8F6041
-item_door_spruce	Porta de Abeto	5	683	683	683	1	664C2F
-item_door_wood	Madeira de Porta	5	684	684	684	1	AA7C4D
+item_door_acacia	Porta de Acácia	6	678	678	678	1	A14B24
+item_door_birch	Porta de Bétula	6	679	679	679	1	C3A97C
+item_door_dark_oak	Porta de Escuro Carvalho	6	680	680	680	1	3E2915
+item_door_iron	Porta de Ferro	6	681	681	681	1	9CA7AB
+item_door_jungle	Porta de Selva	6	682	682	682	1	8F6041
+item_door_spruce	Porta de Abeto	6	683	683	683	1	664C2F
+item_door_wood	Madeira de Porta	6	684	684	684	1	AA7C4D
 item_dragon_fireball	Dragon Fireball	5	685	685	685	1	BD5CCF
 item_dragons_breath	Dragons Breath	5	686	686	686	1	9B718F
 item_dried_kelp	Seca Alga	5	687	687	687	1	322D22
@@ -713,9 +713,9 @@ item_ender_eye	Ender Olho	5	784	784	784	1	377A47
 item_ender_pearl	Ender Pérola	5	785	785	785	1	0B554E
 item_experience_bottle	Experience Garrafa	5	786	786	786	1	889A2B
 item_explorer_pottery_sherd	Explorer Pottery Sherd	5	787	787	787	1	6F3222
-item_exposed_copper_chain	Corrente de Exposed Cobre	5	788	788	788	1	864832
-item_exposed_copper_door	Porta de Exposed Cobre	5	789	789	789	1	8A573C
-item_exposed_copper_lantern	Lanterna de Exposed Cobre	5	790	790	790	1	77552B
+item_exposed_copper_chain	Corrente de Exposed Cobre	6	788	788	788	1	864832
+item_exposed_copper_door	Porta de Exposed Cobre	6	789	789	789	1	8A573C
+item_exposed_copper_lantern	Lanterna de Exposed Cobre	6	790	790	790	1	77552B
 item_eye_armor_trim_smithing_template	Olho Armor Trim Smithing Template	5	791	791	791	1	B1B682
 item_feather	Pena	5	792	792	792	1	CDCAC4
 item_field_masoned_banner_pattern	Field Masoned Banner Pattern	5	793	793	793	1	BAAD9D
@@ -735,7 +735,7 @@ item_flow_armor_trim_smithing_template	Flow Armor Trim Smithing Template	5	806	8
 item_flow_banner_pattern	Flow Banner Pattern	5	807	807	807	1	B5A796
 item_flow_pottery_sherd	Flow Pottery Sherd	5	808	808	808	1	783725
 item_flower_banner_pattern	Flor de Banner Pattern	5	809	809	809	1	B1A191
-item_flower_pot	Flor de Vaso	5	810	810	810	1	7C3827
+item_flower_pot	Flor de Vaso	6	810	810	810	1	7C3827
 item_friend_pottery_sherd	Friend Pottery Sherd	5	811	811	811	1	763624
 item_ghast_tear	Ghast Tear	5	812	812	812	1	83AEB7
 item_globe_banner_pattern	Globe Banner Pattern	5	813	813	813	1	B4A695
@@ -758,14 +758,14 @@ item_gold_sword	Espada de Ouro	5	829	829	829	1	C38315
 item_gunpowder	Pólvora	5	830	830	830	1	45444D
 item_guster_banner_pattern	Guster Banner Pattern	5	831	831	831	1	BDB0A1
 item_guster_pottery_sherd	Guster Pottery Sherd	5	832	832	832	1	773725
-item_hanging_roots	Hanging Roots	5	833	833	833	1	A0674D
+item_hanging_roots	Hanging Roots	2	833	833	833	1	A0674D
 item_heart_pottery_sherd	Heart Pottery Sherd	5	834	834	834	1	773625
 item_heartbreak_pottery_sherd	Heartbreak Pottery Sherd	5	835	835	835	1	773625
 item_heartofthesea_closed	Heartofthesea Closed	5	836	836	836	1	126387
 item_hoglin_meat_cooked	Hoglin Meat Cozido	5	837	837	837	1	762E17
 item_hoglin_meat_raw	Hoglin Meat Bruto	5	838	838	838	1	A5413C
 item_honey_bottle	Mel Garrafa	5	839	839	839	1	A07D5F
-item_hopper	Hopper	5	840	840	840	1	3E3C40
+item_hopper	Hopper	6	840	840	840	1	3E3C40
 item_host_armor_trim_smithing_template	Host Armor Trim Smithing Template	5	841	841	841	1	544940
 item_howl_pottery_sherd	Howl Pottery Sherd	5	842	842	842	1	743524
 item_iron_axe	Machado de Ferro	5	843	843	843	1	837671
@@ -782,9 +782,9 @@ item_iron_shovel	Pá de Ferro	5	853	853	853	1	898482
 item_iron_sword	Espada de Ferro	5	854	854	854	1	7C8285
 item_item_frame	Frame	5	855	855	855	1	AB774C
 item_jungle_chest_boat	Barco de Selva Baú	5	856	856	856	1	8A572E
-item_jungle_hanging_sign	Placa de Selva Hanging	5	857	857	857	1	91644A
-item_kelp	Alga	5	858	858	858	1	2F7614
-item_lantern	Lanterna	5	859	859	859	1	5F5C66
+item_jungle_hanging_sign	Placa de Selva Hanging	6	857	857	857	1	91644A
+item_kelp	Alga	2	858	858	858	1	2F7614
+item_lantern	Lanterna	6	859	859	859	1	5F5C66
 item_lead	Guia	5	860	860	860	1	7B3014
 item_leather	Couro	5	861	861	861	1	873317
 item_leather_boots	Botas de Couro	5	862	862	862	1	66340F
@@ -792,7 +792,7 @@ item_leather_chestplate	Peitoral de Couro	5	863	863	863	1	AD8B57
 item_leather_helmet	Capacete de Couro	5	864	864	864	1	64320E
 item_leather_horse_armor	Couro Horse Armor	5	865	865	865	1	7D4314
 item_leather_leggings	Calças de Couro	5	866	866	866	1	62310E
-item_lever	Lever	5	867	867	867	1	696470
+item_lever	Lever	6	867	867	867	1	696470
 item_light_block_10	Claro Bloco 10	5	868	868	868	1	BCA262
 item_light_block_11	Claro Bloco 11	5	869	869	869	1	C1A765
 item_light_block_12	Claro Bloco 12	5	870	870	870	1	BFA86E
@@ -805,9 +805,9 @@ item_mace	Mace	5	876	876	876	1	515B83
 item_magma_cream	Magma Cream	5	877	877	877	1	B39132
 item_mangrove_boat	Barco de Mangue	5	878	878	878	1	541C17
 item_mangrove_chest_boat	Barco de Mangue Baú	5	879	879	879	1	693016
-item_mangrove_door	Porta de Mangue	5	880	880	880	1	5B231E
-item_mangrove_hanging_sign	Placa de Mangue Hanging	5	881	881	881	1	5E2825
-item_mangrove_sign	Placa de Mangue	5	882	882	882	1	5B231A
+item_mangrove_door	Porta de Mangue	6	880	880	880	1	5B231E
+item_mangrove_hanging_sign	Placa de Mangue Hanging	6	881	881	881	1	5E2825
+item_mangrove_sign	Placa de Mangue	6	882	882	882	1	5B231A
 item_map_filled	Mapa Filled	5	883	883	883	1	94A388
 item_map_locked	Mapa Locked	5	884	884	884	1	B3C2B1
 item_map_mansion	Mapa Mansion	5	885	885	885	1	878F71
@@ -851,18 +851,18 @@ item_netherite_shovel	Pá de Netherita	5	922	922	922	1	46353B
 item_netherite_sword	Espada de Netherita	5	923	923	923	1	443239
 item_netherite_upgrade_smithing_template	Netherita Upgrade Smithing Template	5	924	924	924	1	5F2C2D
 item_oak_chest_boat	Barco de Carvalho Baú	5	925	925	925	1	92612D
-item_oak_hanging_sign	Placa de Carvalho Hanging	5	926	926	926	1	A87C4C
+item_oak_hanging_sign	Placa de Carvalho Hanging	6	926	926	926	1	A87C4C
 item_ominous_bottle	Ominous Garrafa	5	927	927	927	1	4C4A50
 item_ominous_trial_key	Ominous Trial Key	5	928	928	928	1	4B564D
-item_oxidized_copper_chain	Corrente de Oxidized Cobre	5	929	929	929	1	2F6F58
-item_oxidized_copper_door	Porta de Oxidized Cobre	5	930	930	930	1	33775D
-item_oxidized_copper_lantern	Lanterna de Oxidized Cobre	5	931	931	931	1	34784C
+item_oxidized_copper_chain	Corrente de Oxidized Cobre	6	929	929	929	1	2F6F58
+item_oxidized_copper_door	Porta de Oxidized Cobre	6	930	930	930	1	33775D
+item_oxidized_copper_lantern	Lanterna de Oxidized Cobre	6	931	931	931	1	34784C
 item_painting	Painting	5	932	932	932	1	9F7B59
 item_pale_oak_boat	Barco de Pálido Carvalho	5	933	933	933	1	C1B3B2
 item_pale_oak_chest_boat	Barco de Pálido Carvalho Baú	5	934	934	934	1	AF937C
-item_pale_oak_door	Porta de Pálido Carvalho	5	935	935	935	1	B8AEAD
-item_pale_oak_hanging_sign	Placa de Pálido Carvalho Hanging	5	936	936	936	1	C6BCBE
-item_pale_oak_sign	Placa de Pálido Carvalho	5	937	937	937	1	C3B8B6
+item_pale_oak_door	Porta de Pálido Carvalho	6	935	935	935	1	B8AEAD
+item_pale_oak_hanging_sign	Placa de Pálido Carvalho Hanging	6	936	936	936	1	C6BCBE
+item_pale_oak_sign	Placa de Pálido Carvalho	6	937	937	937	1	C3B8B6
 item_paper	Papel	5	938	938	938	1	D4DCDD
 item_phantom_membrane	Phantom Membrane	5	939	939	939	1	BDA598
 item_piglin_banner_pattern	Piglin Banner Pattern	5	940	940	940	1	B9AC9C
@@ -990,7 +990,7 @@ item_record_ward	Disco Ward	5	1061	1061	1061	1	393C3B
 item_recovery_compass_atlas	Recovery Bússola Atlas	5	1062	1062	1062	1	808080
 item_recovery_compass_item	Recovery Bússola	5	1063	1063	1063	1	3A5556
 item_redstone_dust	Redstone Pó	5	1064	1064	1064	1	800600
-item_repeater	Repeater	5	1065	1065	1065	1	7F5458
+item_repeater	Repeater	6	1065	1065	1065	1	7F5458
 item_resin_brick	Resin Tijolo	5	1066	1066	1066	1	C85E19
 item_rib_armor_trim_smithing_template	Rib Armor Trim Smithing Template	5	1067	1067	1067	1	322833
 item_rotten_flesh	Podre Carne	5	1068	1068	1068	1	A05D2C
@@ -1006,14 +1006,14 @@ item_sheaf_pottery_sherd	Sheaf Pottery Sherd	5	1077	1077	1077	1	743524
 item_shears	Shears	5	1078	1078	1078	1	86888E
 item_shelter_pottery_sherd	Shelter Pottery Sherd	5	1079	1079	1079	1	763624
 item_shulker_shell	Shulker Shell	5	1080	1080	1080	1	9B499B
-item_sign	Placa	5	1081	1081	1081	1	A77640
-item_sign_acacia	Placa de Acácia	5	1082	1082	1082	1	9D4B24
-item_sign_birch	Placa de Bétula	5	1083	1083	1083	1	BB9C69
-item_sign_crimson	Placa de Carmesim	5	1084	1084	1084	1	652D42
-item_sign_darkoak	Placa de Darkoak	5	1085	1085	1085	1	52391E
-item_sign_jungle	Placa de Selva	5	1086	1086	1086	1	8E5F3E
-item_sign_spruce	Placa de Abeto	5	1087	1087	1087	1	66441F
-item_sign_warped	Placa de Distorcido	5	1088	1088	1088	1	296763
+item_sign	Placa	6	1081	1081	1081	1	A77640
+item_sign_acacia	Placa de Acácia	6	1082	1082	1082	1	9D4B24
+item_sign_birch	Placa de Bétula	6	1083	1083	1083	1	BB9C69
+item_sign_crimson	Placa de Carmesim	6	1084	1084	1084	1	652D42
+item_sign_darkoak	Placa de Darkoak	6	1085	1085	1085	1	52391E
+item_sign_jungle	Placa de Selva	6	1086	1086	1086	1	8E5F3E
+item_sign_spruce	Placa de Abeto	6	1087	1087	1087	1	66441F
+item_sign_warped	Placa de Distorcido	6	1088	1088	1088	1	296763
 item_silence_armor_trim_smithing_template	Silence Armor Trim Smithing Template	5	1089	1089	1089	1	335056
 item_skull_banner_pattern	Skull Banner Pattern	5	1090	1090	1090	1	B3A494
 item_skull_pottery_sherd	Skull Pottery Sherd	5	1091	1091	1091	1	713323
@@ -1022,15 +1022,15 @@ item_sniffer_egg	Farejador Ovo	5	1093	1093	1093	1	504844
 item_snort_pottery_sherd	Snort Pottery Sherd	5	1094	1094	1094	1	713423
 item_snout_armor_trim_smithing_template	Snout Armor Trim Smithing Template	5	1095	1095	1095	1	383E47
 item_snowball	Snowball	5	1096	1096	1096	1	C5DDE7
-item_soul_campfire	Alma Campfire	5	1097	1097	1097	1	578775
-item_soul_lantern	Lanterna de Alma	5	1098	1098	1098	1	476279
+item_soul_campfire	Alma Campfire	6	1097	1097	1097	1	578775
+item_soul_lantern	Lanterna de Alma	6	1098	1098	1098	1	476279
 item_spawn_egg	Spawn Ovo	5	1099	1099	1099	1	AFAFAF
 item_spawn_egg_overlay	Spawn Ovo Overlay	5	1100	1100	1100	1	B9B9B9
 item_spider_eye	Aranha Olho	5	1101	1101	1101	1	70142A
 item_spider_eye_fermented	Aranha Olho Fermented	5	1102	1102	1102	1	6E1C24
 item_spire_armor_trim_smithing_template	Spire Armor Trim Smithing Template	5	1103	1103	1103	1	9670A6
 item_spruce_chest_boat	Barco de Abeto Baú	5	1104	1104	1104	1	704619
-item_spruce_hanging_sign	Placa de Abeto Hanging	5	1105	1105	1105	1	6A4B2A
+item_spruce_hanging_sign	Placa de Abeto Hanging	6	1105	1105	1105	1	6A4B2A
 item_spyglass	Spyglass	5	1106	1106	1106	1	B77B4C
 item_stick	Graveto	5	1107	1107	1107	1	624B12
 item_stone_axe	Machado de Pedra	5	1108	1108	1108	1	635041
@@ -1077,14 +1077,14 @@ item_turtle_shell_piece	Turtle Shell Piece	5	1148	1148	1148	1	2E8037
 item_vex_armor_trim_smithing_template	Vex Armor Trim Smithing Template	5	1149	1149	1149	1	526160
 item_villagebell	Villagebell	5	1150	1150	1150	1	CE943D
 item_ward_armor_trim_smithing_template	Ward Armor Trim Smithing Template	5	1151	1151	1151	1	41585B
-item_warped_door	Porta de Distorcido	5	1152	1152	1152	1	287772
+item_warped_door	Porta de Distorcido	6	1152	1152	1152	1	287772
 item_warped_fungus_on_a_stick	Distorcido Fungus On A Graveto	5	1153	1153	1153	1	82683F
-item_warped_hanging_sign	Placa de Distorcido Hanging	5	1154	1154	1154	1	2E6B6A
+item_warped_hanging_sign	Placa de Distorcido Hanging	6	1154	1154	1154	1	2E6B6A
 item_watch_atlas	Watch Atlas	5	1155	1155	1155	1	808080
 item_wayfinder_armor_trim_smithing_template	Wayfinder Armor Trim Smithing Template	5	1156	1156	1156	1	554B42
-item_weathered_copper_chain	Corrente de Weathered Cobre	5	1157	1157	1157	1	5B6E42
-item_weathered_copper_door	Porta de Weathered Cobre	5	1158	1158	1158	1	5D7649
-item_weathered_copper_lantern	Lanterna de Weathered Cobre	5	1159	1159	1159	1	587837
+item_weathered_copper_chain	Corrente de Weathered Cobre	6	1157	1157	1157	1	5B6E42
+item_weathered_copper_door	Porta de Weathered Cobre	6	1158	1158	1158	1	5D7649
+item_weathered_copper_lantern	Lanterna de Weathered Cobre	6	1159	1159	1159	1	587837
 item_wheat	Trigo	5	1160	1160	1160	1	B06423
 item_wild_armor_trim_smithing_template	Wild Armor Trim Smithing Template	5	1161	1161	1161	1	69846A
 item_wind_charge	Wind Charge	5	1162	1162	1162	1	D1D8F5

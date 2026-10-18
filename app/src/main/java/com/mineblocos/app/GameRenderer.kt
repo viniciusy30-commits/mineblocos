@@ -25,7 +25,7 @@ class GameRenderer(
 
     private class Mesh(var vbo: Int, var count: Int)
     private val BB_FULL = floatArrayOf(0f, 0f, 0f, 1f, 1f, 1f)
-    private class Hit(val x: Int, val y: Int, val z: Int, val nx: Int, val ny: Int, val nz: Int)
+    private class Hit(val x: Int, val y: Int, val z: Int, val nx: Int, val ny: Int, val nz: Int, val hy: Float = 0f)
     private class Particle(
         var x: Float, var y: Float, var z: Float,
         var vx: Float, var vy: Float, var vz: Float,
@@ -222,8 +222,9 @@ class GameRenderer(
         // começa uma célula abaixo: cercas têm 1,5 bloco; lajes e terra batida têm altura parcial
         for (iy in (minY - 1)..maxY) for (iz in minZ..maxZ) for (ix in minX..maxX) {
             if (!world.solid(ix, iy, iz)) continue
-            val top = Shapes.top(world.get(ix, iy, iz))
-            if (y < iy + top && y + 1.8f > iy) return true
+            val bk = world.get(ix, iy, iz)
+            val mt = world.getMeta(ix, iy, iz)
+            if (y < iy + Shapes.hi(bk, mt) && y + 1.8f > iy + Shapes.lo(bk, mt)) return true
         }
         return false
     }
@@ -275,7 +276,7 @@ class GameRenderer(
             }
             i += 6
         }
-        return if (best < Float.MAX_VALUE) Hit(x, y, z, bnx, bny, bnz) else null
+        return if (best < Float.MAX_VALUE) Hit(x, y, z, bnx, bny, bnz, oy + dy * best) else null
     }
 
     private fun raycast(ox: Float, oy: Float, oz: Float, dx: Float, dy: Float, dz: Float, maxDist: Float): Hit? {
@@ -298,7 +299,7 @@ class GameRenderer(
             val bl = world.get(x, y, z)
             if (bl != Blocks.AIR) {
                 val hb = Shapes.hitBoxes(world, x, y, z, bl)
-                if (hb == null) return Hit(x, y, z, nx, ny, nz)
+                if (hb == null) return Hit(x, y, z, nx, ny, nz, oy + dy * t)
                 val hh = hitBoxes(hb, x, y, z, ox, oy, oz, dx, dy, dz, maxDist, nx, ny, nz)
                 if (hh != null) return hh
             }
@@ -402,6 +403,16 @@ class GameRenderer(
                 breakProg += dt / total
                 if (breakProg >= 1f) {
                     spawnParticles(h.x, h.y, h.z, b)
+                    val mb = world.getMeta(h.x, h.y, h.z)
+                    if (Shapes.isDoor(b)) {
+                        val oy2 = if ((mb and Shapes.M_UPPER) != 0) h.y - 1 else h.y + 1
+                        if (world.get(h.x, oy2, h.z) == b) world.set(h.x, oy2, h.z, Blocks.AIR)
+                    } else if (Shapes.isBed(b)) {
+                        val sg = if ((mb and Shapes.M_SECOND) != 0) -1 else 1
+                        val ox2 = h.x + Shapes.dirX(mb) * sg
+                        val oz2 = h.z + Shapes.dirZ(mb) * sg
+                        if (world.get(ox2, h.y, oz2) == b) world.set(ox2, h.y, oz2, Blocks.AIR)
+                    }
                     world.set(h.x, h.y, h.z, Blocks.AIR)
                     breakProg = 0f
                     hasBreak = false
@@ -418,15 +429,7 @@ class GameRenderer(
 
         if (s.placeRequest) {
             s.placeRequest = false
-            if (h != null) {
-                val bx = h.x + h.nx
-                val by = h.y + h.ny
-                val bz = h.z + h.nz
-                if (world.inBounds(bx, by, bz) && world.get(bx, by, bz) == Blocks.AIR && Reg.placeable(s.block) && !intersectsPlayer(bx, by, bz)) {
-                    world.set(bx, by, bz, s.block)
-                    punch = 1f
-                }
-            }
+            if (h != null) doPlace(h, sy, cy)
         }
 
         // partículas
@@ -449,6 +452,67 @@ class GameRenderer(
             }
             i--
         }
+    }
+
+    private fun doPlace(h: Hit, sy: Float, cy: Float) {
+        val tb = world.get(h.x, h.y, h.z)
+        val tm = world.getMeta(h.x, h.y, h.z)
+        // abrir / fechar portas e portões
+        if (Shapes.interactive(tb)) {
+            val nm = tm xor Shapes.M_OPEN
+            world.setMeta(h.x, h.y, h.z, nm)
+            if (Shapes.isDoor(tb)) {
+                val oy2 = if ((tm and Shapes.M_UPPER) != 0) h.y - 1 else h.y + 1
+                if (world.get(h.x, oy2, h.z) == tb) world.setMeta(h.x, oy2, h.z, world.getMeta(h.x, oy2, h.z) xor Shapes.M_OPEN)
+            }
+            punch = 1f
+            return
+        }
+        val blk = s.block
+        if (!Reg.placeable(blk)) return
+        val frac = h.hy - h.y
+        // laje sobre laje vira bloco inteiro
+        if (Shapes.isSlab(tb) && tb == blk && (tm and Shapes.M_SECOND) == 0) {
+            val upper = (tm and Shapes.M_UPPER) != 0
+            if ((h.ny == 1 && !upper) || (h.ny == -1 && upper)) {
+                world.setMeta(h.x, h.y, h.z, tm or Shapes.M_SECOND)
+                punch = 1f
+                return
+            }
+        }
+        val bx = h.x + h.nx
+        val by = h.y + h.ny
+        val bz = h.z + h.nz
+        if (!world.inBounds(bx, by, bz) || world.get(bx, by, bz) != Blocks.AIR) return
+        // direção em que o jogador olha: 0 = -Z, 1 = +X, 2 = +Z, 3 = -X
+        val lx = sy
+        val lz = -cy
+        val face = if (abs(lx) > abs(lz)) (if (lx > 0f) 1 else 3) else (if (lz > 0f) 2 else 0)
+        if (Shapes.isDoor(blk)) {
+            if (!world.inBounds(bx, by + 1, bz) || world.get(bx, by + 1, bz) != Blocks.AIR) return
+            if (intersectsPlayer(bx, by, bz) || intersectsPlayer(bx, by + 1, bz)) return
+            world.set(bx, by, bz, blk, face)
+            world.set(bx, by + 1, bz, blk, face or Shapes.M_UPPER)
+            punch = 1f
+            return
+        }
+        if (Shapes.isBed(blk)) {
+            val hx = bx + Shapes.dirX(face)
+            val hz = bz + Shapes.dirZ(face)
+            if (!world.inBounds(hx, by, hz) || world.get(hx, by, hz) != Blocks.AIR) return
+            if (intersectsPlayer(bx, by, bz) || intersectsPlayer(hx, by, hz)) return
+            world.set(bx, by, bz, blk, face)
+            world.set(hx, by, hz, blk, face or Shapes.M_SECOND)
+            punch = 1f
+            return
+        }
+        if (intersectsPlayer(bx, by, bz) && Reg.solid(blk)) return
+        var meta = face
+        if (Shapes.isSlab(blk)) {
+            meta = if (h.ny == -1 || (h.ny == 0 && frac > 0.5f)) Shapes.M_UPPER else 0
+        }
+        world.set(bx, by, bz, blk, meta)
+        punch = 1f
     }
 
     private fun spawnParticles(x: Int, y: Int, z: Int, b: Int) {
@@ -743,7 +807,7 @@ class GameRenderer(
         Matrix.rotateM(model, 0, -sw * 55f, 1f, 0f, 0f)
         Matrix.rotateM(model, 0, 28f, 0f, 1f, 0f)
         Matrix.rotateM(model, 0, -12f, 1f, 0f, 0f)
-        val flatHand = Reg.kind(handBlock) != Reg.K_CUBE && Reg.kind(handBlock) != Reg.K_MODEL
+        val flatHand = Reg.kind(handBlock) != Reg.K_CUBE && (Reg.kind(handBlock) != Reg.K_MODEL || Shapes.spriteItem(handBlock))
         if (flatHand) Matrix.rotateM(model, 0, 18f, 0f, 0f, 1f)
         val hk = if (flatHand) 0.62f else 0.36f
         Matrix.scaleM(model, 0, hk, hk, hk)

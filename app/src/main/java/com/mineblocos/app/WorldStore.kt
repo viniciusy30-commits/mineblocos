@@ -12,8 +12,8 @@ import java.util.zip.GZIPInputStream
 import java.util.zip.GZIPOutputStream
 
 object WorldStore {
-    private const val MAGIC = 0x4D420005
-    private const val MAGIC_OLD = 0x4D420003
+    private const val MAGIC = 0x4D420006
+    private const val MAGIC_V5 = 0x4D420005
 
     class Loaded(
         val world: World,
@@ -31,7 +31,7 @@ object WorldStore {
 
     @Synchronized
     fun save(
-        c: Context, blocks: ShortArray, seed: Int,
+        c: Context, blocks: ShortArray, meta: ByteArray, seed: Int,
         px: Float, py: Float, pz: Float, yaw: Float, pitch: Float, time: Float
     ) {
         try {
@@ -44,6 +44,7 @@ object WorldStore {
                 val bb = java.nio.ByteBuffer.allocate(blocks.size * 2)
                 bb.asShortBuffer().put(blocks)
                 o.write(bb.array())
+                o.write(meta)
             }
             val dest = file(c)
             dest.delete()
@@ -59,7 +60,7 @@ object WorldStore {
         return try {
             DataInputStream(GZIPInputStream(BufferedInputStream(FileInputStream(f)))).use { i ->
                 val magic = i.readInt()
-                if (magic != MAGIC) return null
+                if (magic != MAGIC && magic != MAGIC_V5) return null
                 val seed = i.readInt()
                 val px = i.readFloat(); val py = i.readFloat(); val pz = i.readFloat()
                 val yaw = i.readFloat(); val pitch = i.readFloat(); val time = i.readFloat()
@@ -67,6 +68,7 @@ object WorldStore {
                 val bytes = ByteArray(w.blocks.size * 2)
                 i.readFully(bytes)
                 java.nio.ByteBuffer.wrap(bytes).asShortBuffer().get(w.blocks)
+                if (magic == MAGIC) i.readFully(w.meta)
                 w.markAllDirty()
                 Loaded(w, px, py, pz, yaw, pitch, time)
             }

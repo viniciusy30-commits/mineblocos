@@ -164,7 +164,8 @@ object Mesher {
                 out.add(oy + fy)
                 out.add(oz + fz)
                 out.add((tx + 0.02f + faceU(f, fx, fz) * 15.96f) / aw)
-                out.add((ty + 0.02f + faceV(f, fy, fz) * 15.96f) / ah)
+                val vv = faceV(f, fy, fz)
+                out.add((ty + 0.02f + (if (f >= 2) bx.vOff + vv * bx.vMul else vv) * 15.96f) / ah)
                 out.add(light)
             }
         }
@@ -261,7 +262,7 @@ object Mesher {
     fun handMesh(b: Int): MeshData {
         val out = FloatList(256)
         val l = FloatArray(4)
-        if (Reg.kind(b) == Reg.K_MODEL) {
+        if (Reg.kind(b) == Reg.K_MODEL && !Shapes.spriteItem(b)) {
             emitModel(out, Shapes.model(null, 0, 0, 0, b), 0f, 0f, 0f, null, 0, 0, 0)
             return MeshData(out.a, out.n)
         }

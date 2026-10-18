@@ -15,9 +15,20 @@ class World(val seed: Int) {
     }
 
     val blocks = ShortArray(W * H * D)
+
+    /** Estado do bloco: bits 0-1 direção, 2 aberto, 3 metade de cima, 4 segunda parte (laje dupla, cama, porta). */
+    val meta = ByteArray(W * H * D)
     val dirty = BooleanArray(CX * CZ)
 
     private fun idx(x: Int, y: Int, z: Int) = (y * D + z) * W + x
+
+    fun getMeta(x: Int, y: Int, z: Int): Int = if (inBounds(x, y, z)) meta[idx(x, y, z)].toInt() else 0
+
+    fun setMeta(x: Int, y: Int, z: Int, m: Int) {
+        if (!inBounds(x, y, z)) return
+        meta[idx(x, y, z)] = m.toByte()
+        touch(x, z)
+    }
 
     fun inBounds(x: Int, y: Int, z: Int) = x in 0 until W && y in 0 until H && z in 0 until D
 
@@ -35,7 +46,9 @@ class World(val seed: Int) {
         if (y < 0) return true
         if (y >= H) return false
         if (x < 0 || x >= W || z < 0 || z >= D) return true
-        return Reg.solid(blocks[idx(x, y, z)].toInt())
+        val i = idx(x, y, z)
+        val b = blocks[i].toInt()
+        return Reg.solid(b) && Shapes.solidAt(b, meta[i].toInt())
     }
 
     private fun setRaw(x: Int, y: Int, z: Int, b: Int) {
@@ -50,9 +63,14 @@ class World(val seed: Int) {
         for (i in dirty.indices) dirty[i] = true
     }
 
-    fun set(x: Int, y: Int, z: Int, b: Int) {
+    fun set(x: Int, y: Int, z: Int, b: Int, m: Int = 0) {
         if (!inBounds(x, y, z)) return
         blocks[idx(x, y, z)] = b.toShort()
+        meta[idx(x, y, z)] = m.toByte()
+        touch(x, z)
+    }
+
+    private fun touch(x: Int, z: Int) {
         val cx = x shr 4
         val cz = z shr 4
         markDirty(cx, cz)

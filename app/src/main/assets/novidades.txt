@@ -1,3 +1,12 @@
+#id 2026-10-17-g
+#titulo Blocos completos como no Minecraft
+- Laje em cima ou embaixo (conforme onde você mira) e laje dupla ao empilhar duas iguais
+- Portões e portas abrem e fecham ao tocar; portas têm 2 blocos de altura
+- Camas de todas as cores (2 blocos, com travesseiro), placas, lanternas, correntes, fogueiras, caldeirão, funil, suporte de poções, alavanca, vaso vazio, bolo, repetidor e comparador agora podem ser colocados
+- Bambu, alga e raízes pendentes viram plantas
+- Blocos lembram a direção em que você estava olhando ao colocar
+- Mundos antigos continuam funcionando
+
 #id 2026-10-17-f
 #titulo Formas reais dos blocos
 - Cerca e portão de bambu com formato de verdade (a cerca conecta nos vizinhos)
