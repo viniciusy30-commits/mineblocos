@@ -53,6 +53,7 @@ object Shapes {
     private const val POT_EMPTY = 27
     private const val CAKE = 28
     private const val DIODE = 29
+    private const val STAIRS = 30
 
     /** Bits do estado do bloco (World.meta). */
     const val M_OPEN = 4
@@ -101,7 +102,9 @@ object Shapes {
                     "item_repeater", "item_comparator" -> DIODE
                     else -> {
                         val k = Reg.key(i)
-                        if (k.startsWith("item_bed_")) BED
+                        if (k.endsWith("_drz_stairs")) STAIRS
+                        else if (k.endsWith("_drz_slab")) SLAB
+                        else if (k.startsWith("item_bed_")) BED
                         else if (k.startsWith("item_") && k.contains("sign")) SIGN
                         else if (k.startsWith("item_") && k.contains("door") && Reg.kind(i) == Reg.K_MODEL) DOOR
                         else NONE
@@ -144,7 +147,7 @@ object Shapes {
     }
 
     fun solid(b: Int): Boolean = when (shapeOf(b)) {
-        FENCE, GATE, CACTUS, SLAB, COMPOSTER, POT, POT_AZALEA, POT_EMPTY, FARMLAND, PATH, HEAVY_CORE, AZALEA,
+        FENCE, GATE, CACTUS, SLAB, STAIRS, COMPOSTER, POT, POT_AZALEA, POT_EMPTY, FARMLAND, PATH, HEAVY_CORE, AZALEA,
         DOOR, BED, CAULDRON, HOPPER, CAKE, DIODE, CAMPFIRE -> true
         else -> false
     }
@@ -160,6 +163,7 @@ object Shapes {
     fun interactive(b: Int): Boolean { val sh = shapeOf(b); return sh == GATE || sh == DOOR }
 
     fun isSlab(b: Int) = shapeOf(b) == SLAB
+    fun isStairs(b: Int) = shapeOf(b) == STAIRS
     fun isDoor(b: Int) = shapeOf(b) == DOOR
     fun isBed(b: Int) = shapeOf(b) == BED
 
@@ -292,9 +296,20 @@ object Shapes {
             }
             CACTUS -> return Model(arrayOf(bx(1f, 0f, 1f, 15f, 16f, 15f, top, bot, side)))
             SLAB -> {
-                if ((m and M_SECOND) != 0) return Model(arrayOf(bx(0f, 0f, 0f, 16f, 16f, 16f, top)))
-                return if ((m and M_UPPER) != 0) Model(arrayOf(bx(0f, 8f, 0f, 16f, 16f, 16f, top)))
-                else Model(arrayOf(bx(0f, 0f, 0f, 16f, 8f, 16f, top)))
+                if ((m and M_SECOND) != 0) return Model(arrayOf(bx(0f, 0f, 0f, 16f, 16f, 16f, top, bot, side)))
+                return if ((m and M_UPPER) != 0) Model(arrayOf(bx(0f, 8f, 0f, 16f, 16f, 16f, top, bot, side)))
+                else Model(arrayOf(bx(0f, 0f, 0f, 16f, 8f, 16f, top, bot, side)))
+            }
+            STAIRS -> {
+                // modelo olhando para -Z: degrau alto no fundo; M_UPPER = escada invertida
+                val boxes = if ((m and M_UPPER) != 0) arrayOf(
+                    bx(0f, 8f, 0f, 16f, 16f, 16f, top, bot, side),
+                    bx(0f, 0f, 0f, 16f, 8f, 8f, top, bot, side, 62)
+                ) else arrayOf(
+                    bx(0f, 0f, 0f, 16f, 8f, 16f, top, bot, side),
+                    bx(0f, 8f, 0f, 16f, 16f, 8f, top, bot, side, 61)
+                )
+                return Model(rot(boxes, f))
             }
             COMPOSTER -> {
                 val wall = Reg.tile(Reg.id("planks_spruce"), 2)

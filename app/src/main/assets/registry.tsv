@@ -1094,3 +1094,711 @@ item_wood_hoe	Enxada de Madeira	5	1165	1165	1165	1	6F4B15
 item_wood_pickaxe	Picareta de Madeira	5	1166	1166	1166	1	713D14
 item_wood_shovel	Pá de Madeira	5	1167	1167	1167	1	6A4613
 item_wood_sword	Espada de Madeira	5	1168	1168	1168	1	764015
+asphalt_1_drz	Asphalt 1	1	1169	1170	1170	0	545454
+asphalt_1a_drz	Asphalt 1A	1	1171	1170	1170	0	545454
+asphalt_2_drz	Asphalt 2	1	1172	1170	1170	0	545454
+asphalt_2a_drz	Asphalt 2A	1	1173	1170	1170	0	545454
+asphalt_3_drz	Asphalt 3	1	1174	1170	1170	0	545454
+asphalt_4_drz	Asphalt 4	1	1175	1170	1170	0	545454
+asphalt_4a_drz	Asphalt 4A	1	1176	1170	1170	0	545454
+asphalt_4b_drz	Asphalt 4B	1	1177	1170	1170	0	545454
+asphalt_4c_drz	Asphalt 4C	1	1178	1170	1170	0	545454
+asphalt_4d_drz	Asphalt 4D	1	1179	1170	1170	0	545454
+asphalt_5_drz	Asphalt 5	1	1180	1170	1170	0	545454
+asphalt_5a_drz	Asphalt 5A	1	1181	1170	1170	0	545454
+asphalt_5b_drz	Asphalt 5B	1	1182	1170	1170	0	545454
+asphalt_5c_drz	Asphalt 5C	1	1183	1170	1170	0	545454
+asphalt_6_drz	Asphalt 6	1	1184	1170	1170	0	545454
+asphalt_6a_drz	Asphalt 6A	1	1185	1170	1170	0	545454
+asphalt_drz	Asphalt	1	1170	1170	1170	0	545454
+asphalt_bike_1_drz	Asphalt Bike 1	1	1186	1187	1187	0	3A8D78
+asphalt_bike_1a_drz	Asphalt Bike 1A	1	1188	1187	1187	0	3A8D78
+asphalt_bike_1b_drz	Asphalt Bike 1B	1	1189	1187	1187	0	3A8D78
+asphalt_bike_2_drz	Asphalt Bike 2	1	1190	1187	1187	0	3A8D78
+asphalt_bike_3_drz	Asphalt Bike 3	1	1191	1187	1187	0	3A8D78
+asphalt_bike_4_drz	Asphalt Bike 4	1	1192	1187	1187	0	3A8D78
+asphalt_bike_4a_drz	Asphalt Bike 4A	1	1193	1187	1187	0	3A8D78
+asphalt_bike_4b_drz	Asphalt Bike 4B	1	1194	1187	1187	0	3A8D78
+asphalt_bike_4c_drz	Asphalt Bike 4C	1	1195	1187	1187	0	3A8D78
+asphalt_bike_5_drz	Asphalt Bike 5	1	1196	1187	1187	0	3A8D78
+asphalt_bike_5a_drz	Asphalt Bike 5A	1	1197	1187	1187	0	3A8D78
+asphalt_bike_5b_drz	Asphalt Bike 5B	1	1198	1187	1187	0	3A8D78
+asphalt_bike_drz	Asphalt Bike	1	1187	1187	1187	0	3A8D78
+asphalt_bike_blue_1_drz	Asphalt Bike Blue 1	1	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz	Asphalt Bike Blue 1A	1	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz	Asphalt Bike Blue 1B	1	1202	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz	Asphalt Bike Blue 2	1	1203	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz	Asphalt Bike Blue 3	1	1204	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz	Asphalt Bike Blue 4	1	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz	Asphalt Bike Blue 4A	1	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz	Asphalt Bike Blue 4B	1	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz	Asphalt Bike Blue 4C	1	1208	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz	Asphalt Bike Blue 5	1	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz	Asphalt Bike Blue 5A	1	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz	Asphalt Bike Blue 5B	1	1211	1200	1200	0	3988D6
+asphalt_bike_blue_drz	Asphalt Bike Blue	1	1200	1200	1200	0	3988D6
+asphalt_bus_1_drz	Asphalt Bus 1	1	1212	1213	1213	0	D3584E
+asphalt_bus_1a_drz	Asphalt Bus 1A	1	1214	1213	1213	0	D3584E
+asphalt_bus_1b_drz	Asphalt Bus 1B	1	1215	1213	1213	0	D3584E
+asphalt_bus_1c_drz	Asphalt Bus 1C	1	1216	1213	1213	0	D3584E
+asphalt_bus_2_drz	Asphalt Bus 2	1	1217	1213	1213	0	D3584E
+asphalt_bus_3_drz	Asphalt Bus 3	1	1218	1213	1213	0	D3584E
+asphalt_bus_4_drz	Asphalt Bus 4	1	1219	1213	1213	0	D3584E
+asphalt_bus_4a_drz	Asphalt Bus 4A	1	1220	1213	1213	0	D3584E
+asphalt_bus_drz	Asphalt Bus	1	1213	1213	1213	0	D3584E
+asphalt_gray_1_drz	Asphalt Gray 1	1	1221	1222	1222	0	878787
+asphalt_gray_1a_drz	Asphalt Gray 1A	1	1223	1222	1222	0	878787
+asphalt_gray_2_drz	Asphalt Gray 2	1	1224	1222	1222	0	878787
+asphalt_gray_2a_drz	Asphalt Gray 2A	1	1225	1222	1222	0	878787
+asphalt_gray_3_drz	Asphalt Gray 3	1	1226	1222	1222	0	878787
+asphalt_gray_4_drz	Asphalt Gray 4	1	1227	1222	1222	0	878787
+asphalt_gray_4a_drz	Asphalt Gray 4A	1	1228	1222	1222	0	878787
+asphalt_gray_4b_drz	Asphalt Gray 4B	1	1229	1222	1222	0	878787
+asphalt_gray_4c_drz	Asphalt Gray 4C	1	1230	1222	1222	0	878787
+asphalt_gray_4d_drz	Asphalt Gray 4D	1	1231	1222	1222	0	878787
+asphalt_gray_5_drz	Asphalt Gray 5	1	1232	1222	1222	0	878787
+asphalt_gray_5a_drz	Asphalt Gray 5A	1	1233	1222	1222	0	878787
+asphalt_gray_5b_drz	Asphalt Gray 5B	1	1234	1222	1222	0	878787
+asphalt_gray_5c_drz	Asphalt Gray 5C	1	1235	1222	1222	0	878787
+asphalt_gray_6_drz	Asphalt Gray 6	1	1236	1222	1222	0	878787
+asphalt_gray_6a_drz	Asphalt Gray 6A	1	1237	1222	1222	0	878787
+asphalt_gray_drz	Asphalt Gray	1	1222	1222	1222	0	878787
+asphalt_pink_drz	Asphalt Pink	1	1238	1238	1238	0	E07FC1
+asphalt_white_drz	Asphalt White	1	1239	1239	1239	0	E2E2E2
+asphalt_yellow_drz	Asphalt Yellow	1	1240	1240	1240	0	CFC949
+container_a_drz	Container A	1	1241	1241	1241	0	A56D28
+container_b_drz	Container B	1	1242	1242	1242	0	608D2E
+container_c_drz	Container C	1	1243	1243	1243	0	389C87
+container_d_drz	Container D	1	1244	1244	1244	0	4A78A2
+container_drz	Container	1	1245	1245	1245	0	8D3131
+container_e_drz	Container E	1	1246	1246	1246	0	BCBCBC
+container_f_drz	Container F	1	1247	1247	1247	0	202020
+embedded_track_drz	Embedded Track	1	1248	1248	1248	0	AAA6A4
+escalator_block_a_drz	Escalator Block A	1	1249	1249	1249	0	354342
+escalator_block_b_drz	Escalator Block B	1	1250	1250	1250	0	333C40
+escalator_block_c_drz	Escalator Block C	1	1251	1251	1251	0	333C41
+escalator_block_drz	Escalator Block	1	1252	1252	1252	0	31363F
+marble_1_drz	Marble 1	1	1253	1253	1253	0	ECECEC
+marble_1a_drz	Marble 1A	1	1254	1254	1254	0	F1F1F1
+marble_1b_drz	Marble 1B	1	1255	1255	1255	0	CDCDCD
+marble_1c_drz	Marble 1C	1	1256	1256	1256	0	9B9B9B
+marble_white_drz	Marble White	1	1257	1257	1257	0	EDEDED
+metal_drz	Metal	1	1258	1258	1258	0	F1F2F3
+metal_gray_drz	Metal Gray	1	1259	1259	1259	0	3F3D45
+metal_rusted_a_drz	Metal Rusted A	1	1260	1260	1260	0	985145
+metal_rusted_drz	Metal Rusted	1	1261	1261	1261	0	E2CEBF
+monodeus_script_a_drz	Monodeus Script A	1	1262	1262	1262	0	D0AF87
+monodeus_script_adios_drz	Monodeus Script Adios	1	1263	1263	1263	0	CFAF87
+monodeus_script_coic_drz	Monodeus Script Coic	1	1264	1264	1264	0	CFAF87
+monodeus_script_dah_drz	Monodeus Script Dah	1	1265	1265	1265	0	D0AF87
+monodeus_script_dou_drz	Monodeus Script Dou	1	1266	1266	1266	0	CFAF87
+monodeus_script_ga_drz	Monodeus Script Ga	1	1267	1267	1267	0	D0B087
+monodeus_script_gard_drz	Monodeus Script Gard	1	1268	1268	1268	0	CDAC85
+monodeus_script_gate_drz	Monodeus Script Gate	1	1269	1269	1269	0	D0B088
+monodeus_script_geon_drz	Monodeus Script Geon	1	1270	1270	1270	0	D0AF87
+monodeus_script_grac_drz	Monodeus Script Grac	1	1271	1271	1271	0	CFAE86
+monodeus_script_guro_drz	Monodeus Script Guro	1	1272	1272	1272	0	CEAD86
+monodeus_script_hm_drz	Monodeus Script Hm	1	1273	1273	1273	0	D0B087
+monodeus_script_i_drz	Monodeus Script I	1	1274	1274	1274	0	D0B087
+monodeus_script_ii_drz	Monodeus Script Ii	1	1275	1275	1275	0	CFAF87
+monodeus_script_iii_drz	Monodeus Script Iii	1	1276	1276	1276	0	CFAE87
+monodeus_script_light_drz	Monodeus Script Light	1	1277	1277	1277	0	D0B087
+monodeus_script_mon_drz	Monodeus Script Mon	1	1278	1278	1278	0	CEAD86
+monodeus_script_moni_drz	Monodeus Script Moni	1	1279	1279	1279	0	CEAD86
+monodeus_script_monodeco_drz	Monodeus Script Monodeco	1	1280	1280	1280	0	D0AF87
+monodeus_script_moon_drz	Monodeus Script Moon	1	1281	1281	1281	0	D0B087
+monodeus_script_moongate_drz	Monodeus Script Moongate	1	1282	1282	1282	0	D0AF87
+monodeus_script_mt_drz	Monodeus Script Mt	1	1283	1283	1283	0	CEAE86
+monodeus_script_nox_drz	Monodeus Script Nox	1	1284	1284	1284	0	CFAF87
+monodeus_script_orc_drz	Monodeus Script Orc	1	1285	1285	1285	0	D0B087
+monodeus_script_orca_drz	Monodeus Script Orca	1	1286	1286	1286	0	CEAD86
+monodeus_script_orion_drz	Monodeus Script Orion	1	1287	1287	1287	0	CFAF87
+monodeus_script_pur_drz	Monodeus Script Pur	1	1288	1288	1288	0	D0B087
+monodeus_script_req_drz	Monodeus Script Req	1	1289	1289	1289	0	CDAC85
+monodeus_script_rod_drz	Monodeus Script Rod	1	1290	1290	1290	0	CEAD86
+monodeus_script_skar_drz	Monodeus Script Skar	1	1291	1291	1291	0	CFAF87
+monodeus_script_sol_drz	Monodeus Script Sol	1	1292	1292	1292	0	CDAC85
+monodeus_script_space_drz	Monodeus Script Space	1	1293	1293	1293	0	D0B087
+monodeus_script_v_drz	Monodeus Script V	1	1294	1294	1294	0	D0B087
+monodeus_script_val_drz	Monodeus Script Val	1	1295	1295	1295	0	CEAD86
+monodeus_script_vis_drz	Monodeus Script Vis	1	1296	1296	1296	0	CFAF87
+monodeus_script_x_drz	Monodeus Script X	1	1297	1297	1297	0	D0B087
+monodeus_script_ysk_drz	Monodeus Script Ysk	1	1298	1298	1298	0	CFAF87
+monodeus_script_zen_drz	Monodeus Script Zen	1	1299	1299	1299	0	D0AF87
+sidewalk_6_drz	Sidewalk 6	1	1300	1300	1300	0	848484
+sidewalk_6a_drz	Sidewalk 6A	1	1301	1301	1301	0	7E7E7E
+sidewalk_6b_drz	Sidewalk 6B	1	1302	1302	1302	0	6E6E6E
+sidewalk_1_drz	Sidewalk 1	1	1303	1303	1303	0	A39B97
+sidewalk_1a_drz	Sidewalk 1A	1	1304	1304	1304	0	4E4E4E
+sidewalk_2_drz	Sidewalk 2	1	1305	1305	1305	0	9298A6
+sidewalk_2a_drz	Sidewalk 2A	1	1306	1306	1306	0	D2675B
+sidewalk_3_drz	Sidewalk 3	1	1307	1307	1307	0	9C9C9C
+sidewalk_4_drz	Sidewalk 4	1	1308	1308	1308	0	BDBDBD
+sidewalk_5_drz	Sidewalk 5	1	1309	1309	1309	0	E8E2D8
+sidewalk_5a_drz	Sidewalk 5A	1	1310	1310	1310	0	A4A8B5
+sidewalk_5b_drz	Sidewalk 5B	1	1311	1311	1311	0	BC4D4F
+sidewalk_drz	Sidewalk	1	1312	1312	1312	0	A2A2A2
+tiles_black_drz	Tiles Black	1	1313	1313	1313	0	878789
+tiles_blue_drz	Tiles Blue	1	1314	1314	1314	0	8BB9E6
+tiles_green_drz	Tiles Green	1	1315	1315	1315	0	95E19C
+tiles_red_drz	Tiles Red	1	1316	1316	1316	0	D1828C
+tiles_white_drz	Tiles White	1	1317	1317	1317	0	CFD4DA
+tiles_yellow_drz	Tiles Yellow	1	1318	1318	1318	0	DFD997
+tiles_1_drz	Tiles 1	1	1319	1319	1319	0	EBEBEB
+tiles_1a_drz	Tiles 1A	1	1320	1320	1320	0	8E939E
+tiles_2_drz	Tiles 2	1	1321	1321	1321	0	EDEDED
+tiles_2a_drz	Tiles 2A	1	1322	1322	1322	0	8A8F99
+tiles_3_drz	Tiles 3	1	1323	1323	1323	0	ECECEC
+tiles_3a_drz	Tiles 3A	1	1324	1324	1324	0	898E99
+tiles_4_drz	Tiles 4	1	1325	1325	1325	0	D6D6D6
+tiles_4a_drz	Tiles 4A	1	1326	1326	1326	0	7F7F7F
+tiles_4b_drz	Tiles 4B	1	1327	1327	1327	0	444444
+tiles_4c_drz	Tiles 4C	1	1328	1328	1328	0	B74646
+tiles_4d_drz	Tiles 4D	1	1329	1329	1329	0	DB8C4F
+tiles_4e_drz	Tiles 4E	1	1330	1330	1330	0	E7D35D
+tiles_4f_drz	Tiles 4F	1	1331	1331	1331	0	A2E461
+tiles_4g_drz	Tiles 4G	1	1332	1332	1332	0	6EF1DE
+tiles_4h_drz	Tiles 4H	1	1333	1333	1333	0	5D9BE3
+tiles_4i_drz	Tiles 4I	1	1334	1334	1334	0	5459EB
+tiles_4j_drz	Tiles 4J	1	1335	1335	1335	0	D64DD5
+tiles_4k_drz	Tiles 4K	1	1336	1336	1336	0	F4A6BF
+tiles_4l_drz	Tiles 4L	1	1337	1337	1337	0	72262D
+tiles_a_black_drz	Tiles A Black	1	1338	1338	1338	0	242424
+tiles_a_blue_drz	Tiles A Blue	1	1339	1339	1339	0	4EA2B3
+tiles_a_green_drz	Tiles A Green	1	1340	1340	1340	0	70CE60
+tiles_a_pink_drz	Tiles A Pink	1	1341	1341	1341	0	EC90D5
+tiles_a_red_drz	Tiles A Red	1	1342	1342	1342	0	D3626C
+tiles_a_white_drz	Tiles A White	1	1343	1343	1343	0	E2E2E2
+tiles_a_yellow_drz	Tiles A Yellow	1	1344	1344	1344	0	D6C857
+wall_1_drz	Wall 1	1	1345	1345	1346	0	99BBBE
+wall_1a_drz	Wall 1A	1	1345	1345	1347	0	ACA78A
+wall_2_drz	Wall 2	1	1348	1348	1348	0	F0F2F4
+wall_2a_drz	Wall 2A	1	1349	1349	1349	0	D16E6D
+wall_2b_drz	Wall 2B	1	1350	1350	1350	0	D4D77D
+wall_2c_drz	Wall 2C	1	1351	1351	1351	0	7399CC
+wall_2d_drz	Wall 2D	1	1352	1352	1352	0	C97BCE
+wall_2e_drz	Wall 2E	1	1353	1353	1353	0	27272D
+wall_2f_drz	Wall 2F	1	1354	1354	1354	0	D6CAB0
+wall_2g_drz	Wall 2G	1	1355	1355	1355	0	7C7D7E
+wall_2h_drz	Wall 2H	1	1356	1356	1356	0	213555
+wall_2i_drz	Wall 2I	1	1357	1357	1357	0	86A788
+wall_2j_drz	Wall 2J	1	1358	1358	1358	0	FEB8E0
+wall_2k_drz	Wall 2K	1	1359	1359	1359	0	FEB4A2
+wall_2l_drz	Wall 2L	1	1360	1360	1360	0	7C444F
+wall_3_brown_drz	Wall 3 Brown	1	1361	1361	1361	0	AC8062
+wall_3_gray_drz	Wall 3 Gray	1	1362	1362	1362	0	5B6171
+wall_3_white_drz	Wall 3 White	1	1345	1345	1345	0	EFF1F4
+wall_4_drz	Wall 4	1	1363	1363	1363	0	F0F2F4
+wall_4a_drz	Wall 4A	1	1364	1364	1364	0	D16E6D
+wall_4b_drz	Wall 4B	1	1365	1365	1365	0	D4D77D
+wall_4c_drz	Wall 4C	1	1366	1366	1366	0	7399CC
+wall_4d_drz	Wall 4D	1	1367	1367	1367	0	C97BCE
+wall_4e_drz	Wall 4E	1	1368	1368	1368	0	27272D
+wall_4f_drz	Wall 4F	1	1369	1369	1369	0	D6CAB0
+wall_4g_drz	Wall 4G	1	1370	1370	1370	0	7C7D7E
+wall_4h_drz	Wall 4H	1	1371	1371	1371	0	213555
+wall_4i_drz	Wall 4I	1	1372	1372	1372	0	86A788
+wall_4j_drz	Wall 4J	1	1373	1373	1373	0	FEB8E0
+wall_4k_drz	Wall 4K	1	1374	1374	1374	0	FEB4A2
+wall_4l_drz	Wall 4L	1	1375	1375	1375	0	7C444F
+wall_blue_drz	Wall Blue	1	1376	1376	1376	0	2885DE
+wall_green_drz	Wall Green	1	1377	1377	1377	0	27D95D
+wall_red_drz	Wall Red	1	1378	1378	1378	0	D53521
+wall_yellow_drz	Wall Yellow	1	1379	1379	1379	0	D8BE25
+wall_5_drz	Wall 5	1	1380	1380	1380	0	928F89
+wall_5a_drz	Wall 5A	1	1381	1381	1381	0	8B8D83
+wall_5b_drz	Wall 5B	1	1382	1382	1382	0	8F8E86
+wall_5c_drz	Wall 5C	1	1383	1383	1383	0	888B80
+wall_6_drz	Wall 6	1	1384	1384	1384	0	474747
+wall_6a_drz	Wall 6A	1	1385	1385	1385	0	C6C6C6
+wall_6b_drz	Wall 6B	1	1386	1386	1386	0	44587A
+wall_6c_drz	Wall 6C	1	1387	1387	1387	0	736154
+wall_6d_drz	Wall 6D	1	1388	1388	1388	0	3E5F3F
+wall_6e_drz	Wall 6E	1	1389	1389	1389	0	5D0007
+wall_6f_drz	Wall 6F	1	1390	1390	1390	0	AF2B00
+wall_7_drz	Wall 7	1	1391	1391	1391	0	999999
+wall_7a_drz	Wall 7A	1	1392	1392	1392	0	9C9C9C
+wall_7b_drz	Wall 7B	1	1393	1393	1393	0	9C9C9C
+wall_7c_drz	Wall 7C	1	1394	1394	1394	0	9F9F9F
+wall_metal_drz	Wall Metal	1	1395	1395	1395	0	B1B3B5
+wood_black_drz	Wood Black	1	1396	1396	1396	0	262523
+wood_brown_drz	Wood Brown	1	1397	1397	1397	0	D5B89A
+wood_gray_drz	Wood Gray	1	1398	1398	1398	0	63605C
+wood_light_drz	Wood Light	1	1399	1399	1399	0	F8F8F8
+wood_vinyl_brown_drz	Wood Vinyl Brown	1	1400	1400	1400	0	8F7566
+wood_vinyl_dark_drz	Wood Vinyl Dark	1	1401	1401	1401	0	48240F
+wood_vinyl_light_drz	Wood Vinyl Light	1	1402	1402	1402	0	F1F1F1
+wood_vinyl_white_drz	Wood Vinyl White	1	1403	1403	1403	0	EAE0DB
+wood_white_drz	Wood White	1	1404	1404	1404	0	E8DED9
+asphalt_1_drz_stairs	Escada Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1a_drz_stairs	Escada Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_2_drz_stairs	Escada Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2a_drz_stairs	Escada Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_3_drz_stairs	Escada Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_4_drz_stairs	Escada Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4a_drz_stairs	Escada Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4b_drz_stairs	Escada Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4c_drz_stairs	Escada Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4d_drz_stairs	Escada Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_5_drz_stairs	Escada Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5a_drz_stairs	Escada Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5b_drz_stairs	Escada Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5c_drz_stairs	Escada Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_6_drz_stairs	Escada Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6a_drz_stairs	Escada Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_drz_stairs	Escada Asphalt	6	1170	1170	1170	0	545454
+asphalt_bike_1_drz_stairs	Escada Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_stairs	Escada Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_stairs	Escada Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_2_drz_stairs	Escada Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_3_drz_stairs	Escada Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_4_drz_stairs	Escada Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_stairs	Escada Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_stairs	Escada Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_stairs	Escada Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_5_drz_stairs	Escada Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_stairs	Escada Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_stairs	Escada Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_drz_stairs	Escada Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_blue_1_drz_stairs	Escada Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_stairs	Escada Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_stairs	Escada Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_stairs	Escada Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_stairs	Escada Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_stairs	Escada Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_stairs	Escada Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_stairs	Escada Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_stairs	Escada Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_stairs	Escada Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_stairs	Escada Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_stairs	Escada Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_drz_stairs	Escada Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bus_1_drz_stairs	Escada Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1a_drz_stairs	Escada Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1b_drz_stairs	Escada Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1c_drz_stairs	Escada Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_2_drz_stairs	Escada Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_3_drz_stairs	Escada Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_4_drz_stairs	Escada Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4a_drz_stairs	Escada Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_drz_stairs	Escada Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_gray_1_drz_stairs	Escada Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1a_drz_stairs	Escada Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_2_drz_stairs	Escada Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2a_drz_stairs	Escada Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_3_drz_stairs	Escada Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_4_drz_stairs	Escada Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4a_drz_stairs	Escada Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4b_drz_stairs	Escada Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4c_drz_stairs	Escada Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4d_drz_stairs	Escada Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_5_drz_stairs	Escada Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5a_drz_stairs	Escada Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5b_drz_stairs	Escada Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5c_drz_stairs	Escada Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_6_drz_stairs	Escada Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6a_drz_stairs	Escada Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_drz_stairs	Escada Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_pink_drz_stairs	Escada Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_white_drz_stairs	Escada Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_yellow_drz_stairs	Escada Asphalt Yellow	6	1240	1240	1240	0	CFC949
+container_a_drz_stairs	Escada Container A	6	1241	1241	1241	0	A56D28
+container_b_drz_stairs	Escada Container B	6	1242	1242	1242	0	608D2E
+container_c_drz_stairs	Escada Container C	6	1243	1243	1243	0	389C87
+container_d_drz_stairs	Escada Container D	6	1244	1244	1244	0	4A78A2
+container_drz_stairs	Escada Container	6	1245	1245	1245	0	8D3131
+container_e_drz_stairs	Escada Container E	6	1246	1246	1246	0	BCBCBC
+container_f_drz_stairs	Escada Container F	6	1247	1247	1247	0	202020
+embedded_track_drz_stairs	Escada Embedded Track	6	1248	1248	1248	0	AAA6A4
+escalator_block_a_drz_stairs	Escada Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_b_drz_stairs	Escada Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_c_drz_stairs	Escada Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_drz_stairs	Escada Escalator Block	6	1252	1252	1252	0	31363F
+marble_1_drz_stairs	Escada Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1a_drz_stairs	Escada Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1b_drz_stairs	Escada Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1c_drz_stairs	Escada Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_white_drz_stairs	Escada Marble White	6	1257	1257	1257	0	EDEDED
+metal_drz_stairs	Escada Metal	6	1258	1258	1258	0	F1F2F3
+metal_gray_drz_stairs	Escada Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_rusted_a_drz_stairs	Escada Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_drz_stairs	Escada Metal Rusted	6	1261	1261	1261	0	E2CEBF
+monodeus_script_a_drz_stairs	Escada Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_adios_drz_stairs	Escada Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_coic_drz_stairs	Escada Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_dah_drz_stairs	Escada Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dou_drz_stairs	Escada Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_ga_drz_stairs	Escada Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_gard_drz_stairs	Escada Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gate_drz_stairs	Escada Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_geon_drz_stairs	Escada Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_grac_drz_stairs	Escada Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_guro_drz_stairs	Escada Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_hm_drz_stairs	Escada Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_i_drz_stairs	Escada Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_ii_drz_stairs	Escada Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_iii_drz_stairs	Escada Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_light_drz_stairs	Escada Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_mon_drz_stairs	Escada Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_moni_drz_stairs	Escada Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_monodeco_drz_stairs	Escada Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_moon_drz_stairs	Escada Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moongate_drz_stairs	Escada Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_mt_drz_stairs	Escada Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_nox_drz_stairs	Escada Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_orc_drz_stairs	Escada Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orca_drz_stairs	Escada Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orion_drz_stairs	Escada Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_pur_drz_stairs	Escada Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_req_drz_stairs	Escada Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_rod_drz_stairs	Escada Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_skar_drz_stairs	Escada Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_sol_drz_stairs	Escada Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_space_drz_stairs	Escada Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_v_drz_stairs	Escada Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_val_drz_stairs	Escada Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_vis_drz_stairs	Escada Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_x_drz_stairs	Escada Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_ysk_drz_stairs	Escada Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_zen_drz_stairs	Escada Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+sidewalk_6_drz_stairs	Escada Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6a_drz_stairs	Escada Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6b_drz_stairs	Escada Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_1_drz_stairs	Escada Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1a_drz_stairs	Escada Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_2_drz_stairs	Escada Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2a_drz_stairs	Escada Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_3_drz_stairs	Escada Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_4_drz_stairs	Escada Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_5_drz_stairs	Escada Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5a_drz_stairs	Escada Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5b_drz_stairs	Escada Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_drz_stairs	Escada Sidewalk	6	1312	1312	1312	0	A2A2A2
+tiles_black_drz_stairs	Escada Tiles Black	6	1313	1313	1313	0	878789
+tiles_blue_drz_stairs	Escada Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_green_drz_stairs	Escada Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_red_drz_stairs	Escada Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_white_drz_stairs	Escada Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_yellow_drz_stairs	Escada Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_1_drz_stairs	Escada Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1a_drz_stairs	Escada Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_2_drz_stairs	Escada Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2a_drz_stairs	Escada Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_3_drz_stairs	Escada Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3a_drz_stairs	Escada Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_4_drz_stairs	Escada Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4a_drz_stairs	Escada Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4b_drz_stairs	Escada Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4c_drz_stairs	Escada Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4d_drz_stairs	Escada Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4e_drz_stairs	Escada Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4f_drz_stairs	Escada Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4g_drz_stairs	Escada Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4h_drz_stairs	Escada Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4i_drz_stairs	Escada Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4j_drz_stairs	Escada Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4k_drz_stairs	Escada Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4l_drz_stairs	Escada Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_a_black_drz_stairs	Escada Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_blue_drz_stairs	Escada Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_green_drz_stairs	Escada Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_pink_drz_stairs	Escada Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_red_drz_stairs	Escada Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_white_drz_stairs	Escada Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_yellow_drz_stairs	Escada Tiles A Yellow	6	1344	1344	1344	0	D6C857
+wall_1_drz_stairs	Escada Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1a_drz_stairs	Escada Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_2_drz_stairs	Escada Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2a_drz_stairs	Escada Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2b_drz_stairs	Escada Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2c_drz_stairs	Escada Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2d_drz_stairs	Escada Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2e_drz_stairs	Escada Wall 2E	6	1353	1353	1353	0	27272D
+wall_2f_drz_stairs	Escada Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2g_drz_stairs	Escada Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2h_drz_stairs	Escada Wall 2H	6	1356	1356	1356	0	213555
+wall_2i_drz_stairs	Escada Wall 2I	6	1357	1357	1357	0	86A788
+wall_2j_drz_stairs	Escada Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2k_drz_stairs	Escada Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2l_drz_stairs	Escada Wall 2L	6	1360	1360	1360	0	7C444F
+wall_3_brown_drz_stairs	Escada Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_gray_drz_stairs	Escada Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_white_drz_stairs	Escada Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_4_drz_stairs	Escada Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4a_drz_stairs	Escada Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4b_drz_stairs	Escada Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4c_drz_stairs	Escada Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4d_drz_stairs	Escada Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4e_drz_stairs	Escada Wall 4E	6	1368	1368	1368	0	27272D
+wall_4f_drz_stairs	Escada Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4g_drz_stairs	Escada Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4h_drz_stairs	Escada Wall 4H	6	1371	1371	1371	0	213555
+wall_4i_drz_stairs	Escada Wall 4I	6	1372	1372	1372	0	86A788
+wall_4j_drz_stairs	Escada Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4k_drz_stairs	Escada Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4l_drz_stairs	Escada Wall 4L	6	1375	1375	1375	0	7C444F
+wall_blue_drz_stairs	Escada Wall Blue	6	1376	1376	1376	0	2885DE
+wall_green_drz_stairs	Escada Wall Green	6	1377	1377	1377	0	27D95D
+wall_red_drz_stairs	Escada Wall Red	6	1378	1378	1378	0	D53521
+wall_yellow_drz_stairs	Escada Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_5_drz_stairs	Escada Wall 5	6	1380	1380	1380	0	928F89
+wall_5a_drz_stairs	Escada Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5b_drz_stairs	Escada Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5c_drz_stairs	Escada Wall 5C	6	1383	1383	1383	0	888B80
+wall_6_drz_stairs	Escada Wall 6	6	1384	1384	1384	0	474747
+wall_6a_drz_stairs	Escada Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6b_drz_stairs	Escada Wall 6B	6	1386	1386	1386	0	44587A
+wall_6c_drz_stairs	Escada Wall 6C	6	1387	1387	1387	0	736154
+wall_6d_drz_stairs	Escada Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6e_drz_stairs	Escada Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6f_drz_stairs	Escada Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_7_drz_stairs	Escada Wall 7	6	1391	1391	1391	0	999999
+wall_7a_drz_stairs	Escada Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7b_drz_stairs	Escada Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7c_drz_stairs	Escada Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_metal_drz_stairs	Escada Wall Metal	6	1395	1395	1395	0	B1B3B5
+wood_black_drz_stairs	Escada Wood Black	6	1396	1396	1396	0	262523
+wood_brown_drz_stairs	Escada Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_gray_drz_stairs	Escada Wood Gray	6	1398	1398	1398	0	63605C
+wood_light_drz_stairs	Escada Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_vinyl_brown_drz_stairs	Escada Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_dark_drz_stairs	Escada Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_light_drz_stairs	Escada Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_white_drz_stairs	Escada Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_white_drz_stairs	Escada Wood White	6	1404	1404	1404	0	E8DED9
+asphalt_1_drz_slab	Laje Asphalt 1	6	1169	1170	1170	0	545454
+asphalt_1a_drz_slab	Laje Asphalt 1A	6	1171	1170	1170	0	545454
+asphalt_2_drz_slab	Laje Asphalt 2	6	1172	1170	1170	0	545454
+asphalt_2a_drz_slab	Laje Asphalt 2A	6	1173	1170	1170	0	545454
+asphalt_3_drz_slab	Laje Asphalt 3	6	1174	1170	1170	0	545454
+asphalt_4_drz_slab	Laje Asphalt 4	6	1175	1170	1170	0	545454
+asphalt_4a_drz_slab	Laje Asphalt 4A	6	1176	1170	1170	0	545454
+asphalt_4b_drz_slab	Laje Asphalt 4B	6	1177	1170	1170	0	545454
+asphalt_4c_drz_slab	Laje Asphalt 4C	6	1178	1170	1170	0	545454
+asphalt_4d_drz_slab	Laje Asphalt 4D	6	1179	1170	1170	0	545454
+asphalt_5_drz_slab	Laje Asphalt 5	6	1180	1170	1170	0	545454
+asphalt_5a_drz_slab	Laje Asphalt 5A	6	1181	1170	1170	0	545454
+asphalt_5b_drz_slab	Laje Asphalt 5B	6	1182	1170	1170	0	545454
+asphalt_5c_drz_slab	Laje Asphalt 5C	6	1183	1170	1170	0	545454
+asphalt_6_drz_slab	Laje Asphalt 6	6	1184	1170	1170	0	545454
+asphalt_6a_drz_slab	Laje Asphalt 6A	6	1185	1170	1170	0	545454
+asphalt_drz_slab	Laje Asphalt	6	1170	1170	1170	0	545454
+asphalt_bike_1_drz_slab	Laje Asphalt Bike 1	6	1186	1187	1187	0	3A8D78
+asphalt_bike_1a_drz_slab	Laje Asphalt Bike 1A	6	1188	1187	1187	0	3A8D78
+asphalt_bike_1b_drz_slab	Laje Asphalt Bike 1B	6	1189	1187	1187	0	3A8D78
+asphalt_bike_2_drz_slab	Laje Asphalt Bike 2	6	1190	1187	1187	0	3A8D78
+asphalt_bike_3_drz_slab	Laje Asphalt Bike 3	6	1191	1187	1187	0	3A8D78
+asphalt_bike_4_drz_slab	Laje Asphalt Bike 4	6	1192	1187	1187	0	3A8D78
+asphalt_bike_4a_drz_slab	Laje Asphalt Bike 4A	6	1193	1187	1187	0	3A8D78
+asphalt_bike_4b_drz_slab	Laje Asphalt Bike 4B	6	1194	1187	1187	0	3A8D78
+asphalt_bike_4c_drz_slab	Laje Asphalt Bike 4C	6	1195	1187	1187	0	3A8D78
+asphalt_bike_5_drz_slab	Laje Asphalt Bike 5	6	1196	1187	1187	0	3A8D78
+asphalt_bike_5a_drz_slab	Laje Asphalt Bike 5A	6	1197	1187	1187	0	3A8D78
+asphalt_bike_5b_drz_slab	Laje Asphalt Bike 5B	6	1198	1187	1187	0	3A8D78
+asphalt_bike_drz_slab	Laje Asphalt Bike	6	1187	1187	1187	0	3A8D78
+asphalt_bike_blue_1_drz_slab	Laje Asphalt Bike Blue 1	6	1199	1200	1200	0	3988D6
+asphalt_bike_blue_1a_drz_slab	Laje Asphalt Bike Blue 1A	6	1201	1200	1200	0	3988D6
+asphalt_bike_blue_1b_drz_slab	Laje Asphalt Bike Blue 1B	6	1202	1200	1200	0	3988D6
+asphalt_bike_blue_2_drz_slab	Laje Asphalt Bike Blue 2	6	1203	1200	1200	0	3988D6
+asphalt_bike_blue_3_drz_slab	Laje Asphalt Bike Blue 3	6	1204	1200	1200	0	3988D6
+asphalt_bike_blue_4_drz_slab	Laje Asphalt Bike Blue 4	6	1205	1200	1200	0	3988D6
+asphalt_bike_blue_4a_drz_slab	Laje Asphalt Bike Blue 4A	6	1206	1200	1200	0	3988D6
+asphalt_bike_blue_4b_drz_slab	Laje Asphalt Bike Blue 4B	6	1207	1200	1200	0	3988D6
+asphalt_bike_blue_4c_drz_slab	Laje Asphalt Bike Blue 4C	6	1208	1200	1200	0	3988D6
+asphalt_bike_blue_5_drz_slab	Laje Asphalt Bike Blue 5	6	1209	1200	1200	0	3988D6
+asphalt_bike_blue_5a_drz_slab	Laje Asphalt Bike Blue 5A	6	1210	1200	1200	0	3988D6
+asphalt_bike_blue_5b_drz_slab	Laje Asphalt Bike Blue 5B	6	1211	1200	1200	0	3988D6
+asphalt_bike_blue_drz_slab	Laje Asphalt Bike Blue	6	1200	1200	1200	0	3988D6
+asphalt_bus_1_drz_slab	Laje Asphalt Bus 1	6	1212	1213	1213	0	D3584E
+asphalt_bus_1a_drz_slab	Laje Asphalt Bus 1A	6	1214	1213	1213	0	D3584E
+asphalt_bus_1b_drz_slab	Laje Asphalt Bus 1B	6	1215	1213	1213	0	D3584E
+asphalt_bus_1c_drz_slab	Laje Asphalt Bus 1C	6	1216	1213	1213	0	D3584E
+asphalt_bus_2_drz_slab	Laje Asphalt Bus 2	6	1217	1213	1213	0	D3584E
+asphalt_bus_3_drz_slab	Laje Asphalt Bus 3	6	1218	1213	1213	0	D3584E
+asphalt_bus_4_drz_slab	Laje Asphalt Bus 4	6	1219	1213	1213	0	D3584E
+asphalt_bus_4a_drz_slab	Laje Asphalt Bus 4A	6	1220	1213	1213	0	D3584E
+asphalt_bus_drz_slab	Laje Asphalt Bus	6	1213	1213	1213	0	D3584E
+asphalt_gray_1_drz_slab	Laje Asphalt Gray 1	6	1221	1222	1222	0	878787
+asphalt_gray_1a_drz_slab	Laje Asphalt Gray 1A	6	1223	1222	1222	0	878787
+asphalt_gray_2_drz_slab	Laje Asphalt Gray 2	6	1224	1222	1222	0	878787
+asphalt_gray_2a_drz_slab	Laje Asphalt Gray 2A	6	1225	1222	1222	0	878787
+asphalt_gray_3_drz_slab	Laje Asphalt Gray 3	6	1226	1222	1222	0	878787
+asphalt_gray_4_drz_slab	Laje Asphalt Gray 4	6	1227	1222	1222	0	878787
+asphalt_gray_4a_drz_slab	Laje Asphalt Gray 4A	6	1228	1222	1222	0	878787
+asphalt_gray_4b_drz_slab	Laje Asphalt Gray 4B	6	1229	1222	1222	0	878787
+asphalt_gray_4c_drz_slab	Laje Asphalt Gray 4C	6	1230	1222	1222	0	878787
+asphalt_gray_4d_drz_slab	Laje Asphalt Gray 4D	6	1231	1222	1222	0	878787
+asphalt_gray_5_drz_slab	Laje Asphalt Gray 5	6	1232	1222	1222	0	878787
+asphalt_gray_5a_drz_slab	Laje Asphalt Gray 5A	6	1233	1222	1222	0	878787
+asphalt_gray_5b_drz_slab	Laje Asphalt Gray 5B	6	1234	1222	1222	0	878787
+asphalt_gray_5c_drz_slab	Laje Asphalt Gray 5C	6	1235	1222	1222	0	878787
+asphalt_gray_6_drz_slab	Laje Asphalt Gray 6	6	1236	1222	1222	0	878787
+asphalt_gray_6a_drz_slab	Laje Asphalt Gray 6A	6	1237	1222	1222	0	878787
+asphalt_gray_drz_slab	Laje Asphalt Gray	6	1222	1222	1222	0	878787
+asphalt_pink_drz_slab	Laje Asphalt Pink	6	1238	1238	1238	0	E07FC1
+asphalt_white_drz_slab	Laje Asphalt White	6	1239	1239	1239	0	E2E2E2
+asphalt_yellow_drz_slab	Laje Asphalt Yellow	6	1240	1240	1240	0	CFC949
+container_a_drz_slab	Laje Container A	6	1241	1241	1241	0	A56D28
+container_b_drz_slab	Laje Container B	6	1242	1242	1242	0	608D2E
+container_c_drz_slab	Laje Container C	6	1243	1243	1243	0	389C87
+container_d_drz_slab	Laje Container D	6	1244	1244	1244	0	4A78A2
+container_drz_slab	Laje Container	6	1245	1245	1245	0	8D3131
+container_e_drz_slab	Laje Container E	6	1246	1246	1246	0	BCBCBC
+container_f_drz_slab	Laje Container F	6	1247	1247	1247	0	202020
+embedded_track_drz_slab	Laje Embedded Track	6	1248	1248	1248	0	AAA6A4
+escalator_block_a_drz_slab	Laje Escalator Block A	6	1249	1249	1249	0	354342
+escalator_block_b_drz_slab	Laje Escalator Block B	6	1250	1250	1250	0	333C40
+escalator_block_c_drz_slab	Laje Escalator Block C	6	1251	1251	1251	0	333C41
+escalator_block_drz_slab	Laje Escalator Block	6	1252	1252	1252	0	31363F
+marble_1_drz_slab	Laje Marble 1	6	1253	1253	1253	0	ECECEC
+marble_1a_drz_slab	Laje Marble 1A	6	1254	1254	1254	0	F1F1F1
+marble_1b_drz_slab	Laje Marble 1B	6	1255	1255	1255	0	CDCDCD
+marble_1c_drz_slab	Laje Marble 1C	6	1256	1256	1256	0	9B9B9B
+marble_white_drz_slab	Laje Marble White	6	1257	1257	1257	0	EDEDED
+metal_drz_slab	Laje Metal	6	1258	1258	1258	0	F1F2F3
+metal_gray_drz_slab	Laje Metal Gray	6	1259	1259	1259	0	3F3D45
+metal_rusted_a_drz_slab	Laje Metal Rusted A	6	1260	1260	1260	0	985145
+metal_rusted_drz_slab	Laje Metal Rusted	6	1261	1261	1261	0	E2CEBF
+monodeus_script_a_drz_slab	Laje Monodeus Script A	6	1262	1262	1262	0	D0AF87
+monodeus_script_adios_drz_slab	Laje Monodeus Script Adios	6	1263	1263	1263	0	CFAF87
+monodeus_script_coic_drz_slab	Laje Monodeus Script Coic	6	1264	1264	1264	0	CFAF87
+monodeus_script_dah_drz_slab	Laje Monodeus Script Dah	6	1265	1265	1265	0	D0AF87
+monodeus_script_dou_drz_slab	Laje Monodeus Script Dou	6	1266	1266	1266	0	CFAF87
+monodeus_script_ga_drz_slab	Laje Monodeus Script Ga	6	1267	1267	1267	0	D0B087
+monodeus_script_gard_drz_slab	Laje Monodeus Script Gard	6	1268	1268	1268	0	CDAC85
+monodeus_script_gate_drz_slab	Laje Monodeus Script Gate	6	1269	1269	1269	0	D0B088
+monodeus_script_geon_drz_slab	Laje Monodeus Script Geon	6	1270	1270	1270	0	D0AF87
+monodeus_script_grac_drz_slab	Laje Monodeus Script Grac	6	1271	1271	1271	0	CFAE86
+monodeus_script_guro_drz_slab	Laje Monodeus Script Guro	6	1272	1272	1272	0	CEAD86
+monodeus_script_hm_drz_slab	Laje Monodeus Script Hm	6	1273	1273	1273	0	D0B087
+monodeus_script_i_drz_slab	Laje Monodeus Script I	6	1274	1274	1274	0	D0B087
+monodeus_script_ii_drz_slab	Laje Monodeus Script Ii	6	1275	1275	1275	0	CFAF87
+monodeus_script_iii_drz_slab	Laje Monodeus Script Iii	6	1276	1276	1276	0	CFAE87
+monodeus_script_light_drz_slab	Laje Monodeus Script Light	6	1277	1277	1277	0	D0B087
+monodeus_script_mon_drz_slab	Laje Monodeus Script Mon	6	1278	1278	1278	0	CEAD86
+monodeus_script_moni_drz_slab	Laje Monodeus Script Moni	6	1279	1279	1279	0	CEAD86
+monodeus_script_monodeco_drz_slab	Laje Monodeus Script Monodeco	6	1280	1280	1280	0	D0AF87
+monodeus_script_moon_drz_slab	Laje Monodeus Script Moon	6	1281	1281	1281	0	D0B087
+monodeus_script_moongate_drz_slab	Laje Monodeus Script Moongate	6	1282	1282	1282	0	D0AF87
+monodeus_script_mt_drz_slab	Laje Monodeus Script Mt	6	1283	1283	1283	0	CEAE86
+monodeus_script_nox_drz_slab	Laje Monodeus Script Nox	6	1284	1284	1284	0	CFAF87
+monodeus_script_orc_drz_slab	Laje Monodeus Script Orc	6	1285	1285	1285	0	D0B087
+monodeus_script_orca_drz_slab	Laje Monodeus Script Orca	6	1286	1286	1286	0	CEAD86
+monodeus_script_orion_drz_slab	Laje Monodeus Script Orion	6	1287	1287	1287	0	CFAF87
+monodeus_script_pur_drz_slab	Laje Monodeus Script Pur	6	1288	1288	1288	0	D0B087
+monodeus_script_req_drz_slab	Laje Monodeus Script Req	6	1289	1289	1289	0	CDAC85
+monodeus_script_rod_drz_slab	Laje Monodeus Script Rod	6	1290	1290	1290	0	CEAD86
+monodeus_script_skar_drz_slab	Laje Monodeus Script Skar	6	1291	1291	1291	0	CFAF87
+monodeus_script_sol_drz_slab	Laje Monodeus Script Sol	6	1292	1292	1292	0	CDAC85
+monodeus_script_space_drz_slab	Laje Monodeus Script Space	6	1293	1293	1293	0	D0B087
+monodeus_script_v_drz_slab	Laje Monodeus Script V	6	1294	1294	1294	0	D0B087
+monodeus_script_val_drz_slab	Laje Monodeus Script Val	6	1295	1295	1295	0	CEAD86
+monodeus_script_vis_drz_slab	Laje Monodeus Script Vis	6	1296	1296	1296	0	CFAF87
+monodeus_script_x_drz_slab	Laje Monodeus Script X	6	1297	1297	1297	0	D0B087
+monodeus_script_ysk_drz_slab	Laje Monodeus Script Ysk	6	1298	1298	1298	0	CFAF87
+monodeus_script_zen_drz_slab	Laje Monodeus Script Zen	6	1299	1299	1299	0	D0AF87
+sidewalk_6_drz_slab	Laje Sidewalk 6	6	1300	1300	1300	0	848484
+sidewalk_6a_drz_slab	Laje Sidewalk 6A	6	1301	1301	1301	0	7E7E7E
+sidewalk_6b_drz_slab	Laje Sidewalk 6B	6	1302	1302	1302	0	6E6E6E
+sidewalk_1_drz_slab	Laje Sidewalk 1	6	1303	1303	1303	0	A39B97
+sidewalk_1a_drz_slab	Laje Sidewalk 1A	6	1304	1304	1304	0	4E4E4E
+sidewalk_2_drz_slab	Laje Sidewalk 2	6	1305	1305	1305	0	9298A6
+sidewalk_2a_drz_slab	Laje Sidewalk 2A	6	1306	1306	1306	0	D2675B
+sidewalk_3_drz_slab	Laje Sidewalk 3	6	1307	1307	1307	0	9C9C9C
+sidewalk_4_drz_slab	Laje Sidewalk 4	6	1308	1308	1308	0	BDBDBD
+sidewalk_5_drz_slab	Laje Sidewalk 5	6	1309	1309	1309	0	E8E2D8
+sidewalk_5a_drz_slab	Laje Sidewalk 5A	6	1310	1310	1310	0	A4A8B5
+sidewalk_5b_drz_slab	Laje Sidewalk 5B	6	1311	1311	1311	0	BC4D4F
+sidewalk_drz_slab	Laje Sidewalk	6	1312	1312	1312	0	A2A2A2
+tiles_black_drz_slab	Laje Tiles Black	6	1313	1313	1313	0	878789
+tiles_blue_drz_slab	Laje Tiles Blue	6	1314	1314	1314	0	8BB9E6
+tiles_green_drz_slab	Laje Tiles Green	6	1315	1315	1315	0	95E19C
+tiles_red_drz_slab	Laje Tiles Red	6	1316	1316	1316	0	D1828C
+tiles_white_drz_slab	Laje Tiles White	6	1317	1317	1317	0	CFD4DA
+tiles_yellow_drz_slab	Laje Tiles Yellow	6	1318	1318	1318	0	DFD997
+tiles_1_drz_slab	Laje Tiles 1	6	1319	1319	1319	0	EBEBEB
+tiles_1a_drz_slab	Laje Tiles 1A	6	1320	1320	1320	0	8E939E
+tiles_2_drz_slab	Laje Tiles 2	6	1321	1321	1321	0	EDEDED
+tiles_2a_drz_slab	Laje Tiles 2A	6	1322	1322	1322	0	8A8F99
+tiles_3_drz_slab	Laje Tiles 3	6	1323	1323	1323	0	ECECEC
+tiles_3a_drz_slab	Laje Tiles 3A	6	1324	1324	1324	0	898E99
+tiles_4_drz_slab	Laje Tiles 4	6	1325	1325	1325	0	D6D6D6
+tiles_4a_drz_slab	Laje Tiles 4A	6	1326	1326	1326	0	7F7F7F
+tiles_4b_drz_slab	Laje Tiles 4B	6	1327	1327	1327	0	444444
+tiles_4c_drz_slab	Laje Tiles 4C	6	1328	1328	1328	0	B74646
+tiles_4d_drz_slab	Laje Tiles 4D	6	1329	1329	1329	0	DB8C4F
+tiles_4e_drz_slab	Laje Tiles 4E	6	1330	1330	1330	0	E7D35D
+tiles_4f_drz_slab	Laje Tiles 4F	6	1331	1331	1331	0	A2E461
+tiles_4g_drz_slab	Laje Tiles 4G	6	1332	1332	1332	0	6EF1DE
+tiles_4h_drz_slab	Laje Tiles 4H	6	1333	1333	1333	0	5D9BE3
+tiles_4i_drz_slab	Laje Tiles 4I	6	1334	1334	1334	0	5459EB
+tiles_4j_drz_slab	Laje Tiles 4J	6	1335	1335	1335	0	D64DD5
+tiles_4k_drz_slab	Laje Tiles 4K	6	1336	1336	1336	0	F4A6BF
+tiles_4l_drz_slab	Laje Tiles 4L	6	1337	1337	1337	0	72262D
+tiles_a_black_drz_slab	Laje Tiles A Black	6	1338	1338	1338	0	242424
+tiles_a_blue_drz_slab	Laje Tiles A Blue	6	1339	1339	1339	0	4EA2B3
+tiles_a_green_drz_slab	Laje Tiles A Green	6	1340	1340	1340	0	70CE60
+tiles_a_pink_drz_slab	Laje Tiles A Pink	6	1341	1341	1341	0	EC90D5
+tiles_a_red_drz_slab	Laje Tiles A Red	6	1342	1342	1342	0	D3626C
+tiles_a_white_drz_slab	Laje Tiles A White	6	1343	1343	1343	0	E2E2E2
+tiles_a_yellow_drz_slab	Laje Tiles A Yellow	6	1344	1344	1344	0	D6C857
+wall_1_drz_slab	Laje Wall 1	6	1345	1345	1346	0	99BBBE
+wall_1a_drz_slab	Laje Wall 1A	6	1345	1345	1347	0	ACA78A
+wall_2_drz_slab	Laje Wall 2	6	1348	1348	1348	0	F0F2F4
+wall_2a_drz_slab	Laje Wall 2A	6	1349	1349	1349	0	D16E6D
+wall_2b_drz_slab	Laje Wall 2B	6	1350	1350	1350	0	D4D77D
+wall_2c_drz_slab	Laje Wall 2C	6	1351	1351	1351	0	7399CC
+wall_2d_drz_slab	Laje Wall 2D	6	1352	1352	1352	0	C97BCE
+wall_2e_drz_slab	Laje Wall 2E	6	1353	1353	1353	0	27272D
+wall_2f_drz_slab	Laje Wall 2F	6	1354	1354	1354	0	D6CAB0
+wall_2g_drz_slab	Laje Wall 2G	6	1355	1355	1355	0	7C7D7E
+wall_2h_drz_slab	Laje Wall 2H	6	1356	1356	1356	0	213555
+wall_2i_drz_slab	Laje Wall 2I	6	1357	1357	1357	0	86A788
+wall_2j_drz_slab	Laje Wall 2J	6	1358	1358	1358	0	FEB8E0
+wall_2k_drz_slab	Laje Wall 2K	6	1359	1359	1359	0	FEB4A2
+wall_2l_drz_slab	Laje Wall 2L	6	1360	1360	1360	0	7C444F
+wall_3_brown_drz_slab	Laje Wall 3 Brown	6	1361	1361	1361	0	AC8062
+wall_3_gray_drz_slab	Laje Wall 3 Gray	6	1362	1362	1362	0	5B6171
+wall_3_white_drz_slab	Laje Wall 3 White	6	1345	1345	1345	0	EFF1F4
+wall_4_drz_slab	Laje Wall 4	6	1363	1363	1363	0	F0F2F4
+wall_4a_drz_slab	Laje Wall 4A	6	1364	1364	1364	0	D16E6D
+wall_4b_drz_slab	Laje Wall 4B	6	1365	1365	1365	0	D4D77D
+wall_4c_drz_slab	Laje Wall 4C	6	1366	1366	1366	0	7399CC
+wall_4d_drz_slab	Laje Wall 4D	6	1367	1367	1367	0	C97BCE
+wall_4e_drz_slab	Laje Wall 4E	6	1368	1368	1368	0	27272D
+wall_4f_drz_slab	Laje Wall 4F	6	1369	1369	1369	0	D6CAB0
+wall_4g_drz_slab	Laje Wall 4G	6	1370	1370	1370	0	7C7D7E
+wall_4h_drz_slab	Laje Wall 4H	6	1371	1371	1371	0	213555
+wall_4i_drz_slab	Laje Wall 4I	6	1372	1372	1372	0	86A788
+wall_4j_drz_slab	Laje Wall 4J	6	1373	1373	1373	0	FEB8E0
+wall_4k_drz_slab	Laje Wall 4K	6	1374	1374	1374	0	FEB4A2
+wall_4l_drz_slab	Laje Wall 4L	6	1375	1375	1375	0	7C444F
+wall_blue_drz_slab	Laje Wall Blue	6	1376	1376	1376	0	2885DE
+wall_green_drz_slab	Laje Wall Green	6	1377	1377	1377	0	27D95D
+wall_red_drz_slab	Laje Wall Red	6	1378	1378	1378	0	D53521
+wall_yellow_drz_slab	Laje Wall Yellow	6	1379	1379	1379	0	D8BE25
+wall_5_drz_slab	Laje Wall 5	6	1380	1380	1380	0	928F89
+wall_5a_drz_slab	Laje Wall 5A	6	1381	1381	1381	0	8B8D83
+wall_5b_drz_slab	Laje Wall 5B	6	1382	1382	1382	0	8F8E86
+wall_5c_drz_slab	Laje Wall 5C	6	1383	1383	1383	0	888B80
+wall_6_drz_slab	Laje Wall 6	6	1384	1384	1384	0	474747
+wall_6a_drz_slab	Laje Wall 6A	6	1385	1385	1385	0	C6C6C6
+wall_6b_drz_slab	Laje Wall 6B	6	1386	1386	1386	0	44587A
+wall_6c_drz_slab	Laje Wall 6C	6	1387	1387	1387	0	736154
+wall_6d_drz_slab	Laje Wall 6D	6	1388	1388	1388	0	3E5F3F
+wall_6e_drz_slab	Laje Wall 6E	6	1389	1389	1389	0	5D0007
+wall_6f_drz_slab	Laje Wall 6F	6	1390	1390	1390	0	AF2B00
+wall_7_drz_slab	Laje Wall 7	6	1391	1391	1391	0	999999
+wall_7a_drz_slab	Laje Wall 7A	6	1392	1392	1392	0	9C9C9C
+wall_7b_drz_slab	Laje Wall 7B	6	1393	1393	1393	0	9C9C9C
+wall_7c_drz_slab	Laje Wall 7C	6	1394	1394	1394	0	9F9F9F
+wall_metal_drz_slab	Laje Wall Metal	6	1395	1395	1395	0	B1B3B5
+wood_black_drz_slab	Laje Wood Black	6	1396	1396	1396	0	262523
+wood_brown_drz_slab	Laje Wood Brown	6	1397	1397	1397	0	D5B89A
+wood_gray_drz_slab	Laje Wood Gray	6	1398	1398	1398	0	63605C
+wood_light_drz_slab	Laje Wood Light	6	1399	1399	1399	0	F8F8F8
+wood_vinyl_brown_drz_slab	Laje Wood Vinyl Brown	6	1400	1400	1400	0	8F7566
+wood_vinyl_dark_drz_slab	Laje Wood Vinyl Dark	6	1401	1401	1401	0	48240F
+wood_vinyl_light_drz_slab	Laje Wood Vinyl Light	6	1402	1402	1402	0	F1F1F1
+wood_vinyl_white_drz_slab	Laje Wood Vinyl White	6	1403	1403	1403	0	EAE0DB
+wood_white_drz_slab	Laje Wood White	6	1404	1404	1404	0	E8DED9

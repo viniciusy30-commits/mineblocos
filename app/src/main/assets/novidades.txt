@@ -1,3 +1,10 @@
+#id 2026-10-18-a
+#titulo Addon monoDeco: cubos, escadas e lajes
+- 236 blocos do addon monoDeco (asfalto, pisos, azulejos, paredes, madeiras, mármores, metais...)
+- Cada bloco ganhou versão em escada e em laje (coloque mirando na metade de cima para inverter)
+- A escada sobe na direção em que você olha
+- Mundos antigos continuam funcionando
+
 #id 2026-10-17-h
 #titulo Só blocos de construção
 - Inventário agora mostra apenas blocos de construção (pedra, madeira, tijolos, vidro, concreto, lã, cobre, quartzo etc.)

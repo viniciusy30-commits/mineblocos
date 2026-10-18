@@ -508,8 +508,8 @@ class GameRenderer(
         }
         if (intersectsPlayer(bx, by, bz) && Reg.solid(blk)) return
         var meta = face
-        if (Shapes.isSlab(blk)) {
-            meta = if (h.ny == -1 || (h.ny == 0 && frac > 0.5f)) Shapes.M_UPPER else 0
+        if (Shapes.isSlab(blk) || Shapes.isStairs(blk)) {
+            meta = face or (if (h.ny == -1 || (h.ny == 0 && frac > 0.5f)) Shapes.M_UPPER else 0)
         }
         world.set(bx, by, bz, blk, meta)
         punch = 1f

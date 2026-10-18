@@ -172,6 +172,7 @@ object Reg {
         if (!ok(b)) return false
         val k = ids[b]
         if (k == "stone_slab") return true
+        if (kinds[b] == K_MODEL && (k.endsWith("_drz_stairs") || k.endsWith("_drz_slab"))) return true
         if (kinds[b] != K_CUBE) return false
         if (k.endsWith("_ore") || k in NOT_BUILDING) return false
         return true
