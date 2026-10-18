@@ -155,7 +155,32 @@ object Reg {
     /** IDs de todos os registros de um dos tipos dados. */
     fun list(vararg k: Int): IntArray = (1 until count).filter { kinds[it] in k }.toIntArray()
 
-    fun placeable(b: Int): Boolean = ok(b) && kinds[b] != K_ITEM && kinds[b] != K_HIDDEN
+    /** Chaves de blocos que não são de construção (estações, colmeias, decoração, minérios, texturas auxiliares). */
+    private val NOT_BUILDING = setOf(
+        "bedrock", "bee_nest", "bee_nest_front_honey", "beehive", "beehive_front_honey",
+        "blast_furnace", "furnace", "smoker", "crafter", "crafting_table", "fletcher_table",
+        "honey", "honeycomb", "slime", "sponge", "sponge_wet", "hay_block", "pumpkin", "pumpkin_white", "melon",
+        "ochre_froglight", "pearlescent_froglight", "verdant_froglight", "shroomlight", "sculk",
+        "end_gateway", "budding_amethyst", "powder_snow", "magma", "bone_block",
+        "mushroom_block_inside", "mushroom_block_skin_brown", "mushroom_block_skin_red",
+        "grass_side_snowed", "log_top_normal_weak", "planks_mer_weak", "planks_normal_weak",
+        "dirt_with_roots", "muddy_mangrove_roots", "mangrove_roots", "ancient_debris", "gilded_blackstone"
+    )
+
+    /** Bloco de construção: cubo cheio (ou laje de pedra) que não seja minério, estação ou decoração. */
+    fun building(b: Int): Boolean {
+        if (!ok(b)) return false
+        val k = ids[b]
+        if (k == "stone_slab") return true
+        if (kinds[b] != K_CUBE) return false
+        if (k.endsWith("_ore") || k in NOT_BUILDING) return false
+        return true
+    }
+
+    /** IDs dos blocos de construção (para o inventário). */
+    fun buildingList(): IntArray = (1 until count).filter { building(it) }.toIntArray()
+
+    fun placeable(b: Int): Boolean = building(b)
 
     fun isPlant(b: Int): Boolean = ok(b) && (kinds[b] == K_CROSS || kinds[b] == K_FLAT)
 }

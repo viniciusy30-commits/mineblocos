@@ -46,20 +46,16 @@ class HudView(
     private var invX = 0f; private var invY = 0f; private var invR = 0f
     private var cubes: IntArray = IntArray(0)
     private var invTab = 0
-    private val tabNames = arrayOf("Blocos", "Plantas", "Itens")
+    private val tabNames = arrayOf("Blocos")
 
     init {
         Prefs.hotbar(ctx)?.let { v ->
-            if (v.all { it > 0 && it < Reg.count }) for (i in 0 until 10) s.hotbar[i] = v[i]
+            if (v.all { Reg.building(it) }) for (i in 0 until 10) s.hotbar[i] = v[i]
         }
     }
 
     private fun loadTab() {
-        cubes = when (invTab) {
-            0 -> Reg.list(Reg.K_CUBE, Reg.K_MODEL).filter { !Shapes.spriteItem(it) }.toIntArray()
-            1 -> Reg.list(Reg.K_CROSS, Reg.K_FLAT)
-            else -> Reg.list(Reg.K_ITEM, Reg.K_MODEL).filter { Reg.kind(it) == Reg.K_ITEM || Shapes.spriteItem(it) }.toIntArray()
-        }
+        cubes = Reg.buildingList()
         invScroll = 0f
     }
     private val pl get() = dp(24f)
@@ -153,9 +149,6 @@ class HudView(
 
     private fun invTouchDown(id: Int, x: Float, y: Float) {
         if (y in pt..(pt + dp(30f)) && x in pl..pr) {
-            val tw = dp(66f)
-            val i = ((x - (pr - tw * 3f - dp(6f))) / tw).toInt()
-            if (x >= pr - tw * 3f - dp(6f) && i in 0..2 && i != invTab) { invTab = i; loadTab() }
             return
         }
         if (y >= hbTop - dp(4f) && x >= hbLeft && x <= hbLeft + slot * 10f) {
@@ -428,17 +421,6 @@ class HudView(
         text.textAlign = Paint.Align.LEFT
         text.textSize = dp(13f)
         c.drawText("Inventário", pl + dp(10f), pt + dp(20f), text)
-        val tw = dp(66f)
-        text.textAlign = Paint.Align.CENTER
-        text.textSize = dp(11f)
-        for (i in 0 until 3) {
-            val tl = pr - tw * 3f - dp(6f) + i * tw
-            val tr = RectF(tl + 2f, pt + dp(5f), tl + tw - 2f, pt + dp(27f))
-            paint.style = Paint.Style.FILL
-            paint.color = if (i == invTab) 0xAA57C84D.toInt() else 0x55FFFFFF
-            c.drawRoundRect(tr, dp(4f), dp(4f), paint)
-            c.drawText(tabNames[i], (tl + tw / 2f), pt + dp(20f), text)
-        }
         text.textAlign = Paint.Align.LEFT
 
         val gridTop = pt + dp(30f)
