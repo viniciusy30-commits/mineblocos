@@ -437,10 +437,12 @@ class GameRenderer(
         val h = raycast(s.px, s.py + eyeH(), s.pz, dx, dy, dz, 5f)
         hit = h
         s.targetName = if (h != null) Blocks.name(world.get(h.x, h.y, h.z)) else null
+        s.targetShow = if (h != null && world.isShowcase(h.x, h.y, h.z)) world.get(h.x, h.y, h.z) else 0
+        s.areaName = world.areaAt(floor(s.px).toInt(), floor(s.pz).toInt())
 
         punch = max(0f, punch - dt * 4f)
         handWave = 0f
-        if (s.breaking && h != null) {
+        if (s.breaking && h != null && s.targetShow == 0) {
             handWave = abs(sin(timeAcc * 14f))
             if (hasBreak && h.x == breakX && h.y == breakY && h.z == breakZ) {
                 val b = world.get(h.x, h.y, h.z)

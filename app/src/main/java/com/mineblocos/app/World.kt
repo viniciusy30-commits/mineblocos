@@ -16,6 +16,20 @@ class World(val seed: Int) {
 
     val blocks = ShortArray(W * H * D)
 
+    /** Trecho da vitrine com o nome da categoria (mostrado na tela quando o jogador passa por ele). */
+    class Area(val name: String, val x0: Int, val x1: Int, val z0: Int, val z1: Int)
+
+    /** Células que pertencem à vitrine: não podem ser quebradas nem substituídas. */
+    val showcase = java.util.BitSet(W * H * D)
+    val areas = ArrayList<Area>()
+
+    fun isShowcase(x: Int, y: Int, z: Int): Boolean = inBounds(x, y, z) && showcase.get(idx(x, y, z))
+
+    fun areaAt(x: Int, z: Int): String? {
+        for (a in areas) if (x >= a.x0 && x <= a.x1 && z >= a.z0 && z <= a.z1) return a.name
+        return null
+    }
+
     /** Estado do bloco: bits 0-1 direção, 2 aberto, 3 metade de cima, 4 segunda parte (laje dupla, cama, porta). */
     val meta = ByteArray(W * H * D)
     val dirty = BooleanArray(CX * CZ)
@@ -175,6 +189,7 @@ class World(val seed: Int) {
 
     fun set(x: Int, y: Int, z: Int, b: Int, m: Int = 0) {
         if (!inBounds(x, y, z)) return
+        if (showcase.get(idx(x, y, z))) return // bloco da vitrine é indestrutível
         val pb = blocks[idx(x, y, z)].toInt()
         blocks[idx(x, y, z)] = b.toShort()
         meta[idx(x, y, z)] = m.toByte()
@@ -210,6 +225,13 @@ class World(val seed: Int) {
         if (!inBounds(x, y, z)) return
         blocks[idx(x, y, z)] = b.toShort()
         meta[idx(x, y, z)] = m.toByte()
+    }
+
+    /** Escreve um bloco da vitrine (e o marca como indestrutível). */
+    fun putShowcase(x: Int, y: Int, z: Int, b: Int, m: Int = 0) {
+        if (!inBounds(x, y, z)) return
+        put(x, y, z, b, m)
+        showcase.set(idx(x, y, z))
     }
 
     /** Mundo totalmente plano, sem rios nem árvores, com a vitrine de todos os blocos. */

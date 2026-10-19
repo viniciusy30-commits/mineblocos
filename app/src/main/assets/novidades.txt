@@ -1,3 +1,13 @@
+#id 2026-10-19-a
+#titulo Vitrine por categorias, texturas corrigidas e botão Copiar
+- Texturas corrigidas: minérios (diamante, esmeralda, ouro, redstone, nether ouro), ametista e ametista budding, colmeias com mel, magma, sculk, prismarina rough e end gateway apareciam só como moldura
+- Vitrine reorganizada por categorias (terreno, pedras, minérios, madeiras, vidros, cores, Nether, End, plantas, ruas, cozinha, sala, quarto, banheiro, lojas, eletrônicos...) com as peças do mesmo tamanho juntas
+- O nome da categoria aparece no topo da tela quando você passa por ela
+- Blocos da vitrine são indestrutíveis (segurar para quebrar não faz nada)
+- Mirando num bloco da vitrine aparece o botão COPIAR: ele vai para o slot selecionado da hotbar para você testar colocando
+- Formas derivadas (escadas, lajes, círculos...) mostram 1 ou 2 poses; gire ao colocar para ver as outras
+- Crie um mundo novo para ver a vitrine nova (mundos antigos continuam como estavam)
+
 #id 2026-10-18-g
 #titulo Vitrine mais leve
 - Faces escondidas dos móveis (encostadas no chão ou em blocos vizinhos) deixaram de ser desenhadas

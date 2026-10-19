@@ -8,7 +8,7 @@ leaves	Folhas	1	8	8	8	1	3E8037
 sand	Areia	1	9	9	9	0	F0D280
 glass	Vidro	1	10	10	10	3	E7F4F7
 brick	Tijolos	1	11	11	11	0	A2563B
-amethyst_block	Bloco de Ametista	1	12	12	12	1	9669C3
+amethyst_block	Bloco de Ametista	1	12	12	12	0	9669C3
 ancient_debris	Ancient Debris	1	13	13	14	0	643D31
 azalea_leaves	Folhas de Azalea	1	15	15	15	1	526822
 azalea_leaves_flowers	Azalea Folhas Flowers	1	16	16	16	1	5F6932
@@ -23,14 +23,14 @@ bamboo_planks	Tábuas de Bambu	1	26	26	26	0	BC9D49
 basalt	Basalto	1	27	27	28	0	5B555F
 bedrock	Rocha Matriz	1	29	29	29	0	515151
 bee_nest	Bee Nest	1	30	31	32	0	C9993F
-bee_nest_front_honey	Bee Nest Front Mel	1	33	33	33	1	E0A439
+bee_nest_front_honey	Bee Nest Front Mel	1	33	33	33	0	E0A439
 beehive	Beehive	1	34	35	36	0	A87743
-beehive_front_honey	Beehive Front Mel	1	37	37	37	1	E7A95E
+beehive_front_honey	Beehive Front Mel	1	37	37	37	0	E7A95E
 blackstone	Pedra Negra	1	38	38	39	0	292329
 blast_furnace	Blast Fornalha	1	40	41	42	0	6C6B6B
 blue_ice	Azul Gelo	1	43	43	43	0	60ADFB
 bone_block	Bloco de Osso	1	44	44	45	0	D9D3AF
-budding_amethyst	Budding Ametista	1	46	46	46	1	42266F
+budding_amethyst	Budding Ametista	1	46	46	46	0	42266F
 bush	Arbusto	7	47	47	47	1	95A7B4
 cactus	Cacto	6	48	49	50	1	7C9F34
 cactus_flower	Flor de Cacto	7	51	51	51	1	EA86A3
@@ -96,13 +96,13 @@ crimson_roots	Raízes Carmesim	7	117	117	117	1	790502
 crimson_roots_pot	Carmesim Roots Vaso	6	118	118	118	1	7D0603
 cut_copper	Cortado Cobre	1	119	119	119	0	BA583B
 diamond_block	Bloco de Diamante	1	120	120	120	0	4AE3EB
-diamond_ore	Minério de Diamante	1	121	121	121	1	709B9F
+diamond_ore	Minério de Diamante	1	121	121	121	0	709B9F
 dirt_podzol	Terra Podzol	1	122	122	123	0	663D1A
 dirt_with_roots	Terra With Roots	1	124	124	124	0	98623F
 emerald_block	Bloco de Esmeralda	1	125	125	125	0	23C050
-emerald_ore	Minério de Esmeralda	1	126	126	126	1	50925E
+emerald_ore	Minério de Esmeralda	1	126	126	126	0	50925E
 end_bricks	Tijolos de End	1	127	127	127	0	EFE091
-end_gateway	End Gateway	1	128	128	128	1	07151E
+end_gateway	End Gateway	1	128	128	128	0	07151E
 end_stone	End Pedra	1	129	129	129	0	F2EE84
 exposed_chiseled_copper	Exposed Talhado Cobre	1	130	130	130	0	A56346
 exposed_copper	Exposed Cobre	1	131	131	131	0	B26E4C
@@ -158,7 +158,7 @@ glazed_terracotta_yellow	Esmaltada Terracota Amarelo	1	184	184	184	0	E6BD5D
 glow_lichen	Brilhante Lichen	3	185	185	185	1	57875D
 glowstone	Pedra Luminosa	1	186	186	186	0	C09055
 gold_block	Bloco de Ouro	1	187	187	187	0	F0BD39
-gold_ore	Minério de Ouro	1	188	188	188	1	A4834D
+gold_ore	Minério de Ouro	1	188	188	188	0	A4834D
 grass_block_snow	Grama Bloco Neve	1	189	189	189	0	BFAC9D
 grass_path	Grama Path	6	190	190	191	0	936532
 grass_side_snowed	Grama Side Snowed	1	192	192	192	0	BFAC9D
@@ -196,7 +196,7 @@ log_birch	Tronco de Bétula	1	228	228	229	0	CEBA93
 log_jungle	Tronco de Selva	1	230	230	231	0	7C572E
 log_spruce	Tronco de Abeto	1	232	232	233	0	5C3C1B
 log_top_normal_weak	Tronco de Top Normal Weak	1	234	234	234	0	8080FE
-magma	Magma	1	235	235	235	1	5E1310
+magma	Magma	1	235	235	235	0	5E1310
 mangrove_leaves	Folhas de Mangue	1	236	236	236	1	8093A7
 mangrove_leaves_opaque	Mangue Folhas Opaque	1	237	237	237	0	8092A5
 mangrove_log	Tronco de Mangue	1	238	238	239	0	532B19
@@ -223,7 +223,7 @@ mushroom_red_3d	Cogumelo Vermelho 3D	7	263	263	264	1	DF5839
 mushroom_red_3d_side_pot	Cogumelo Vermelho 3D Side Vaso	7	265	265	265	1	E34833
 mycelium	Micélio	1	266	266	267	0	7B6561
 nether_brick	Nether Tijolo	1	268	268	268	0	2B1116
-nether_gold_ore	Minério de Nether Ouro	1	269	269	269	1	9A441A
+nether_gold_ore	Minério de Nether Ouro	1	269	269	269	0	9A441A
 nether_sprouts	Brotos do Nether	7	270	270	270	1	119874
 netherite_block	Bloco de Netherita	1	271	271	271	0	423C3E
 netherrack	Netherrack	1	272	272	272	0	6D1217
@@ -259,7 +259,7 @@ potted_flowering_azalea_bush	Potted Flowering Azalea Bush	6	306	306	307	1	717536
 powder_snow	Pó de Neve	1	308	308	308	0	EEF8FB
 prismarine_bricks	Tijolos de Prismarina	1	309	309	309	0	4FAF95
 prismarine_dark	Prismarina Escuro	1	310	310	310	0	325849
-prismarine_rough	Prismarina Rough	1	311	311	311	1	529E9D
+prismarine_rough	Prismarina Rough	1	311	311	311	0	529E9D
 pumpkin	Abóbora	1	312	312	313	0	B86614
 pumpkin_white	Abóbora Branco	1	314	314	314	0	C0AB87
 purpur_block	Bloco de Purpur	1	315	315	315	0	BB69C4
@@ -278,7 +278,7 @@ red_sandstone	Vermelho Sandstone	1	332	333	332	0	D06C25
 red_sandstone_carved	Vermelho Sandstone Carved	1	334	334	334	0	CA6924
 red_sandstone_smooth	Vermelho Sandstone Liso	1	335	335	335	0	CF6D26
 redstone_block	Bloco de Redstone	1	336	336	336	1	AF0B07
-redstone_ore	Minério de Redstone	1	337	337	337	1	7A4F4F
+redstone_ore	Minério de Redstone	1	337	337	337	0	7A4F4F
 resin_block	Bloco de Resin	1	338	338	338	0	DD6314
 resin_bricks	Tijolos de Resin	1	339	339	339	0	D05A14
 resin_clump	Resin Clump	3	340	340	340	1	DA6814
@@ -286,7 +286,7 @@ sandstone	Sandstone	1	341	342	341	0	F0D389
 sandstone_carved	Sandstone Carved	1	343	343	343	0	EAC780
 sandstone_smooth	Sandstone Liso	1	344	344	344	0	EFD088
 scuk_shrieker_can_summon_inner	Scuk Shrieker Can Summon Inner	7	345	345	345	1	3A5A54
-sculk	Sculk	1	346	346	346	1	081C24
+sculk	Sculk	1	346	346	346	0	081C24
 sea_pickle	Mar Pickle	6	347	347	347	1	555D1D
 short_dry_grass	Short Dry Grama	2	348	348	348	1	C79F61
 shroomlight	Shroomlight	1	349	349	349	0	F38A3E

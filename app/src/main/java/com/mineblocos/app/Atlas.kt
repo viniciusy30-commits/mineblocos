@@ -13,6 +13,8 @@ object Atlas {
 
     fun init(c: Context) { appCtx = c.applicationContext }
 
+    fun context(): Context? = appCtx
+
     val bitmap: Bitmap by lazy { load() }
 
     private fun load(): Bitmap {
@@ -232,7 +234,8 @@ object Reg {
         return if (c in 'A'..'Z') c else '#'
     }
 
-    fun placeable(b: Int): Boolean = building(b)
+    /** Pode ir para a hotbar e ser colocado (inclui minérios, plantas e demais itens da vitrine). */
+    fun placeable(b: Int): Boolean = ok(b) && kinds[b] != K_ITEM && kinds[b] != K_HIDDEN && b != waterId
 
     fun isPlant(b: Int): Boolean = ok(b) && (kinds[b] == K_CROSS || kinds[b] == K_FLAT)
 }

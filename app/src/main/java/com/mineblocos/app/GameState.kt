@@ -24,6 +24,10 @@ class GameState {
     @Volatile var ready = false
     @Volatile var onGround = false
     @Volatile var targetName: String? = null
+    /** Id do bloco da vitrine que está na mira (0 se não for da vitrine): habilita o botão COPIAR. */
+    @Volatile var targetShow = 0
+    /** Nome da categoria da vitrine onde o jogador está. */
+    @Volatile var areaName: String? = null
 
     var sens = 0.005f
     var showFps = false

@@ -50,7 +50,7 @@ class HudView(
 
     init {
         Prefs.hotbar(ctx)?.let { v ->
-            if (v.all { Reg.building(it) }) for (i in 0 until 10) s.hotbar[i] = v[i]
+            if (v.all { Reg.placeable(it) }) for (i in 0 until 10) s.hotbar[i] = v[i]
         }
     }
 
@@ -101,6 +101,12 @@ class HudView(
     private var moved = false
     private var longFired = false
 
+    // botão COPIAR (aparece ao mirar num bloco da vitrine)
+    private var copyId = -1
+    private var copyBlk = 0
+    private val copyRect = RectF()
+    private var copyFlash = 0L
+
     // animação
     private var selPos = 0f
     private var nameAlpha = 1f
@@ -145,6 +151,7 @@ class HudView(
                 touchUp(e.getPointerId(e.actionIndex))
             }
             MotionEvent.ACTION_CANCEL -> {
+                copyId = -1
                 touchUp(joyId); touchUp(lookId); touchUp(jumpId); touchUp(downId)
             }
         }
@@ -153,7 +160,7 @@ class HudView(
 
     private fun resetControls() {
         removeCallbacks(longPress)
-        joyId = -1; lookId = -1; jumpId = -1; downId = -1
+        joyId = -1; lookId = -1; jumpId = -1; downId = -1; copyId = -1
         s.moveX = 0f; s.moveZ = 0f; s.jump = false; s.down = false; s.breaking = false
         longFired = false
     }
@@ -227,6 +234,10 @@ class HudView(
             s.selected = ((x - hbLeft) / slot).toInt().coerceIn(0, 9)
             return
         }
+        if (s.targetShow != 0 && copyId == -1 && copyRect.contains(x, y)) {
+            copyId = id; copyBlk = s.targetShow
+            return
+        }
         if (inCircle(x, y, jumpX, jumpY, jumpR)) { jumpId = id; s.jump = true; return }
         if (inCircle(x, y, flyX, flyY, flyR)) { s.flying = !s.flying; if (!s.flying) s.down = false; return }
         if (inCircle(x, y, camX, camY, camR)) { s.camMode = (s.camMode + 1) % 3; return }
@@ -269,6 +280,15 @@ class HudView(
 
     private fun touchUp(id: Int) {
         if (id < 0) return
+        if (id == copyId) {
+            copyId = -1
+            if (copyBlk != 0 && Reg.placeable(copyBlk)) {
+                s.hotbar[s.selected] = copyBlk
+                Prefs.setHotbar(context, s.hotbar)
+                copyFlash = SystemClock.uptimeMillis()
+            }
+            return
+        }
         if (invOpen || id == invId) { invTouchUp(id); return }
         if (id == joyId) {
             joyId = -1; s.moveX = 0f; s.moveZ = 0f
@@ -399,6 +419,35 @@ class HudView(
                 dp(12f), dp(40f), text
             )
         }
+        val an = s.areaName
+        if (an != null) {
+            text.textAlign = Paint.Align.CENTER
+            text.textSize = dp(13f)
+            text.alpha = 225
+            c.drawText("Vitrine  •  $an", w / 2f, dp(24f), text)
+            text.alpha = 255
+        }
+        if (s.targetShow != 0 && !invOpen) {
+            val bw = dp(104f); val bh = dp(34f)
+            copyRect.set(cx - bw / 2f, cy + dp(50f), cx + bw / 2f, cy + dp(50f) + bh)
+            val done = s.hotbar[s.selected] == s.targetShow
+            paint.style = Paint.Style.FILL
+            paint.color = if (copyId != -1) 0xFF3E9A36.toInt() else if (done) 0xCC2F7D2A.toInt() else 0xCC57C84D.toInt()
+            c.drawRoundRect(copyRect, dp(8f), dp(8f), paint)
+            paint.style = Paint.Style.STROKE
+            paint.strokeWidth = dp(2f)
+            paint.color = 0xFFFFFFFF.toInt()
+            c.drawRoundRect(copyRect, dp(8f), dp(8f), paint)
+            text.textAlign = Paint.Align.CENTER
+            text.textSize = dp(12f)
+            c.drawText(if (done) "COPIADO" else "COPIAR", cx, copyRect.centerY() + dp(4.5f), text)
+            text.textSize = dp(10f)
+            text.alpha = 200
+            c.drawText("indestrutível", cx, copyRect.bottom + dp(14f), text)
+            text.alpha = 255
+        } else {
+            copyRect.setEmpty()
+        }
         val tn = s.targetName
         if (tn != null) {
             text.textAlign = Paint.Align.CENTER
@@ -413,7 +462,7 @@ class HudView(
             text.textAlign = Paint.Align.CENTER
             text.textSize = dp(12f)
             text.alpha = (a * 255).toInt()
-            c.drawText("Toque: colocar  •  Segure: quebrar  •  Arraste: olhar", w / 2f, dp(26f), text)
+            c.drawText("Toque: colocar  •  Segure: quebrar  •  Arraste: olhar", w / 2f, dp(52f), text)
             text.alpha = 255
         }
 

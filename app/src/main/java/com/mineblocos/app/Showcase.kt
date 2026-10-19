@@ -5,9 +5,9 @@ import kotlin.math.max
 import kotlin.math.min
 
 /**
- * Vitrine do mundo plano: todos os blocos do jogo (e decorações) em todos os ângulos, estados e tamanhos.
- * Duas faixas: sul (a partir do ponto de partida, no sentido de +Z) e norte. Cada seção termina com
- * uma coluna luminosa para você achar o começo dela voando.
+ * Vitrine do mundo plano: todos os blocos do jogo (e decorações) organizados por categoria
+ * (assets/vitrine.tsv). Cada categoria começa com uma coluna luminosa e o nome dela aparece no topo da tela
+ * quando você passa por ali. Os blocos da vitrine são indestrutíveis e podem ser copiados para a hotbar.
  */
 object Showcase {
     private const val SINGLE = 0
@@ -96,14 +96,18 @@ object Showcase {
         if (kd == Reg.K_ITEM || kd == Reg.K_HIDDEN) return null
         if (kd != Reg.K_MODEL) { l.add(Pose(0, SINGLE)); return Slot(b, l, 2) }
         // modelos do jogo / formas derivadas dos cubos do addon
+        // (formas derivadas mostram só 1–2 poses: dá para girar ao colocar; assim cabem todos os materiais)
+        val der = derived(k)
         when {
-            k.endsWith("_drz_stairs") || k.endsWith("_drz_circulo") || k.endsWith("_drz_curva") ->
-                for (up in intArrayOf(0, 8)) for (f in 0 until 4) l.add(Pose(f or up, SINGLE))
-            Shapes.isSlab(b) -> { l.add(Pose(0, SINGLE)); l.add(Pose(8, SINGLE)); l.add(Pose(16, SINGLE)) }
+            k.endsWith("_drz_stairs") || k.endsWith("_drz_circulo") || k.endsWith("_drz_curva") -> {
+                l.add(Pose(0, SINGLE)); l.add(Pose(8, SINGLE))
+            }
+            Shapes.isSlab(b) -> { l.add(Pose(0, SINGLE)); l.add(Pose(8, SINGLE)); if (!der) l.add(Pose(16, SINGLE)) }
             k.endsWith("_drz_pilar") -> l.add(Pose(0, SINGLE))
-            k.endsWith("_drz_muro") -> { l.add(Pose(0, SINGLE)); l.add(Pose(1, SINGLE)) }
+            k.endsWith("_drz_muro") -> { l.add(Pose(0, SINGLE)); if (!der) l.add(Pose(1, SINGLE)) }
             Shapes.isDoor(b) -> for (open in intArrayOf(0, 4)) for (f in 0 until 4) l.add(Pose(f or open, DOOR_V))
             Shapes.isBed(b) -> for (f in 0 until 4) l.add(Pose(f, BED))
+            der -> l.add(Pose(0, SINGLE))
             else -> {
                 for (f in 0 until 4) l.add(Pose(f, SINGLE))
                 if (Shapes.interactive(b)) for (f in 0 until 4) l.add(Pose(f or 4, SINGLE))
@@ -112,32 +116,63 @@ object Showcase {
         return Slot(b, l, if (Shapes.isBed(b)) 3 else 2)
     }
 
-    private fun groups(): List<List<Int>> {
-        val g = ArrayList<List<Int>>()
-        val simple = ArrayList<Int>(); val models = ArrayList<Int>()
+    private class Section(val name: String, val ids: List<Int>)
+
+    private fun eligible(b: Int): Boolean {
+        val kd = Reg.kind(b)
+        return b > 0 && kd != Reg.K_ITEM && kd != Reg.K_HIDDEN
+    }
+
+    /** Lê as categorias de assets/vitrine.tsv. Tudo que não estiver listado cai em "Diversos". */
+    private fun sections(): List<Section> {
+        val out = ArrayList<Section>()
+        val used = HashSet<Int>()
+        var lines: List<String> = emptyList()
+        try {
+            val c = Atlas.context()
+            if (c != null) lines = c.assets.open("vitrine.tsv").bufferedReader(Charsets.UTF_8).use { it.readLines() }
+        } catch (e: Throwable) {
+            android.util.Log.e("Mineblocos", "vitrine.tsv ausente; usando categoria única", e)
+        }
+        var name = ""
+        var cur = ArrayList<Int>()
+        fun flush() {
+            if (name.isNotEmpty() && cur.isNotEmpty()) out.add(Section(name, cur))
+            cur = ArrayList()
+        }
+        for (raw in lines) {
+            val line = raw.trimEnd()
+            if (line.isEmpty()) continue
+            if (line[0] == '#') {
+                flush()
+                name = line.substring(1).trim()
+            } else if (line[0] == '@') {
+                flush()
+                name = ""
+                val p = line.split('\t')
+                if (p.size >= 3) {
+                    val l = ArrayList<Int>()
+                    for (b in 1 until Reg.count) {
+                        if (Reg.kind(b) == Reg.K_MODEL && Reg.key(b).endsWith(p[1])) { l.add(b); used.add(b) }
+                    }
+                    if (l.isNotEmpty()) out.add(Section(p[2], l))
+                }
+            } else {
+                val b = Reg.id(line.trim())
+                if (b > 0 && eligible(b) && used.add(b)) cur.add(b)
+            }
+        }
+        flush()
+        val rest = ArrayList<Int>()
         for (b in 1 until Reg.count) {
-            val kd = Reg.kind(b)
-            if (kd == Reg.K_ITEM || kd == Reg.K_HIDDEN) continue
-            val k = Reg.key(b)
-            if (Models3D.has(k)) continue
-            if (kd != Reg.K_MODEL) simple.add(b)
-            else if (!derived(k)) models.add(b)
+            if (eligible(b) && !used.contains(b) && !derived(Reg.key(b))) rest.add(b)
         }
-        g.add(simple); g.add(models)
-        for (suf in FAMILIES) {
-            val l = ArrayList<Int>()
-            for (b in 1 until Reg.count) if (Reg.kind(b) == Reg.K_MODEL && Reg.key(b).endsWith(suf)) l.add(b)
-            g.add(l)
-        }
-        val xs = ArrayList<Int>()
-        for (b in 1 until Reg.count) if (Models3D.has(Reg.key(b))) xs.add(b)
-        xs.sortBy { Reg.name(it).lowercase() }
-        g.add(xs)
-        return g
+        if (rest.isNotEmpty()) out.add(Section("Diversos", rest))
+        return out
     }
 
     private fun put(w: World, x: Int, y: Int, z: Int, id: Int, meta: Int) {
-        if (x in 0 until World.W && y in 0 until World.H && z in 0 until World.D) w.put(x, y, z, id, meta)
+        w.putShowcase(x, y, z, id, meta)
     }
 
     private fun place(w: World, id: Int, pose: Pose, x: Int, y: Int, z: Int, sp: Int) {
@@ -179,43 +214,58 @@ object Showcase {
         val y = ground + 1
         val x0 = 8
         val x1 = World.W - 8
-        // faixas: sul (a partir do ponto de partida) e norte
-        val bands = arrayOf(intArrayOf(282, World.D - 8), intArrayOf(8, 230), intArrayOf(232, 250))
+        // faixas: sul (a partir do ponto de partida, deixando o spawn livre), norte e uma faixa central
+        val bands = arrayOf(intArrayOf(270, World.D - 8), intArrayOf(8, 230), intArrayOf(232, 250))
         var band = 0
         var cx = x0
         var cz = bands[0][0]
         var rowH = 0
+        var lineStart = cz
+        var lineName = ""
         val marker = Reg.id("glowstone")
         var full = false
+        w.areas.clear()
+
+        fun closeLine() {
+            if (rowH > 0) w.areas.add(World.Area(lineName, x0 - 6, x1 + 4, lineStart, lineStart + rowH))
+        }
 
         fun newLine(gap: Int) {
+            closeLine()
             cx = x0
             cz += rowH + gap
             rowH = 0
+            lineStart = cz
         }
 
-        for (g in groups()) {
+        for (sec in sections()) {
             if (full) break
-            // começo de seção: nova linha e uma coluna luminosa como marco
+            // começo de categoria: nova linha e uma coluna luminosa como marco
             if (cx != x0 || rowH > 0) newLine(1)
+            lineName = sec.name
             if (marker > 0) for (i in 0 until 10) put(w, x0 - 4, y + i, cz, marker, 0)
-            for (b in g) {
-                val slot = slotFor(b) ?: continue
+            // peças de mesmo tamanho ficam juntas (linhas uniformes), em ordem alfabética
+            val slots = ArrayList<Slot>()
+            for (b in sec.ids) { val sl = slotFor(b); if (sl != null) slots.add(sl) }
+            slots.sortWith(compareBy<Slot>({ it.sp }, { Reg.name(it.id).lowercase() }))
+            for (slot in slots) {
                 val sw = slot.width
                 if (cx + sw > x1) newLine(0)
                 if (cz + slot.sp > bands[band][1]) {
+                    closeLine()
                     band++
                     if (band >= bands.size) { full = true; break }
-                    cx = x0; cz = bands[band][0]; rowH = 0
+                    cx = x0; cz = bands[band][0]; rowH = 0; lineStart = cz
                 }
                 var px = cx
                 for (p in slot.poses) {
-                    place(w, b, p, px, y, cz, slot.sp)
+                    place(w, slot.id, p, px, y, cz, slot.sp)
                     px += slot.pw(p)
                 }
                 cx += sw
                 rowH = max(rowH, slot.sp)
             }
         }
+        closeLine()
     }
 }
