@@ -19,10 +19,14 @@ object Showcase {
     private const val DOOR_V = 6    // porta original (baixo + cima)
     private const val BED = 7
 
+    /** Espaço extra entre peças diferentes e entre fileiras (somado ao 1 bloco que já existia = 4 blocos livres). */
+    private const val GAP = 3
+
     private class Pose(val meta: Int, val mode: Int)
     private class Slot(val id: Int, val poses: List<Pose>, val sp: Int) {
         fun pw(p: Pose): Int = if (p.mode == LINE) max(sp, 3) + 1 else sp
-        val width: Int get() = poses.sumOf { pw(it) }
+        /** Largura da peça com todas as poses (1 bloco entre elas) + o espaço até a próxima peça. */
+        val width: Int get() = poses.sumOf { pw(it) } + GAP
     }
 
     private val FAMILIES = arrayOf(
@@ -216,10 +220,26 @@ object Showcase {
     /** Monta a vitrine só com as categorias em [selected] (null = todas). */
     fun build(w: World, ground: Int, selected: Set<String>? = null) {
         val y = ground + 1
-        val x0 = 8
-        val x1 = World.W - 8
+        // categorias escolhidas, já com as peças ordenadas (mesmo tamanho juntas, ordem alfabética)
+        val prepared = ArrayList<Pair<Section, List<Slot>>>()
+        var area = 0L
+        var maxW = 0
+        for (sec in sections()) {
+            if (selected != null && sec.name !in selected) continue
+            val slots = ArrayList<Slot>()
+            for (b in sec.ids) { val sl = slotFor(b); if (sl != null) slots.add(sl) }
+            slots.sortWith(compareBy<Slot>({ it.sp }, { Reg.name(it.id).lowercase() }))
+            if (slots.isEmpty()) continue
+            for (sl in slots) { area += sl.width.toLong() * (sl.sp + GAP + 1); maxW = max(maxW, sl.width) }
+            prepared.add(Pair(sec, slots))
+        }
+        // vitrine sempre junto do spawn: largura proporcional ao que foi escolhido, centrada no ponto de partida
+        val full0 = World.W - 16
+        val rowW = min(full0, max(maxW + 8, max(Math.sqrt(area * 1.5).toInt(), (area / 200).toInt())))
+        val x0 = max(8, (World.W - rowW) / 2)
+        val x1 = min(World.W - 8, x0 + rowW)
         // faixas: sul (a partir do ponto de partida, deixando o spawn livre), norte e uma faixa central
-        val bands = arrayOf(intArrayOf(270, World.D - 8), intArrayOf(8, 230), intArrayOf(232, 250))
+        val bands = arrayOf(intArrayOf(262, World.D - 8), intArrayOf(8, 230), intArrayOf(232, 250))
         var band = 0
         var cx = x0
         var cz = bands[0][0]
@@ -242,17 +262,12 @@ object Showcase {
             lineStart = cz
         }
 
-        for (sec in sections()) {
+        for ((sec, slots) in prepared) {
             if (full) break
-            if (selected != null && sec.name !in selected) continue
             // começo de categoria: nova linha e uma coluna luminosa como marco
             if (cx != x0 || rowH > 0) newLine(1)
             lineName = sec.name
             if (marker > 0) for (i in 0 until 10) put(w, x0 - 4, y + i, cz, marker, 0)
-            // peças de mesmo tamanho ficam juntas (linhas uniformes), em ordem alfabética
-            val slots = ArrayList<Slot>()
-            for (b in sec.ids) { val sl = slotFor(b); if (sl != null) slots.add(sl) }
-            slots.sortWith(compareBy<Slot>({ it.sp }, { Reg.name(it.id).lowercase() }))
             for (slot in slots) {
                 val sw = slot.width
                 if (cx + sw > x1) newLine(0)
@@ -268,7 +283,7 @@ object Showcase {
                     px += slot.pw(p)
                 }
                 cx += sw
-                rowH = max(rowH, slot.sp)
+                rowH = max(rowH, slot.sp + GAP)
             }
         }
         closeLine()

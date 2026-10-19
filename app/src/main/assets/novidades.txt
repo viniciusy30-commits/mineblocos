@@ -1,7 +1,8 @@
 #id 2026-10-19-b
 #titulo Vitrine por categorias escolhidas e botão dia/noite
 - Ao entrar num mundo novo, você escolhe quais categorias da vitrine quer ver (só elas são montadas, fica bem mais organizado)
-- Botão de engrenagem na tela (ou "Categorias da vitrine" no menu de pausa) para trocar as categorias a qualquer momento; a vitrine é refeita e você volta ao ponto de partida
+- Botão de engrenagem na tela (ou "Categorias da vitrine" no menu de pausa) para trocar as categorias a qualquer momento; a vitrine é refeita sempre colada no ponto de partida e você é levado para lá
+- Peças diferentes e fileiras da vitrine ficam a 4 blocos de distância (poses da mesma peça, 1 bloco)
 - Novo botão sol/lua no topo da tela para alternar entre dia e noite
 - Mundos novos começam sem vitrine até você escolher as categorias
 
