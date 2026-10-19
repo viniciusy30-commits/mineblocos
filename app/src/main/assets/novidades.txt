@@ -1,3 +1,10 @@
+#id 2026-10-19-e
+#titulo Animações do personagem refeitas do zero
+- Andar e correr agora seguem a distância percorrida (pé não escorrega), com passada, chute de calcanhar, torção do tronco, quique e inclinação ao acelerar e nas curvas
+- Pulo com squash & stretch: braços para cima na subida, flutuada no topo, queda com braços e pernas batendo e pouso amortecido com rebote
+- Voo novo: paira parado, inclina o corpo com a velocidade até a pose de Superman, mergulha, sobe e faz curvas inclinando o corpo
+- Nado com braçada alternada e corpo que acompanha a direção; golpe de braço com antecipação e impulso do corpo; agachar, sentar e ocioso mais vivos
+
 #id 2026-10-19-d
 #titulo Rio com água para nadar
 - Mundos novos têm um rio atravessando o mapa, com água translúcida de verdade
