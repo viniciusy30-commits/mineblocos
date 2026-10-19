@@ -1,3 +1,47 @@
+#id 2026-10-18-g
+#titulo Vitrine mais leve
+- Faces escondidas dos móveis (encostadas no chão ou em blocos vizinhos) deixaram de ser desenhadas
+- Chunks distantes liberam memória da GPU e voltam ao chegar perto
+- Chunks fora do campo de visão não são desenhados
+- Vitrine pula poses repetidas (estados sem efeito visual) e ganhou uma faixa extra de segurança
+
+#id 2026-10-18-f
+#titulo Mundo plano e vitrine de blocos
+- Mundo novo totalmente plano, sem rios e sem árvores
+- Vitrine com todos os blocos do jogo em todos os ângulos, estados e tamanhos (escadas e lajes de cima e de baixo, objetos abertos/fechados e ligados/desligados, conexões, portas de 2 e 3 blocos, objetos de vários blocos)
+- Duas faixas: uma ao sul do ponto de partida e outra ao norte; cada seção começa com uma coluna luminosa
+- Crie um mundo novo para ver a vitrine (mundos antigos continuam como estavam)
+
+#id 2026-10-18-e
+#titulo Luz de bloco, animações, portas e sentar
+- Luz de verdade: lâmpadas, luminárias e telas iluminam a volta à noite (até 15 blocos, como no Minecraft)
+- Texturas animadas do addon (semáforos, TVs, lareira, lava lamp, ventiladores, placas)
+- Portas de 2 ou 3 blocos, com espelho automático em portas duplas; tocar abre e fecha a porta toda
+- Toque em cadeiras, bancos e sofás para sentar (pule ou ande para levantar)
+- Colocação diagonal: mirando entre dois lados, o objeto fica na meia posição
+- Objetos empilháveis alternam entre principal e de cima
+- Mundos antigos continuam funcionando
+
+#id 2026-10-18-d
+#titulo Addon monoDeco: texturas originais, estados e itens
+- Todas as texturas dos móveis agora em resolução original (sem redução)
+- Cada objeto gira para o lado certo ao colocar, como no addon
+- Conexões automáticas: grades, balcões, postes e peças que se ligam aos vizinhos
+- Objetos de vários blocos (2 ou 3 de altura, largura ou fundo) são colocados e quebrados inteiros
+- Toque para abrir/fechar ou ligar/desligar objetos que têm esse estado
+- Peças presas na parede ajustam a frente ao colocar na lateral de um bloco
+- Partes "light" (lâmpadas, telas) brilham sem sombra
+- 90 itens do addon (chapéus, máscaras, câmeras, ferramentas) como objetos decorativos na aba Móveis
+- Mundos antigos continuam funcionando
+
+#id 2026-10-18-c
+#titulo Addon monoDeco: móveis e objetos
+- Mais de 3.000 móveis e objetos do addon (cadeiras, lâmpadas, placas, eletrônicos, bebidas, placas de rua, bancos...) com modelo 3D e textura próprios
+- Nova aba "Móveis" no inventário, em ordem alfabética, com índice por letra
+- Colisão e seleção seguem o modelo de cada objeto
+- Escadas verticais (esquerda e direita) para todos os 236 blocos
+- Mundos antigos continuam funcionando
+
 #id 2026-10-18-b
 #titulo Addon monoDeco: formas especiais
 - Círculo, curva, curva horizontal, diagonal, muro fino e ventilação para todos os 236 blocos

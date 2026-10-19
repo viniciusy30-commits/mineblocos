@@ -227,10 +227,82 @@ object Mesher {
         }
     }
 
+    /** Modelo 3D do addon: cada face usa o retângulo de textura da sua instância de material. */
+    private fun emitX(out: FloatList, xv: XVar, ox: Float, oy: Float, oz: Float, w: World?, cx: Int, cy: Int, cz: Int) {
+        val aw = Atlas.bitmap.width.toFloat()
+        val ah = Atlas.bitmap.height.toFloat()
+        val order = intArrayOf(0, 1, 2, 0, 2, 3)
+        val rw = FloatArray(24)
+        val star = xv.rects["*"]
+        for (q in xv.cubes) {
+            var mx = 0f; var my = 0f; var mz = 0f
+            for (i in 0 until 8) {
+                var wx = q.wor[i * 3]; val wy = q.wor[i * 3 + 1]; var wz = q.wor[i * 3 + 2]
+                for (r in 0 until xv.rot) { val nx = 1f - wz; val nz = wx; wx = nx; wz = nz }
+                rw[i * 3] = wx + xv.tx; rw[i * 3 + 1] = wy + xv.ty; rw[i * 3 + 2] = wz + xv.tz
+                mx += rw[i * 3]; my += rw[i * 3 + 1]; mz += rw[i * 3 + 2]
+            }
+            mx /= 8f; my /= 8f; mz /= 8f
+            for (fc in q.faces) {
+                val rect = xv.rects[fc.inst] ?: star ?: continue
+                val f = fc.f
+                val c = CORNERS[f]
+                var fx = 0f; var fy = 0f; var fz = 0f
+                for (k in 0 until 4) {
+                    val ci = (if (c[k * 3] == 1) 1 else 0) + (if (c[k * 3 + 1] == 1) 2 else 0) + (if (c[k * 3 + 2] == 1) 4 else 0)
+                    fx += rw[ci * 3]; fy += rw[ci * 3 + 1]; fz += rw[ci * 3 + 2]
+                }
+                val nx = fx / 4f - mx; val ny = fy / 4f - my; val nz = fz / 4f - mz
+                val idx = if (abs(ny) >= abs(nx) && abs(ny) >= abs(nz)) (if (ny > 0f) 0 else 1)
+                else if (abs(nx) >= abs(nz)) (if (nx > 0f) 2 else 3)
+                else (if (nz > 0f) 4 else 5)
+                // face encostada num bloco opaco vizinho (ou no chão): não aparece, não é desenhada
+                if (w != null) {
+                    val ax = fx / 4f; val ay = fy / 4f; val az = fz / 4f
+                    var hidden = false
+                    when (idx) {
+                        0 -> if (ay > 0.999f && ay < 1.001f) hidden = Reg.opaque(w.get(cx, cy + 1, cz))
+                        1 -> if (ay > -0.001f && ay < 0.001f) hidden = Reg.opaque(w.get(cx, cy - 1, cz))
+                        2 -> if (ax > 0.999f && ax < 1.001f) hidden = Reg.opaque(w.get(cx + 1, cy, cz))
+                        3 -> if (ax > -0.001f && ax < 0.001f) hidden = Reg.opaque(w.get(cx - 1, cy, cz))
+                        4 -> if (az > 0.999f && az < 1.001f) hidden = Reg.opaque(w.get(cx, cy, cz + 1))
+                        else -> if (az > -0.001f && az < 0.001f) hidden = Reg.opaque(w.get(cx, cy, cz - 1))
+                    }
+                    if (hidden) continue
+                }
+                // faces "light" são emissivas (lâmpadas, telas): sem sombreamento
+                val light = if (fc.inst == "light") 31f else SHADE[idx] * 0.97f
+                for (k in order) {
+                    val xi = c[k * 3]; val yi = c[k * 3 + 1]; val zi = c[k * 3 + 2]
+                    val ci = xi + 2 * yi + 4 * zi
+                    out.add(ox + rw[ci * 3])
+                    out.add(oy + rw[ci * 3 + 1])
+                    out.add(oz + rw[ci * 3 + 2])
+                    val a: Int; val b: Int
+                    when (f) {
+                        5 -> { a = 1 - xi; b = 1 - yi }
+                        4 -> { a = xi; b = 1 - yi }
+                        2 -> { a = 1 - zi; b = 1 - yi }
+                        3 -> { a = zi; b = 1 - yi }
+                        0 -> { a = xi; b = zi }
+                        else -> { a = xi; b = 1 - zi }
+                    }
+                    val u = (fc.u0 + a * (fc.u1 - fc.u0)).coerceIn(0f, 1f)
+                    val v = (fc.v0 + b * (fc.v1 - fc.v0)).coerceIn(0f, 1f)
+                    out.add((rect[0] + 0.02f + u * (rect[2] - 0.04f)) / aw)
+                    out.add((rect[1] + 0.02f + v * (rect[3] - 0.04f)) / ah)
+                    out.add(light)
+                }
+            }
+        }
+    }
+
     private fun emitModel(out: FloatList, m: Model, ox: Float, oy: Float, oz: Float, w: World?, cx: Int, cy: Int, cz: Int) {
         for (bx in m.boxes) emitBox(out, bx, ox, oy, oz, w, cx, cy, cz)
         val rc = m.rc
         if (rc != null && rc.isNotEmpty()) emitRot(out, m, rc, ox, oy, oz)
+        val xv = m.xv
+        if (xv != null) emitX(out, xv, ox, oy, oz, w, cx, cy, cz)
         if (m.cross >= 0) emitCross(out, ox, oy, oz, m.cross, m.crossScale, m.crossY)
     }
 
@@ -261,11 +333,16 @@ object Mesher {
         val out = FloatList(24000)
         val x0 = cx * World.CS
         val z0 = cz * World.CS
+        var ps = 0
+        var pl = 0
         for (y in 0 until World.H) {
             for (z in z0 until z0 + World.CS) {
                 for (x in x0 until x0 + World.CS) {
                     val b = w.get(x, y, z)
                     if (b == Blocks.AIR) continue
+                    if (pl > 0 && out.n > ps) applyLight(out, ps, out.n, pl)
+                    ps = out.n
+                    pl = w.lightAround(x, y, z)
                     if (Reg.kind(b) == Reg.K_CROSS) {
                         emitCross(out, x.toFloat(), y.toFloat(), z.toFloat(), Reg.tile(b, 2))
                         continue
@@ -305,7 +382,19 @@ object Mesher {
                 }
             }
         }
+        if (pl > 0 && out.n > ps) applyLight(out, ps, out.n, pl)
         return MeshData(out.a, out.n)
+    }
+
+    /** Luz de bloco: soma 2*nível à luz do vértice (o shader separa os dois). */
+    private fun applyLight(out: FloatList, start: Int, end: Int, l: Int) {
+        var i = start + 5
+        while (i < end) {
+            val v = out.a[i]
+            val cur = kotlin.math.floor(v * 0.5f).toInt()
+            if (l > cur) out.a[i] = v + 2f * (l - cur)
+            i += 6
+        }
     }
 
     /** Cubo 0..1 com sombreamento simples, para a "mão" do jogador. */

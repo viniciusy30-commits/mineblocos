@@ -14,6 +14,7 @@ class GameState {
     @Volatile var jump = false
     @Volatile var down = false
     @Volatile var flying = false
+    @Volatile var sitting = false
     @Volatile var breaking = false
     @Volatile var placeRequest = false
     @Volatile var selected = 0

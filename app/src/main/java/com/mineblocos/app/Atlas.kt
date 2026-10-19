@@ -124,6 +124,21 @@ object Reg {
         waterId = index["water"] ?: -1
         ready = true
         Shapes3D.load(c)
+        Models3D.load(c)
+        Anim3D.load(c)
+        emitArr = ByteArray(n)
+        val vanilla = mapOf(
+            "glowstone" to 15, "sea_lantern" to 15, "shroomlight" to 15, "jack_o_lantern" to 15,
+            "ochre_froglight" to 15, "pearlescent_froglight" to 15, "verdant_froglight" to 15,
+            "torch" to 14, "lantern" to 15, "redstone_lamp" to 15
+        )
+        for (i in 1 until n) {
+            val k = ids[i]
+            val m = Models3D.get(k)
+            if (m != null && m.emit > 0) emitArr[i] = m.emit.toByte()
+            val v = vanilla[k]
+            if (v != null) emitArr[i] = v.toByte()
+        }
     }
 
     private fun ok(b: Int) = b > 0 && b < count
@@ -142,6 +157,9 @@ object Reg {
     fun avg(b: Int): Int = if (ok(b)) avgs[b] else 0xFF808080.toInt()
 
     /** Cubo cheio e sem pixels transparentes. */
+    private var emitArr = ByteArray(0)
+    fun emission(b: Int): Int = if (b > 0 && b < emitArr.size) emitArr[b].toInt() else 0
+
     fun opaque(b: Int): Boolean = ok(b) && kinds[b] == K_CUBE && (flags[b] and 1) == 0
 
     /** Vidro, gelo, água: faces entre blocos iguais não são desenhadas. */
@@ -173,10 +191,12 @@ object Reg {
         if (!ok(b)) return false
         val k = ids[b]
         if (k == "stone_slab") return true
+        if (kinds[b] == K_MODEL && Models3D.has(k)) return true
         if (kinds[b] == K_MODEL && (k.endsWith("_drz_stairs") || k.endsWith("_drz_slab") ||
             k.endsWith("_drz_vslab") || k.endsWith("_drz_pilar") || k.endsWith("_drz_quinae") || k.endsWith("_drz_quinad") ||
             k.endsWith("_drz_circulo") || k.endsWith("_drz_curva") || k.endsWith("_drz_curvah") ||
-            k.endsWith("_drz_diagonal") || k.endsWith("_drz_ventila") || k.endsWith("_drz_muro"))) return true
+            k.endsWith("_drz_diagonal") || k.endsWith("_drz_ventila") || k.endsWith("_drz_muro") ||
+            k.endsWith("_drz_vescl") || k.endsWith("_drz_vescr"))) return true
         if (kinds[b] != K_CUBE) return false
         if (k.endsWith("_ore") || k in NOT_BUILDING) return false
         return true
@@ -189,16 +209,28 @@ object Reg {
     private fun category(b: Int): Int {
         val k = ids[b]
         if (k == "stone_slab") return 1
+        if (Models3D.has(k)) return 3
         return when {
             k.endsWith("_drz_stairs") || k.endsWith("_drz_slab") || k.endsWith("_drz_vslab") ||
-                k.endsWith("_drz_pilar") || k.endsWith("_drz_quinae") || k.endsWith("_drz_quinad") -> 1
+                k.endsWith("_drz_pilar") || k.endsWith("_drz_quinae") || k.endsWith("_drz_quinad") ||
+                k.endsWith("_drz_vescl") || k.endsWith("_drz_vescr") -> 1
             k.endsWith("_drz_circulo") || k.endsWith("_drz_curva") || k.endsWith("_drz_curvah") ||
                 k.endsWith("_drz_diagonal") || k.endsWith("_drz_ventila") || k.endsWith("_drz_muro") -> 2
             else -> 0
         }
     }
 
-    fun buildingList(tab: Int): IntArray = (1 until count).filter { building(it) && category(it) == tab }.toIntArray()
+    fun buildingList(tab: Int): IntArray {
+        val l = (1 until count).filter { building(it) && category(it) == tab }
+        // móveis e objetos: ordem alfabética (a aba tem índice por letra)
+        return if (tab == 3) l.sortedBy { names[it].lowercase() }.toIntArray() else l.toIntArray()
+    }
+
+    /** Letra inicial do nome (A..Z) ou '#'. */
+    fun initial(b: Int): Char {
+        val c = name(b).trim().firstOrNull()?.uppercaseChar() ?: '#'
+        return if (c in 'A'..'Z') c else '#'
+    }
 
     fun placeable(b: Int): Boolean = building(b)
 

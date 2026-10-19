@@ -181,7 +181,26 @@ class GameRenderer(
         draw()
     }
 
+    private var freeTick = 0
+
+    /** Libera as malhas de chunks distantes (memória da GPU); elas voltam ao chegar perto. */
+    private fun freeFarMeshes() {
+        if (++freeTick % 90 != 0) return
+        val lim = (renderDist + 4) * 16f
+        for (i in meshes.indices) {
+            val m = meshes[i] ?: continue
+            val dx = (i % World.CX) * 16 + 8 - s.px
+            val dz = (i / World.CX) * 16 + 8 - s.pz
+            if (dx * dx + dz * dz > lim * lim) {
+                GLES20.glDeleteBuffers(1, intArrayOf(m.vbo), 0)
+                meshes[i] = null
+                world.dirty[i] = true
+            }
+        }
+    }
+
     private fun rebuildChunks(budgetMs: Float) {
+        freeFarMeshes()
         val t0 = System.nanoTime()
         while (true) {
             var best = -1
@@ -225,7 +244,7 @@ class GameRenderer(
             val bk = world.get(ix, iy, iz)
             val mt = world.getMeta(ix, iy, iz)
             if (Shapes.boxCollide(bk)) {
-                for (q in Shapes.model(world, ix, iy, iz, bk, true).boxes) {
+                for (q in Shapes.collBoxes(world, ix, iy, iz, bk)) {
                     if (x + 0.3f > ix + q.x0 && x - 0.3f < ix + q.x1 &&
                         y + 1.8f > iy + q.y0 && y < iy + q.y1 &&
                         z + 0.3f > iz + q.z0 && z - 0.3f < iz + q.z1
@@ -364,6 +383,8 @@ class GameRenderer(
         s.onGround = ground
     }
 
+    private fun eyeH(): Float = if (s.sitting) 0.95f else 1.62f
+
     private fun update(dt: Float) {
         s.takeLook(look)
         s.yaw += look[0] * s.sens
@@ -390,7 +411,16 @@ class GameRenderer(
                 s.onGround = false
             }
         }
-        physics(dt)
+        if (s.sitting) {
+            if (s.jump || abs(s.moveX) > 0.5f || abs(s.moveZ) > 0.5f) {
+                s.sitting = false
+                s.vy = 0f
+                s.py += 0.6f
+            } else {
+                s.vx = 0f; s.vy = 0f; s.vz = 0f
+            }
+        }
+        if (!s.sitting) physics(dt)
         if (s.py < -20f) {
             s.py = (world.surfaceY(World.W / 2, World.D / 2) + 2).toFloat(); s.px = World.W / 2 + 0.5f; s.pz = World.D / 2 + 0.5f; s.vy = 0f
         }
@@ -404,7 +434,7 @@ class GameRenderer(
         val dx = sy * cp
         val dy = sin(s.pitch)
         val dz = -cy * cp
-        val h = raycast(s.px, s.py + 1.62f, s.pz, dx, dy, dz, 5f)
+        val h = raycast(s.px, s.py + eyeH(), s.pz, dx, dy, dz, 5f)
         hit = h
         s.targetName = if (h != null) Blocks.name(world.get(h.x, h.y, h.z)) else null
 
@@ -419,7 +449,27 @@ class GameRenderer(
                 if (breakProg >= 1f) {
                     spawnParticles(h.x, h.y, h.z, b)
                     val mb = world.getMeta(h.x, h.y, h.z)
-                    if (Shapes.isDoor(b)) {
+                    if (Shapes.isXModel(b) && (Models3D.get(Reg.key(b))?.hasDoor == true)) {
+                        val f0 = mb and 3
+                        var yy = h.y + 1
+                        while (world.get(h.x, yy, h.z) == b && (world.getMeta(h.x, yy, h.z) and 3) == f0) { world.set(h.x, yy, h.z, Blocks.AIR); yy++ }
+                        yy = h.y - 1
+                        while (world.get(h.x, yy, h.z) == b && (world.getMeta(h.x, yy, h.z) and 3) == f0) { world.set(h.x, yy, h.z, Blocks.AIR); yy-- }
+                    } else if (Shapes.isXModel(b) && (Models3D.get(Reg.key(b))?.multi == true)) {
+                        val xm = Models3D.get(Reg.key(b))!!
+                        val f = mb and 3
+                        val seg = (mb shr 2) and 15
+                        val me = xm.parts.firstOrNull { it.seg == seg }
+                        if (me != null) {
+                            val bx0 = h.x - me.off[f * 3]
+                            val by0 = h.y - me.off[f * 3 + 1]
+                            val bz0 = h.z - me.off[f * 3 + 2]
+                            for (pt in xm.parts) {
+                                val px = bx0 + pt.off[f * 3]; val py = by0 + pt.off[f * 3 + 1]; val pz = bz0 + pt.off[f * 3 + 2]
+                                if (world.get(px, py, pz) == b) world.set(px, py, pz, Blocks.AIR)
+                            }
+                        }
+                    } else if (Shapes.isDoor(b)) {
                         val oy2 = if ((mb and Shapes.M_UPPER) != 0) h.y - 1 else h.y + 1
                         if (world.get(h.x, oy2, h.z) == b) world.set(h.x, oy2, h.z, Blocks.AIR)
                     } else if (Shapes.isBed(b)) {
@@ -472,6 +522,43 @@ class GameRenderer(
     private fun doPlace(h: Hit, sy: Float, cy: Float) {
         val tb = world.get(h.x, h.y, h.z)
         val tm = world.getMeta(h.x, h.y, h.z)
+        // sentar em cadeiras, bancos e sofás do addon
+        if (Shapes.isXModel(tb)) {
+            val txm = Models3D.get(Reg.key(tb))
+            if (txm != null && txm.sit && !s.sitting) {
+                val v = txm.variantAt(world, h.x, h.y, h.z, tm)
+                var top = 0f
+                for (q in v.sel) if (q.y1 > top) top = q.y1
+                s.px = h.x + 0.5f
+                s.pz = h.z + 0.5f
+                s.py = h.y + min(0.6f, max(0.3f, top * 0.55f))
+                s.vx = 0f; s.vy = 0f; s.vz = 0f
+                s.sitting = true
+                punch = 1f
+                return
+            }
+        }
+        // objetos do addon com estado (abrir/fechar, ligar/desligar)
+        val tbit = Shapes.toggleBit(tb)
+        if (tbit != 0) {
+            val nm2 = tm xor tbit
+            world.setMeta(h.x, h.y, h.z, nm2)
+            val txm2 = Models3D.get(Reg.key(tb))
+            if (txm2 != null && txm2.hasDoor) {
+                // portas: todas as partes da coluna abrem e fecham juntas
+                val f0 = tm and 3
+                var yy = h.y + 1
+                while (world.get(h.x, yy, h.z) == tb && (world.getMeta(h.x, yy, h.z) and 3) == f0) {
+                    world.setMeta(h.x, yy, h.z, world.getMeta(h.x, yy, h.z) xor tbit); yy++
+                }
+                yy = h.y - 1
+                while (world.get(h.x, yy, h.z) == tb && (world.getMeta(h.x, yy, h.z) and 3) == f0) {
+                    world.setMeta(h.x, yy, h.z, world.getMeta(h.x, yy, h.z) xor tbit); yy--
+                }
+            }
+            punch = 1f
+            return
+        }
         // abrir / fechar portas e portões
         if (Shapes.interactive(tb)) {
             val nm = tm xor Shapes.M_OPEN
@@ -512,6 +599,74 @@ class GameRenderer(
         val lx = sy
         val lz = -cy
         val face = if (abs(lx) > abs(lz)) (if (lx > 0f) 1 else 3) else (if (lz > 0f) 2 else 0)
+        if (Shapes.isXModel(blk)) {
+            val xm = Models3D.get(Reg.key(blk)) ?: return
+            var f = face
+            var mount = 0
+            if (xm.hasMount && (h.nx != 0 || h.nz != 0)) {
+                // preso na parede: a frente aponta para fora dela
+                val ox = -h.nx; val oz = -h.nz
+                f = if (oz < 0) 0 else if (ox > 0) 1 else if (oz > 0) 2 else 3
+                mount = 32
+            }
+            if (xm.hasDoor) {
+                // porta de 2 ou 3 blocos de altura (3 se houver espaço), com espelho automático em portas duplas
+                if (!world.inBounds(bx, by + 1, bz) || world.get(bx, by + 1, bz) != Blocks.AIR) return
+                val three = world.inBounds(bx, by + 2, bz) && world.get(bx, by + 2, bz) == Blocks.AIR
+                val lv = intArrayOf(0, 0, 0, 0)
+                val dl = intArrayOf(-1, 0, 1, 0)   // esquerda do jogador (x) para face 0..3
+                val dlz = intArrayOf(0, -1, 0, 1)
+                val lxn = bx + dl[face]; val lzn = bz + dlz[face]
+                val rxn = bx - dl[face]; val rzn = bz - dlz[face]
+                fun baseDoor(px: Int, pz: Int): Int {
+                    if (world.get(px, by, pz) != blk) return -1
+                    val mm = world.getMeta(px, by, pz)
+                    if ((mm and 3) != face) return -1
+                    val pi = (mm shr 3) and 3
+                    return if (pi == 2 || pi == 3) mm else -1
+                }
+                var mirror = 0
+                val lm = baseDoor(lxn, lzn)
+                val rm = baseDoor(rxn, rzn)
+                if (lm >= 0 && (lm and 64) == 0) mirror = 64
+                else if (rm >= 0 && (rm and 64) != 0) mirror = 0
+                val hb = if (three) 32 else 0
+                val types = if (three) intArrayOf(3, 1, 0) else intArrayOf(2, 0)
+                for (i in types.indices) {
+                    if (xm.solid && intersectsPlayer(bx, by + i, bz)) return
+                }
+                for (i in types.indices) world.set(bx, by + i, bz, blk, face or (types[i] shl 3) or hb or mirror)
+                punch = 1f
+                return
+            }
+            if (xm.hasHalf) {
+                // colocação diagonal: mirando entre dois lados, o objeto fica na meia posição
+                val fdx = Shapes.dirX(face).toFloat(); val fdz = Shapes.dirZ(face).toFloat()
+                val fw = lx * fdx + lz * fdz
+                val sd = lx * (-fdz) + lz * fdx
+                val delta = Math.toDegrees(Math.atan2(sd.toDouble(), fw.toDouble()))
+                if (abs(delta) in 22.5..67.5) mount = 64 or (if (delta > 0) 8 else 0)
+            }
+            if (xm.hasUp && h.ny == 1 && tb == blk) {
+                // empilhar: alterna entre principal e de cima
+                if ((tm and 8) == 0) mount = mount or 8
+            }
+            if (xm.multi) {
+                for (pt in xm.parts) {
+                    val px = bx + pt.off[f * 3]; val py = by + pt.off[f * 3 + 1]; val pz = bz + pt.off[f * 3 + 2]
+                    if (!world.inBounds(px, py, pz) || world.get(px, py, pz) != Blocks.AIR) return
+                    if (xm.solid && intersectsPlayer(px, py, pz)) return
+                }
+                for (pt in xm.parts) {
+                    world.set(bx + pt.off[f * 3], by + pt.off[f * 3 + 1], bz + pt.off[f * 3 + 2], blk, f or (pt.seg shl 2))
+                }
+            } else {
+                if (xm.solid && intersectsPlayer(bx, by, bz)) return
+                world.set(bx, by, bz, blk, f or mount)
+            }
+            punch = 1f
+            return
+        }
         if (Shapes.isDoor(blk)) {
             if (!world.inBounds(bx, by + 1, bz) || world.get(bx, by + 1, bz) != Blocks.AIR) return
             if (intersectsPlayer(bx, by, bz) || intersectsPlayer(bx, by + 1, bz)) return
@@ -608,7 +763,7 @@ class GameRenderer(
         val dirZ = -cos(s.yaw) * cp
         val bob = if (s.onGround) sin(bobT) * 0.04f else 0f
         val eyeX = s.px
-        val eyeY = s.py + 1.62f + bob
+        val eyeY = s.py + eyeH() + bob
         val eyeZ = s.pz
         var ex = eyeX
         var ey = eyeY
@@ -664,6 +819,7 @@ class GameRenderer(
         GLES20.glUniform1f(wFogEnd, fogEnd)
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0)
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, texId)
+        Anim3D.tick(System.currentTimeMillis())
         GLES20.glUniform1i(wTex, 0)
         worldAttribs(true)
 
@@ -677,7 +833,12 @@ class GameRenderer(
             val ccx = (i % World.CX) * 16 + 8 - ex
             val ccz = (i / World.CX) * 16 + 8 - ez
             if (ccx * ccx + ccz * ccz > limit * limit) continue
-            if (abs(s.pitch) < 1.0f && ccx * hx + ccz * hz < -14f) continue
+            if (abs(s.pitch) < 1.0f) {
+                // fora do campo de visão horizontal (margem de 70°): não desenha
+                val fwd = ccx * hx + ccz * hz
+                val side = abs(ccx * (-hz) + ccz * hx)
+                if (fwd + 12f < 0f || side - 12f > (fwd + 12f) * 2.75f) continue
+            }
             GLES20.glBindBuffer(GLES20.GL_ARRAY_BUFFER, m.vbo)
             GLES20.glVertexAttribPointer(wPos, 3, GLES20.GL_FLOAT, false, 24, 0)
             GLES20.glVertexAttribPointer(wUV, 2, GLES20.GL_FLOAT, false, 24, 12)
@@ -892,7 +1053,10 @@ class GameRenderer(
             void main() {
                 vec4 c = texture2D(uTex, vUV);
                 if (c.a < 0.5) discard;
-                vec3 col = c.rgb * (vLight * uSun);
+                float lv = floor(vLight * 0.5);
+                float sh = vLight - 2.0 * lv;
+                float lit = max(sh * uSun, sh * (lv / 15.0));
+                vec3 col = c.rgb * lit;
                 float f = clamp((uFogEnd - vDist) / (uFogEnd - uFogStart), 0.0, 1.0);
                 gl_FragColor = vec4(mix(uFogColor, col, f), 1.0);
             }

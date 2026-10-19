@@ -46,7 +46,7 @@ class HudView(
     private var invX = 0f; private var invY = 0f; private var invR = 0f
     private var cubes: IntArray = IntArray(0)
     private var invTab = 0
-    private val tabNames = arrayOf("Blocos", "Escadas", "Formas")
+    private val tabNames = arrayOf("Blocos", "Escadas", "Formas", "Móveis")
 
     init {
         Prefs.hotbar(ctx)?.let { v ->
@@ -54,10 +54,23 @@ class HudView(
         }
     }
 
+    private val letters = "#ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    private val letterIdx = IntArray(27)
+
     private fun loadTab() {
         cubes = Reg.buildingList(invTab)
         invScroll = 0f
+        if (invTab == 3) {
+            // primeiro item de cada letra (ou o próximo que existir)
+            var p = 0
+            for (li in letters.indices) {
+                while (p < cubes.size && letters.indexOf(Reg.initial(cubes[p])) < li) p++
+                letterIdx[li] = min(p, max(0, cubes.size - 1))
+            }
+        }
     }
+
+    private fun gridTopY(): Float = pt + dp(30f) + (if (invTab == 3) dp(48f) else 0f)
     private val pl get() = dp(24f)
     private val pr get() = width - dp(24f)
     private val pt get() = dp(76f)
@@ -148,10 +161,18 @@ class HudView(
     private fun invContentH(): Float = ((cubes.size + cols - 1) / cols) * cell
 
     private fun invTouchDown(id: Int, x: Float, y: Float) {
+        if (invTab == 3 && y in (pt + dp(30f))..(pt + dp(78f)) && x in pl..pr) {
+            val lw = (pr - pl - dp(16f)) / 14f
+            val row = if (y < pt + dp(54f)) 0 else 1
+            val col = ((x - (pl + dp(8f))) / lw).toInt().coerceIn(0, 13)
+            val li = row * 14 + col
+            if (li in 0..26) invScroll = ((letterIdx[li] / cols) * cell).coerceIn(0f, invMaxScroll)
+            return
+        }
         if (y in pt..(pt + dp(30f)) && x in pl..pr) {
-            val tw = dp(66f)
-            val i = ((x - (pr - tw * 3f - dp(6f))) / tw).toInt()
-            if (x >= pr - tw * 3f - dp(6f) && i in 0..2 && i != invTab) { invTab = i; loadTab() }
+            val tw = dp(58f)
+            val i = ((x - (pr - tw * 4f - dp(6f))) / tw).toInt()
+            if (x >= pr - tw * 4f - dp(6f) && i in 0..3 && i != invTab) { invTab = i; loadTab() }
             return
         }
         if (y >= hbTop - dp(4f) && x >= hbLeft && x <= hbLeft + slot * 10f) {
@@ -176,7 +197,7 @@ class HudView(
         if (id != invId) return
         invId = -1
         if (invMoved) return
-        val gridTop = pt + dp(30f)
+        val gridTop = gridTopY()
         val gx = invDownX - (pl + dp(8f))
         val gy = invDownY - gridTop + invScroll
         if (gx < 0f || gy < 0f || invDownY < gridTop) return
@@ -424,11 +445,11 @@ class HudView(
         text.textAlign = Paint.Align.LEFT
         text.textSize = dp(13f)
         c.drawText("Inventário", pl + dp(10f), pt + dp(20f), text)
-        val tw = dp(66f)
+        val tw = dp(58f)
         text.textAlign = Paint.Align.CENTER
         text.textSize = dp(11f)
-        for (i in 0 until 3) {
-            val tl = pr - tw * 3f - dp(6f) + i * tw
+        for (i in 0 until 4) {
+            val tl = pr - tw * 4f - dp(6f) + i * tw
             val tr = RectF(tl + 2f, pt + dp(5f), tl + tw - 2f, pt + dp(27f))
             paint.style = Paint.Style.FILL
             paint.color = if (i == invTab) 0xAA57C84D.toInt() else 0x55FFFFFF
@@ -437,7 +458,25 @@ class HudView(
         }
         text.textAlign = Paint.Align.LEFT
 
-        val gridTop = pt + dp(30f)
+        if (invTab == 3) {
+            // índice por letra (2 linhas)
+            val lw = (pr - pl - dp(16f)) / 14f
+            text.textAlign = Paint.Align.CENTER
+            text.textSize = dp(12f)
+            for (li in 0 until 27) {
+                val row = li / 14
+                val col = li % 14
+                val lx = pl + dp(8f) + col * lw
+                val ly = pt + dp(32f) + row * dp(22f)
+                paint.style = Paint.Style.FILL
+                paint.color = 0x44FFFFFF
+                c.drawRoundRect(RectF(lx + 1f, ly, lx + lw - 1f, ly + dp(20f)), dp(3f), dp(3f), paint)
+                c.drawText(letters[li].toString(), lx + lw / 2f, ly + dp(14f), text)
+            }
+            text.textAlign = Paint.Align.LEFT
+        }
+
+        val gridTop = gridTopY()
         val rows = (cubes.size + cols - 1) / cols
         invMaxScroll = max(0f, rows * cell - (pb - gridTop - dp(6f)))
         invScroll = invScroll.coerceIn(0f, invMaxScroll)

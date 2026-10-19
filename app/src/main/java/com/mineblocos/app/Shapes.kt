@@ -20,7 +20,8 @@ class Model(
     val rf: Int = 0,
     val rt: Int = 0,
     val rb: Int = 0,
-    val rs: Int = 0
+    val rs: Int = 0,
+    val xv: XVar? = null
 )
 
 /**
@@ -69,6 +70,9 @@ object Shapes {
     private const val DIAG = 38
     private const val VENT = 39
     private const val FWALL = 40
+    private const val XMODEL = 41
+    private const val VSTL = 42
+    private const val VSTR = 43
 
     /** Bits do estado do bloco (World.meta). */
     const val M_OPEN = 4
@@ -117,7 +121,10 @@ object Shapes {
                     "item_repeater", "item_comparator" -> DIODE
                     else -> {
                         val k = Reg.key(i)
-                        if (k.endsWith("_drz_stairs")) STAIRS
+                        if (Models3D.has(k)) XMODEL
+                        else if (k.endsWith("_drz_vescl")) VSTL
+                        else if (k.endsWith("_drz_vescr")) VSTR
+                        else if (k.endsWith("_drz_stairs")) STAIRS
                         else if (k.endsWith("_drz_vslab")) VSLAB
                         else if (k.endsWith("_drz_pilar")) PILLAR
                         else if (k.endsWith("_drz_circulo")) CIRCLE
@@ -171,8 +178,8 @@ object Shapes {
         else -> 1f
     }
 
-    fun solid(b: Int): Boolean = when (shapeOf(b)) {
-        FENCE, GATE, CACTUS, SLAB, STAIRS, VSLAB, PILLAR, QCL, QCR, CIRCLE, CURVE, CURVEH, DIAG, VENT, FWALL, COMPOSTER, POT, POT_AZALEA, POT_EMPTY, FARMLAND, PATH, HEAVY_CORE, AZALEA,
+    fun solid(b: Int): Boolean = if (shapeOf(b) == XMODEL) (Models3D.get(Reg.key(b))?.solid == true) else when (shapeOf(b)) {
+        FENCE, GATE, CACTUS, SLAB, STAIRS, VSLAB, PILLAR, QCL, QCR, CIRCLE, CURVE, CURVEH, DIAG, VENT, FWALL, VSTL, VSTR, COMPOSTER, POT, POT_AZALEA, POT_EMPTY, FARMLAND, PATH, HEAVY_CORE, AZALEA,
         DOOR, BED, CAULDRON, HOPPER, CAKE, DIODE, CAMPFIRE -> true
         else -> false
     }
@@ -193,7 +200,32 @@ object Shapes {
 
     /** Formas cuja colisão segue as caixas do modelo (escadas, lajes verticais, pilares, quinas). */
     fun boxCollide(b: Int): Boolean { val s = shapeOf(b); return s == STAIRS || s == VSLAB || s == PILLAR || s == QCL || s == QCR ||
-        s == CIRCLE || s == CURVE || s == CURVEH || s == DIAG || s == VENT || s == FWALL }
+        s == CIRCLE || s == CURVE || s == CURVEH || s == DIAG || s == VENT || s == FWALL || s == XMODEL ||
+        s == VSTL || s == VSTR }
+
+    fun isXModel(b: Int) = shapeOf(b) == XMODEL
+
+    private fun shiftBoxes(a: Array<Box>, dx: Float, dy: Float, dz: Float): Array<Box> {
+        if (dx == 0f && dy == 0f && dz == 0f) return a
+        return Array(a.size) { Box(a[it].x0 + dx, a[it].y0 + dy, a[it].z0 + dz, a[it].x1 + dx, a[it].y1 + dy, a[it].z1 + dz, 0, 0, 0) }
+    }
+
+    /** Objetos com estado que se alterna ao tocar (abrir/fechar, ligar/desligar). */
+    fun toggleBit(b: Int): Int {
+        if (shapeOf(b) != XMODEL) return 0
+        val xm = Models3D.get(Reg.key(b)) ?: return 0
+        return if (xm.hasOpen) 4 else if (xm.hasOn) 16 else 0
+    }
+
+    /** Caixas de colisão (modelos 3D têm colisão própria, diferente da seleção). */
+    fun collBoxes(w: World?, x: Int, y: Int, z: Int, b: Int): Array<Box> {
+        if (shapeOf(b) == XMODEL) {
+            val xm = Models3D.get(Reg.key(b)) ?: return emptyArray()
+            val v = xm.variantAt(w, x, y, z, w?.getMeta(x, y, z) ?: 0)
+            return shiftBoxes(rot(v.coll, v.rot), v.tx, v.ty, v.tz)
+        }
+        return model(w, x, y, z, b, true).boxes
+    }
 
     /** Escadas, círculos e curvas podem ser colocados de cabeça para baixo (M_UPPER). */
     fun flippable(b: Int): Boolean { val s = shapeOf(b); return s == STAIRS || s == CIRCLE || s == CURVE }
@@ -393,12 +425,19 @@ object Shapes {
             QCL -> return Model(rot(arrayOf(bx(0f, 0f, 0f, 8f, 16f, 8f, top, bot, side)), f))
             QCR -> return Model(rot(arrayOf(bx(8f, 0f, 0f, 16f, 16f, 8f, top, bot, side)), f))
             FWALL -> return Model(rot(arrayOf(bx(0f, 0f, 4f, 16f, 16f, 12f, top, bot, side)), f))
-            CIRCLE, CURVE, CURVEH, DIAG, VENT -> {
+            XMODEL -> {
+                val xm = Models3D.get(Reg.key(b)) ?: return Model(arrayOf(bx(0f, 0f, 0f, 16f, 16f, 16f, top, bot, side)))
+                val v = xm.variantAt(w, x, y, z, m)
+                return Model(if (hit) shiftBoxes(rot(v.sel, v.rot), v.tx, v.ty, v.tz) else emptyArray(), xv = v)
+            }
+            CIRCLE, CURVE, CURVEH, DIAG, VENT, VSTL, VSTR -> {
                 val up = (m and M_UPPER) != 0
                 val n = when (shapeOf(b)) {
                     CIRCLE -> if (up) "circle_flip" else "circle"
                     CURVE -> if (up) "curve_flip" else "curve"
                     CURVEH -> "curveh"
+                    VSTL -> "vstairl"
+                    VSTR -> "vstairr"
                     DIAG -> "diag"
                     else -> "vent"
                 }
