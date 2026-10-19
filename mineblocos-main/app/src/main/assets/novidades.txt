@@ -1,0 +1,162 @@
+#id 2026-10-19-e
+#titulo Animações do personagem refeitas do zero
+- Andar e correr agora seguem a distância percorrida (pé não escorrega), com passada, chute de calcanhar, torção do tronco, quique e inclinação ao acelerar e nas curvas
+- Pulo com squash & stretch: braços para cima na subida, flutuada no topo, queda com braços e pernas batendo e pouso amortecido com rebote
+- Voo novo: paira parado, inclina o corpo com a velocidade até a pose de Superman, mergulha, sobe e faz curvas inclinando o corpo
+- Nado com braçada alternada e corpo que acompanha a direção; golpe de braço com antecipação e impulso do corpo; agachar, sentar e ocioso mais vivos
+
+#id 2026-10-19-d
+#titulo Rio com água para nadar
+- Mundos novos têm um rio atravessando o mapa, com água translúcida de verdade
+- Ao entrar em água funda você nada sozinho (animação de nadar), boia na superfície e mergulha com o botão de descer
+- Debaixo d'água a tela fica azulada; dá para sair pela margem
+- Mundos antigos continuam planos: crie um mundo NOVO para ver o rio
+
+#id 2026-10-19-c
+#titulo Animações do personagem (Actions & Stuff)
+- Personagem Steve com as animações do addon Actions & Stuff: andar, andar de costas, correr, agachar, pular, cair, aterrissar, voar e golpe de braço
+- Novos botões CORRER e AGACHAR (agachado anda devagar, desce a câmera e não deixa cair da borda)
+- Voando, CORRER acelera o voo
+- Animação de sentar (pernas dobradas, mãos no colo) e de nadar (superfície e mergulho)
+- Botão NADAR liga o modo nado só para ver a animação (o jogo ainda não tem água)
+
+#id 2026-10-19-b
+#titulo Vitrine por categorias escolhidas e botão dia/noite
+- Ao entrar num mundo novo, você escolhe quais categorias da vitrine quer ver (só elas são montadas, fica bem mais organizado)
+- Botão de engrenagem na tela (ou "Categorias da vitrine" no menu de pausa) para trocar as categorias a qualquer momento; a vitrine é refeita sempre colada no ponto de partida e você é levado para lá
+- Peças diferentes e fileiras da vitrine ficam a 4 blocos de distância (poses da mesma peça, 1 bloco)
+- Novo botão sol/lua no topo da tela para alternar entre dia e noite
+- Mundos novos começam sem vitrine até você escolher as categorias
+
+#id 2026-10-19-a
+#titulo Vitrine por categorias, texturas corrigidas e botão Copiar
+- Texturas corrigidas: minérios (diamante, esmeralda, ouro, redstone, nether ouro), ametista e ametista budding, colmeias com mel, magma, sculk, prismarina rough e end gateway apareciam só como moldura
+- Vitrine reorganizada por categorias (terreno, pedras, minérios, madeiras, vidros, cores, Nether, End, plantas, ruas, cozinha, sala, quarto, banheiro, lojas, eletrônicos...) com as peças do mesmo tamanho juntas
+- O nome da categoria aparece no topo da tela quando você passa por ela
+- Blocos da vitrine são indestrutíveis (segurar para quebrar não faz nada)
+- Mirando num bloco da vitrine aparece o botão COPIAR: ele vai para o slot selecionado da hotbar para você testar colocando
+- Formas derivadas (escadas, lajes, círculos...) mostram 1 ou 2 poses; gire ao colocar para ver as outras
+- Crie um mundo novo para ver a vitrine nova (mundos antigos continuam como estavam)
+
+#id 2026-10-18-g
+#titulo Vitrine mais leve
+- Faces escondidas dos móveis (encostadas no chão ou em blocos vizinhos) deixaram de ser desenhadas
+- Chunks distantes liberam memória da GPU e voltam ao chegar perto
+- Chunks fora do campo de visão não são desenhados
+- Vitrine pula poses repetidas (estados sem efeito visual) e ganhou uma faixa extra de segurança
+
+#id 2026-10-18-f
+#titulo Mundo plano e vitrine de blocos
+- Mundo novo totalmente plano, sem rios e sem árvores
+- Vitrine com todos os blocos do jogo em todos os ângulos, estados e tamanhos (escadas e lajes de cima e de baixo, objetos abertos/fechados e ligados/desligados, conexões, portas de 2 e 3 blocos, objetos de vários blocos)
+- Duas faixas: uma ao sul do ponto de partida e outra ao norte; cada seção começa com uma coluna luminosa
+- Crie um mundo novo para ver a vitrine (mundos antigos continuam como estavam)
+
+#id 2026-10-18-e
+#titulo Luz de bloco, animações, portas e sentar
+- Luz de verdade: lâmpadas, luminárias e telas iluminam a volta à noite (até 15 blocos, como no Minecraft)
+- Texturas animadas do addon (semáforos, TVs, lareira, lava lamp, ventiladores, placas)
+- Portas de 2 ou 3 blocos, com espelho automático em portas duplas; tocar abre e fecha a porta toda
+- Toque em cadeiras, bancos e sofás para sentar (pule ou ande para levantar)
+- Colocação diagonal: mirando entre dois lados, o objeto fica na meia posição
+- Objetos empilháveis alternam entre principal e de cima
+- Mundos antigos continuam funcionando
+
+#id 2026-10-18-d
+#titulo Addon monoDeco: texturas originais, estados e itens
+- Todas as texturas dos móveis agora em resolução original (sem redução)
+- Cada objeto gira para o lado certo ao colocar, como no addon
+- Conexões automáticas: grades, balcões, postes e peças que se ligam aos vizinhos
+- Objetos de vários blocos (2 ou 3 de altura, largura ou fundo) são colocados e quebrados inteiros
+- Toque para abrir/fechar ou ligar/desligar objetos que têm esse estado
+- Peças presas na parede ajustam a frente ao colocar na lateral de um bloco
+- Partes "light" (lâmpadas, telas) brilham sem sombra
+- 90 itens do addon (chapéus, máscaras, câmeras, ferramentas) como objetos decorativos na aba Móveis
+- Mundos antigos continuam funcionando
+
+#id 2026-10-18-c
+#titulo Addon monoDeco: móveis e objetos
+- Mais de 3.000 móveis e objetos do addon (cadeiras, lâmpadas, placas, eletrônicos, bebidas, placas de rua, bancos...) com modelo 3D e textura próprios
+- Nova aba "Móveis" no inventário, em ordem alfabética, com índice por letra
+- Colisão e seleção seguem o modelo de cada objeto
+- Escadas verticais (esquerda e direita) para todos os 236 blocos
+- Mundos antigos continuam funcionando
+
+#id 2026-10-18-b
+#titulo Addon monoDeco: formas especiais
+- Círculo, curva, curva horizontal, diagonal, muro fino e ventilação para todos os 236 blocos
+- Círculo e curva podem ser colocados de cabeça para baixo (mire na metade de cima)
+- Inventário com 3 abas: Blocos, Escadas (lajes, pilares, quinas) e Formas
+- Dá para subir diagonais e curvas andando
+- Mundos antigos continuam funcionando
+
+#id 2026-10-18-a
+#titulo Addon monoDeco: cubos, escadas e lajes
+- 236 blocos do addon monoDeco (asfalto, pisos, azulejos, paredes, madeiras, mármores, metais...)
+- Cada bloco ganhou versão em escada, laje, laje vertical, pilar e quinas (esquerda e direita)
+- Escadas: sobem na direção em que você olha, viram canto interno/externo sozinhas e dá para subir andando
+- Laje vertical: encosta no bloco que você mira; clique na face de dentro para completar o bloco
+- Mirando na metade de cima, escadas e lajes são colocadas invertidas
+- Mundos antigos continuam funcionando
+
+#id 2026-10-17-h
+#titulo Só blocos de construção
+- Inventário agora mostra apenas blocos de construção (pedra, madeira, tijolos, vidro, concreto, lã, cobre, quartzo etc.)
+- Removidos itens, plantas e decorações (flores, mudas, portas, camas, lanternas, vasos, cercas, comida, ferramentas)
+- Removidos também minérios, estações de trabalho, colmeias e blocos especiais
+- Mundos antigos continuam funcionando
+
+#id 2026-10-17-g
+#titulo Blocos completos como no Minecraft
+- Laje em cima ou embaixo (conforme onde você mira) e laje dupla ao empilhar duas iguais
+- Portões e portas abrem e fecham ao tocar; portas têm 2 blocos de altura
+- Camas de todas as cores (2 blocos, com travesseiro), placas, lanternas, correntes, fogueiras, caldeirão, funil, suporte de poções, alavanca, vaso vazio, bolo, repetidor e comparador agora podem ser colocados
+- Bambu, alga e raízes pendentes viram plantas
+- Blocos lembram a direção em que você estava olhando ao colocar
+- Mundos antigos continuam funcionando
+
+#id 2026-10-17-f
+#titulo Formas reais dos blocos
+- Cerca e portão de bambu com formato de verdade (a cerca conecta nos vizinhos)
+- Cacto, laje, composteira, vasos de planta, terra de cultivo, caminho de terra, azaleia, brotos de ametista, picles-do-mar e núcleo pesado com a forma do Minecraft
+- Pétalas, líquen, ovos de sapo e fio de armadilha ficam coladinhos no chão
+- Teia, mudas, botão-de-olho e gramas secas viram plantas em cruz
+- A mira agora acerta só a parte do bloco que existe (cerca, laje, plantas)
+- Cercas têm 1,5 bloco de altura e lajes/caminho têm altura parcial
+- Blocos que eram só partes de textura foram escondidos do inventário
+- Mundos antigos continuam funcionando
+
+#id 2026-10-17-e
+#titulo Mundo plano com rio
+- Mundo plano, bem maior (512 x 512 blocos), com um rio sinuoso e margens de areia
+- Dá para entrar na água do rio
+- Atenção: o mundo antigo não é compatível, um novo é criado
+
+#id 2026-10-17-d
+#titulo Todos os blocos e itens do Minecraft
+- Mais de 620 blocos e 760 itens com as texturas do Actions & Stuff
+- Botão INV abre o inventário: toque em qualquer bloco ou item para colocar no slot selecionado da hotbar
+- Lajes, flores, mudas, tochas, trilhos e tapetes com formato próprio
+- Itens (espadas, comidas, poções...) aparecem na mão, mas não dá para colocá-los
+- Mundos antigos continuam funcionando
+
+#id 2026-10-17-c
+#titulo Andar igual ao Minecraft
+- Animação de andar do personagem baseada no addon Actions & Stuff
+- Braços, pernas, corpo e cabeça se movem como no Minecraft
+- Personagem com as proporções do Steve
+
+#id 2026-10-17-b
+#titulo Visão em 3ª pessoa e mundo gigante
+- Câmera em 3ª pessoa com personagem animado (botão CÂM alterna 1ª, 3ª atrás e 3ª de frente)
+- Mundo 4 vezes maior (256 x 256 blocos)
+- Distância de visão até 10 chunks nas Configurações
+- Atenção: o mundo antigo não é compatível, um novo é criado
+
+#id 2026-10-17-a
+#titulo Primeira versão: mundo de blocos!
+- Mundo 3D de blocos com colinas, praias e árvores
+- Segure para quebrar e toque para colocar blocos
+- 10 tipos de blocos, modo voar e ciclo de dia e noite
+- O mundo é salvo automaticamente no celular
+- Atualização pelo próprio app (Configurações)
