@@ -210,7 +210,11 @@ object Showcase {
         }
     }
 
-    fun build(w: World, ground: Int) {
+    /** Nomes de todas as categorias da vitrine, na ordem em que aparecem no mundo. */
+    fun categoryNames(): List<String> = sections().map { it.name }
+
+    /** Monta a vitrine só com as categorias em [selected] (null = todas). */
+    fun build(w: World, ground: Int, selected: Set<String>? = null) {
         val y = ground + 1
         val x0 = 8
         val x1 = World.W - 8
@@ -240,6 +244,7 @@ object Showcase {
 
         for (sec in sections()) {
             if (full) break
+            if (selected != null && sec.name !in selected) continue
             // começo de categoria: nova linha e uma coluna luminosa como marco
             if (cx != x0 || rowH > 0) newLine(1)
             lineName = sec.name

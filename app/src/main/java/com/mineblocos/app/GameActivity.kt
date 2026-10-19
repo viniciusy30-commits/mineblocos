@@ -79,9 +79,58 @@ class GameActivity : AppCompatActivity() {
         root.removeAllViews()
         root.addView(gv, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
         root.addView(
-            HudView(this, st) { showPause() },
+            HudView(this, st, { showPause() }, { showCategories() }),
             FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         )
+        // mundo novo: já pergunta quais categorias montar
+        if (intent.getBooleanExtra("novo", false)) gv.post { showCategories() }
+    }
+
+    /** Escolha das categorias da vitrine: a vitrine é refeita só com as marcadas. */
+    private fun showCategories() {
+        val w = world ?: return
+        val names = Showcase.categoryNames().toTypedArray()
+        val current = w.areas.map { it.name }.toHashSet()
+        val checked = BooleanArray(names.size) { names[it] in current }
+        val dlg = AlertDialog.Builder(this)
+            .setTitle("Categorias da vitrine")
+            .setMultiChoiceItems(names, checked) { _, i, c -> checked[i] = c }
+            .setPositiveButton("Aplicar") { _, _ ->
+                val sel = HashSet<String>()
+                for (i in names.indices) if (checked[i]) sel.add(names[i])
+                applyCategories(sel)
+            }
+            .setNegativeButton("Cancelar", null)
+            .setNeutralButton("Todas", null)
+            .create()
+        dlg.show()
+        dlg.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
+            val v = !checked.all { it }
+            for (i in names.indices) { checked[i] = v; dlg.listView.setItemChecked(i, v) }
+        }
+    }
+
+    private fun applyCategories(sel: Set<String>) {
+        val w = world ?: return
+        val st = state ?: return
+        val gv = glView ?: return
+        val msg = AlertDialog.Builder(this).setMessage("Montando vitrine...").setCancelable(false).show()
+        gv.queueEvent {
+            try {
+                w.rebuildShowcase(sel)
+                // volta para o ponto de partida (livre), para não ficar preso dentro de um bloco novo
+                st.vx = 0f; st.vy = 0f; st.vz = 0f
+                st.px = World.W / 2 + 0.5f
+                st.pz = World.D / 2 + 0.5f
+                st.py = (w.surfaceY(World.W / 2, World.D / 2) + 1).toFloat()
+            } catch (e: Throwable) {
+                android.util.Log.e("Mineblocos", "falha ao montar vitrine", e)
+            }
+            runOnUiThread {
+                msg.dismiss()
+                saveWorld()
+            }
+        }
     }
 
     private fun showPause() {
@@ -92,8 +141,10 @@ class GameActivity : AppCompatActivity() {
         saveWorld()
         AlertDialog.Builder(this)
             .setTitle("Jogo pausado")
-            .setItems(arrayOf("Continuar", "Salvar e sair")) { _, which ->
+            .setItems(arrayOf("Continuar", "Categorias da vitrine", "Salvar e sair")) { _, which ->
                 if (which == 1) {
+                    showCategories()
+                } else if (which == 2) {
                     saveWorld()
                     finish()
                 }

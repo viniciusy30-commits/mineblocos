@@ -21,7 +21,8 @@ import kotlin.math.sin
 class HudView(
     ctx: Context,
     private val s: GameState,
-    private val onPauseClick: () -> Unit
+    private val onPauseClick: () -> Unit,
+    private val onCategoriesClick: () -> Unit = {}
 ) : View(ctx) {
 
     private val d = resources.displayMetrics.density
@@ -87,6 +88,8 @@ class HudView(
     private var camX = 0f; private var camY = 0f; private var camR = 0f
     private var dnX = 0f; private var dnY = 0f; private var dnR = 0f
     private var pauseX = 0f; private var pauseY = 0f; private var pauseR = 0f
+    private var cfgX = 0f; private var cfgY = 0f; private var cfgR = 0f
+    private var sunX = 0f; private var sunY = 0f; private var sunR = 0f
     private var joyDefX = 0f; private var joyDefY = 0f; private var joyR = 0f
 
     // toques
@@ -131,6 +134,8 @@ class HudView(
         dnR = dp(30f); dnX = w - dp(152f); dnY = h - dp(80f)
         pauseR = dp(22f); pauseX = w - dp(36f); pauseY = dp(36f)
         invR = dp(22f); invX = w - dp(92f); invY = dp(36f)
+        cfgR = dp(22f); cfgX = w - dp(148f); cfgY = dp(36f)
+        sunR = dp(22f); sunX = w - dp(204f); sunY = dp(36f)
         joyR = dp(56f); joyDefX = dp(108f); joyDefY = h - dp(116f)
         icons.clear()
         invIcons.clear()
@@ -220,6 +225,12 @@ class HudView(
 
     private fun touchDown(id: Int, x: Float, y: Float) {
         if (inCircle(x, y, pauseX, pauseY, pauseR)) { onPauseClick(); return }
+        if (inCircle(x, y, cfgX, cfgY, cfgR)) { onCategoriesClick(); return }
+        if (inCircle(x, y, sunX, sunY, sunR)) {
+            // alterna dia/noite (meio-dia = 0.25, meia-noite = 0.75)
+            s.time = if (sin(2.0 * Math.PI * s.time) > 0.0) 0.75f else 0.25f
+            return
+        }
         if (inCircle(x, y, invX, invY, invR)) {
             invOpen = !invOpen
             if (invOpen) {
@@ -369,6 +380,46 @@ class HudView(
         paint.color = Color.WHITE
         c.drawRect(pauseX - dp(6f), pauseY - dp(7f), pauseX - dp(2.5f), pauseY + dp(7f), paint)
         c.drawRect(pauseX + dp(2.5f), pauseY - dp(7f), pauseX + dp(6f), pauseY + dp(7f), paint)
+
+        // configurações (categorias da vitrine): engrenagem
+        drawRound(c, cfgX, cfgY, cfgR, false, false)
+        paint.style = Paint.Style.STROKE
+        paint.strokeWidth = dp(3f)
+        paint.color = Color.WHITE
+        c.drawCircle(cfgX, cfgY, dp(6f), paint)
+        paint.strokeCap = Paint.Cap.ROUND
+        for (k in 0 until 8) {
+            val a = k * Math.PI / 4
+            val ca = Math.cos(a).toFloat(); val sa = Math.sin(a).toFloat()
+            c.drawLine(cfgX + ca * dp(9f), cfgY + sa * dp(9f), cfgX + ca * dp(12f), cfgY + sa * dp(12f), paint)
+        }
+        paint.strokeCap = Paint.Cap.BUTT
+
+        // dia/noite: mostra o sol de dia e a lua de noite
+        drawRound(c, sunX, sunY, sunR, false, false)
+        if (sin(2.0 * Math.PI * s.time) > 0.0) {
+            paint.style = Paint.Style.FILL
+            paint.color = 0xFFFFD83A.toInt()
+            c.drawCircle(sunX, sunY, dp(6.5f), paint)
+            paint.style = Paint.Style.STROKE
+            paint.strokeWidth = dp(2.5f)
+            paint.strokeCap = Paint.Cap.ROUND
+            for (k in 0 until 8) {
+                val a = k * Math.PI / 4
+                val ca = Math.cos(a).toFloat(); val sa = Math.sin(a).toFloat()
+                c.drawLine(sunX + ca * dp(9.5f), sunY + sa * dp(9.5f), sunX + ca * dp(12.5f), sunY + sa * dp(12.5f), paint)
+            }
+            paint.strokeCap = Paint.Cap.BUTT
+        } else {
+            val moon = Path()
+            moon.addCircle(sunX, sunY, dp(10f), Path.Direction.CW)
+            val cut = Path()
+            cut.addCircle(sunX + dp(5f), sunY - dp(3.5f), dp(8.5f), Path.Direction.CW)
+            moon.op(cut, Path.Op.DIFFERENCE)
+            paint.style = Paint.Style.FILL
+            paint.color = 0xFFE9EDF7.toInt()
+            c.drawPath(moon, paint)
+        }
 
         // botão do inventário
         drawRound(c, invX, invY, invR, false, invOpen)

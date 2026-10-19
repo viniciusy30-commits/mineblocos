@@ -1,3 +1,10 @@
+#id 2026-10-19-b
+#titulo Vitrine por categorias escolhidas e botão dia/noite
+- Ao entrar num mundo novo, você escolhe quais categorias da vitrine quer ver (só elas são montadas, fica bem mais organizado)
+- Botão de engrenagem na tela (ou "Categorias da vitrine" no menu de pausa) para trocar as categorias a qualquer momento; a vitrine é refeita e você volta ao ponto de partida
+- Novo botão sol/lua no topo da tela para alternar entre dia e noite
+- Mundos novos começam sem vitrine até você escolher as categorias
+
 #id 2026-10-19-a
 #titulo Vitrine por categorias, texturas corrigidas e botão Copiar
 - Texturas corrigidas: minérios (diamante, esmeralda, ouro, redstone, nether ouro), ametista e ametista budding, colmeias com mel, magma, sculk, prismarina rough e end gateway apareciam só como moldura

@@ -234,6 +234,20 @@ class World(val seed: Int) {
         showcase.set(idx(x, y, z))
     }
 
+    /** Apaga a vitrine atual e monta de novo só com as categorias escolhidas. */
+    fun rebuildShowcase(selected: Set<String>) {
+        var i = showcase.nextSetBit(0)
+        while (i >= 0) {
+            blocks[i] = 0
+            meta[i] = 0
+            i = showcase.nextSetBit(i + 1)
+        }
+        showcase.clear()
+        areas.clear()
+        Showcase.build(this, 20, selected)
+        markAllDirty()
+    }
+
     /** Mundo totalmente plano, sem rios nem árvores, com a vitrine de todos os blocos. */
     fun generate(progress: (Int) -> Unit) {
         val ground = 20
@@ -251,7 +265,7 @@ class World(val seed: Int) {
             }
             progress(z * 90 / D)
         }
-        Showcase.build(this, ground)
+        areas.clear() // a vitrine é montada depois, com as categorias que o jogador escolher
         progress(100)
         markAllDirty()
     }
