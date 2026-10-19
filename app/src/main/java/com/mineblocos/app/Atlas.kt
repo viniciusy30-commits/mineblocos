@@ -84,6 +84,9 @@ object Reg {
     private var ready = false
     private var waterId = -1
 
+    /** Id do bloco de água (0 se o registro não tiver). */
+    val water: Int get() = if (waterId > 0) waterId else 0
+
     // id, nome, kind, topo, base, lado, flags, cor média (mesma ordem de Blocks.kt)
     private val FALLBACK_REGISTRY = listOf(
         "grass\tGrama\t1\t0\t2\t1\t0\t5DA03A",
@@ -185,7 +188,7 @@ object Reg {
         "end_gateway", "budding_amethyst", "powder_snow", "magma", "bone_block",
         "mushroom_block_inside", "mushroom_block_skin_brown", "mushroom_block_skin_red",
         "grass_side_snowed", "log_top_normal_weak", "planks_mer_weak", "planks_normal_weak",
-        "dirt_with_roots", "muddy_mangrove_roots", "mangrove_roots", "ancient_debris", "gilded_blackstone"
+        "dirt_with_roots", "muddy_mangrove_roots", "mangrove_roots", "ancient_debris", "gilded_blackstone", "water"
     )
 
     /** Bloco de construção: cubo cheio (ou laje de pedra) que não seja minério, estação ou decoração. */

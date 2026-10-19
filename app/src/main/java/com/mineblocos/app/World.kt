@@ -1,6 +1,8 @@
 package com.mineblocos.app
 
 import kotlin.math.abs
+import kotlin.math.ceil
+import kotlin.math.floor
 import kotlin.math.max
 import kotlin.math.sin
 
@@ -42,6 +44,20 @@ class World(val seed: Int) {
         if (!inBounds(x, y, z)) return
         meta[idx(x, y, z)] = m.toByte()
         touch(x, z)
+    }
+
+    /** Tem água nesta célula? */
+    fun isWater(x: Int, y: Int, z: Int): Boolean {
+        val w = Reg.water
+        return w > 0 && get(x, y, z) == w
+    }
+
+    /** Quantas células de água seguidas existem daqui para baixo. */
+    fun waterDepth(x: Int, y: Int, z: Int): Int {
+        var n = 0
+        var yy = y
+        while (yy >= 0 && isWater(x, yy, z)) { n++; yy-- }
+        return n
     }
 
     fun inBounds(x: Int, y: Int, z: Int) = x in 0 until W && y in 0 until H && z in 0 until D
@@ -248,7 +264,38 @@ class World(val seed: Int) {
         markAllDirty()
     }
 
-    /** Mundo totalmente plano, sem rios nem árvores, com a vitrine de todos os blocos. */
+    /**
+     * Rio que atravessa o mundo de leste a oeste, ao lado do ponto de partida (z ≈ 259..273).
+     * Tem 3 a 5 blocos de profundidade no meio, margens de areia e fundo de areia.
+     * A superfície da água fica a 0,1 do topo do chão, como no Minecraft.
+     */
+    private fun carveRiver(ground: Int) {
+        val wid = Reg.water
+        if (wid <= 0) return
+        val sand = Reg.id("sand").let { if (it > 0) it else Blocks.DIRT }
+        for (x in 0 until W) {
+            val c = 266f + 2.5f * sin(x * 0.045f)          // linha central do rio (meandro)
+            val hw = 4.2f + 1.0f * sin(x * 0.031f + 1f)     // meia-largura
+            val z0 = floor(c - hw * 1.4f - 1f).toInt()
+            val z1 = ceil(c + hw * 1.4f + 1f).toInt()
+            for (z in z0..z1) {
+                if (z !in 0 until D) continue
+                val t = abs(z + 0.5f - c) / hw
+                if (t <= 1f) {
+                    val depth = 1 + Math.round(3.5f * (1f - t * t))
+                    val bed = ground - depth
+                    for (y in (bed + 1)..ground) blocks[idx(x, y, z)] = wid.toShort()
+                    blocks[idx(x, bed, z)] = sand.toShort()
+                    if (bed - 1 >= 1) blocks[idx(x, bed - 1, z)] = sand.toShort()
+                } else if (t <= 1.4f) {
+                    blocks[idx(x, ground, z)] = sand.toShort()
+                    blocks[idx(x, ground - 1, z)] = sand.toShort()
+                }
+            }
+        }
+    }
+
+    /** Mundo plano, sem árvores, com um rio, e a vitrine de todos os blocos. */
     fun generate(progress: (Int) -> Unit) {
         val ground = 20
         for (z in 0 until D) {
@@ -265,6 +312,7 @@ class World(val seed: Int) {
             }
             progress(z * 90 / D)
         }
+        carveRiver(ground)
         areas.clear() // a vitrine é montada depois, com as categorias que o jogador escolher
         progress(100)
         markAllDirty()

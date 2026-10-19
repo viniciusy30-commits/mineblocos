@@ -17,6 +17,7 @@ class GameState {
     @Volatile var sitting = false
     @Volatile var sneak = false   // agachar (liga/desliga)
     @Volatile var sprint = false  // correr (liga/desliga)
+    @Volatile var inWater = false  // dentro d'água (nada sozinho)
     @Volatile var swim = false    // nadar (liga/desliga) — ainda não há água, serve para ver a animação
     @Volatile var breaking = false
     @Volatile var placeRequest = false

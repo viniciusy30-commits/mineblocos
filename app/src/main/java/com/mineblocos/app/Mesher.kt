@@ -11,7 +11,8 @@ class FloatList(cap: Int) {
     }
 }
 
-class MeshData(val data: FloatArray, val size: Int)
+/** [split]: índice (em floats) onde começam os vértices de água (translúcidos); antes dele fica o opaco. */
+class MeshData(val data: FloatArray, val size: Int, val split: Int = size)
 
 /** Gera a malha (x,y,z,u,v,luz por vértice) de um chunk, com oclusão ambiente. */
 object Mesher {
@@ -329,8 +330,36 @@ object Mesher {
         }
     }
 
+    /** Faces da água: só as expostas; a superfície fica 0,1 abaixo do topo da célula. */
+    private fun emitWater(w: World, out: FloatList, x: Int, y: Int, z: Int, wid: Int) {
+        val aboveWater = w.getMesh(x, y + 1, z) == wid
+        val tile = Reg.tile(wid, 0)
+        val tx = (tile % Atlas.COLS) * 16f
+        val ty = (tile / Atlas.COLS) * 16f
+        val aw = Atlas.bitmap.width.toFloat()
+        val ah = Atlas.bitmap.height.toFloat()
+        for (f in 0 until 6) {
+            val n = NORMALS[f]
+            val nb = w.getMesh(x + n[0], y + n[1], z + n[2])
+            if (nb == wid || Blocks.opaque(nb)) continue
+            val c = CORNERS[f]
+            val uv = UVS[f]
+            for (k in ORDER_A) {
+                val cy = c[k * 3 + 1]
+                out.add(x + c[k * 3].toFloat())
+                out.add(y + (if (cy == 1 && !aboveWater) 0.9f else cy.toFloat()))
+                out.add(z + c[k * 3 + 2].toFloat())
+                out.add((tx + 0.05f + uv[k * 2] * 15.9f) / aw)
+                out.add((ty + 0.05f + uv[k * 2 + 1] * 15.9f) / ah)
+                out.add(SHADE[f])
+            }
+        }
+    }
+
     fun buildChunk(w: World, cx: Int, cz: Int): MeshData {
         val out = FloatList(24000)
+        val wout = FloatList(2048)
+        val wid = Reg.water
         val x0 = cx * World.CS
         val z0 = cz * World.CS
         var ps = 0
@@ -340,6 +369,7 @@ object Mesher {
                 for (x in x0 until x0 + World.CS) {
                     val b = w.get(x, y, z)
                     if (b == Blocks.AIR) continue
+                    if (wid > 0 && b == wid) { emitWater(w, wout, x, y, z, wid); continue }
                     if (pl > 0 && out.n > ps) applyLight(out, ps, out.n, pl)
                     ps = out.n
                     pl = w.lightAround(x, y, z)
@@ -383,7 +413,11 @@ object Mesher {
             }
         }
         if (pl > 0 && out.n > ps) applyLight(out, ps, out.n, pl)
-        return MeshData(out.a, out.n)
+        if (wout.n == 0) return MeshData(out.a, out.n)
+        val all = FloatArray(out.n + wout.n)
+        System.arraycopy(out.a, 0, all, 0, out.n)
+        System.arraycopy(wout.a, 0, all, out.n, wout.n)
+        return MeshData(all, all.size, out.n)
     }
 
     /** Luz de bloco: soma 2*nível à luz do vértice (o shader separa os dois). */

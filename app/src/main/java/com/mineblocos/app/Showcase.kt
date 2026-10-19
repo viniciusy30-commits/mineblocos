@@ -124,7 +124,7 @@ object Showcase {
 
     private fun eligible(b: Int): Boolean {
         val kd = Reg.kind(b)
-        return b > 0 && kd != Reg.K_ITEM && kd != Reg.K_HIDDEN
+        return b > 0 && b != Reg.water && kd != Reg.K_ITEM && kd != Reg.K_HIDDEN
     }
 
     /** Lê as categorias de assets/vitrine.tsv. Tudo que não estiver listado cai em "Diversos". */
@@ -239,7 +239,8 @@ object Showcase {
         val x0 = max(8, (World.W - rowW) / 2)
         val x1 = min(World.W - 8, x0 + rowW)
         // faixas: sul (a partir do ponto de partida, deixando o spawn livre), norte e uma faixa central
-        val bands = arrayOf(intArrayOf(262, World.D - 8), intArrayOf(8, 230), intArrayOf(232, 250))
+        // (o rio ocupa a faixa z 246..278, ao lado do ponto de partida)
+        val bands = arrayOf(intArrayOf(280, World.D - 8), intArrayOf(8, 230), intArrayOf(232, 244))
         var band = 0
         var cx = x0
         var cz = bands[0][0]

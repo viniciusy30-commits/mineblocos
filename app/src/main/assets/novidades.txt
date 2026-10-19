@@ -1,3 +1,10 @@
+#id 2026-10-19-d
+#titulo Rio com água para nadar
+- Mundos novos têm um rio atravessando o mapa, com água translúcida de verdade
+- Ao entrar em água funda você nada sozinho (animação de nadar), boia na superfície e mergulha com o botão de descer
+- Debaixo d'água a tela fica azulada; dá para sair pela margem
+- Mundos antigos continuam planos: crie um mundo NOVO para ver o rio
+
 #id 2026-10-19-c
 #titulo Animações do personagem (Actions & Stuff)
 - Personagem Steve com as animações do addon Actions & Stuff: andar, andar de costas, correr, agachar, pular, cair, aterrissar, voar e golpe de braço

@@ -269,13 +269,13 @@ class HudView(
             if (s.sprint) s.sneak = false
             return
         }
-        if (!s.flying && !s.swim && inCircle(x, y, dnX, dnY, dnR)) {
+        if (!s.flying && !s.swim && !s.inWater && inCircle(x, y, dnX, dnY, dnR)) {
             s.sneak = !s.sneak
             if (s.sneak) s.sprint = false
             return
         }
         if (inCircle(x, y, camX, camY, camR)) { s.camMode = (s.camMode + 1) % 3; return }
-        if ((s.flying || s.swim) && inCircle(x, y, dnX, dnY, dnR)) { downId = id; s.down = true; return }
+        if ((s.flying || s.swim || s.inWater) && inCircle(x, y, dnX, dnY, dnR)) { downId = id; s.down = true; return }
         if (x < width * 0.38f && joyId == -1) {
             joyId = id; joyOx = x; joyOy = y; joyX = x; joyY = y
             return
@@ -399,7 +399,7 @@ class HudView(
         drawRound(c, spX, spY, spR, false, s.sprint)
         text.textSize = dp(9f)
         c.drawText("CORRER", spX, spY + dp(3.2f), text)
-        if (s.flying || s.swim) {
+        if (s.flying || s.swim || s.inWater) {
             drawRound(c, dnX, dnY, dnR, downId != -1, false)
             drawChevron(c, dnX, dnY, dnR * 0.45f, false)
         } else {

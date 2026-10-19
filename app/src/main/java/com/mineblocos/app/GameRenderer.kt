@@ -24,7 +24,7 @@ class GameRenderer(
     animJson: String? = null
 ) : GLSurfaceView.Renderer {
 
-    private class Mesh(var vbo: Int, var count: Int)
+    private class Mesh(var vbo: Int, var count: Int, var oc: Int = count)
     private val BB_FULL = floatArrayOf(0f, 0f, 0f, 1f, 1f, 1f)
     private class Hit(val x: Int, val y: Int, val z: Int, val nx: Int, val ny: Int, val nz: Int, val hy: Float = 0f)
     private class Particle(
@@ -40,7 +40,8 @@ class GameRenderer(
     private var progColor = 0
     private var wPos = 0; private var wUV = 0; private var wLight = 0
     private var wMVP = 0; private var wCam = 0; private var wTex = 0; private var wSun = 0
-    private var wFogColor = 0; private var wFogStart = 0; private var wFogEnd = 0
+    private var wFogColor = 0; private var wFogStart = 0; private var wFogEnd = 0; private var wAlpha = 0
+    private val waterList = ArrayList<Mesh>()
     private var cPos = 0; private var cMVP = 0; private var cColor = 0
 
     private var texId = 0
@@ -96,6 +97,7 @@ class GameRenderer(
         wFogColor = GLES20.glGetUniformLocation(progWorld, "uFogColor")
         wFogStart = GLES20.glGetUniformLocation(progWorld, "uFogStart")
         wFogEnd = GLES20.glGetUniformLocation(progWorld, "uFogEnd")
+        wAlpha = GLES20.glGetUniformLocation(progWorld, "uAlpha")
         cPos = GLES20.glGetAttribLocation(progColor, "aPos")
         cMVP = GLES20.glGetUniformLocation(progColor, "uMVP")
         cColor = GLES20.glGetUniformLocation(progColor, "uColor")
@@ -236,6 +238,7 @@ class GameRenderer(
         }
         if (md.size > 0) upload(m.vbo, md.data, md.size)
         m.count = md.size / 6
+        m.oc = md.split / 6
     }
 
     // ---------------------------------------------------------------- lógica
@@ -313,6 +316,12 @@ class GameRenderer(
         return if (best < Float.MAX_VALUE) Hit(x, y, z, bnx, bny, bnz, oy + dy * best) else null
     }
 
+    /** Célula livre para construir: ar ou água. */
+    private fun free(x: Int, y: Int, z: Int): Boolean {
+        val b = world.get(x, y, z)
+        return b == Blocks.AIR || (Reg.water > 0 && b == Reg.water)
+    }
+
     private fun raycast(ox: Float, oy: Float, oz: Float, dx: Float, dy: Float, dz: Float, maxDist: Float): Hit? {
         var x = floor(ox).toInt()
         var y = floor(oy).toInt()
@@ -331,7 +340,7 @@ class GameRenderer(
         var t = 0f
         while (t <= maxDist) {
             val bl = world.get(x, y, z)
-            if (bl != Blocks.AIR) {
+            if (bl != Blocks.AIR && bl != Reg.water) {
                 val hb = Shapes.hitBoxes(world, x, y, z, bl)
                 if (hb == null) return Hit(x, y, z, nx, ny, nz, oy + dy * t)
                 val hh = hitBoxes(hb, x, y, z, ox, oy, oz, dx, dy, dz, maxDist, nx, ny, nz)
@@ -371,10 +380,10 @@ class GameRenderer(
                 s.vx = 0f
             } else if (!collides(nx, s.py, s.pz)) {
                 s.px = nx
-            } else if (moving && wasGround && !s.flying && !collides(nx, s.py + 0.51f, s.pz)) {
+            } else if (moving && (wasGround || swimming) && !s.flying && !collides(nx, s.py + 0.51f, s.pz)) {
                 s.py += 0.51f
                 s.px = nx
-            } else if (moving && wasGround && !s.flying && !collides(nx, s.py + 1.05f, s.pz)) {
+            } else if (moving && (wasGround || swimming) && !s.flying && !collides(nx, s.py + 1.05f, s.pz)) {
                 s.vy = 8.6f
             } else {
                 s.vx = 0f
@@ -384,10 +393,10 @@ class GameRenderer(
                 s.vz = 0f
             } else if (!collides(s.px, s.py, nz)) {
                 s.pz = nz
-            } else if (moving && wasGround && !s.flying && !collides(s.px, s.py + 0.51f, nz)) {
+            } else if (moving && (wasGround || swimming) && !s.flying && !collides(s.px, s.py + 0.51f, nz)) {
                 s.py += 0.51f
                 s.pz = nz
-            } else if (moving && wasGround && !s.flying && !collides(s.px, s.py + 1.05f, nz)) {
+            } else if (moving && (wasGround || swimming) && !s.flying && !collides(s.px, s.py + 1.05f, nz)) {
                 s.vy = 8.6f
             } else {
                 s.vz = 0f
@@ -403,6 +412,16 @@ class GameRenderer(
         s.onGround = ground
     }
 
+    /** O olho do personagem está debaixo da superfície da água? */
+    private fun eyeUnder(): Boolean {
+        if (Reg.water <= 0) return false
+        val ey = s.py + eyeH()
+        val iy = floor(ey).toInt()
+        val ix = floor(s.px).toInt()
+        val iz = floor(s.pz).toInt()
+        return world.isWater(ix, iy, iz) && (world.isWater(ix, iy + 1, iz) || ey - iy < 0.9f)
+    }
+
     private fun eyeH(): Float = if (s.sitting) 0.95f else eyeSmooth
 
     private fun update(dt: Float) {
@@ -414,10 +433,16 @@ class GameRenderer(
 
         val sy = sin(s.yaw)
         val cy = cos(s.yaw)
+        // água: nada sozinho quando ela cobre o corpo (precisa de 2+ blocos de profundidade; em 1 bloco só anda)
+        val ixp = floor(s.px).toInt()
+        val izp = floor(s.pz).toInt()
+        val inWater = Reg.water > 0 && !s.flying && !s.sitting &&
+            world.waterDepth(ixp, floor(s.py + (if (swimming) 0.5f else 1.15f)).toInt(), izp) >= 2
+        s.inWater = inWater
         // agachar / correr
-        if (s.flying || s.sitting || s.swim) s.sneak = false
+        if (s.flying || s.sitting || s.swim || inWater) s.sneak = false
         if (s.flying || s.sitting) s.swim = false
-        if (s.swim) {
+        if (s.swim || inWater) {
             swimming = true
         } else if (swimming && !collides(s.px, s.py, s.pz, 1.8f)) {
             swimming = false   // só levanta se houver espaço em cima
@@ -428,7 +453,7 @@ class GameRenderer(
             sneaking = false   // só levanta se houver espaço em cima
         }
         ph = if (swimming) 0.6f else if (sneaking) 1.5f else 1.8f
-        eyeSmooth += ((if (swimming) 0.4f else if (sneaking) 1.27f else 1.62f) - eyeSmooth) * min(1f, dt * 14f)
+        eyeSmooth += ((if (swimming) 0.5f else if (sneaking) 1.27f else 1.62f) - eyeSmooth) * min(1f, dt * 14f)
         val sprinting = s.sprint && s.moveZ > 0.3f && !sneaking && !s.sitting
         val speed = when {
             s.flying -> if (s.sprint) 15f else 9f
@@ -442,7 +467,18 @@ class GameRenderer(
         val k = min(1f, dt * 14f)
         s.vx += (tx - s.vx) * k
         s.vz += (tz - s.vz) * k
-        if (s.flying || swimming) {
+        if (swimming && inWater) {
+            // dentro d'água: sem gravidade, flutua sozinho, boia na superfície, pula/desce com os botões
+            val cell = floor(s.py + 0.5f).toInt()
+            val surface = !world.isWater(ixp, cell + 1, izp)
+            var ty = ((if (s.jump) 1f else 0f) - (if (s.down) 1f else 0f)) * 3.2f
+            if (ty == 0f) ty = 1.2f   // flutua para cima sozinho
+            if (surface && !s.down) {
+                val hover = (cell + 0.9f + 0.03f - 0.5f) - s.py   // altura em que o olho fica logo acima da água
+                if (s.jump || hover < 0.35f) ty = (hover * 6f).coerceIn(-1.5f, 3.2f)
+            }
+            s.vy += (ty - s.vy) * min(1f, dt * 8f)
+        } else if (s.flying || swimming) {
             val ty = ((if (s.jump) 1f else 0f) - (if (s.down) 1f else 0f)) * 6.5f
             s.vy += (ty - s.vy) * k
         } else {
@@ -645,7 +681,7 @@ class GameRenderer(
         val bx = h.x + h.nx
         val by = h.y + h.ny
         val bz = h.z + h.nz
-        if (!world.inBounds(bx, by, bz) || world.get(bx, by, bz) != Blocks.AIR) return
+        if (!world.inBounds(bx, by, bz) || !free(bx, by, bz)) return
         // direção em que o jogador olha: 0 = -Z, 1 = +X, 2 = +Z, 3 = -X
         val lx = sy
         val lz = -cy
@@ -662,8 +698,8 @@ class GameRenderer(
             }
             if (xm.hasDoor) {
                 // porta de 2 ou 3 blocos de altura (3 se houver espaço), com espelho automático em portas duplas
-                if (!world.inBounds(bx, by + 1, bz) || world.get(bx, by + 1, bz) != Blocks.AIR) return
-                val three = world.inBounds(bx, by + 2, bz) && world.get(bx, by + 2, bz) == Blocks.AIR
+                if (!world.inBounds(bx, by + 1, bz) || !free(bx, by + 1, bz)) return
+                val three = world.inBounds(bx, by + 2, bz) && free(bx, by + 2, bz)
                 val lv = intArrayOf(0, 0, 0, 0)
                 val dl = intArrayOf(-1, 0, 1, 0)   // esquerda do jogador (x) para face 0..3
                 val dlz = intArrayOf(0, -1, 0, 1)
@@ -705,7 +741,7 @@ class GameRenderer(
             if (xm.multi) {
                 for (pt in xm.parts) {
                     val px = bx + pt.off[f * 3]; val py = by + pt.off[f * 3 + 1]; val pz = bz + pt.off[f * 3 + 2]
-                    if (!world.inBounds(px, py, pz) || world.get(px, py, pz) != Blocks.AIR) return
+                    if (!world.inBounds(px, py, pz) || !free(px, py, pz)) return
                     if (xm.solid && intersectsPlayer(px, py, pz)) return
                 }
                 for (pt in xm.parts) {
@@ -719,7 +755,7 @@ class GameRenderer(
             return
         }
         if (Shapes.isDoor(blk)) {
-            if (!world.inBounds(bx, by + 1, bz) || world.get(bx, by + 1, bz) != Blocks.AIR) return
+            if (!world.inBounds(bx, by + 1, bz) || !free(bx, by + 1, bz)) return
             if (intersectsPlayer(bx, by, bz) || intersectsPlayer(bx, by + 1, bz)) return
             world.set(bx, by, bz, blk, face)
             world.set(bx, by + 1, bz, blk, face or Shapes.M_UPPER)
@@ -729,7 +765,7 @@ class GameRenderer(
         if (Shapes.isBed(blk)) {
             val hx = bx + Shapes.dirX(face)
             val hz = bz + Shapes.dirZ(face)
-            if (!world.inBounds(hx, by, hz) || world.get(hx, by, hz) != Blocks.AIR) return
+            if (!world.inBounds(hx, by, hz) || !free(hx, by, hz)) return
             if (intersectsPlayer(bx, by, bz) || intersectsPlayer(hx, by, hz)) return
             world.set(bx, by, bz, blk, face)
             world.set(hx, by, hz, blk, face or Shapes.M_SECOND)
@@ -805,7 +841,12 @@ class GameRenderer(
         val skyG = 0.04f + (0.78f - 0.04f) * day + warm * 0.45f
         val skyB = 0.10f + (0.98f - 0.10f) * day
 
-        GLES20.glClearColor(skyR, skyG, skyB, 1f)
+        val under = eyeUnder()
+        val uw = 0.35f + 0.65f * day
+        val fogR = if (under) 0.06f * uw else skyR
+        val fogG = if (under) 0.22f * uw else skyG
+        val fogB = if (under) 0.46f * uw else skyB
+        GLES20.glClearColor(fogR, fogG, fogB, 1f)
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT or GLES20.GL_DEPTH_BUFFER_BIT)
 
         val cp = cos(s.pitch)
@@ -842,14 +883,14 @@ class GameRenderer(
         GLES20.glBindBuffer(GLES20.GL_ARRAY_BUFFER, cubeVbo)
         GLES20.glEnableVertexAttribArray(cPos)
         GLES20.glVertexAttribPointer(cPos, 3, GLES20.GL_FLOAT, false, 12, 0)
-        if (sdy > -0.12f) {
+        if (sdy > -0.12f && !under) {
             Matrix.setIdentityM(model, 0)
             Matrix.translateM(model, 0, ex + sdx * 220f, ey + sdy * 220f, ez + 60f)
             Matrix.scaleM(model, 0, 34f, 34f, 34f)
             Matrix.translateM(model, 0, -0.5f, -0.5f, -0.5f)
             drawColorCube(model, 1f, 0.93f, 0.55f, 1f)
         }
-        if (sdy < 0.12f) {
+        if (sdy < 0.12f && !under) {
             Matrix.setIdentityM(model, 0)
             Matrix.translateM(model, 0, ex - sdx * 220f, ey - sdy * 220f, ez + 60f)
             Matrix.scaleM(model, 0, 24f, 24f, 24f)
@@ -865,9 +906,10 @@ class GameRenderer(
         GLES20.glUniformMatrix4fv(wMVP, 1, false, vp, 0)
         GLES20.glUniform3f(wCam, ex, ey, ez)
         GLES20.glUniform1f(wSun, bright)
-        GLES20.glUniform3f(wFogColor, skyR, skyG, skyB)
-        GLES20.glUniform1f(wFogStart, fogEnd * 0.5f)
-        GLES20.glUniform1f(wFogEnd, fogEnd)
+        GLES20.glUniform3f(wFogColor, fogR, fogG, fogB)
+        GLES20.glUniform1f(wFogStart, if (under) 0f else fogEnd * 0.5f)
+        GLES20.glUniform1f(wFogEnd, if (under) 26f else fogEnd)
+        GLES20.glUniform1f(wAlpha, 1f)
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0)
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, texId)
         Anim3D.tick(System.currentTimeMillis())
@@ -894,7 +936,26 @@ class GameRenderer(
             GLES20.glVertexAttribPointer(wPos, 3, GLES20.GL_FLOAT, false, 24, 0)
             GLES20.glVertexAttribPointer(wUV, 2, GLES20.GL_FLOAT, false, 24, 12)
             GLES20.glVertexAttribPointer(wLight, 1, GLES20.GL_FLOAT, false, 24, 20)
-            GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, m.count)
+            if (m.oc > 0) GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, m.oc)
+            if (m.count > m.oc) waterList.add(m)
+        }
+        if (waterList.isNotEmpty()) {
+            // água: translúcida, desenhada depois de todo o opaco
+            GLES20.glEnable(GLES20.GL_BLEND)
+            GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA)
+            GLES20.glDepthMask(false)
+            GLES20.glUniform1f(wAlpha, 0.72f)
+            for (m in waterList) {
+                GLES20.glBindBuffer(GLES20.GL_ARRAY_BUFFER, m.vbo)
+                GLES20.glVertexAttribPointer(wPos, 3, GLES20.GL_FLOAT, false, 24, 0)
+                GLES20.glVertexAttribPointer(wUV, 2, GLES20.GL_FLOAT, false, 24, 12)
+                GLES20.glVertexAttribPointer(wLight, 1, GLES20.GL_FLOAT, false, 24, 20)
+                GLES20.glDrawArrays(GLES20.GL_TRIANGLES, m.oc, m.count - m.oc)
+            }
+            GLES20.glDepthMask(true)
+            GLES20.glDisable(GLES20.GL_BLEND)
+            GLES20.glUniform1f(wAlpha, 1f)
+            waterList.clear()
         }
         worldAttribs(false)
 
@@ -1068,6 +1129,7 @@ class GameRenderer(
         GLES20.glUniform3f(wFogColor, 0f, 0f, 0f)
         GLES20.glUniform1f(wFogStart, 0f)
         GLES20.glUniform1f(wFogEnd, 10000f)
+        GLES20.glUniform1f(wAlpha, 1f)
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0)
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, texId)
         GLES20.glUniform1i(wTex, 0)
@@ -1104,6 +1166,7 @@ class GameRenderer(
             uniform vec3 uFogColor;
             uniform float uFogStart;
             uniform float uFogEnd;
+            uniform float uAlpha;
             varying vec2 vUV;
             varying float vLight;
             varying float vDist;
@@ -1115,7 +1178,7 @@ class GameRenderer(
                 float lit = max(sh * uSun, sh * (lv / 15.0));
                 vec3 col = c.rgb * lit;
                 float f = clamp((uFogEnd - vDist) / (uFogEnd - uFogStart), 0.0, 1.0);
-                gl_FragColor = vec4(mix(uFogColor, col, f), 1.0);
+                gl_FragColor = vec4(mix(uFogColor, col, f), uAlpha);
             }
         """
         private const val COLOR_VS = """
