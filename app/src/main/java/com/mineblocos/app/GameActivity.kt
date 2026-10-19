@@ -68,7 +68,10 @@ class GameActivity : AppCompatActivity() {
         st.sens = Prefs.sensRad(this)
         st.showFps = Prefs.showFps(this)
 
-        val renderer = GameRenderer(w, st, Prefs.dist(this))
+        val animJson = try {
+            assets.open("player_anims.json").bufferedReader().use { it.readText() }
+        } catch (e: Exception) { null }
+        val renderer = GameRenderer(w, st, Prefs.dist(this), animJson)
         val gv = GLSurfaceView(this)
         gv.setEGLContextClientVersion(2)
         gv.setEGLConfigChooser(8, 8, 8, 8, 16, 0)

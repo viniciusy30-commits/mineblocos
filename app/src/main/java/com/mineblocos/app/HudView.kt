@@ -87,6 +87,8 @@ class HudView(
     private var flyX = 0f; private var flyY = 0f; private var flyR = 0f
     private var camX = 0f; private var camY = 0f; private var camR = 0f
     private var dnX = 0f; private var dnY = 0f; private var dnR = 0f
+    private var spX = 0f; private var spY = 0f; private var spR = 0f
+    private var swX = 0f; private var swY = 0f; private var swR = 0f
     private var pauseX = 0f; private var pauseY = 0f; private var pauseR = 0f
     private var cfgX = 0f; private var cfgY = 0f; private var cfgR = 0f
     private var sunX = 0f; private var sunY = 0f; private var sunR = 0f
@@ -132,6 +134,8 @@ class HudView(
         flyR = dp(25f); flyX = w - dp(72f); flyY = h - dp(196f)
         camR = dp(25f); camX = w - dp(152f); camY = h - dp(170f)
         dnR = dp(30f); dnX = w - dp(152f); dnY = h - dp(80f)
+        spR = dp(27f); spX = w - dp(232f); spY = h - dp(112f)
+        swR = dp(25f); swX = w - dp(232f); swY = h - dp(196f)
         pauseR = dp(22f); pauseX = w - dp(36f); pauseY = dp(36f)
         invR = dp(22f); invX = w - dp(92f); invY = dp(36f)
         cfgR = dp(22f); cfgX = w - dp(148f); cfgY = dp(36f)
@@ -250,9 +254,28 @@ class HudView(
             return
         }
         if (inCircle(x, y, jumpX, jumpY, jumpR)) { jumpId = id; s.jump = true; return }
-        if (inCircle(x, y, flyX, flyY, flyR)) { s.flying = !s.flying; if (!s.flying) s.down = false; return }
+        if (inCircle(x, y, flyX, flyY, flyR)) {
+            s.flying = !s.flying
+            if (!s.flying) s.down = false else { s.sneak = false; s.swim = false }
+            return
+        }
+        if (inCircle(x, y, swX, swY, swR)) {
+            s.swim = !s.swim
+            if (s.swim) { s.flying = false; s.down = false; s.sneak = false }
+            return
+        }
+        if (inCircle(x, y, spX, spY, spR)) {
+            s.sprint = !s.sprint
+            if (s.sprint) s.sneak = false
+            return
+        }
+        if (!s.flying && !s.swim && inCircle(x, y, dnX, dnY, dnR)) {
+            s.sneak = !s.sneak
+            if (s.sneak) s.sprint = false
+            return
+        }
         if (inCircle(x, y, camX, camY, camR)) { s.camMode = (s.camMode + 1) % 3; return }
-        if (s.flying && inCircle(x, y, dnX, dnY, dnR)) { downId = id; s.down = true; return }
+        if ((s.flying || s.swim) && inCircle(x, y, dnX, dnY, dnR)) { downId = id; s.down = true; return }
         if (x < width * 0.38f && joyId == -1) {
             joyId = id; joyOx = x; joyOy = y; joyX = x; joyY = y
             return
@@ -370,9 +393,19 @@ class HudView(
         c.drawText("VOAR", flyX, flyY + dp(3.5f), text)
         drawRound(c, camX, camY, camR, false, false)
         c.drawText("CÂM", camX, camY + dp(3.5f), text)
-        if (s.flying) {
+        drawRound(c, swX, swY, swR, false, s.swim)
+        text.textSize = dp(9f)
+        c.drawText("NADAR", swX, swY + dp(3.2f), text)
+        drawRound(c, spX, spY, spR, false, s.sprint)
+        text.textSize = dp(9f)
+        c.drawText("CORRER", spX, spY + dp(3.2f), text)
+        if (s.flying || s.swim) {
             drawRound(c, dnX, dnY, dnR, downId != -1, false)
             drawChevron(c, dnX, dnY, dnR * 0.45f, false)
+        } else {
+            drawRound(c, dnX, dnY, dnR, false, s.sneak)
+            text.textSize = dp(9f)
+            c.drawText("AGACHAR", dnX, dnY + dp(3.2f), text)
         }
         // pausa
         drawRound(c, pauseX, pauseY, pauseR, false, false)

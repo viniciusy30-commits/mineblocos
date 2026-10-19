@@ -20,7 +20,8 @@ import kotlin.math.sqrt
 class GameRenderer(
     private val world: World,
     private val s: GameState,
-    private val renderDist: Int
+    private val renderDist: Int,
+    animJson: String? = null
 ) : GLSurfaceView.Renderer {
 
     private class Mesh(var vbo: Int, var count: Int)
@@ -61,7 +62,12 @@ class GameRenderer(
     private var fpsFrames = 0
     private var timeAcc = 0f
     private var bobT = 0f
-    private val anim = PlayerAnim()
+    private val animator = PlayerAnimator(animJson)
+    private var sneaking = false
+    private var swimming = false
+    private var ph = 1.8f          // altura da caixa de colisão (1.5 agachado)
+    private var eyeSmooth = 1.62f  // altura dos olhos suavizada
+    private var lastPunch = 0f
 
     private val look = FloatArray(2)
     private var hit: Hit? = null
@@ -234,9 +240,9 @@ class GameRenderer(
 
     // ---------------------------------------------------------------- lógica
 
-    private fun collides(x: Float, y: Float, z: Float): Boolean {
+    private fun collides(x: Float, y: Float, z: Float, hgt: Float = ph): Boolean {
         val minX = floor(x - 0.3f).toInt(); val maxX = floor(x + 0.3f).toInt()
-        val minY = floor(y).toInt(); val maxY = floor(y + 1.8f).toInt()
+        val minY = floor(y).toInt(); val maxY = floor(y + hgt - 0.001f).toInt()
         val minZ = floor(z - 0.3f).toInt(); val maxZ = floor(z + 0.3f).toInt()
         // começa uma célula abaixo: cercas têm 1,5 bloco; lajes e terra batida têm altura parcial
         for (iy in (minY - 1)..maxY) for (iz in minZ..maxZ) for (ix in minX..maxX) {
@@ -246,20 +252,20 @@ class GameRenderer(
             if (Shapes.boxCollide(bk)) {
                 for (q in Shapes.collBoxes(world, ix, iy, iz, bk)) {
                     if (x + 0.3f > ix + q.x0 && x - 0.3f < ix + q.x1 &&
-                        y + 1.8f > iy + q.y0 && y < iy + q.y1 &&
+                        y + hgt > iy + q.y0 && y < iy + q.y1 &&
                         z + 0.3f > iz + q.z0 && z - 0.3f < iz + q.z1
                     ) return true
                 }
                 continue
             }
-            if (y < iy + Shapes.hi(bk, mt) && y + 1.8f > iy + Shapes.lo(bk, mt)) return true
+            if (y < iy + Shapes.hi(bk, mt) && y + hgt > iy + Shapes.lo(bk, mt)) return true
         }
         return false
     }
 
     private fun intersectsPlayer(x: Int, y: Int, z: Int): Boolean {
         return s.px + 0.3f > x && s.px - 0.3f < x + 1 &&
-            s.py + 1.8f > y && s.py < y + 1 &&
+            s.py + ph > y && s.py < y + 1 &&
             s.pz + 0.3f > z && s.pz - 0.3f < z + 1
     }
 
@@ -342,16 +348,28 @@ class GameRenderer(
         return null
     }
 
+    /** há chão sólido sob o personagem em (x, z)? (para não cair da borda agachado) */
+    private fun supported(x: Float, y: Float, z: Float): Boolean {
+        val by = floor(y - 0.05f).toInt()
+        return world.solid(floor(x - 0.3f).toInt(), by, floor(z - 0.3f).toInt()) ||
+            world.solid(floor(x + 0.3f).toInt(), by, floor(z - 0.3f).toInt()) ||
+            world.solid(floor(x - 0.3f).toInt(), by, floor(z + 0.3f).toInt()) ||
+            world.solid(floor(x + 0.3f).toInt(), by, floor(z + 0.3f).toInt())
+    }
+
     private fun physics(dt: Float) {
         var rem = dt
         var ground = false
         val wasGround = s.onGround
         val moving = abs(s.moveX) + abs(s.moveZ) > 0.1f
+        val edgeSafe = sneaking && wasGround && !s.flying
         while (rem > 0f) {
             val h = min(rem, 0.02f)
             rem -= h
             val nx = s.px + s.vx * h
-            if (!collides(nx, s.py, s.pz)) {
+            if (edgeSafe && !supported(nx, s.py, s.pz) && supported(s.px, s.py, s.pz)) {
+                s.vx = 0f
+            } else if (!collides(nx, s.py, s.pz)) {
                 s.px = nx
             } else if (moving && wasGround && !s.flying && !collides(nx, s.py + 0.51f, s.pz)) {
                 s.py += 0.51f
@@ -362,7 +380,9 @@ class GameRenderer(
                 s.vx = 0f
             }
             val nz = s.pz + s.vz * h
-            if (!collides(s.px, s.py, nz)) {
+            if (edgeSafe && !supported(s.px, s.py, nz) && supported(s.px, s.py, s.pz)) {
+                s.vz = 0f
+            } else if (!collides(s.px, s.py, nz)) {
                 s.pz = nz
             } else if (moving && wasGround && !s.flying && !collides(s.px, s.py + 0.51f, nz)) {
                 s.py += 0.51f
@@ -383,7 +403,7 @@ class GameRenderer(
         s.onGround = ground
     }
 
-    private fun eyeH(): Float = if (s.sitting) 0.95f else 1.62f
+    private fun eyeH(): Float = if (s.sitting) 0.95f else eyeSmooth
 
     private fun update(dt: Float) {
         s.takeLook(look)
@@ -394,13 +414,35 @@ class GameRenderer(
 
         val sy = sin(s.yaw)
         val cy = cos(s.yaw)
-        val speed = if (s.flying) 9f else 4.6f
+        // agachar / correr
+        if (s.flying || s.sitting || s.swim) s.sneak = false
+        if (s.flying || s.sitting) s.swim = false
+        if (s.swim) {
+            swimming = true
+        } else if (swimming && !collides(s.px, s.py, s.pz, 1.8f)) {
+            swimming = false   // só levanta se houver espaço em cima
+        }
+        if (s.sneak && !swimming) {
+            sneaking = true
+        } else if (sneaking && !collides(s.px, s.py, s.pz, 1.8f)) {
+            sneaking = false   // só levanta se houver espaço em cima
+        }
+        ph = if (swimming) 0.6f else if (sneaking) 1.5f else 1.8f
+        eyeSmooth += ((if (swimming) 0.4f else if (sneaking) 1.27f else 1.62f) - eyeSmooth) * min(1f, dt * 14f)
+        val sprinting = s.sprint && s.moveZ > 0.3f && !sneaking && !s.sitting
+        val speed = when {
+            s.flying -> if (s.sprint) 15f else 9f
+            swimming -> if (s.sprint) 4.6f else 3.2f
+            sneaking -> 2.0f
+            sprinting -> 6.2f
+            else -> 4.6f
+        }
         val tx = (sy * s.moveZ + cy * s.moveX) * speed
         val tz = (-cy * s.moveZ + sy * s.moveX) * speed
         val k = min(1f, dt * 14f)
         s.vx += (tx - s.vx) * k
         s.vz += (tz - s.vz) * k
-        if (s.flying) {
+        if (s.flying || swimming) {
             val ty = ((if (s.jump) 1f else 0f) - (if (s.down) 1f else 0f)) * 6.5f
             s.vy += (ty - s.vy) * k
         } else {
@@ -427,7 +469,6 @@ class GameRenderer(
 
         val spd = sqrt(s.vx * s.vx + s.vz * s.vz)
         if (s.onGround && spd > 0.5f) bobT += dt * spd * 1.9f
-        anim.update(dt, spd, s.onGround, s.flying)
 
         // interação
         val cp = cos(s.pitch)
@@ -498,6 +539,14 @@ class GameRenderer(
             s.placeRequest = false
             if (h != null) doPlace(h, sy, cy)
         }
+
+        // animação do personagem (golpe quando `punch` acabou de ser disparado)
+        animator.update(
+            dt, s.onGround || s.sitting, s.flying, sneaking, sprinting,
+            s.vx, s.vy, s.vz, s.yaw, s.pitch,
+            punch > 0.97f, s.breaking && h != null && s.targetShow == 0,
+            s.sitting, swimming
+        )
 
         // partículas
         var i = parts.size - 1
@@ -907,75 +956,81 @@ class GameRenderer(
 
     private val base = FloatArray(16)
     private val pm = FloatArray(16)
-    private val boneM = Array(PlayerAnim.COUNT) { FloatArray(16) }
+    // ---- personagem estilo Minecraft (Steve) -----------------------------------------------
+    // Espaço do modelo = Bedrock: 1 px = 1/16 de bloco na escala do modelo, frente = +Z, braço direito em -X.
+    // Ossos na ordem de PlayerAnimator: root, waist, body, head, rightArm, leftArm, rightLeg, leftLeg.
+    private val boneM = Array(8) { FloatArray(16) }
+    private val pivX = floatArrayOf(0f, 0f, 0f, 0f, -5f, 5f, -1.9f, 1.9f)
+    private val pivY = floatArrayOf(0f, 12f, 24f, 24f, 22f, 22f, 12f, 12f)
+    private val parentOf = intArrayOf(-1, 0, 1, 2, 2, 2, 0, 0)
 
-    // Esqueleto do personagem, nas proporções do Minecraft (Steve: 32 px = 1,8 bloco).
-    // X+ é a direita do personagem; o rosto aponta para -Z.
-    private val PX = 1.8f / 32f
-    private val PIVOT = floatArrayOf(
-        0f, 12f, 0f,     // cintura
-        0f, 24f, 0f,     // corpo
-        0f, 24f, 0f,     // cabeça
-        5f, 22f, 0f,     // braço direito
-        -5f, 22f, 0f,    // braço esquerdo
-        1.9f, 12f, 0f,   // perna direita
-        -1.9f, 12f, 0f   // perna esquerda
-    )
-    // cintura -> corpo -> cabeça/braços; pernas presas na raiz (como no Minecraft)
-    private val PARENT = intArrayOf(
-        -1, PlayerAnim.WAIST, PlayerAnim.BODY, PlayerAnim.BODY, PlayerAnim.BODY, -1, -1
-    )
-
-    /** Monta a matriz do osso: posição da animação, depois rotação em torno do pivô. */
-    private fun poseBone(i: Int, extraPitch: Float) {
-        val parent = if (PARENT[i] < 0) base else boneM[PARENT[i]]
-        val m = boneM[i]
-        System.arraycopy(parent, 0, m, 0, 16)
-        val px = PIVOT[i * 3]
-        val py = PIVOT[i * 3 + 1]
-        val pz = PIVOT[i * 3 + 2]
-        Matrix.translateM(m, 0, px + anim.pos[i * 3], py + anim.pos[i * 3 + 1], pz + anim.pos[i * 3 + 2])
-        Matrix.rotateM(m, 0, anim.rot[i * 3 + 2], 0f, 0f, 1f)
-        Matrix.rotateM(m, 0, anim.rot[i * 3 + 1], 0f, 1f, 0f)
-        Matrix.rotateM(m, 0, anim.rot[i * 3] + extraPitch, 1f, 0f, 0f)
-        Matrix.translateM(m, 0, -px, -py, -pz)
+    private fun buildBones() {
+        for (i in 0 until 8) {
+            val bo = animator.bones[i]
+            val m = boneM[i]
+            System.arraycopy(if (parentOf[i] < 0) base else boneM[parentOf[i]], 0, m, 0, 16)
+            Matrix.translateM(m, 0, pivX[i] + bo.pos[0], pivY[i] + bo.pos[1], bo.pos[2])
+            // convenção de sinais do Bedrock -> mão direita do OpenGL: (rx, -ry, -rz), ordem Z·Y·X
+            Matrix.rotateM(m, 0, -bo.rot[2], 0f, 0f, 1f)
+            Matrix.rotateM(m, 0, -bo.rot[1], 0f, 1f, 0f)
+            Matrix.rotateM(m, 0, bo.rot[0], 1f, 0f, 0f)
+            Matrix.scaleM(m, 0, bo.scl[0], bo.scl[1], bo.scl[2])
+            Matrix.translateM(m, 0, -pivX[i], -pivY[i], 0f)
+        }
     }
 
-    /** Caixa em coordenadas do modelo (pixels), presa a um osso. */
     private fun box(
-        bone: Int, x0: Float, y0: Float, z0: Float, x1: Float, y1: Float, z1: Float,
+        bone: Int, x0: Float, y0: Float, z0: Float, w: Float, h: Float, d: Float,
         r: Float, g: Float, b: Float, lum: Float
     ) {
         System.arraycopy(boneM[bone], 0, pm, 0, 16)
         Matrix.translateM(pm, 0, x0, y0, z0)
-        Matrix.scaleM(pm, 0, x1 - x0, y1 - y0, z1 - z0)
+        Matrix.scaleM(pm, 0, w, h, d)
         drawColorCube(pm, r * lum, g * lum, b * lum, 1f)
     }
 
     private fun drawPlayer(lum: Float) {
+        val px = 1.8f / 32f   // o modelo tem 32 px de altura = 1.8 blocos
         Matrix.setIdentityM(base, 0)
         Matrix.translateM(base, 0, s.px, s.py, s.pz)
-        Matrix.rotateM(base, 0, -Math.toDegrees(s.yaw.toDouble()).toFloat(), 0f, 1f, 0f)
-        Matrix.scaleM(base, 0, PX, PX, PX)
-        val pitch = Math.toDegrees(s.pitch.toDouble()).toFloat()
-        for (i in 0 until PlayerAnim.COUNT) {
-            poseBone(i, if (i == PlayerAnim.HEAD) pitch else 0f)
-        }
-        // pernas
-        box(PlayerAnim.R_LEG, -0.1f, 0f, -2f, 3.9f, 12f, 2f, 0.2f, 0.2f, 0.52f, lum)
-        box(PlayerAnim.L_LEG, -3.9f, 0f, -2f, 0.1f, 12f, 2f, 0.22f, 0.22f, 0.58f, lum)
-        // corpo
-        box(PlayerAnim.BODY, -4f, 12f, -2f, 4f, 24f, 2f, 0.0f, 0.68f, 0.68f, lum)
-        // braços
-        box(PlayerAnim.R_ARM, 4f, 12f, -2f, 8f, 24f, 2f, 0.8f, 0.6f, 0.45f, lum)
-        box(PlayerAnim.L_ARM, -8f, 12f, -2f, -4f, 24f, 2f, 0.84f, 0.64f, 0.48f, lum)
-        // cabeça, cabelo e olhos
-        val h = PlayerAnim.HEAD
-        box(h, -4f, 24f, -4f, 4f, 32f, 4f, 0.86f, 0.66f, 0.5f, lum)
-        box(h, -4.4f, 30.2f, -4.4f, 4.4f, 32.4f, 4.4f, 0.28f, 0.17f, 0.08f, lum)
-        box(h, -4.4f, 24f, 2.8f, 4.4f, 30.2f, 4.4f, 0.28f, 0.17f, 0.08f, lum)
-        box(h, -2.8f, 26.8f, -4.3f, -0.8f, 28.2f, -3.95f, 0.15f, 0.2f, 0.65f, lum)
-        box(h, 0.8f, 26.8f, -4.3f, 2.8f, 28.2f, -3.95f, 0.15f, 0.2f, 0.65f, lum)
+        Matrix.rotateM(base, 0, -Math.toDegrees(animator.bodyYaw.toDouble()).toFloat(), 0f, 1f, 0f)
+        Matrix.rotateM(base, 0, 180f, 0f, 1f, 0f)   // frente do modelo (+Z) -> frente do jogo (-Z)
+        Matrix.scaleM(base, 0, px, px, px)
+        buildBones()
+
+        val H = PlayerAnimator.HEAD
+        val B = PlayerAnimator.BODY
+        val RA = PlayerAnimator.R_ARM
+        val LA = PlayerAnimator.L_ARM
+        val RL = PlayerAnimator.R_LEG
+        val LL = PlayerAnimator.L_LEG
+
+        // pernas: calça + sapato
+        box(RL, -3.9f, 2f, -2f, 3.8f, 10f, 4f, 0.23f, 0.24f, 0.62f, lum)
+        box(RL, -3.9f, 0f, -2f, 3.8f, 2f, 4f, 0.42f, 0.42f, 0.44f, lum)
+        box(LL, 0.1f, 2f, -2f, 3.8f, 10f, 4f, 0.2f, 0.21f, 0.56f, lum)
+        box(LL, 0.1f, 0f, -2f, 3.8f, 2f, 4f, 0.38f, 0.38f, 0.4f, lum)
+        // corpo (camisa)
+        box(B, -4f, 12f, -2f, 8f, 12f, 4f, 0.0f, 0.66f, 0.67f, lum)
+        // braços: manga + pele
+        box(RA, -7.9f, 20f, -2f, 3.8f, 4f, 4f, 0.0f, 0.62f, 0.63f, lum)
+        box(RA, -7.9f, 12f, -2f, 3.8f, 8f, 4f, 0.76f, 0.56f, 0.42f, lum)
+        box(LA, 4.1f, 20f, -2f, 3.8f, 4f, 4f, 0.0f, 0.58f, 0.6f, lum)
+        box(LA, 4.1f, 12f, -2f, 3.8f, 8f, 4f, 0.72f, 0.52f, 0.39f, lum)
+        // cabeça
+        box(H, -4f, 24f, -4f, 8f, 8f, 8f, 0.78f, 0.58f, 0.44f, lum)
+        // cabelo (topo, atrás, costeletas)
+        box(H, -4.2f, 30f, -4.2f, 8.4f, 2.2f, 8.4f, 0.27f, 0.17f, 0.09f, lum)
+        box(H, -4.2f, 26f, -4.2f, 8.4f, 4.2f, 1.0f, 0.27f, 0.17f, 0.09f, lum)
+        box(H, -4.2f, 28f, -4.2f, 0.4f, 2f, 5.2f, 0.27f, 0.17f, 0.09f, lum)
+        box(H, 3.8f, 28f, -4.2f, 0.4f, 2f, 5.2f, 0.27f, 0.17f, 0.09f, lum)
+        // rosto (frente = +Z): olhos, nariz, boca
+        box(H, -3f, 27f, 4f, 1f, 1f, 0.1f, 0.95f, 0.95f, 0.95f, lum)
+        box(H, -2f, 27f, 4f, 1f, 1f, 0.1f, 0.27f, 0.22f, 0.55f, lum)
+        box(H, 1f, 27f, 4f, 1f, 1f, 0.1f, 0.27f, 0.22f, 0.55f, lum)
+        box(H, 2f, 27f, 4f, 1f, 1f, 0.1f, 0.95f, 0.95f, 0.95f, lum)
+        box(H, -1f, 26f, 4f, 2f, 1f, 0.1f, 0.66f, 0.46f, 0.34f, lum)
+        box(H, -1f, 25f, 4f, 2f, 1f, 0.1f, 0.5f, 0.3f, 0.24f, lum)
     }
 
     private fun drawHand(bright: Float) {

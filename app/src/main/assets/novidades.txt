@@ -1,3 +1,11 @@
+#id 2026-10-19-c
+#titulo Animações do personagem (Actions & Stuff)
+- Personagem Steve com as animações do addon Actions & Stuff: andar, andar de costas, correr, agachar, pular, cair, aterrissar, voar e golpe de braço
+- Novos botões CORRER e AGACHAR (agachado anda devagar, desce a câmera e não deixa cair da borda)
+- Voando, CORRER acelera o voo
+- Animação de sentar (pernas dobradas, mãos no colo) e de nadar (superfície e mergulho)
+- Botão NADAR liga o modo nado só para ver a animação (o jogo ainda não tem água)
+
 #id 2026-10-19-b
 #titulo Vitrine por categorias escolhidas e botão dia/noite
 - Ao entrar num mundo novo, você escolhe quais categorias da vitrine quer ver (só elas são montadas, fica bem mais organizado)
