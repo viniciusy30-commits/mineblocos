@@ -1,3 +1,13 @@
+#id 2026-10-20-a
+#titulo Animações 2.0: rig com joelhos e cotovelos
+- O personagem agora tem joelhos e cotovelos articulados de verdade: pernas dobram ao agachar, pousar, correr, nadar e sentar; braços se dobram conforme a velocidade
+- Pés plantados com geometria de 2 segmentos: o joelho dobra exatamente o necessário para o pé não afundar nem flutuar quando o quadril desce
+- Corrida com joelhos altos e braços de corredor; andar mais natural com joelho macio no apoio e perna recolhida no balanço
+- Parado muito mais vivo: respiração com o peito, troca de peso entre as pernas, ombro que relaxa e a cabeça que olha para os lados de vez em quando
+- Golpe agora é combo: golpes rápidos alternam os braços, com ventania, torção de tronco, passo à frente, joelho absorvendo e recuperação com overshoot
+- Pulo e pouso refinados: perna da frente recolhida na subida, joelhos abraçados no topo do salto, queda pedalando e pouso com joelhos absorvendo o impacto
+- Sentado com joelhos de cadeira e mãos pousadas nas coxas; nado com cotovelos acompanhando a braçada
+
 #id 2026-10-19-e
 #titulo Animações do personagem refeitas do zero
 - Andar e correr agora seguem a distância percorrida (pé não escorrega), com passada, chute de calcanhar, torção do tronco, quique e inclinação ao acelerar e nas curvas

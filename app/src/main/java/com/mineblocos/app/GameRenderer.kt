@@ -1019,14 +1019,15 @@ class GameRenderer(
     private val pm = FloatArray(16)
     // ---- personagem estilo Minecraft (Steve) -----------------------------------------------
     // Espaço do modelo = Bedrock: 1 px = 1/16 de bloco na escala do modelo, frente = +Z, braço direito em -X.
-    // Ossos na ordem de PlayerAnimator: root, waist, body, head, rightArm, leftArm, rightLeg, leftLeg.
-    private val boneM = Array(8) { FloatArray(16) }
-    private val pivX = floatArrayOf(0f, 0f, 0f, 0f, -5f, 5f, -1.9f, 1.9f)
-    private val pivY = floatArrayOf(0f, 12f, 24f, 24f, 22f, 22f, 12f, 12f)
-    private val parentOf = intArrayOf(-1, 0, 1, 2, 2, 2, 0, 0)
+    // Ossos na ordem de PlayerAnimator: root, waist, body, head, rightArm, leftArm, rightLeg, leftLeg,
+    // rightElbow, leftElbow, rightKnee, leftKnee.
+    private val boneM = Array(12) { FloatArray(16) }
+    private val pivX = floatArrayOf(0f, 0f, 0f, 0f, -5f, 5f, -1.9f, 1.9f, -5f, 5f, -1.9f, 1.9f)
+    private val pivY = floatArrayOf(0f, 12f, 24f, 24f, 22f, 22f, 12f, 12f, 17f, 17f, 6f, 6f)
+    private val parentOf = intArrayOf(-1, 0, 1, 2, 2, 2, 0, 0, 4, 5, 6, 7)
 
     private fun buildBones() {
-        for (i in 0 until 8) {
+        for (i in 0 until 12) {
             val bo = animator.bones[i]
             val m = boneM[i]
             System.arraycopy(if (parentOf[i] < 0) base else boneM[parentOf[i]], 0, m, 0, 16)
@@ -1065,19 +1066,27 @@ class GameRenderer(
         val LA = PlayerAnimator.L_ARM
         val RL = PlayerAnimator.R_LEG
         val LL = PlayerAnimator.L_LEG
+        val RE = PlayerAnimator.R_ELBOW
+        val LE = PlayerAnimator.L_ELBOW
+        val RK = PlayerAnimator.R_KNEE
+        val LK = PlayerAnimator.L_KNEE
 
-        // pernas: calça + sapato
-        box(RL, -3.9f, 2f, -2f, 3.8f, 10f, 4f, 0.23f, 0.24f, 0.62f, lum)
-        box(RL, -3.9f, 0f, -2f, 3.8f, 2f, 4f, 0.42f, 0.42f, 0.44f, lum)
-        box(LL, 0.1f, 2f, -2f, 3.8f, 10f, 4f, 0.2f, 0.21f, 0.56f, lum)
-        box(LL, 0.1f, 0f, -2f, 3.8f, 2f, 4f, 0.38f, 0.38f, 0.4f, lum)
+        // pernas: coxa (calça), canela (calça) e sapato — o joelho articula de verdade
+        box(RL, -3.9f, 6f, -2f, 3.8f, 6f, 4f, 0.23f, 0.24f, 0.62f, lum)
+        box(RK, -3.9f, 2f, -2f, 3.8f, 4f, 4f, 0.23f, 0.24f, 0.62f, lum)
+        box(RK, -3.9f, 0f, -2f, 3.8f, 2f, 4f, 0.42f, 0.42f, 0.44f, lum)
+        box(LL, 0.1f, 6f, -2f, 3.8f, 6f, 4f, 0.2f, 0.21f, 0.56f, lum)
+        box(LK, 0.1f, 2f, -2f, 3.8f, 4f, 4f, 0.2f, 0.21f, 0.56f, lum)
+        box(LK, 0.1f, 0f, -2f, 3.8f, 2f, 4f, 0.38f, 0.38f, 0.4f, lum)
         // corpo (camisa)
         box(B, -4f, 12f, -2f, 8f, 12f, 4f, 0.0f, 0.66f, 0.67f, lum)
-        // braços: manga + pele
+        // braços: manga + braço de cima (ombro) e antebraço (cotovelo)
         box(RA, -7.9f, 20f, -2f, 3.8f, 4f, 4f, 0.0f, 0.62f, 0.63f, lum)
-        box(RA, -7.9f, 12f, -2f, 3.8f, 8f, 4f, 0.76f, 0.56f, 0.42f, lum)
+        box(RA, -7.9f, 17f, -2f, 3.8f, 3f, 4f, 0.76f, 0.56f, 0.42f, lum)
+        box(RE, -7.9f, 12f, -2f, 3.8f, 5f, 4f, 0.76f, 0.56f, 0.42f, lum)
         box(LA, 4.1f, 20f, -2f, 3.8f, 4f, 4f, 0.0f, 0.58f, 0.6f, lum)
-        box(LA, 4.1f, 12f, -2f, 3.8f, 8f, 4f, 0.72f, 0.52f, 0.39f, lum)
+        box(LA, 4.1f, 17f, -2f, 3.8f, 3f, 4f, 0.72f, 0.52f, 0.39f, lum)
+        box(LE, 4.1f, 12f, -2f, 3.8f, 5f, 4f, 0.72f, 0.52f, 0.39f, lum)
         // cabeça
         box(H, -4f, 24f, -4f, 8f, 8f, 8f, 0.78f, 0.58f, 0.44f, lum)
         // cabelo (topo, atrás, costeletas)
