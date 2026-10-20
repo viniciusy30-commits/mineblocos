@@ -1092,6 +1092,8 @@ class GameRenderer(
         box(H, 2f, 27f, 4f, 1f, 1f, 0.1f, 0.95f, 0.95f, 0.95f, lum)
         box(H, -1f, 26f, 4f, 2f, 1f, 0.1f, 0.66f, 0.46f, 0.34f, lum)
         box(H, -1f, 25f, 4f, 2f, 1f, 0.1f, 0.5f, 0.3f, 0.24f, lum)
+        // piscar: a pele cobre os olhos por uma fração de segundo
+        if (animator.blink > 0.5f) box(H, -3f, 27f, 4.05f, 6f, 1f, 0.1f, 0.78f, 0.58f, 0.44f, lum)
     }
 
     private fun drawHand(bright: Float) {
