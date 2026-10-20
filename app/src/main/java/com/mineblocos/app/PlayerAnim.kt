@@ -226,6 +226,12 @@ class PlayerAnimator(@Suppress("UNUSED_PARAMETER") json: String?) {
         return sin(u * PI_F).pow(0.9f)
     }
 
+    /** onda do pé (-1..1): seno + triangular, o pé de apoio desliza quase em velocidade constante */
+    private fun wave(phi: Float): Float {
+        val c = cos(phi).coerceIn(-1f, 1f)
+        return 0.55f * c + 0.45f * (2f / PI_F) * asin(c)
+    }
+
     /** peso (0..1) do pé no apoio, com rampas curtas nas pontas (sem degrau) */
     private fun stanceW(t0: Float, beta: Float): Float {
         val tt = (t0 - floor(t0) + 0.04f) % 1f
@@ -370,17 +376,15 @@ class PlayerAnimator(@Suppress("UNUSED_PARAMETER") json: String?) {
         val spn0 = sp.coerceIn(0f, 1.3f)
         val ampK = 0.45f + 0.55f * min(spn0, 1.1f)
         val backK = if (dF < 0f) 1f + 0.18f * dF else 1f
-        val ampN = 0.4f + 0.6f * min(spn0, 1.1f)
-        frontA = lerp(lerp(27f, 40f, runW), 17f, sneakW) * ampN
-        backA = lerp(lerp(30f, 58f, runW), 19f, sneakW) * ampN
-        axA = (frontA + backA) * 0.5f * backK
-        azA = lerp(20f, 13f, sneakW) * ampK
+        val ampN = 0.5f + 0.5f * min(spn0, 1.1f)
+        axA = lerp(lerp(30f, 54f, runW), 17f, sneakW) * ampN * backK
+        azA = lerp(lerp(16f, 10f, runW), 9f, sneakW) * ampN
         gBeta = lerp(lerp(0.60f, 0.38f, runW), 0.64f, sneakW)
         gNorm = footNorm(gBeta)
         val mag = hyp(LEG * sin(axA * RAD) * dF, LEG * sin(azA * RAD) * dR)
         val kPlant = lerp(lerp(0.76f, 0.80f, runW), 0.85f, sneakW)
         // comprimento do passo = varredura REAL do pé no apoio / fração do ciclo no chão / quanto o pé acompanha o chão
-        stride = max(2f * mag / gNorm * PX / (gBeta * kPlant), 0.7f)
+        stride = max(4f * mag * PX / kPlant, 0.7f)
 
         if (grounded) {
             if (gs < 0.3f && turnW < 0.1f) {
@@ -543,70 +547,59 @@ class PlayerAnimator(@Suppress("UNUSED_PARAMETER") json: String?) {
         val k = w * mv
         val absR = abs(dR)
 
-        // ---- ciclo novo: alcance à frente menor que o de trás, joelho recolhido no balanço, fase de voo ao correr
-        val amp = 0.4f + 0.6f * min(spn, 1.1f)
-        val legRx = -asym(xR * dF)
-        val legLx = -asym(xL * dF)
-        val latR = azA * (xR * dR + absR)            // 0 .. 2*az (abre)
-        val latL = azA * (-xL * dR + absR)
-        val kick = 1f + 0.55f * max(0f, -dF)
-        val lift = lerp(2.2f, 5.5f, runW) * amp * kick
-        val fold = lerp(0.10f, 0.34f, runW) * amp
-        val arR = swingArc(phase, beta)
-        val arL = swingArc(phase + 0.5f, beta)
-        liftR = lift * arR * k
-        liftL = lift * arL * k
-        r(R_LEG, 0, legRx * k)
-        r(L_LEG, 0, legLx * k)
-        r(R_LEG, 2, latR * k)
-        r(L_LEG, 2, -latL * k)
+        // ---- ciclo simples e robusto (pernas e braços em oposição, onda com pé de apoio quase constante)
+        val amp = 0.5f + 0.5f * min(spn, 1.1f)
+        val fR = wave(phi)
+        val fL = -fR
+        val sph = sin(phi)
+        val zA = lerp(lerp(16f, 10f, runW), 9f, sneakW) * amp
+        val rxR = -axA * fR * dF
+        val rxL = -axA * fL * dF
+        val rzR = zA * (fR * dR + absR)
+        val rzL = -zA * (fL * dR + absR)
+        r(R_LEG, 0, rxR * k)
+        r(L_LEG, 0, rxL * k)
+        r(R_LEG, 2, rzR * k)
+        r(L_LEG, 2, rzL * k)
+        // o pé que vai para a frente levanta um pouco (joelho recolhido)
+        val lift = lerp(1.4f, 3.6f, runW) * amp * (1f - 0.5f * sneakW)
+        liftR = lift * max(0f, -sph).pow(0.8f) * k
+        liftL = lift * max(0f, sph).pow(0.8f) * k
         p(R_LEG, 1, liftR)
         p(L_LEG, 1, liftL)
-        p(R_LEG, 2, -liftR * 0.55f)
-        p(L_LEG, 2, -liftL * 0.55f)
-        bones[R_LEG].scl[1] = 1f - fold * arR * k
-        bones[L_LEG].scl[1] = 1f - fold * arL * k
-        // corpo: andando cai nos contatos; correndo comprime no apoio e sobe no voo
-        val thR = hyp(legRx, latR) * RAD
-        val thL = hyp(legLx, latL) * RAD
-        val stR = stanceW(phase, beta)
-        val stL = stanceW(phase + 0.5f, beta)
-        val sS = stR + stL
-        val avg = (stR * LEG * (1f - cos(thR)) + stL * LEG * (1f - cos(thL))) / max(sS, 0.001f)
-        val uR = min((phase - floor(phase)) / beta, 1f)
-        val ph2 = phase + 0.5f
-        val uL = min((ph2 - floor(ph2)) / beta, 1f)
-        val comp = lerp(0.5f, 2.4f, runW) * amp
-        val compress = comp * (stR * sin(uR * PI_F) + stL * sin(uL * PI_F)) / max(sS, 1f)
-        val flight = if (sS >= 1f) 0f else 1f - sS
-        val rise = lerp(0f, 2.2f, runW) * amp * flight
-        p(ROOT, 1, (-avg * (1f - 0.55f * runW) * min(sS, 1f) - compress + rise) * k)
+        p(R_LEG, 2, -liftR * 0.4f * dF)
+        p(L_LEG, 2, -liftL * 0.4f * dF)
+        // corpo: andando desce quando as pernas abrem; correndo sobe no voo (pernas abertas) e comprime ao passar
+        val thR = hyp(rxR, rzR) * RAD
+        val thL = hyp(rxL, rzL) * RAD
+        val drop = LEG * (1f - cos(max(thR, thL))) * lerp(0.9f, 0.3f, runW)
+        val c2 = cos(phi)
+        val rise = (2.4f * c2 * c2 - 1.6f * sph * sph) * runW * amp
+        p(ROOT, 1, (-drop + rise) * k)
 
-        // ---- braços: contrabalançam com atraso; correndo ficam "dobrados" para a frente e cruzam um pouco
-        val sa = cos(phi - 0.3f)
-        val armA = lerp(24f, 58f, runW) * amp * lerp(1f, 0.45f, sneakW)
-        val pump = lerp(-3f, -40f, runW)
-        val armF = armA * sa * dF
-        r(R_ARM, 0, (pump + armF) * k)
-        r(L_ARM, 0, (pump - armF) * k)
-        val flare = lerp(3f, -7f, runW) + (1.5f + 2f * runW) * cos(2f * phi)
-        val armZ = 13f * min(spn, 1f) * (1f - 0.5f * sneakW)
-        val arZ = flare + armZ * (absR - sa * dR)
-        r(R_ARM, 2, arZ * k)
-        r(L_ARM, 2, -arZ * k)
+        // ---- braços: opostos às pernas, com um pequeno atraso; correndo ficam dobrados para a frente
+        val armA = lerp(30f, 55f, runW) * amp * lerp(1f, 0.45f, sneakW)
+        val sa = cos(phi - 0.25f)
+        val pump = lerp(-2f, -42f, runW)
+        r(R_ARM, 0, (pump + armA * sa * dF) * k)
+        r(L_ARM, 0, (pump - armA * sa * dF) * k)
+        val flare = lerp(3f, -6f, runW) + (1f + 1.5f * runW) * cos(2f * phi)
+        val armZ = 10f * min(spn, 1f) * (absR - sa * dR) * (1f - 0.5f * sneakW)
+        r(R_ARM, 2, (flare + armZ) * k)
+        r(L_ARM, 2, -(flare + armZ) * k)
 
-        // ---- torção do tronco (ombros contra quadril), balanço lateral e quadril
-        val twv = lerp(7f, 12f, runW) * amp * (xR - xL) * 0.5f * dF
-        r(WAIST, 1, -twv * k)
-        r(HEAD, 1, twv * 0.8f * k)
-        val fold2 = asin(sin(dirAng))                 // 0 frente/trás, ±90° de lado (contínuo)
+        // ---- tronco: ombros contra quadril, balanço lateral, cabeça estável
+        val tw = lerp(7f, 12f, runW) * amp
+        r(WAIST, 1, -tw * fR * dF * k)
+        r(HEAD, 1, tw * fR * dF * 0.8f * k)
+        val fold2 = asin(sin(dirAng))
         val twDir = (fold2 * DEG * 0.2f).coerceIn(-16f, 16f) * min(spn, 1f)
         r(WAIST, 1, twDir * k)
         r(HEAD, 1, -twDir * 0.9f * k)
-        val rollA = lerp(3f, 4f, runW) * amp
-        r(WAIST, 2, rollA * hs * k)
-        r(HEAD, 2, -rollA * hs * 0.6f * k)
-        p(ROOT, 0, 0.55f * hs * amp * k)
+        val rollA = lerp(3f, 4f, runW) * amp * sph
+        r(WAIST, 2, -rollA * k)
+        r(HEAD, 2, rollA * 0.6f * k)
+        p(ROOT, 0, -0.55f * amp * sph * k)
         r(HEAD, 0, -1.2f * amp * cos(2f * phi) * k)
 
         // inclinação (aceleração + velocidade): para frente corre inclinado, de costas inclina o corpo para trás
