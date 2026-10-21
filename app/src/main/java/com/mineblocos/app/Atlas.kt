@@ -25,11 +25,12 @@ object Atlas {
     private val addonRects = HashMap<String, IntArray>()
     private var addonSlot = 0
     private var addonStartY = -1
+    // 42 colunas de 48 px ocupam 2016 px dentro do atlas de 2048 px.
 
     /**
      * Adds user-owned Bedrock textures to a runtime atlas. Textures stay in the
      * user's private addon storage; no pack artwork is bundled into the APK.
-     * Each image is kept aspect-ratio-correct in a 32x32 cell.
+     * Each image is kept aspect-ratio-correct in a 48x48 cell.
      */
     @Synchronized
     fun appendAddonTextures(files: Map<String, java.io.File>): Map<String, IntArray> {
@@ -37,8 +38,8 @@ object Atlas {
         if (pending.isEmpty()) return HashMap(addonRects)
         val old = bitmap
         val targetW = 2048
-        val targetH = 4096
-        if (addonStartY < 0) addonStartY = ((old.height + 31) / 32) * 32
+        val targetH = 8192
+        if (addonStartY < 0) addonStartY = ((old.height + 47) / 48) * 48
         if (addonStartY >= targetH) return HashMap(addonRects)
         val out = if (old.width == targetW && old.height == targetH) old else {
             Bitmap.createBitmap(targetW, targetH, Bitmap.Config.ARGB_8888).also { expanded ->
@@ -48,7 +49,7 @@ object Atlas {
         val canvas = android.graphics.Canvas(out)
         val paint = Paint().apply { isFilterBitmap = false }
         for ((key, file) in pending) {
-            if (addonStartY + (addonSlot / 64) * 32 + 32 > targetH) break
+            if (addonStartY + (addonSlot / 42) * 48 + 48 > targetH) break
             var src: Bitmap? = null
             try {
                 val options = BitmapFactory.Options().apply {
@@ -63,13 +64,13 @@ object Atlas {
                     if (cropped !== src) src.recycle()
                     src = cropped
                 }
-                val cellX = (addonSlot % 64) * 32
-                val cellY = addonStartY + (addonSlot / 64) * 32
-                val scale = minOf(32f / src.width, 32f / src.height)
+                val cellX = (addonSlot % 42) * 48
+                val cellY = addonStartY + (addonSlot / 42) * 48
+                val scale = minOf(48f / src.width, 48f / src.height)
                 val dw = maxOf(1, (src.width * scale).toInt())
                 val dh = maxOf(1, (src.height * scale).toInt())
-                val dx = cellX + (32 - dw) / 2
-                val dy = cellY + (32 - dh) / 2
+                val dx = cellX + (48 - dw) / 2
+                val dy = cellY + (48 - dh) / 2
                 canvas.drawBitmap(src, null, android.graphics.Rect(dx, dy, dx + dw, dy + dh), paint)
                 addonRects[key] = intArrayOf(dx, dy, dw, dh)
                 addonSlot++
