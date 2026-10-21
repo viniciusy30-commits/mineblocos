@@ -51,7 +51,8 @@ class AddonsActivity : AppCompatActivity() {
             setPadding(12, 8, 12, 8)
         }
         root.addView(urlInput, LinearLayout.LayoutParams(-1, -2).apply { topMargin = 8 })
-        val urlButton = UiKit.mcButton(this, "Baixar addon pelo link") {
+        lateinit var urlButton: Button
+        urlButton = UiKit.mcButton(this, "Baixar addon pelo link") {
             val url = urlInput.text.toString().trim()
             if (!url.startsWith("https://", ignoreCase = true)) {
                 AlertDialog.Builder(this).setTitle("Link inválido")
