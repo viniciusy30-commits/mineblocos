@@ -35,7 +35,7 @@ class AddonsActivity : AppCompatActivity() {
         }
         root.addView(title, LinearLayout.LayoutParams(-1, -2))
         val info = TextView(this).apply {
-            text = "Importe arquivos .mcaddon, .mcpack ou .zip. Esta versão armazena e identifica os pacotes; os blocos do Bedrock ainda precisam ser convertidos para o motor do MineBlocos."
+            text = "Importe arquivos .mcaddon, .mcpack ou .zip. Ao iniciar o mundo, o MineBlocos tenta converter os blocos e modelos estáticos do addon para o inventário e para o mundo. Scripts, animações e estados avançados próprios do Bedrock não são executados."
             textSize = 14f
             setTextColor(0xFFD7D7D7.toInt())
             setPadding(4, 12, 4, 12)
