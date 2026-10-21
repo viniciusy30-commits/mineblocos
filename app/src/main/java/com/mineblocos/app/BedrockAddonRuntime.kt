@@ -178,14 +178,20 @@ object BedrockAddonRuntime {
             if (rect == null) missingTexture++
             val geoId = row.optString("geometry")
             val geo = geometryById[geoId]
-            if (geo == null) missingGeometry++
             val components = row.optJSONObject("components") ?: JSONObject()
             val geometryComponent = components.optJSONObject("minecraft:geometry")
             val boneVisibility = geometryComponent?.optJSONObject("bone_visibility")
-            val cubes = if (geo != null && boneVisibility != null && boneVisibility.length() > 0) {
+            val filteredCubes = if (geo != null && boneVisibility != null && boneVisibility.length() > 0) {
                 parseGeometry(geo.source, geo.texW, geo.texH, boneVisibility,
                     row.optJSONObject("stateDefaults") ?: JSONObject())
-            } else geo?.cubes?.takeIf { it.isNotEmpty() } ?: fallbackCube()
+            } else null
+            val cubes = filteredCubes?.takeIf { it.isNotEmpty() }
+                ?: geo?.cubes?.takeIf { it.isNotEmpty() }
+                ?: fallbackCube()
+            if ((geo == null || geo.cubes.isEmpty()) &&
+                geoId.isNotBlank() && geoId !in setOf("minecraft:geometry.full_block", "geometry.full_block")) {
+                missingGeometry++
+            }
             val rectMap = HashMap<String, IntArray>()
             if (rect != null) rectMap["*"] = rect else rectMap["*"] = intArrayOf(0, 0, 16, 16)
             val materials = row.optJSONObject("materials") ?: JSONObject()
