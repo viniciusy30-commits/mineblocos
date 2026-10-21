@@ -212,6 +212,29 @@ object Reg {
         }
     }
 
+    /** Registers an imported Bedrock block with a runtime 3D model. */
+    @Synchronized
+    fun registerAddonModel(id: String, displayName: String, model: XModel, averageColor: Int = 0xFF8A8A8A.toInt(), light: Int = 0): Int {
+        if (!ready || id.isBlank()) return 0
+        val existing = index[id]
+        if (existing != null) return existing
+        val b = count
+        ids = ids.copyOf(b + 1); ids[b] = id
+        names = names.copyOf(b + 1); names[b] = displayName.ifBlank { id.substringAfter(':') }
+        kinds = kinds.copyOf(b + 1); kinds[b] = K_MODEL
+        top = top.copyOf(b + 1); bot = bot.copyOf(b + 1); side = side.copyOf(b + 1)
+        flags = flags.copyOf(b + 1)
+        avgs = avgs.copyOf(b + 1); avgs[b] = averageColor
+        emitArr = emitArr.copyOf(b + 1); emitArr[b] = light.coerceIn(0, 15).toByte()
+        count = b + 1
+        index[id] = b
+        Models3D.register(model)
+        return b
+    }
+
+    /** Loads imported packs on a worker thread before the world/GL renderer starts. */
+    fun loadImportedAddons(c: Context): String = BedrockAddonRuntime.load(c)
+
     private fun ok(b: Int) = b > 0 && b < count
 
     fun id(name: String): Int = index[name] ?: 0
