@@ -69,7 +69,8 @@ class HudView(
     private fun applyInventorySearch() {
         // Quando há uma busca, pesquisar no catálogo inteiro, não só na aba atual.
         allCubes = if (searchQuery.isBlank()) Reg.buildingList(invTab) else
-            (0..3).flatMap { Reg.buildingList(it).asIterable() }.distinct().toIntArray()
+            (0..3).flatMap { Reg.buildingList(it).asIterable() }.distinct()
+                .sortedBy { Reg.name(it).lowercase() }.toIntArray()
         cubes = if (searchQuery.isBlank()) allCubes else allCubes.filter {
             Reg.name(it).contains(searchQuery.trim(), ignoreCase = true) ||
                 Reg.key(it).contains(searchQuery.trim(), ignoreCase = true)
