@@ -45,7 +45,7 @@ object AddonManager {
                         val entry = zip.nextEntry ?: break
                         entries++
                         if (entries > MAX_ENTRIES) error("O pacote tem arquivos demais.")
-                        val relative = entry.name.replace('\\\\', '/')
+                        val relative = entry.name.replace('\\', '/')
                         val parts = relative.split('/')
                         if (relative.startsWith("/") || parts.any { it == ".." } ||
                             relative.contains(":") || relative.isBlank()) {
@@ -53,7 +53,7 @@ object AddonManager {
                             continue
                         }
                         val out = File(staging, relative).canonicalFile
-                        if (!out.toPath().startsWith(staging.canonicalFile.toPath())) {
+                        if (out.canonicalPath != staging.canonicalPath && !out.canonicalPath.startsWith(staging.canonicalPath + File.separator)) {
                             zip.closeEntry()
                             continue
                         }
