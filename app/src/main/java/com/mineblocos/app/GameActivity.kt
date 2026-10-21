@@ -42,6 +42,14 @@ class GameActivity : AppCompatActivity() {
         val novo = intent.getBooleanExtra("novo", false)
         val app = applicationContext
         Thread {
+            // Load imported Bedrock furniture before restoring/generating a world so block IDs
+            // and the runtime texture atlas are ready before the renderer is created.
+            try {
+                val addonResult = Reg.loadImportedAddons(app)
+                android.util.Log.i("Mineblocos", addonResult)
+            } catch (e: Throwable) {
+                android.util.Log.e("Mineblocos", "Falha ao converter addon Bedrock", e)
+            }
             val loaded = if (novo) null else WorldStore.load(app)
             val w: World
             val st = GameState()
