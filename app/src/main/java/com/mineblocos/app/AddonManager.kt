@@ -79,6 +79,8 @@ object AddonManager {
                 }
             } ?: error("Não foi possível abrir o arquivo selecionado.")
 
+            expandNestedPacks(staging)
+
             val manifests = staging.walkTopDown().filter {
                 it.isFile && it.name.equals("manifest.json", ignoreCase = true)
             }.toList()
@@ -107,6 +109,63 @@ object AddonManager {
         } catch (e: Exception) {
             staging.deleteRecursively()
             return "Falha na importação: ${e.message ?: "arquivo inválido"}"
+        }
+    }
+
+
+    /**
+     * A .mcaddon commonly contains .mcpack ZIPs rather than loose manifests.
+     * Expand those nested packs into sibling folders so their manifests/assets
+     * can be indexed without altering the original imported files.
+     */
+    private fun expandNestedPacks(staging: File) {
+        val archives = staging.walkTopDown().filter {
+            it.isFile && (it.extension.equals("mcpack", true) || it.extension.equals("mcaddon", true))
+        }.toList()
+        for (archive in archives) {
+            val destination = File(archive.parentFile, archive.nameWithoutExtension + "_contents")
+            if (!destination.mkdirs()) continue
+            var total = 0L
+            var count = 0
+            try {
+                ZipInputStream(archive.inputStream().buffered()).use { zip ->
+                    while (true) {
+                        val entry = zip.nextEntry ?: break
+                        count++
+                        if (count > MAX_ENTRIES) error("Nested pack has too many entries")
+                        val name = entry.name.replace('\\', '/')
+                        val parts = name.split('/')
+                        if (name.startsWith("/") || parts.any { it == ".." } ||
+                            name.contains(":") || name.isBlank()) {
+                            zip.closeEntry()
+                            continue
+                        }
+                        val out = File(destination, name).canonicalFile
+                        if (out.canonicalPath != destination.canonicalPath &&
+                            !out.canonicalPath.startsWith(destination.canonicalPath + File.separator)) {
+                            zip.closeEntry()
+                            continue
+                        }
+                        if (entry.isDirectory) out.mkdirs() else {
+                            out.parentFile?.mkdirs()
+                            out.outputStream().buffered().use { stream ->
+                                val buffer = ByteArray(8192)
+                                while (true) {
+                                    val n = zip.read(buffer)
+                                    if (n < 0) break
+                                    total += n
+                                    if (total > MAX_UNCOMPRESSED_BYTES) error("Nested pack exceeds size limit")
+                                    stream.write(buffer, 0, n)
+                                }
+                            }
+                        }
+                        zip.closeEntry()
+                    }
+                }
+            } catch (e: Exception) {
+                destination.deleteRecursively()
+                android.util.Log.w("Mineblocos", "Não foi possível expandir pacote aninhado", e)
+            }
         }
     }
 
