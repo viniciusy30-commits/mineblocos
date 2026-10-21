@@ -11,6 +11,8 @@ import android.graphics.Typeface
 import android.os.SystemClock
 import android.view.MotionEvent
 import android.view.View
+import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import kotlin.math.abs
 import kotlin.math.hypot
 import kotlin.math.max
@@ -46,6 +48,8 @@ class HudView(
     private var invMoved = false
     private var invX = 0f; private var invY = 0f; private var invR = 0f
     private var cubes: IntArray = IntArray(0)
+    private var allCubes: IntArray = IntArray(0)
+    private var searchQuery = ""
     private var invTab = 0
     private val tabNames = arrayOf("Blocos", "Escadas", "Formas", "Móveis")
 
@@ -59,16 +63,50 @@ class HudView(
     private val letterIdx = IntArray(27)
 
     private fun loadTab() {
-        cubes = Reg.buildingList(invTab)
+        allCubes = Reg.buildingList(invTab)
+        applyInventorySearch()
+    }
+
+    private fun applyInventorySearch() {
+        cubes = if (searchQuery.isBlank()) allCubes else allCubes.filter {
+            Reg.name(it).contains(searchQuery.trim(), ignoreCase = true) ||
+                Reg.key(it).contains(searchQuery.trim(), ignoreCase = true)
+        }.toIntArray()
         invScroll = 0f
-        if (invTab == 3) {
-            // primeiro item de cada letra (ou o próximo que existir)
+        letterIdx.fill(0)
+        if (invTab == 3 && cubes.isNotEmpty()) {
+            // Primeiro item de cada letra dentro dos resultados filtrados.
             var p = 0
             for (li in letters.indices) {
                 while (p < cubes.size && letters.indexOf(Reg.initial(cubes[p])) < li) p++
                 letterIdx[li] = min(p, max(0, cubes.size - 1))
             }
         }
+        invIcons.clear()
+        invalidate()
+    }
+
+    private fun openInventorySearch() {
+        val field = EditText(context).apply {
+            hint = "Nome do item ou identificador"
+            setSingleLine(true)
+            setText(searchQuery)
+            setSelection(text.length)
+        }
+        AlertDialog.Builder(context)
+            .setTitle("Pesquisar itens")
+            .setMessage("Pesquise pelo nome exibido ou pelo identificador do bloco.")
+            .setView(field)
+            .setNegativeButton("Limpar") { _, _ ->
+                searchQuery = ""
+                applyInventorySearch()
+            }
+            .setNeutralButton("Cancelar", null)
+            .setPositiveButton("Pesquisar") { _, _ ->
+                searchQuery = field.text?.toString().orEmpty()
+                applyInventorySearch()
+            }
+            .show()
     }
 
     private fun gridTopY(): Float = pt + dp(30f) + (if (invTab == 3) dp(48f) else 0f)
@@ -187,8 +225,13 @@ class HudView(
         }
         if (y in pt..(pt + dp(30f)) && x in pl..pr) {
             val tw = dp(58f)
-            val i = ((x - (pr - tw * 4f - dp(6f))) / tw).toInt()
-            if (x >= pr - tw * 4f - dp(6f) && i in 0..3 && i != invTab) { invTab = i; loadTab() }
+            val tabsLeft = pr - tw * 4f - dp(6f)
+            if (x < tabsLeft) {
+                openInventorySearch()
+                return
+            }
+            val i = ((x - tabsLeft) / tw).toInt()
+            if (i in 0..3 && i != invTab) { invTab = i; loadTab() }
             return
         }
         if (y >= hbTop - dp(4f) && x >= hbLeft && x <= hbLeft + slot * 10f) {
@@ -577,7 +620,7 @@ class HudView(
 
         text.textAlign = Paint.Align.LEFT
         text.textSize = dp(13f)
-        c.drawText("Inventário", pl + dp(10f), pt + dp(20f), text)
+        c.drawText(if (searchQuery.isBlank()) "Inventário  •  🔎 Pesquisar" else "Busca: $searchQuery  •  🔎", pl + dp(10f), pt + dp(20f), text)
         val tw = dp(58f)
         text.textAlign = Paint.Align.CENTER
         text.textSize = dp(11f)
@@ -612,6 +655,12 @@ class HudView(
         val gridTop = gridTopY()
         val rows = (cubes.size + cols - 1) / cols
         invMaxScroll = max(0f, rows * cell - (pb - gridTop - dp(6f)))
+        if (cubes.isEmpty()) {
+            text.textAlign = Paint.Align.CENTER
+            text.textSize = dp(13f)
+            c.drawText(if (searchQuery.isBlank()) "Nenhum item nesta categoria" else "Nenhum item encontrado", (pl + pr) / 2f, gridTop + dp(32f), text)
+            text.textAlign = Paint.Align.LEFT
+        }
         invScroll = invScroll.coerceIn(0f, invMaxScroll)
 
         c.save()
