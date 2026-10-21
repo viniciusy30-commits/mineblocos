@@ -170,9 +170,15 @@ object BedrockAddonRuntime {
             val components = row.optJSONObject("components") ?: JSONObject()
             val coll = parseBlockBoxes(components.opt("minecraft:collision_box"))
             val sel = parseBlockBoxes(components.opt("minecraft:selection_box"))
-            val variant = XVar(cubes, 0, rectMap, coll, if (sel.isEmpty()) arrayOf(Box(0f, 0f, 0f, 1f, 1f, 1f, 0, 0, 0)) else sel, 0f, 0f, 0f)
+            val selection = if (sel.isEmpty()) arrayOf(Box(0f, 0f, 0f, 1f, 1f, 1f, 0, 0, 0)) else sel
+            // Meta 0..3 significa norte/leste/sul/oeste no MineBlocos. Gerar
+            // variantes rotacionadas permite orientar cada móvel ao colocá-lo.
+            val variants = Array(4) { facing ->
+                XVar(cubes, facing, rectMap, coll, selection, 0f, 0f, 0f)
+            }
             val light = components.optInt("minecraft:light_emission", 0).coerceIn(0, 15)
-            val model = XModel(id, "", 1, intArrayOf(), intArrayOf(), arrayOf(variant), shortArrayOf(0), emptyArray(), false, light)
+            val model = XModel(id, "", 1, intArrayOf(), intArrayOf(), variants,
+                shortArrayOf(0, 1, 2, 3), emptyArray(), false, light)
             Reg.registerAddonModel(id, row.optString("name", id.substringAfter(':')), model, 0xFF8A8A8A.toInt(), light)
             added++
         }
