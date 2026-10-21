@@ -112,10 +112,22 @@ class AddonsActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode != REQUEST_ARCHIVE || resultCode != RESULT_OK) return
         val uri = data?.data ?: return
-        val result = AddonManager.import(this, uri)
-        AlertDialog.Builder(this).setTitle("Importação de addon")
-            .setMessage(result).setPositiveButton("OK", null).show()
-        refreshList()
+        val progress = AlertDialog.Builder(this)
+            .setTitle("Importando addon")
+            .setMessage("Extraindo arquivos e analisando os blocos, modelos e texturas. Isso pode levar alguns minutos.")
+            .setCancelable(false)
+            .create()
+        progress.show()
+        addonExecutor.execute {
+            val result = AddonManager.import(this, uri)
+            runOnUiThread {
+                if (isFinishing || isDestroyed) return@runOnUiThread
+                progress.dismiss()
+                AlertDialog.Builder(this).setTitle("Importação de addon")
+                    .setMessage(result).setPositiveButton("OK", null).show()
+                refreshList()
+            }
+        }
     }
 
     private fun refreshList() {
