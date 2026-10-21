@@ -176,9 +176,14 @@ object BedrockAddonRuntime {
                 textureRects[materialTexture]?.let { rectMap[materialKey] = it }
             }
             val components = row.optJSONObject("components") ?: JSONObject()
-            val coll = parseBlockBoxes(components.opt("minecraft:collision_box"))
-            val sel = parseBlockBoxes(components.opt("minecraft:selection_box"))
-            val selection = if (sel.isEmpty()) arrayOf(Box(0f, 0f, 0f, 1f, 1f, 1f, 0, 0, 0)) else sel
+            val fullBlock = arrayOf(Box(0f, 0f, 0f, 1f, 1f, 1f, 0, 0, 0))
+            // Bedrock usa caixa inteira por padrão quando o componente não existe;
+            // false explícito continua significando sem colisão.
+            val coll = if (components.has("minecraft:collision_box"))
+                parseBlockBoxes(components.opt("minecraft:collision_box")) else fullBlock
+            val sel = if (components.has("minecraft:selection_box"))
+                parseBlockBoxes(components.opt("minecraft:selection_box")) else coll
+            val selection = sel
             // Meta 0..3 significa norte/leste/sul/oeste no MineBlocos. Gerar
             // variantes rotacionadas permite orientar cada móvel ao colocá-lo.
             val directional = row.optBoolean("directional", false)
