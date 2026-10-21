@@ -212,6 +212,22 @@ object Reg {
         }
     }
 
+    private fun ensureCapacity(required: Int) {
+        if (required <= ids.size) return
+        val newSize = maxOf(required, ids.size * 2)
+        val oldIds = ids
+        ids = Array(newSize) { i -> if (i < oldIds.size) oldIds[i] else "air" }
+        val oldNames = names
+        names = Array(newSize) { i -> if (i < oldNames.size) oldNames[i] else "?" }
+        kinds = kinds.copyOf(newSize)
+        top = top.copyOf(newSize)
+        bot = bot.copyOf(newSize)
+        side = side.copyOf(newSize)
+        flags = flags.copyOf(newSize)
+        avgs = avgs.copyOf(newSize) { 0xFF808080.toInt() }
+        emitArr = emitArr.copyOf(newSize)
+    }
+
     /** Registers an imported Bedrock block with a runtime 3D model. */
     @Synchronized
     fun registerAddonModel(id: String, displayName: String, model: XModel, averageColor: Int = 0xFF8A8A8A.toInt(), light: Int = 0): Int {
@@ -219,17 +235,13 @@ object Reg {
         val existing = index[id]
         if (existing != null) return existing
         val b = count
-        val oldIds = ids
-        ids = Array(b + 1) { i -> if (i < oldIds.size) oldIds[i] else id }
+        ensureCapacity(b + 1)
         ids[b] = id
-        val oldNames = names
-        names = Array(b + 1) { i -> if (i < oldNames.size) oldNames[i] else displayName.ifBlank { id.substringAfter(':') } }
         names[b] = displayName.ifBlank { id.substringAfter(':') }
-        kinds = kinds.copyOf(b + 1); kinds[b] = K_MODEL
-        top = top.copyOf(b + 1); bot = bot.copyOf(b + 1); side = side.copyOf(b + 1)
-        flags = flags.copyOf(b + 1)
-        avgs = avgs.copyOf(b + 1); avgs[b] = averageColor
-        emitArr = emitArr.copyOf(b + 1); emitArr[b] = light.coerceIn(0, 15).toByte()
+        kinds[b] = K_MODEL
+        top[b] = 0; bot[b] = 0; side[b] = 0; flags[b] = 0
+        avgs[b] = averageColor
+        emitArr[b] = light.coerceIn(0, 15).toByte()
         count = b + 1
         index[id] = b
         Models3D.register(model)
