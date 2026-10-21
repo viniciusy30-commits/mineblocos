@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import java.util.concurrent.Executors
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 /** UI for importing and inspecting Bedrock add-on archives. */
 class AddonsActivity : AppCompatActivity() {
     private lateinit var listBox: LinearLayout
+    private val addonExecutor = Executors.newSingleThreadExecutor()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +40,37 @@ class AddonsActivity : AppCompatActivity() {
             setPadding(4, 12, 4, 12)
         }
         root.addView(info)
-        val importButton = UiKit.mcButton(this, "Importar addon") { chooseArchive() }
+        val importButton = UiKit.mcButton(this, "Escolher arquivo no aparelho") { chooseArchive() }
         root.addView(importButton, LinearLayout.LayoutParams(-1, -2).apply { topMargin = 8 })
+
+        val urlInput = EditText(this).apply {
+            hint = "Link direto HTTPS do .mcaddon/.mcpack"
+            setSingleLine(true)
+            setTextColor(0xFFFFFFFF.toInt())
+            setHintTextColor(0xFFBBBBBB.toInt())
+            setPadding(12, 8, 12, 8)
+        }
+        root.addView(urlInput, LinearLayout.LayoutParams(-1, -2).apply { topMargin = 8 })
+        val urlButton = UiKit.mcButton(this, "Baixar addon pelo link") {
+            val url = urlInput.text.toString().trim()
+            if (!url.startsWith("https://", ignoreCase = true)) {
+                AlertDialog.Builder(this).setTitle("Link inválido")
+                    .setMessage("Cole um link HTTPS direto para o arquivo, não a página do site.")
+                    .setPositiveButton("OK", null).show()
+            } else {
+                urlButton.isEnabled = false
+                addonExecutor.execute {
+                    val result = AddonManager.importFromUrl(this, url)
+                    runOnUiThread {
+                        urlButton.isEnabled = true
+                        AlertDialog.Builder(this).setTitle("Download do addon")
+                            .setMessage(result).setPositiveButton("OK", null).show()
+                        refreshList()
+                    }
+                }
+            }
+        }
+        root.addView(urlButton, LinearLayout.LayoutParams(-1, -2).apply { topMargin = 8 })
         val refreshButton = UiKit.mcButton(this, "Atualizar lista") { refreshList() }
         root.addView(refreshButton, LinearLayout.LayoutParams(-1, -2).apply { topMargin = 8 })
         val scroll = ScrollView(this)
@@ -121,6 +153,11 @@ class AddonsActivity : AppCompatActivity() {
             card.addView(remove, ViewGroup.LayoutParams(-1, -2))
             listBox.addView(card, LinearLayout.LayoutParams(-1, -2).apply { bottomMargin = 10 })
         }
+    }
+
+    override fun onDestroy() {
+        addonExecutor.shutdownNow()
+        super.onDestroy()
     }
 
     companion object { private const val REQUEST_ARCHIVE = 7304 }
