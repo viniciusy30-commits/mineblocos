@@ -253,8 +253,13 @@ object BedrockAddonRuntime {
                         val v0 = pos.optDouble(1, 0.0).toFloat() / texH
                         val u1 = (pos.optDouble(0, 0.0) + sz.optDouble(0, 0.0)).toFloat() / texW
                         val v1 = (pos.optDouble(1, 0.0) + sz.optDouble(1, 0.0)).toFloat() / texH
-                        val faceMaterial = if (boneMaterial != "*") boneMaterial else faceName
-                        faces.add(XFace(faceId, faceMaterial, u0, v0, u1, v1))
+                        // O material explícito da face tem prioridade; alguns móveis usam
+                        // uma textura emissiva separada para telas/luzes.
+                        val faceMaterial = face.optString("material_instance", "").ifBlank {
+                            if (boneMaterial != "*") boneMaterial else faceName
+                        }
+                        val uvRotation = face.optInt("uv_rotation", face.optInt("rotation", 0))
+                        faces.add(XFace(faceId, faceMaterial, u0, v0, u1, v1, uvRotation))
                     }
                 } else {
                     // Legacy Bedrock box UVs: use the declared texture window on each face.
