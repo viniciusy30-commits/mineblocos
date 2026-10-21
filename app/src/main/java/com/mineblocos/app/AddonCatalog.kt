@@ -102,8 +102,12 @@ object AddonCatalog {
                     val id = description.optString("identifier").trim()
                     if (id.isBlank()) return@forEach
                     val components = block.optJSONObject("components") ?: JSONObject()
-                    val geometryId = components.optJSONObject("minecraft:geometry")
-                        ?.optString("identifier").orEmpty()
+                    val geometryRaw = components.opt("minecraft:geometry")
+                    val geometryId = when (geometryRaw) {
+                        is String -> geometryRaw
+                        is JSONObject -> geometryRaw.optString("identifier").orEmpty()
+                        else -> ""
+                    }
                     val materials = components.optJSONObject("minecraft:material_instances")
                     var texture = ""
                     if (materials != null) {
