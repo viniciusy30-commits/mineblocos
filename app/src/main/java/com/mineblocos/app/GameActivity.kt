@@ -45,13 +45,19 @@ class GameActivity : AppCompatActivity() {
             // Load imported Bedrock furniture before restoring/generating a world so block IDs
             // and the runtime texture atlas are ready before the renderer is created.
             runOnUiThread { loading.text = "Convertendo modelos e texturas do addon..." }
+            var addonResult = ""
             try {
-                val addonResult = Reg.loadImportedAddons(app)
+                addonResult = Reg.loadImportedAddons(app)
                 android.util.Log.i("Mineblocos", addonResult)
             } catch (e: Throwable) {
+                addonResult = "Falha ao converter o addon: ${e.message ?: "erro desconhecido"}"
                 android.util.Log.e("Mineblocos", "Falha ao converter addon Bedrock", e)
             }
-            runOnUiThread { loading.text = "Preparando mundo..." }
+            runOnUiThread {
+                loading.text = if (addonResult.startsWith("monoDeco convertido:"))
+                    "Addon carregado\n$addonResult\nPreparando mundo..."
+                else "Preparando mundo..."
+            }
             val loaded = if (novo) null else WorldStore.load(app)
             val w: World
             val st = GameState()
