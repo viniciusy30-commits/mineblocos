@@ -240,7 +240,7 @@ object BedrockAddonRuntime {
             Reg.registerAddonModel(id, row.optString("name", id.substringAfter(':')), model, 0xFF8A8A8A.toInt(), light)
             added++
         }
-        val summary = "monoDeco convertido: $added blocos/modelos registrados; $geometryCount geometrias lidas; $missingGeometry usando modelo de reserva; $missingTexture sem textura compatível."
+        val summary = "monoDeco convertido: $added blocos/modelos registrados; $geometryCount geometrias lidas; $missingGeometry geometrias personalizadas ausentes; $missingTexture texturas sem correspondência."
         lastFingerprint = fingerprint
         lastSummary = summary
         Log.i(TAG, summary)
