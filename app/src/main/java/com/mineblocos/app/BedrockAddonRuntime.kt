@@ -138,8 +138,16 @@ object BedrockAddonRuntime {
             val textureFile = texturePathByKey[textureKey]
                 ?: resources.firstNotNullOfOrNull { resolveTexture(it, "textures/blocks/$textureKey") }
             if (textureFile != null) neededTextures[textureKey] = textureFile
+            val permutations = block.optJSONArray("permutations") ?: JSONArray()
+            var directional = desc.optJSONObject("states")?.has("minecraft:cardinal_direction") == true
+            for (pi in 0 until permutations.length()) {
+                if (permutations.optJSONObject(pi)?.optString("condition", "")?.contains("minecraft:cardinal_direction") == true) {
+                    directional = true
+                    break
+                }
+            }
             blockRows.add(JSONObject().put("id", id).put("name", names[id] ?: names[id.substringAfter(':')] ?: cleanName(id.substringAfter(':')))
-                .put("texture", textureKey).put("materials", materials)
+                .put("texture", textureKey).put("materials", materials).put("directional", directional)
                 .put("geometry", components.optJSONObject("minecraft:geometry")?.optString("identifier", "").orEmpty())
                 .put("components", components).put("file", file.absolutePath))
         }
@@ -173,8 +181,13 @@ object BedrockAddonRuntime {
             val selection = if (sel.isEmpty()) arrayOf(Box(0f, 0f, 0f, 1f, 1f, 1f, 0, 0, 0)) else sel
             // Meta 0..3 significa norte/leste/sul/oeste no MineBlocos. Gerar
             // variantes rotacionadas permite orientar cada móvel ao colocá-lo.
+            val directional = row.optBoolean("directional", false)
+            // A maioria dos modelos monoDeco tem frente padrão para sul no Bedrock.
+            // O renderer gira no sentido oposto ao yaw do Bedrock: N=180°, E=-90°, S=0°, W=90°.
+            val bedrockFacingRotation = intArrayOf(2, 3, 0, 1)
             val variants = Array(4) { facing ->
-                XVar(cubes, facing, rectMap, coll, selection, 0f, 0f, 0f)
+                XVar(cubes, if (directional) bedrockFacingRotation[facing] else 0,
+                    rectMap, coll, selection, 0f, 0f, 0f)
             }
             val light = components.optInt("minecraft:light_emission", 0).coerceIn(0, 15)
             val model = XModel(id, "", 1, intArrayOf(), intArrayOf(), variants,
