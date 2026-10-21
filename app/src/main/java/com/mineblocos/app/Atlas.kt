@@ -224,7 +224,8 @@ object Reg {
         bot = bot.copyOf(newSize)
         side = side.copyOf(newSize)
         flags = flags.copyOf(newSize)
-        avgs = avgs.copyOf(newSize) { 0xFF808080.toInt() }
+        val oldAvgs = avgs
+        avgs = IntArray(newSize) { i -> if (i < oldAvgs.size) oldAvgs[i] else 0xFF808080.toInt() }
         emitArr = emitArr.copyOf(newSize)
     }
 
