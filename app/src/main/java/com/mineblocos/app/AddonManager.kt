@@ -108,7 +108,7 @@ object AddonManager {
             val packs = list(context)
             val names = packs.filter { it.directory.absolutePath.startsWith(destination.absolutePath) }
                 .joinToString(", ") { it.name }
-            return "Pacote importado: ${if (names.isBlank()) "$valid pacote(s)" else names}. Os arquivos foram guardados no MineBlocos; a conversão dos blocos Bedrock para o motor do jogo ainda é uma etapa separada."
+            return "Pacote importado: ${if (names.isBlank()) "$valid pacote(s)" else names}. Os arquivos ficaram no armazenamento privado do MineBlocos. Inicie um mundo para converter os blocos e modelos estáticos compatíveis."
         } catch (e: Exception) {
             staging.deleteRecursively()
             return "Falha na importação: ${e.message ?: "arquivo inválido"}"
