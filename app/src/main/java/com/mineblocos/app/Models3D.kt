@@ -199,6 +199,7 @@ object Models3D {
         }
     }
 
+    @Synchronized fun register(model: XModel) { map[model.key] = model }
     fun get(key: String): XModel? = map[key]
     fun has(key: String): Boolean = map.containsKey(key)
 }
