@@ -337,10 +337,14 @@ object BedrockAddonRuntime {
         var expr = condition
         val equal = Regex("""q\.block_state\(['"]([^'"]+)['"]\)\s*==\s*['"]([^'"]+)['"]""")
         val notEqual = Regex("""q\.block_state\(['"]([^'"]+)['"]\)\s*!=\s*['"]([^'"]+)['"]""")
+        val numericEqual = Regex("""q\.block_state\(['"]([^'"]+)['"]\)\s*==\s*(-?\d+)""")
+        val numericNotEqual = Regex("""q\.block_state\(['"]([^'"]+)['"]\)\s*!=\s*(-?\d+)""")
         fun state(key: String): String = states.optString(key,
             if (key == "minecraft:cardinal_direction") "south" else "0")
         expr = equal.replace(expr) { m -> (state(m.groupValues[1]) == m.groupValues[2]).toString() }
         expr = notEqual.replace(expr) { m -> (state(m.groupValues[1]) != m.groupValues[2]).toString() }
+        expr = numericEqual.replace(expr) { m -> (state(m.groupValues[1]) == m.groupValues[2]).toString() }
+        expr = numericNotEqual.replace(expr) { m -> (state(m.groupValues[1]) != m.groupValues[2]).toString() }
         val query = Regex("""q\.block_state\(['"]([^'"]+)['"]\)""")
         expr = query.replace(expr) { m ->
             val value = state(m.groupValues[1]).lowercase(Locale.ROOT)
