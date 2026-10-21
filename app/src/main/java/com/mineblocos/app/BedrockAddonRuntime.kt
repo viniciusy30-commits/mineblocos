@@ -335,13 +335,13 @@ object BedrockAddonRuntime {
     /** Avalia o subconjunto booleano usado por bone_visibility nos packs Bedrock. */
     private fun evaluateVisibility(condition: String, states: JSONObject): Boolean {
         var expr = condition
-        val equal = Regex("""q\\.block_state\\(['"]([^'"]+)['"]\\)\\s*==\\s*['"]([^'"]+)['"]""")
-        val notEqual = Regex("""q\\.block_state\\(['"]([^'"]+)['"]\\)\\s*!=\\s*['"]([^'"]+)['"]""")
+        val equal = Regex("""q\.block_state\(['"]([^'"]+)['"]\)\s*==\s*['"]([^'"]+)['"]""")
+        val notEqual = Regex("""q\.block_state\(['"]([^'"]+)['"]\)\s*!=\s*['"]([^'"]+)['"]""")
         fun state(key: String): String = states.optString(key,
             if (key == "minecraft:cardinal_direction") "south" else "0")
         expr = equal.replace(expr) { m -> (state(m.groupValues[1]) == m.groupValues[2]).toString() }
         expr = notEqual.replace(expr) { m -> (state(m.groupValues[1]) != m.groupValues[2]).toString() }
-        val query = Regex("""q\\.block_state\\(['"]([^'"]+)['"]\\)""")
+        val query = Regex("""q\.block_state\(['"]([^'"]+)['"]\)""")
         expr = query.replace(expr) { m ->
             val value = state(m.groupValues[1]).lowercase(Locale.ROOT)
             (value != "0" && value != "false" && value.isNotBlank()).toString()
