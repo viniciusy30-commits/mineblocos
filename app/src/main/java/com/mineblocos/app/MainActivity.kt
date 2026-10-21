@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         btnPlay = UiKit.mcButton(this, "Jogar") { startGame(false) }
         add(btnPlay)
         add(UiKit.mcButton(this, "Novo mundo") { confirmNew() })
+        add(UiKit.mcButton(this, "Addons") { startActivity(Intent(this, AddonsActivity::class.java)) })
         add(UiKit.mcButton(this, "Configurações") { startActivity(Intent(this, SettingsActivity::class.java)) })
         add(UiKit.mcButton(this, "O que mudou") { Novidades.showAll(this) })
 
