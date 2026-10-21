@@ -82,8 +82,28 @@ class HudView(
                 letterIdx[li] = min(p, max(0, cubes.size - 1))
             }
         }
-        invIcons.clear()
+        clearInventoryIcons()
         invalidate()
+    }
+
+    private fun clearInventoryIcons() {
+        invIcons.values.forEach { if (!it.isRecycled) it.recycle() }
+        invIcons.clear()
+    }
+
+    private fun inventoryIcon(block: Int, size: Int): Bitmap {
+        invIcons[block]?.let { return it }
+        // O addon pode registrar milhares de móveis; limitar o cache evita OOM
+        // ao percorrer o inventário inteiro em celulares com pouca memória.
+        if (invIcons.size >= 160) {
+            val first = invIcons.entries.iterator()
+            if (first.hasNext()) {
+                val entry = first.next()
+                invIcons.remove(entry.key)
+                if (!entry.value.isRecycled) entry.value.recycle()
+            }
+        }
+        return BlockIcons.make(block, size).also { invIcons[block] = it }
     }
 
     private fun openInventorySearch() {
@@ -180,7 +200,7 @@ class HudView(
         sunR = dp(22f); sunX = w - dp(204f); sunY = dp(36f)
         joyR = dp(56f); joyDefX = dp(108f); joyDefY = h - dp(116f)
         icons.clear()
-        invIcons.clear()
+        clearInventoryIcons()
     }
 
     private fun inCircle(x: Float, y: Float, cx: Float, cy: Float, r: Float) = hypot(x - cx, y - cy) <= r * 1.25f
@@ -680,7 +700,7 @@ class HudView(
                 paint.style = Paint.Style.FILL
                 paint.color = 0x66303840
                 c.drawRoundRect(r, dp(4f), dp(4f), paint)
-                val ic = invIcons.getOrPut(b) { BlockIcons.make(b, isz) }
+                val ic = inventoryIcon(b, isz)
                 c.drawBitmap(ic, x + (cell - ic.width) / 2f, y + (cell - ic.height) / 2f, null)
                 if (b == s.block) {
                     paint.style = Paint.Style.STROKE
