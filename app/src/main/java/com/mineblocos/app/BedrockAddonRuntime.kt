@@ -149,8 +149,14 @@ object BedrockAddonRuntime {
             if (geo == null) missingGeometry++
             val cubes = geo?.cubes?.takeIf { it.isNotEmpty() } ?: fallbackCube()
             val rectMap = HashMap<String, IntArray>()
-            if (rect != null) rectMap["*"] = rect
-            else rectMap["*"] = intArrayOf(0, 0, 16, 16)
+            if (rect != null) rectMap["*"] = rect else rectMap["*"] = intArrayOf(0, 0, 16, 16)
+            val materials = row.optJSONObject("materials") ?: JSONObject()
+            val materialKeys = materials.keys()
+            while (materialKeys.hasNext()) {
+                val materialKey = materialKeys.next()
+                val materialTexture = materials.optJSONObject(materialKey)?.optString("texture", "")?.trim().orEmpty()
+                textureRects[materialTexture]?.let { rectMap[materialKey] = it }
+            }
             val components = row.optJSONObject("components") ?: JSONObject()
             val coll = parseBlockBoxes(components.opt("minecraft:collision_box"))
             val sel = parseBlockBoxes(components.opt("minecraft:selection_box"))
@@ -196,6 +202,13 @@ object BedrockAddonRuntime {
         val bones = g.optJSONArray("bones") ?: return emptyArray()
         for (bi in 0 until bones.length()) {
             val bone = bones.optJSONObject(bi) ?: continue
+            val boneName = bone.optString("name", "").lowercase(Locale.ROOT)
+            val boneMaterial = when {
+                boneName.contains("light") || boneName.contains("emissive") -> "light"
+                boneName == "1" || boneName == "2" -> boneName
+                boneName.isNotBlank() && boneName !in setOf("main", "body", "root") -> boneName
+                else -> "*"
+            }
             val pivot = numArray(bone.optJSONArray("pivot"), 3, floatArrayOf(0f, 0f, 0f))
             val rotation = numArray(bone.optJSONArray("rotation"), 3, floatArrayOf(0f, 0f, 0f))
             val cubes = bone.optJSONArray("cubes") ?: continue
@@ -230,15 +243,23 @@ object BedrockAddonRuntime {
                         val v0 = pos.optDouble(1, 0.0).toFloat() / texH
                         val u1 = (pos.optDouble(0, 0.0) + sz.optDouble(0, 0.0)).toFloat() / texW
                         val v1 = (pos.optDouble(1, 0.0) + sz.optDouble(1, 0.0)).toFloat() / texH
-                        faces.add(XFace(faceId, "*", u0, v0, u1, v1))
+                        val faceMaterial = if (boneMaterial == "light" || boneMaterial == "1" || boneMaterial == "2" ||
+                            (boneMaterial != "*" && boneMaterial == faceName)) boneMaterial else faceName
+                        faces.add(XFace(faceId, faceMaterial, u0, v0, u1, v1))
                     }
                 } else {
                     // Legacy Bedrock box UVs: use the declared texture window on each face.
                     val uv0 = cube.optJSONArray("uv")
                     val u = if (uv0 != null) uv0.optDouble(0, 0.0).toFloat() else 0f
                     val v = if (uv0 != null) uv0.optDouble(1, 0.0).toFloat() else 0f
-                    for (faceId in 0..5) faces.add(XFace(faceId, "*", u / texW, v / texH,
-                        (u + size[0]) / texW, (v + size[1]) / texH))
+                    val faceNames = arrayOf("up", "down", "east", "west", "south", "north")
+                    for (faceId in 0..5) {
+                        val faceName = faceNames[faceId]
+                        val faceMaterial = if (boneMaterial == "light" || boneMaterial == "1" || boneMaterial == "2" ||
+                            (boneMaterial != "*" && boneMaterial == faceName)) boneMaterial else faceName
+                        faces.add(XFace(faceId, faceMaterial, u / texW, v / texH,
+                            (u + size[0]) / texW, (v + size[1]) / texH))
+                    }
                 }
                 if (faces.isNotEmpty()) out.add(XCube(wor, faces.toTypedArray()))
             }
