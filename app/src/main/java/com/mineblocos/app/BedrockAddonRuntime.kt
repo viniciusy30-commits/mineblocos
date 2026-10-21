@@ -118,26 +118,10 @@ object BedrockAddonRuntime {
             val desc = block.optJSONObject("description") ?: continue
             val id = desc.optString("identifier", "").trim()
             if (id.isBlank() || Reg.id(id) != 0) continue
-            val components = block.optJSONObject("components") ?: JSONObject()
-            val materials = components.optJSONObject("minecraft:material_instances") ?: JSONObject()
-            var textureKey = materials.optJSONObject("*")?.optString("texture", "")?.trim().orEmpty()
-            if (textureKey.isBlank()) {
-                val keys = materials.keys()
-                while (keys.hasNext() && textureKey.isBlank()) textureKey = materials.optJSONObject(keys.next())?.optString("texture", "")?.trim().orEmpty()
-            }
-            if (textureKey.isBlank()) textureKey = id.substringAfter(':')
-            val materialKeys = materials.keys()
-            while (materialKeys.hasNext()) {
-                val materialKey = materialKeys.next()
-                val materialTexture = materials.optJSONObject(materialKey)?.optString("texture", "")?.trim().orEmpty()
-                if (materialTexture.isBlank()) continue
-                val materialFile = texturePathByKey[materialTexture]
-                    ?: resources.firstNotNullOfOrNull { resolveTexture(it, "textures/blocks/$materialTexture") }
-                if (materialFile != null) neededTextures[materialTexture] = materialFile
-            }
-            val textureFile = texturePathByKey[textureKey]
-                ?: resources.firstNotNullOfOrNull { resolveTexture(it, "textures/blocks/$textureKey") }
-            if (textureFile != null) neededTextures[textureKey] = textureFile
+            // Copia os componentes base e aplica as permutações válidas para o estado inicial.
+            // Isso recupera geometrias, texturas e caixas de colisão que o addon declara
+            // apenas em permutations (por exemplo, objetos empilháveis e variantes de tela).
+            val components = JSONObject((block.optJSONObject("components") ?: JSONObject()).toString())
             val permutations = block.optJSONArray("permutations") ?: JSONArray()
             var directional = desc.optJSONObject("states")?.has("minecraft:cardinal_direction") == true
             for (pi in 0 until permutations.length()) {
@@ -159,6 +143,37 @@ object BedrockAddonRuntime {
             }
             // MonoDeco's base geometry generally faces south before the directional permutation.
             if (directional) stateDefaults.put("minecraft:cardinal_direction", "south")
+            for (pi in 0 until permutations.length()) {
+                val permutation = permutations.optJSONObject(pi) ?: continue
+                val condition = permutation.optString("condition", "true")
+                if (!evaluateVisibility(condition, stateDefaults)) continue
+                val overrides = permutation.optJSONObject("components") ?: continue
+                val overrideKeys = overrides.keys()
+                while (overrideKeys.hasNext()) {
+                    val key = overrideKeys.next()
+                    components.put(key, overrides.get(key))
+                }
+            }
+
+            val materials = components.optJSONObject("minecraft:material_instances") ?: JSONObject()
+            var textureKey = materials.optJSONObject("*")?.optString("texture", "")?.trim().orEmpty()
+            if (textureKey.isBlank()) {
+                val keys = materials.keys()
+                while (keys.hasNext() && textureKey.isBlank()) textureKey = materials.optJSONObject(keys.next())?.optString("texture", "")?.trim().orEmpty()
+            }
+            if (textureKey.isBlank()) textureKey = id.substringAfter(':')
+            val materialKeys = materials.keys()
+            while (materialKeys.hasNext()) {
+                val materialKey = materialKeys.next()
+                val materialTexture = materials.optJSONObject(materialKey)?.optString("texture", "")?.trim().orEmpty()
+                if (materialTexture.isBlank()) continue
+                val materialFile = texturePathByKey[materialTexture]
+                    ?: resources.firstNotNullOfOrNull { resolveTexture(it, "textures/blocks/$materialTexture") }
+                if (materialFile != null) neededTextures[materialTexture] = materialFile
+            }
+            val textureFile = texturePathByKey[textureKey]
+                ?: resources.firstNotNullOfOrNull { resolveTexture(it, "textures/blocks/$textureKey") }
+            if (textureFile != null) neededTextures[textureKey] = textureFile
             blockRows.add(JSONObject().put("id", id).put("name", names[id] ?: names[id.substringAfter(':')] ?: cleanName(id.substringAfter(':')))
                 .put("texture", textureKey).put("materials", materials).put("directional", directional)
                 .put("stateDefaults", stateDefaults)
