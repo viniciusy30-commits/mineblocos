@@ -3,7 +3,7 @@ package com.mineblocos.app
 import android.content.Context
 
 /** Face de um cubo do modelo: índice (0 topo, 1 base, 2 +X, 3 -X, 4 +Z, 5 -Z), instância de material e retângulo de UV (fração da textura). */
-class XFace(val f: Int, val inst: String, val u0: Float, val v0: Float, val u1: Float, val v1: Float)
+class XFace(val f: Int, val inst: String, val u0: Float, val v0: Float, val u1: Float, val v1: Float, val uvRotation: Int = 0)
 
 /** Cubo (possivelmente girado): 8 cantos no mundo, em fração do bloco, na ordem x + 2y + 4z. */
 class XCube(val wor: FloatArray, val faces: Array<XFace>)
