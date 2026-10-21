@@ -27,8 +27,8 @@ object AddonManager {
         val directory: File
     )
 
-    private const val MAX_ENTRIES = 12000
-    private const val MAX_UNCOMPRESSED_BYTES = 150L * 1024L * 1024L
+    private const val MAX_ENTRIES = 100000
+    private const val MAX_UNCOMPRESSED_BYTES = 512L * 1024L * 1024L
     private val packRootName = "bedrock_addons"
 
     private fun root(context: Context): File =
@@ -71,7 +71,7 @@ object AddonManager {
                                     if (n < 0) break
                                     totalBytes += n
                                     if (totalBytes > MAX_UNCOMPRESSED_BYTES) {
-                                        error("O pacote excede o limite de 150 MB descompactados.")
+                                        error("O pacote excede o limite de 512 MB descompactados.")
                                     }
                                     stream.write(buffer, 0, n)
                                 }
@@ -199,7 +199,7 @@ object AddonManager {
                     while (true) {
                         val entry = zip.nextEntry ?: break
                         count++
-                        if (count > MAX_ENTRIES) error("Nested pack has too many entries")
+                        if (count > MAX_ENTRIES) error("O pacote interno excede o limite de 100.000 arquivos.")
                         val name = entry.name.replace('\\', '/')
                         val parts = name.split('/')
                         if (name.startsWith("/") || parts.any { it == ".." } ||
@@ -221,7 +221,7 @@ object AddonManager {
                                     val n = zip.read(buffer)
                                     if (n < 0) break
                                     total += n
-                                    if (total > MAX_UNCOMPRESSED_BYTES) error("Nested pack exceeds size limit")
+                                    if (total > MAX_UNCOMPRESSED_BYTES) error("O pacote interno excede o limite de 512 MB descompactados.")
                                     stream.write(buffer, 0, n)
                                 }
                             }
