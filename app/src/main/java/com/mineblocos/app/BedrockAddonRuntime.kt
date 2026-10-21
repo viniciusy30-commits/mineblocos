@@ -264,8 +264,7 @@ object BedrockAddonRuntime {
                     val faceNames = arrayOf("up", "down", "east", "west", "south", "north")
                     for (faceId in 0..5) {
                         val faceName = faceNames[faceId]
-                        val faceMaterial = if (boneMaterial == "light" || boneMaterial == "1" || boneMaterial == "2" ||
-                            (boneMaterial != "*" && boneMaterial == faceName)) boneMaterial else faceName
+                        val faceMaterial = if (boneMaterial != "*") boneMaterial else faceName
                         faces.add(XFace(faceId, faceMaterial, u / texW, v / texH,
                             (u + size[0]) / texW, (v + size[1]) / texH))
                     }
