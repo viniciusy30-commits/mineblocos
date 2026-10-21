@@ -1,6 +1,7 @@
 package com.mineblocos.app
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Gravity
 import android.view.ViewGroup
@@ -40,7 +41,13 @@ class AddonsActivity : AppCompatActivity() {
             setPadding(4, 12, 4, 12)
         }
         root.addView(info)
-        val importButton = UiKit.mcButton(this, "Escolher arquivo no aparelho") { chooseArchive() }
+        val officialButton = UiKit.mcButton(this, "Abrir monoDeco oficial para baixar") {
+            val page = Uri.parse("https://www.curseforge.com/minecraft-bedrock/addons/monodeco-gen-7/files/all")
+            startActivity(Intent(Intent.ACTION_VIEW, page))
+        }
+        root.addView(officialButton, LinearLayout.LayoutParams(-1, -2).apply { topMargin = 8 })
+
+        val importButton = UiKit.mcButton(this, "Importar arquivo baixado") { chooseArchive() }
         root.addView(importButton, LinearLayout.LayoutParams(-1, -2).apply { topMargin = 8 })
 
         val urlInput = EditText(this).apply {
