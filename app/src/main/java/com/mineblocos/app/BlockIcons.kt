@@ -111,9 +111,23 @@ object BlockIcons {
                 }
                 val p3 = PointF(p1.x + p2.x - p0.x, p1.y + p2.y - p0.y)
                 val rx = r[0].toFloat(); val ry = r[1].toFloat(); val rw = r[2].toFloat(); val rh = r[3].toFloat()
+                fun uvPoint(a0: Float, b0: Float): FloatArray {
+                    var a = a0
+                    var b = b0
+                    when (((fc.uvRotation % 360) + 360) % 360) {
+                        90 -> { val t = a; a = b; b = 1f - t }
+                        180 -> { a = 1f - a; b = 1f - b }
+                        270 -> { val t = a; a = 1f - b; b = t }
+                    }
+                    return floatArrayOf(rx + (fc.u0 + a * (fc.u1 - fc.u0)) * rw,
+                        ry + (fc.v0 + b * (fc.v1 - fc.v0)) * rh)
+                }
+                val uv0 = uvPoint(0f, 0f)
+                val uv1 = uvPoint(1f, 0f)
+                val uv2 = uvPoint(0f, 1f)
                 val m = Matrix()
                 m.setPolyToPoly(
-                    floatArrayOf(rx + fc.u0 * rw, ry + fc.v0 * rh, rx + fc.u1 * rw, ry + fc.v0 * rh, rx + fc.u0 * rw, ry + fc.v1 * rh), 0,
+                    floatArrayOf(uv0[0], uv0[1], uv1[0], uv1[1], uv2[0], uv2[1]), 0,
                     floatArrayOf(p0.x, p0.y, p1.x, p1.y, p2.x, p2.y), 0, 3
                 )
                 val path = Path()
