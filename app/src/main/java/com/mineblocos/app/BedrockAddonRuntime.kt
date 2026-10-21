@@ -21,7 +21,7 @@ object BedrockAddonRuntime {
     private const val MAX_BLOCK_DEFS = 20000
     private const val MAX_GEOMETRIES = 5000
 
-    private data class Geo(val cubes: Array<XCube>, val texW: Int, val texH: Int)
+    private data class Geo(val cubes: Array<XCube>, val texW: Int, val texH: Int, val source: JSONObject)
 
     @Volatile private var lastSummary = ""
     @Volatile private var lastFingerprint = ""
@@ -92,7 +92,7 @@ object BedrockAddonRuntime {
                         if (id.isBlank() || geometryById.containsKey(id)) continue
                         val texW = desc.optInt("texture_width", 64).coerceAtLeast(1)
                         val texH = desc.optInt("texture_height", 64).coerceAtLeast(1)
-                        geometryById[id] = Geo(parseGeometry(g, texW, texH), texW, texH)
+                        geometryById[id] = Geo(parseGeometry(g, texW, texH), texW, texH, g)
                         geometryCount++
                     }
                 } catch (e: Exception) { Log.w(TAG, "Geometria ignorada: ${file.name}", e) }
@@ -146,8 +146,22 @@ object BedrockAddonRuntime {
                     break
                 }
             }
+            val stateDefaults = JSONObject()
+            val declaredStates = desc.optJSONObject("states")
+            if (declaredStates != null) {
+                val stateKeys = declaredStates.keys()
+                while (stateKeys.hasNext()) {
+                    val stateKey = stateKeys.next()
+                    val raw = declaredStates.opt(stateKey)
+                    val first = if (raw is JSONArray) raw.opt(0) else raw
+                    if (first != null && first != JSONObject.NULL) stateDefaults.put(stateKey, first.toString())
+                }
+            }
+            // MonoDeco's base geometry generally faces south before the directional permutation.
+            if (directional) stateDefaults.put("minecraft:cardinal_direction", "south")
             blockRows.add(JSONObject().put("id", id).put("name", names[id] ?: names[id.substringAfter(':')] ?: cleanName(id.substringAfter(':')))
                 .put("texture", textureKey).put("materials", materials).put("directional", directional)
+                .put("stateDefaults", stateDefaults)
                 .put("geometry", components.optJSONObject("minecraft:geometry")?.optString("identifier", "").orEmpty())
                 .put("components", components).put("file", file.absolutePath))
         }
@@ -165,7 +179,13 @@ object BedrockAddonRuntime {
             val geoId = row.optString("geometry")
             val geo = geometryById[geoId]
             if (geo == null) missingGeometry++
-            val cubes = geo?.cubes?.takeIf { it.isNotEmpty() } ?: fallbackCube()
+            val components = row.optJSONObject("components") ?: JSONObject()
+            val geometryComponent = components.optJSONObject("minecraft:geometry")
+            val boneVisibility = geometryComponent?.optJSONObject("bone_visibility")
+            val cubes = if (geo != null && boneVisibility != null && boneVisibility.length() > 0) {
+                parseGeometry(geo.source, geo.texW, geo.texH, boneVisibility,
+                    row.optJSONObject("stateDefaults") ?: JSONObject())
+            } else geo?.cubes?.takeIf { it.isNotEmpty() } ?: fallbackCube()
             val rectMap = HashMap<String, IntArray>()
             if (rect != null) rectMap["*"] = rect else rectMap["*"] = intArrayOf(0, 0, 16, 16)
             val materials = row.optJSONObject("materials") ?: JSONObject()
@@ -175,7 +195,6 @@ object BedrockAddonRuntime {
                 val materialTexture = materials.optJSONObject(materialKey)?.optString("texture", "")?.trim().orEmpty()
                 textureRects[materialTexture]?.let { rectMap[materialKey] = it }
             }
-            val components = row.optJSONObject("components") ?: JSONObject()
             val fullBlock = arrayOf(Box(0f, 0f, 0f, 1f, 1f, 1f, 0, 0, 0))
             // Bedrock usa caixa inteira por padrão quando o componente não existe;
             // false explícito continua significando sem colisão.
@@ -231,12 +250,21 @@ object BedrockAddonRuntime {
         return FloatArray(size) { i -> if (i < a.length()) a.optDouble(i, defaults[i].toDouble()).toFloat() else defaults[i] }
     }
 
-    private fun parseGeometry(g: JSONObject, texW: Int, texH: Int): Array<XCube> {
+    private fun parseGeometry(
+        g: JSONObject,
+        texW: Int,
+        texH: Int,
+        boneVisibility: JSONObject? = null,
+        stateDefaults: JSONObject = JSONObject()
+    ): Array<XCube> {
         val out = ArrayList<XCube>()
         val bones = g.optJSONArray("bones") ?: return emptyArray()
         for (bi in 0 until bones.length()) {
             val bone = bones.optJSONObject(bi) ?: continue
-            val boneName = bone.optString("name", "").lowercase(Locale.ROOT)
+            val rawBoneName = bone.optString("name", "")
+            val visibilityRule = boneVisibility?.optString(rawBoneName, "").orEmpty()
+            if (visibilityRule.isNotBlank() && !evaluateVisibility(visibilityRule, stateDefaults)) continue
+            val boneName = rawBoneName.lowercase(Locale.ROOT)
             val boneMaterial = when {
                 boneName.contains("light") || boneName.contains("emissive") -> "light"
                 boneName == "1" || boneName == "2" -> boneName
@@ -302,6 +330,59 @@ object BedrockAddonRuntime {
             }
         }
         return out.toTypedArray()
+    }
+
+    /** Avalia o subconjunto booleano usado por bone_visibility nos packs Bedrock. */
+    private fun evaluateVisibility(condition: String, states: JSONObject): Boolean {
+        var expr = condition
+        val equal = Regex("""q\\.block_state\\(['"]([^'"]+)['"]\\)\\s*==\\s*['"]([^'"]+)['"]""")
+        val notEqual = Regex("""q\\.block_state\\(['"]([^'"]+)['"]\\)\\s*!=\\s*['"]([^'"]+)['"]""")
+        fun state(key: String): String = states.optString(key,
+            if (key == "minecraft:cardinal_direction") "south" else "0")
+        expr = equal.replace(expr) { m -> (state(m.groupValues[1]) == m.groupValues[2]).toString() }
+        expr = notEqual.replace(expr) { m -> (state(m.groupValues[1]) != m.groupValues[2]).toString() }
+        val query = Regex("""q\\.block_state\\(['"]([^'"]+)['"]\\)""")
+        expr = query.replace(expr) { m ->
+            val value = state(m.groupValues[1]).lowercase(Locale.ROOT)
+            (value != "0" && value != "false" && value.isNotBlank()).toString()
+        }
+        val normalized = expr.replace(Regex("\\s+"), "")
+        if (!normalized.all { it.isLetter() || it == '&' || it == '|' || it == '!' || it == '(' || it == ')' }) return true
+
+        class Parser(private val s: String) {
+            private var p = 0
+            private fun eat(token: String): Boolean {
+                if (!s.startsWith(token, p)) return false
+                p += token.length
+                return true
+            }
+            fun parse(): Boolean? {
+                val value = parseOr() ?: return null
+                return if (p == s.length) value else null
+            }
+            private fun parseOr(): Boolean? {
+                var value = parseAnd() ?: return null
+                while (eat("||")) value = (parseAnd() ?: return null) || value
+                return value
+            }
+            private fun parseAnd(): Boolean? {
+                var value = parseUnary() ?: return null
+                while (eat("&&")) value = (parseUnary() ?: return null) && value
+                return value
+            }
+            private fun parseUnary(): Boolean? {
+                if (eat("!")) return !(parseUnary() ?: return null)
+                if (eat("(")) {
+                    val value = parseOr() ?: return null
+                    if (!eat(")")) return null
+                    return value
+                }
+                if (eat("true")) return true
+                if (eat("false")) return false
+                return null
+            }
+        }
+        return Parser(normalized).parse() ?: true
     }
 
     private fun rotate(x0: Float, y0: Float, z0: Float, pivot: FloatArray, rotation: FloatArray): FloatArray {
