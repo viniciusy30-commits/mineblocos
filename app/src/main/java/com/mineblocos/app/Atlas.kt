@@ -3,6 +3,7 @@ package com.mineblocos.app
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Paint
 
 /** Atlas de texturas (tiles de 16px, 64 colunas) vindo do pack Actions & Stuff. */
 object Atlas {
