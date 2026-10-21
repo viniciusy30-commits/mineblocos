@@ -110,7 +110,7 @@ object AddonManager {
                 .joinToString(", ") { it.name }
             AddonCatalog.invalidate()
             val catalog = AddonCatalog.summary(context, force = true)
-            return "Pacote importado: ${if (names.isBlank()) "$valid pacote(s)" else names}. Catálogo analisado: ${catalog.describe()} A conversão das geometrias e texturas Bedrock para o renderer ainda não está concluída."
+            return "Pacote importado: ${if (names.isBlank()) "$valid pacote(s)" else names}. Catálogo analisado: ${catalog.describe()} Ao iniciar o mundo, o MineBlocos converte os modelos estáticos compatíveis. Scripts, animações e estados avançados do Bedrock não são executados."
         } catch (e: Exception) {
             staging.deleteRecursively()
             return "Falha na importação: ${e.message ?: "arquivo inválido"}"
