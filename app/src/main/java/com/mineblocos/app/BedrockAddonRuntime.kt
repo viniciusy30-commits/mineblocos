@@ -162,7 +162,7 @@ object BedrockAddonRuntime {
             blockRows.add(JSONObject().put("id", id).put("name", names[id] ?: names[id.substringAfter(':')] ?: cleanName(id.substringAfter(':')))
                 .put("texture", textureKey).put("materials", materials).put("directional", directional)
                 .put("stateDefaults", stateDefaults)
-                .put("geometry", components.optJSONObject("minecraft:geometry")?.optString("identifier", "").orEmpty())
+                .put("geometry", geometryIdentifier(components.opt("minecraft:geometry")))
                 .put("components", components).put("file", file.absolutePath))
         }
 
@@ -224,6 +224,12 @@ object BedrockAddonRuntime {
         lastSummary = summary
         Log.i(TAG, summary)
         return summary
+    }
+
+    private fun geometryIdentifier(raw: Any?): String = when (raw) {
+        is String -> raw.trim()
+        is JSONObject -> raw.optString("identifier", "").trim()
+        else -> ""
     }
 
     private fun cleanName(raw: String): String {
