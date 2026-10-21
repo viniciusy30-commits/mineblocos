@@ -119,18 +119,28 @@ object BedrockAddonRuntime {
             val id = desc.optString("identifier", "").trim()
             if (id.isBlank() || Reg.id(id) != 0) continue
             val components = block.optJSONObject("components") ?: JSONObject()
-            val material = components.optJSONObject("minecraft:material_instances")
-            var textureKey = material?.optJSONObject("*")?.optString("texture", "")?.trim().orEmpty()
-            if (textureKey.isBlank() && material != null) {
-                val keys = material.keys()
-                while (keys.hasNext() && textureKey.isBlank()) textureKey = material.optJSONObject(keys.next())?.optString("texture", "")?.trim().orEmpty()
+            val materials = components.optJSONObject("minecraft:material_instances") ?: JSONObject()
+            var textureKey = materials.optJSONObject("*")?.optString("texture", "")?.trim().orEmpty()
+            if (textureKey.isBlank()) {
+                val keys = materials.keys()
+                while (keys.hasNext() && textureKey.isBlank()) textureKey = materials.optJSONObject(keys.next())?.optString("texture", "")?.trim().orEmpty()
             }
             if (textureKey.isBlank()) textureKey = id.substringAfter(':')
+            val materialKeys = materials.keys()
+            while (materialKeys.hasNext()) {
+                val materialKey = materialKeys.next()
+                val materialTexture = materials.optJSONObject(materialKey)?.optString("texture", "")?.trim().orEmpty()
+                if (materialTexture.isBlank()) continue
+                val materialFile = texturePathByKey[materialTexture]
+                    ?: resources.firstNotNullOfOrNull { resolveTexture(it, "textures/blocks/$materialTexture") }
+                if (materialFile != null) neededTextures[materialTexture] = materialFile
+            }
             val textureFile = texturePathByKey[textureKey]
                 ?: resources.firstNotNullOfOrNull { resolveTexture(it, "textures/blocks/$textureKey") }
             if (textureFile != null) neededTextures[textureKey] = textureFile
             blockRows.add(JSONObject().put("id", id).put("name", names[id] ?: names[id.substringAfter(':')] ?: cleanName(id.substringAfter(':')))
-                .put("texture", textureKey).put("geometry", components.optJSONObject("minecraft:geometry")?.optString("identifier", "").orEmpty())
+                .put("texture", textureKey).put("materials", materials)
+                .put("geometry", components.optJSONObject("minecraft:geometry")?.optString("identifier", "").orEmpty())
                 .put("components", components).put("file", file.absolutePath))
         }
 
