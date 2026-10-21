@@ -188,7 +188,7 @@ object BedrockAddonRuntime {
 
     private fun numArray(a: JSONArray?, size: Int, defaults: FloatArray): FloatArray {
         if (a == null) return defaults.copyOf()
-        return FloatArray(size) { i -> if (i < a.length()) a.optDouble(i, defaults[i]).toFloat() else defaults[i] }
+        return FloatArray(size) { i -> if (i < a.length()) a.optDouble(i, defaults[i].toDouble()).toFloat() else defaults[i] }
     }
 
     private fun parseGeometry(g: JSONObject, texW: Int, texH: Int): Array<XCube> {
