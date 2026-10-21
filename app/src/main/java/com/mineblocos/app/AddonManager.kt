@@ -2,6 +2,9 @@ package com.mineblocos.app
 
 import android.content.Context
 import android.net.Uri
+import androidx.core.content.FileProvider
+import java.net.HttpURLConnection
+import java.net.URL
 import org.json.JSONObject
 import java.io.File
 import java.util.UUID
@@ -112,6 +115,70 @@ object AddonManager {
         }
     }
 
+
+    /**
+     * Downloads a public HTTPS archive and imports it through the same validation path.
+     * Only direct archive URLs are supported; redirects must remain HTTPS.
+     */
+    @Synchronized
+    fun importFromUrl(context: Context, rawUrl: String): String {
+        val downloadDir = File(context.cacheDir, "addons").apply { mkdirs() }
+        val download = File(downloadDir, "download-${UUID.randomUUID()}.zip")
+        try {
+            var current = URL(rawUrl.trim())
+            var redirects = 0
+            while (true) {
+                if (!current.protocol.equals("https", true))
+                    error("Use um link HTTPS direto para o arquivo.")
+                val connection = current.openConnection() as? HttpURLConnection
+                    ?: error("Tipo de conexão não suportado.")
+                connection.instanceFollowRedirects = false
+                connection.connectTimeout = 15000
+                connection.readTimeout = 30000
+                connection.setRequestProperty("User-Agent", "MineBlocos-AddonImporter/1.0")
+                val status = connection.responseCode
+                if (status in 300..399) {
+                    val location = connection.getHeaderField("Location")
+                    connection.disconnect()
+                    if (location.isNullOrBlank()) error("Redirecionamento sem destino.")
+                    if (++redirects > 5) error("O link redirecionou muitas vezes.")
+                    current = URL(current, location)
+                    continue
+                }
+                if (status !in 200..299) {
+                    connection.disconnect()
+                    error("O servidor respondeu HTTP $status.")
+                }
+                if (connection.contentLengthLong > 100L * 1024L * 1024L) {
+                    connection.disconnect()
+                    error("O arquivo excede o limite de 100 MB.")
+                }
+                connection.inputStream.use { input ->
+                    download.outputStream().buffered().use { output ->
+                        val buffer = ByteArray(16384)
+                        var total = 0L
+                        while (true) {
+                            val n = input.read(buffer)
+                            if (n < 0) break
+                            total += n
+                            if (total > 100L * 1024L * 1024L)
+                                error("O arquivo excede o limite de 100 MB.")
+                            output.write(buffer, 0, n)
+                        }
+                    }
+                }
+                connection.disconnect()
+                break
+            }
+            val uri = FileProvider.getUriForFile(context,
+                context.packageName + ".fileprovider", download)
+            return import(context, uri)
+        } catch (e: Exception) {
+            return "Não foi possível baixar/importar: ${e.message ?: "link inválido"}"
+        } finally {
+            download.delete()
+        }
+    }
 
     /**
      * A .mcaddon commonly contains .mcpack ZIPs rather than loose manifests.
