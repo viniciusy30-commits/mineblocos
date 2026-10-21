@@ -63,11 +63,13 @@ class HudView(
     private val letterIdx = IntArray(27)
 
     private fun loadTab() {
-        allCubes = Reg.buildingList(invTab)
         applyInventorySearch()
     }
 
     private fun applyInventorySearch() {
+        // Quando há uma busca, pesquisar no catálogo inteiro, não só na aba atual.
+        allCubes = if (searchQuery.isBlank()) Reg.buildingList(invTab) else
+            (0..3).flatMap { Reg.buildingList(it).asIterable() }.distinct().toIntArray()
         cubes = if (searchQuery.isBlank()) allCubes else allCubes.filter {
             Reg.name(it).contains(searchQuery.trim(), ignoreCase = true) ||
                 Reg.key(it).contains(searchQuery.trim(), ignoreCase = true)
@@ -251,7 +253,11 @@ class HudView(
                 return
             }
             val i = ((x - tabsLeft) / tw).toInt()
-            if (i in 0..3 && i != invTab) { invTab = i; loadTab() }
+            if (i in 0..3 && i != invTab) {
+                invTab = i
+                if (searchQuery.isNotBlank()) searchQuery = ""
+                loadTab()
+            }
             return
         }
         if (y >= hbTop - dp(4f) && x >= hbLeft && x <= hbLeft + slot * 10f) {
