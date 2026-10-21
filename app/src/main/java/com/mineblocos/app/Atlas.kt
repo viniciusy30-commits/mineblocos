@@ -219,8 +219,12 @@ object Reg {
         val existing = index[id]
         if (existing != null) return existing
         val b = count
-        ids = ids.copyOf(b + 1); ids[b] = id
-        names = names.copyOf(b + 1); names[b] = displayName.ifBlank { id.substringAfter(':') }
+        val oldIds = ids
+        ids = Array(b + 1) { i -> if (i < oldIds.size) oldIds[i] else id }
+        ids[b] = id
+        val oldNames = names
+        names = Array(b + 1) { i -> if (i < oldNames.size) oldNames[i] else displayName.ifBlank { id.substringAfter(':') } }
+        names[b] = displayName.ifBlank { id.substringAfter(':') }
         kinds = kinds.copyOf(b + 1); kinds[b] = K_MODEL
         top = top.copyOf(b + 1); bot = bot.copyOf(b + 1); side = side.copyOf(b + 1)
         flags = flags.copyOf(b + 1)
