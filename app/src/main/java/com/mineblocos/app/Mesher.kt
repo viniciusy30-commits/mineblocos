@@ -288,8 +288,15 @@ object Mesher {
                         0 -> { a = xi; b = zi }
                         else -> { a = xi; b = 1 - zi }
                     }
-                    val u = (fc.u0 + a * (fc.u1 - fc.u0)).coerceIn(0f, 1f)
-                    val v = (fc.v0 + b * (fc.v1 - fc.v0)).coerceIn(0f, 1f)
+                    var ua = a.toFloat()
+                    var va = b.toFloat()
+                    when (((fc.uvRotation % 360) + 360) % 360) {
+                        90 -> { val t = ua; ua = va; va = 1f - t }
+                        180 -> { ua = 1f - ua; va = 1f - va }
+                        270 -> { val t = ua; ua = 1f - va; va = t }
+                    }
+                    val u = (fc.u0 + ua * (fc.u1 - fc.u0)).coerceIn(0f, 1f)
+                    val v = (fc.v0 + va * (fc.v1 - fc.v0)).coerceIn(0f, 1f)
                     out.add((rect[0] + 0.02f + u * (rect[2] - 0.04f)) / aw)
                     out.add((rect[1] + 0.02f + v * (rect[3] - 0.04f)) / ah)
                     out.add(light)
